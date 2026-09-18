@@ -1,0 +1,174 @@
+Category,Relative path,Size KB
+Other,.git/FETCH_HEAD,1.14
+Other,.git/HEAD,0.04
+Other,.git/config,0.38
+Other,.git/description,0.07
+Other,.git/hooks/applypatch-msg.sample,0.47
+Other,.git/hooks/commit-msg.sample,0.88
+Other,.git/hooks/fsmonitor-watchman.sample,4.62
+Other,.git/hooks/post-update.sample,0.18
+Other,.git/hooks/pre-applypatch.sample,0.41
+Other,.git/hooks/pre-commit.sample,1.6
+Other,.git/hooks/pre-merge-commit.sample,0.41
+Other,.git/hooks/pre-push.sample,1.34
+Other,.git/hooks/pre-rebase.sample,4.78
+Other,.git/hooks/pre-receive.sample,0.53
+Other,.git/hooks/prepare-commit-msg.sample,1.46
+Other,.git/hooks/push-to-checkout.sample,2.72
+Other,.git/hooks/sendemail-validate.sample,2.25
+Other,.git/hooks/update.sample,3.56
+Other,.git/index,14.82
+Other,.git/info/exclude,0.23
+Other,.git/logs/HEAD,0.38
+Other,.git/logs/refs/heads/main,0.19
+Possible example,.git/logs/refs/heads/reproduction/original-example,0.15
+Other,.git/logs/refs/remotes/origin/HEAD,0.19
+Other,.git/logs/refs/remotes/upstream/fy24_AIM,0.16
+Other,.git/logs/refs/remotes/upstream/main,0.16
+Other,.git/logs/refs/remotes/upstream/packaging,0.16
+Other,.git/logs/refs/remotes/upstream/slice-bugfix,0.16
+Other,.git/objects/29/2e852443fcd753745bb3e0325376333777504d,0.17
+Other,.git/objects/7d/6ee2f6003d6cd244a0180d14c6433a6165c7f4,0.29
+Other,.git/objects/bf/f83b04883aeb0a410795dfb009aa53929c53bb,0.2
+Other,.git/objects/f2/14ae108b0ac3871e0ad8312ade34c6cde838c9,0.49
+Other,.git/objects/pack/pack-fc0a06b5892223ded0fde8c4b85e159d2e94dcd0.idx,26.2
+Other,.git/objects/pack/pack-fc0a06b5892223ded0fde8c4b85e159d2e94dcd0.pack,98270.04
+Other,.git/objects/pack/pack-fc0a06b5892223ded0fde8c4b85e159d2e94dcd0.rev,3.64
+Other,.git/packed-refs,0.11
+Other,.git/refs/heads/main,0.04
+Possible example,.git/refs/heads/reproduction/original-example,0.04
+Other,.git/refs/remotes/origin/HEAD,0.03
+Other,.git/refs/remotes/upstream/fy24_AIM,0.04
+Other,.git/refs/remotes/upstream/main,0.04
+Other,.git/refs/remotes/upstream/packaging,0.04
+Other,.git/refs/remotes/upstream/slice-bugfix,0.04
+Other,.git/refs/tags/v0.1,0.04
+Other,.git/refs/tags/v0.2,0.04
+Other,.git/refs/tags/v0.2.1,0.04
+Other,.git/refs/tags/v1.0.1,0.04
+Other,.git/refs/tags/v1.0.6,0.04
+Other,.git/refs/tags/v1.1.0,0.04
+Other,.gitignore,0.05
+Data,.readthedocs.yml,0.5
+Documentation,LICENSE,1.49
+Data,MATLAB BLAST-Lite/Application profiles/FCR_1PE_LFP.mat,23905.3
+Data,MATLAB BLAST-Lite/Application profiles/PS_3Cluster_1.mat,13485.36
+Data,MATLAB BLAST-Lite/Application profiles/PVBESS_FeedInDamp.mat,7426.27
+Data,MATLAB BLAST-Lite/Application profiles/commercial_ev.csv,20597.36
+Data,MATLAB BLAST-Lite/Application profiles/commercial_ev_lowdod.csv,20386.27
+Data,MATLAB BLAST-Lite/Application profiles/personal_ev_largebatt.csv,11047.71
+Data,MATLAB BLAST-Lite/Application profiles/personal_ev_smallbatt.csv,11047.62
+Other,MATLAB BLAST-Lite/Application profiles/sources.txt,1.12
+Data,MATLAB BLAST-Lite/Climate data/Top100MSA_hourlyClimateData.mat,1747.52
+Other,MATLAB BLAST-Lite/Functions/func_LifeMdl_LoadParameters.m,4.39
+Other,MATLAB BLAST-Lite/Functions/func_LifeMdl_StressStatistics.m,2.18
+Other,MATLAB BLAST-Lite/Functions/func_LifeMdl_UpdateOutput.m,1.72
+Other,MATLAB BLAST-Lite/Functions/func_LifeMdl_UpdateStates.m,5.23
+Other,MATLAB BLAST-Lite/Functions/func_ThrowOutBadData.m,0.69
+Other,MATLAB BLAST-Lite/Functions/rainflow.m,0.88
+Other,MATLAB BLAST-Lite/Functions/rainflow.mexw32,9.0
+Other,MATLAB BLAST-Lite/Functions/rainflow.mexw64,11.0
+Other,MATLAB BLAST-Lite/Functions/sig2ext.m,2.97
+Other,MATLAB BLAST-Lite/Model_NMC_Gr.m,11.31
+Documentation,MATLAB BLAST-Lite/README.txt,1.26
+Other,MATLAB BLAST-Lite/simulate_battery_aging.m,17.47
+Documentation,NOTICE,1.32
+Documentation,README.md,13.17
+Other,SWR-22-69.docx,23.81
+Other,assets/ev_life_summary.png,1011.84
+Possible example,assets/example_battery_control.png,75.86
+Possible example,assets/example_battery_life.png,110.78
+Possible example,assets/example_thesholds.png,34.35
+Possible example,assets/example_uncertainty.png,49.65
+Other,assets/icon-blast.jpg,41.35
+Other,assets/optimal_battery_sizing.png,49.46
+Other,assets/stationary_storage_summary.png,2591.92
+Other,blast/__init__.py,0.07
+Other,blast/models/__init__.py,1.49
+Other,blast/models/_available_models.py,0.26
+Other,blast/models/degradation_model.py,25.34
+Other,blast/models/lfp_gr_250AhPrismatic_2019.py,7.26
+Other,blast/models/lfp_gr_SonyMurata3Ah_2018.py,12.73
+Other,blast/models/lmo_gr_NissanLeaf66Ah_2ndLife_2020.py,6.24
+Other,blast/models/nca_gr_Panasonic3Ah_2018.py,7.05
+Other,blast/models/nca_grsi_SonyMurata2p5Ah_2023.py,15.4
+Other,blast/models/nmc111_gr_Kokam75Ah_2017.py,10.53
+Other,blast/models/nmc111_gr_Sanyo2Ah_2014.py,10.03
+Other,blast/models/nmc622_gr_DENSO50Ah_2021.py,10.42
+Other,blast/models/nmc811_grSi_LGM50_5Ah_2021.py,9.67
+Other,blast/models/nmc811_grSi_LGMJ1_4Ah_2020.py,6.79
+Other,blast/models/nmc_gr_50Ah_B1_2020.py,6.85
+Other,blast/models/nmc_gr_50Ah_B2_2020.py,7.03
+Other,blast/models/nmc_gr_75Ah_A_2019.py,6.77
+Other,blast/models/nmc_lto_10Ah_2020.py,7.03
+Other,blast/utils/__init__.py,0.11
+Possible example,blast/utils/demo.py,3.89
+Other,blast/utils/functions.py,15.71
+Other,blast/utils/rainflow.py,5.01
+Other,docs/Makefile,0.62
+Other,docs/make.bat,0.75
+Other,docs/source/autoapi/blast/index.rst,0.15
+Other,docs/source/autoapi/blast/models/degradation_model/index.rst,3.29
+Other,docs/source/autoapi/blast/models/index.rst,58.57
+Other,docs/source/autoapi/blast/models/lfp_gr_250AhPrismatic_2019/index.rst,5.0
+Other,docs/source/autoapi/blast/models/lfp_gr_SonyMurata3Ah_2018/index.rst,5.82
+Other,docs/source/autoapi/blast/models/lmo_gr_NissanLeaf66Ah_2ndLife_2020/index.rst,4.22
+Other,docs/source/autoapi/blast/models/nca_gr_Panasonic3Ah_2018/index.rst,4.51
+Other,docs/source/autoapi/blast/models/nca_grsi_SonyMurata2p5Ah_2023/index.rst,5.38
+Other,docs/source/autoapi/blast/models/nmc111_gr_Kokam75Ah_2017/index.rst,5.54
+Other,docs/source/autoapi/blast/models/nmc111_gr_Sanyo2Ah_2014/index.rst,4.7
+Other,docs/source/autoapi/blast/models/nmc811_grSi_LGMJ1_4Ah_2020/index.rst,4.43
+Other,docs/source/autoapi/blast/models/nmc_gr_50Ah_B1_2020/index.rst,4.54
+Other,docs/source/autoapi/blast/models/nmc_gr_50Ah_B2_2020/index.rst,4.57
+Other,docs/source/autoapi/blast/models/nmc_gr_75Ah_A_2019/index.rst,4.32
+Other,docs/source/autoapi/blast/models/nmc_lto_10Ah_2020/index.rst,4.23
+Possible example,docs/source/autoapi/blast/utils/demo/index.rst,0.9
+Other,docs/source/autoapi/blast/utils/functions/index.rst,2.21
+Other,docs/source/autoapi/blast/utils/index.rst,1.96
+Other,docs/source/autoapi/blast/utils/rainflow/index.rst,1.86
+Other,docs/source/autoapi/index.rst,0.24
+Other,docs/source/conf.py,2.48
+Other,docs/source/index.rst,0.33
+Other,docs/source/pages/assets/ev_commercial_multiple_models.PNG,118.1
+Other,docs/source/pages/assets/ev_commercial_profiles.PNG,331.6
+Other,docs/source/pages/assets/ev_multiple_models.PNG,117.91
+Other,docs/source/pages/assets/ev_profiles.PNG,201.04
+Possible example,docs/source/pages/assets/example_battery_life.png,66.32
+Other,docs/source/pages/assets/hawaii_temp.PNG,144.5
+Other,docs/source/pages/assets/icon-blast.jpg,41.35
+Other,docs/source/pages/assets/q_multiple_models_1.PNG,120.22
+Other,docs/source/pages/assets/q_multiple_models_2.PNG,74.98
+Other,docs/source/pages/assets/synthetic_inputs.PNG,70.23
+Other,docs/source/pages/assets/synthetic_inputs_temp.PNG,65.89
+Other,docs/source/pages/assets/synthetic_output_efc_q.PNG,40.12
+Other,docs/source/pages/assets/synthetic_output_q_contributions.PNG,52.65
+Other,docs/source/pages/assets/synthetic_output_r_contributions.PNG,41.35
+Other,docs/source/pages/assets/synthetic_output_time_q.PNG,38.18
+Documentation,docs/source/pages/readme.rst,0.06
+Other,docs/source/pages/user_guide.rst,19.41
+Data,environment.yml,0.25
+Possible example,examples/.hscfg,0.14
+Possible example,examples/Telsa_Survey_Model3SR.xlsx,174.54
+Possible example,examples/TeslaInfo_Model3LR.csv,130.84
+Possible example,examples/application profiles/Commercial PV-BESS (NREL).csv,741.61
+Possible example,examples/application profiles/Commercial peak shaving.csv,1439.45
+Possible example,examples/application profiles/EV charging support corner charging station.csv,3799.69
+Possible example,examples/application profiles/EV charging support rental car depot.csv,3805.0
+Possible example,examples/application profiles/Electric vehicle/annual_vmt_cdf.csv,0.18
+Possible example,examples/application profiles/Electric vehicle/commercial_ev.csv,58.91
+Possible example,examples/application profiles/Electric vehicle/personal_ev_combined.csv,96.39
+Possible example,examples/application profiles/Electric vehicle/personal_ev_largebatt.csv,45.58
+Possible example,examples/application profiles/Electric vehicle/personal_ev_smallbatt.csv,45.57
+Possible example,examples/application profiles/Electric vehicle/vehicle annual miles traveled distributions.xlsx,20.32
+Possible example,examples/application profiles/Frequency containment reserve.csv,1876.79
+Possible example,"examples/application profiles/Residential PV-BESS (CA, mild).csv",985.32
+Possible example,"examples/application profiles/Residential PV-BESS (Germany, aggressive).csv",1775.62
+Possible example,examples/application profiles/Telecom backup power and peak shaving.csv,326.77
+Possible example,examples/climates/hourly_temperature_miami.csv,82.48
+Possible example,examples/climates/nsrdb_honolulu.csv,359.55
+Notebook,examples/example.ipynb,614.11
+Notebook,examples/example_EV_life.ipynb,2021.05
+Notebook,examples/example_fast_calculations.ipynb,23.84
+Notebook,examples/example_stationary_storage_life.ipynb,620.24
+Installation,pyproject.toml,1.26
+Other,version.txt,0.01

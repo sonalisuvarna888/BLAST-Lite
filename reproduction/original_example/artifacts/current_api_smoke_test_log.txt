@@ -1,0 +1,30 @@
+BLAST-LITE CURRENT-API SMOKE TEST
+==============================================================================
+
+
+COMMAND
+/content/blast_py311/bin/python /content/blast_lite_reproduction/current_api_smoke_test.py
+
+STANDARD OUTPUT
+Current method signature:
+(input_timeseries: Union[dict, pandas.core.frame.DataFrame], threshold_time: float = None, threshold_capacity: float = None, threshold_efc: float = None, is_constant_input: bool = False, is_conserve_energy_throughput: bool = True, breakpoints_max_time_diff_s: float = 86400, breakpoints_max_EFC_diff: float = 1)
+Duration argument selected:
+threshold_time=0.1
+Smoke test completed.
+Output keys: ['q', 'q_LLI', 'q_LLI_t', 'q_LLI_EFC', 'q_LAM', 'r', 'r_LLI', 'r_LLI_t', 'r_LLI_EFC', 'r_LAM']
+Stressor keys: ['delta_t_days', 't_days', 'delta_efc', 'efc', 'TdegK', 'soc', 'Ua', 'dod']
+Number of q points: 38
+Initial q: 1.0
+Final q: 0.9334654749043986
+Final time in days: 36.99957175925929
+Final time in years: 0.10136868975139532
+
+
+STANDARD ERROR
+
+
+RETURN CODE
+0
+
+TIMED OUT
+False

@@ -1,0 +1,31 @@
+PYTHON 3.11 BUILD TOOLS
+==============================================================================
+
+
+COMMAND
+/content/blast_py311/bin/python -m pip install --upgrade pip wheel setuptools==69.5.1
+
+STANDARD OUTPUT
+Requirement already satisfied: pip in ./blast_py311/lib/python3.11/site-packages (26.2.1)
+Requirement already satisfied: wheel in ./blast_py311/lib/python3.11/site-packages (0.48.0)
+Collecting setuptools==69.5.1
+  Downloading setuptools-69.5.1-py3-none-any.whl.metadata (6.2 kB)
+Requirement already satisfied: packaging>=24.0 in ./blast_py311/lib/python3.11/site-packages (from wheel) (26.3)
+Downloading setuptools-69.5.1-py3-none-any.whl (894 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 894.6/894.6 kB 28.7 MB/s  0:00:00
+Installing collected packages: setuptools
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 84.0.0
+    Uninstalling setuptools-84.0.0:
+      Successfully uninstalled setuptools-84.0.0
+Successfully installed setuptools-69.5.1
+
+
+STANDARD ERROR
+
+
+RETURN CODE
+0
+
+TIMED OUT
+False

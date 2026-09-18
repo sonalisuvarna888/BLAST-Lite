@@ -1,0 +1,20 @@
+{
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "SOC": "Constant 0.8",
+  "temperature_C": 45,
+  "input_period_seconds": [
+    0,
+    86399
+  ],
+  "duration_years": 5,
+  "constant_input": true,
+  "API_duration_argument": "threshold_time=5",
+  "method_signature": "(input_timeseries: Union[dict, pandas.core.frame.DataFrame], threshold_time: float = None, threshold_capacity: float = None, threshold_efc: float = None, is_constant_input: bool = False, is_conserve_energy_throughput: bool = True, breakpoints_max_time_diff_s: float = 86400, breakpoints_max_EFC_diff: float = 1)",
+  "number_of_output_points": 1827,
+  "initial_q": 1.0,
+  "final_q": 0.7354776618956259,
+  "minimum_q": 0.7354776618956259,
+  "maximum_q": 1.0,
+  "final_time_days": 1825.9788657407755,
+  "final_time_years": 5.00268182394733
+}

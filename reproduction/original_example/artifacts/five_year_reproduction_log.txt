@@ -1,0 +1,47 @@
+BLAST-LITE FIVE-YEAR COMPATIBILITY REPRODUCTION
+==============================================================================
+
+The original physical inputs were retained. The duration keyword was selected automatically from the checked-out source method signature.
+
+COMMAND
+/content/blast_py311/bin/python /content/blast_lite_reproduction/reproduce_fast_calculation.py
+
+STANDARD OUTPUT
+Method signature:
+(input_timeseries: Union[dict, pandas.core.frame.DataFrame], threshold_time: float = None, threshold_capacity: float = None, threshold_efc: float = None, is_constant_input: bool = False, is_conserve_energy_throughput: bool = True, breakpoints_max_time_diff_s: float = 86400, breakpoints_max_EFC_diff: float = 1)
+Duration argument used:
+threshold_time=5
+Five-year simulation completed.
+{
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "SOC": "Constant 0.8",
+  "temperature_C": 45,
+  "input_period_seconds": [
+    0,
+    86399
+  ],
+  "duration_years": 5,
+  "constant_input": true,
+  "API_duration_argument": "threshold_time=5",
+  "method_signature": "(input_timeseries: Union[dict, pandas.core.frame.DataFrame], threshold_time: float = None, threshold_capacity: float = None, threshold_efc: float = None, is_constant_input: bool = False, is_conserve_energy_throughput: bool = True, breakpoints_max_time_diff_s: float = 86400, breakpoints_max_EFC_diff: float = 1)",
+  "number_of_output_points": 1827,
+  "initial_q": 1.0,
+  "final_q": 0.7354776618956259,
+  "minimum_q": 0.7354776618956259,
+  "maximum_q": 1.0,
+  "final_time_days": 1825.9788657407755,
+  "final_time_years": 5.00268182394733
+}
+CSV: /content/blast_lite_reproduction/fast_calculation_results.csv
+Figure: /content/blast_lite_reproduction/fast_calculation_q_trajectory.png
+Summary: /content/blast_lite_reproduction/fast_calculation_summary.json
+
+
+STANDARD ERROR
+
+
+RETURN CODE
+0
+
+TIMED OUT
+False

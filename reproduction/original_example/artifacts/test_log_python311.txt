@@ -1,0 +1,20 @@
+BLAST-LITE TESTS UNDER PYTHON 3.11
+==============================================================================
+
+
+COMMAND
+/content/blast_py311/bin/python -m pytest -q
+
+STANDARD OUTPUT
+
+no tests ran in 0.03s
+
+
+STANDARD ERROR
+
+
+RETURN CODE
+5
+
+TIMED OUT
+False

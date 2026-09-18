@@ -1,0 +1,32 @@
+BATTERY CLASS
+<class 'blast.models.nmc111_gr_Kokam75Ah_2017.Nmc111_Gr_Kokam75Ah_Battery'>
+
+CLASS FILE
+/content/BLAST-Lite/blast/models/nmc111_gr_Kokam75Ah_2017.py
+
+BOUND METHOD SIGNATURE
+(input_timeseries: Union[dict, pandas.core.frame.DataFrame], threshold_time: float = None, threshold_capacity: float = None, threshold_efc: float = None, is_constant_input: bool = False, is_conserve_energy_throughput: bool = True, breakpoints_max_time_diff_s: float = 86400, breakpoints_max_EFC_diff: float = 1)
+
+DOCSTRING
+Run battery life simulation over the input, optionally repeating for any number of years or until
+the battery capacity falls below a certain threshold.
+
+Updates attributes self.rates, self.stressors, self.outputs, and self.states inplace.
+
+Args:
+    input_timeseries (dict, pd.DataFrame)   Input time, SOC, and temperature series
+    threshold_time (float)                  Threshold number of years for stopping simulation
+    threshold_capacity (float)              Threshold capacity for stopping simulation
+    threshold_efc (float)                   Threshold number of equivalent full cycles for stopping simulation
+    is_constant_input (bool)                Whether the input is constant
+    is_conserve_energy_throughput (bool)    Whether to conserve energy throughput as simulation proceeds.
+                                            This effects how the SOC profile and stressors evolve over lifetime.
+                                            If true, energy throughput is conserved, that is, the depth-of-discharge
+                                            will increase as the battery degrades. If false, the EFCs (i.e., energy throughput)
+                                            of any given SOC swing will decrease. In real life, the time it takes for a cycle
+                                            to complete would also decrease, but this is beyond scope of this package.
+    breakpoints_max_time_diff_s (float)     Max time difference for finding breakpoints
+    breakpoints_max_EFC_diff (float)        Max EFC difference for finding breakpoints
+
+
+STANDARD ERROR

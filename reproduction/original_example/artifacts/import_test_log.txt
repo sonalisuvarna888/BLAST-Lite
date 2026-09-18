@@ -1,0 +1,34 @@
+BLAST-LITE IMPORT TEST
+==============================================================================
+
+
+COMMAND
+/content/blast_py311/bin/python -c 
+import sys
+import matplotlib
+matplotlib.use("Agg")
+
+import blast
+from blast.models import Nmc111_Gr_Kokam75Ah_Battery
+
+print("Python:", sys.version)
+print("BLAST package:", blast.__file__)
+print("Battery class:", Nmc111_Gr_Kokam75Ah_Battery)
+print("Matplotlib backend:", matplotlib.get_backend())
+
+
+STANDARD OUTPUT
+Python: 3.11.16 (main, Sep  1 2026, 14:18:37) [Clang 22.1.3 ]
+BLAST package: /content/BLAST-Lite/blast/__init__.py
+Battery class: <class 'blast.models.nmc111_gr_Kokam75Ah_2017.Nmc111_Gr_Kokam75Ah_Battery'>
+Matplotlib backend: Agg
+
+
+STANDARD ERROR
+
+
+RETURN CODE
+0
+
+TIMED OUT
+False

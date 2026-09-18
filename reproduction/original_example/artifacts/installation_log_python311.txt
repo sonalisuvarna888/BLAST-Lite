@@ -1,0 +1,279 @@
+BLAST-LITE INSTALLATION UNDER PYTHON 3.11
+==============================================================================
+
+The isolated Python 3.11 environment was selected to avoid the compatibility problems observed under the Colab Python 3.13 host environment.
+
+COMMAND
+/content/blast_py311/bin/python -m pip install -e /content/BLAST-Lite
+
+STANDARD OUTPUT
+Obtaining file:///content/BLAST-Lite
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Collecting h5pyd (from BLAST-Lite==1.1.0)
+  Downloading h5pyd-1.0.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting numpy<2.0.0 (from BLAST-Lite==1.1.0)
+  Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+Collecting pandas (from BLAST-Lite==1.1.0)
+  Downloading pandas-3.0.6-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+Collecting matplotlib (from BLAST-Lite==1.1.0)
+  Downloading matplotlib-3.11.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+Collecting scipy (from BLAST-Lite==1.1.0)
+  Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+Collecting nrel-rex (from BLAST-Lite==1.1.0)
+  Downloading nrel_rex-0.4.3-py3-none-any.whl.metadata (7.1 kB)
+Collecting geopy (from BLAST-Lite==1.1.0)
+  Downloading geopy-2.5.0-py3-none-any.whl.metadata (7.1 kB)
+Collecting geographiclib<3,>=1.52 (from geopy->BLAST-Lite==1.1.0)
+  Downloading geographiclib-2.1-py3-none-any.whl.metadata (1.6 kB)
+INFO: pip is looking at multiple versions of h5pyd to determine which version is compatible with other requirements. This could take a while.
+Collecting h5pyd (from BLAST-Lite==1.1.0)
+  Downloading h5pyd-0.24.0-py3-none-any.whl.metadata (1.8 kB)
+  Downloading h5pyd-0.23.0-py3-none-any.whl.metadata (1.8 kB)
+  Downloading h5pyd-0.22.0-py3-none-any.whl.metadata (1.9 kB)
+  Downloading h5pyd-0.21.0-py3-none-any.whl.metadata (1.9 kB)
+  Downloading h5pyd-0.20.0-py3-none-any.whl.metadata (1.9 kB)
+  Downloading h5pyd-0.19.0-py3-none-any.whl.metadata (1.9 kB)
+  Downloading h5pyd-0.18.0.tar.gz (139 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting requests_unixsocket (from h5pyd->BLAST-Lite==1.1.0)
+  Downloading requests_unixsocket-0.4.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting pytz (from h5pyd->BLAST-Lite==1.1.0)
+  Downloading pytz-2026.3.post1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting pyjwt (from h5pyd->BLAST-Lite==1.1.0)
+  Downloading pyjwt-2.14.0-py3-none-any.whl.metadata (3.4 kB)
+Collecting contourpy>=1.0.1 (from matplotlib->BLAST-Lite==1.1.0)
+  Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib->BLAST-Lite==1.1.0)
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.28.2 (from matplotlib->BLAST-Lite==1.1.0)
+  Downloading fonttools-4.65.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (125 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib->BLAST-Lite==1.1.0)
+  Downloading kiwisolver-1.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.2 kB)
+Requirement already satisfied: packaging>=20.0 in ./blast_py311/lib/python3.11/site-packages (from matplotlib->BLAST-Lite==1.1.0) (26.3)
+Collecting pillow>=9 (from matplotlib->BLAST-Lite==1.1.0)
+  Downloading pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+Collecting pyparsing>=3 (from matplotlib->BLAST-Lite==1.1.0)
+  Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+Collecting python-dateutil>=2.7 (from matplotlib->BLAST-Lite==1.1.0)
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib->BLAST-Lite==1.1.0)
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting click>=8.1.8 (from nrel-rex->BLAST-Lite==1.1.0)
+  Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting fsspec>=2021.09.0 (from nrel-rex->BLAST-Lite==1.1.0)
+  Downloading fsspec-2026.7.0-py3-none-any.whl.metadata (10 kB)
+Collecting dask>=2024.8.0 (from nrel-rex->BLAST-Lite==1.1.0)
+  Downloading dask-2026.8.0-py3-none-any.whl.metadata (3.8 kB)
+Collecting h5py>=3.13.0 (from nrel-rex->BLAST-Lite==1.1.0)
+  Downloading h5py-3.16.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+INFO: pip is looking at multiple versions of nrel-rex to determine which version is compatible with other requirements. This could take a while.
+Collecting nrel-rex (from BLAST-Lite==1.1.0)
+  Downloading nrel_rex-0.4.2-py3-none-any.whl.metadata (7.1 kB)
+  Downloading nrel_rex-0.4.1-py3-none-any.whl.metadata (7.1 kB)
+  Downloading nrel_rex-0.4.0-py3-none-any.whl.metadata (7.1 kB)
+  Downloading nrel_rex-0.3.5-py3-none-any.whl.metadata (7.0 kB)
+  Downloading nrel_rex-0.3.3-py3-none-any.whl.metadata (7.1 kB)
+Collecting fsspec<2026,>=2021.09.0 (from nrel-rex->BLAST-Lite==1.1.0)
+  Downloading fsspec-2025.12.0-py3-none-any.whl.metadata (10 kB)
+Collecting dask<2026,>=2024.8.0 (from nrel-rex->BLAST-Lite==1.1.0)
+  Downloading dask-2025.12.0-py3-none-any.whl.metadata (3.8 kB)
+Collecting nrel-rex (from BLAST-Lite==1.1.0)
+  Downloading nrel_rex-0.3.2-py3-none-any.whl.metadata (7.1 kB)
+Collecting fsspec<2025,>=2021.09.0 (from nrel-rex->BLAST-Lite==1.1.0)
+  Downloading fsspec-2024.12.0-py3-none-any.whl.metadata (11 kB)
+Collecting dask<2025,>=2024.8.0 (from nrel-rex->BLAST-Lite==1.1.0)
+  Downloading dask-2024.12.1-py3-none-any.whl.metadata (3.7 kB)
+Collecting nrel-rex (from BLAST-Lite==1.1.0)
+  Downloading nrel_rex-0.3.1-py3-none-any.whl.metadata (7.1 kB)
+INFO: pip is still looking at multiple versions of nrel-rex to determine which version is compatible with other requirements. This could take a while.
+  Downloading nrel_rex-0.3.0-py3-none-any.whl.metadata (7.1 kB)
+  Downloading nrel_rex-0.2.100-py3-none-any.whl.metadata (6.9 kB)
+Collecting pandas (from BLAST-Lite==1.1.0)
+  Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+Collecting packaging>=20.0 (from matplotlib->BLAST-Lite==1.1.0)
+  Downloading packaging-24.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting psutil<8,>=7.0.0 (from nrel-rex->BLAST-Lite==1.1.0)
+  Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+Collecting PyYAML<7,>=6.0.2 (from nrel-rex->BLAST-Lite==1.1.0)
+  Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting s3fs<2024,>=2023.6.0 (from nrel-rex->BLAST-Lite==1.1.0)
+  Downloading s3fs-2023.12.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting scikit-learn<2,>=1.6.1 (from nrel-rex->BLAST-Lite==1.1.0)
+  Downloading scikit_learn-1.9.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.3 kB)
+Collecting toml<0.11,>=0.10.2 (from nrel-rex->BLAST-Lite==1.1.0)
+  Downloading toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+Collecting xarray<2026,>=2024.07.0 (from nrel-rex->BLAST-Lite==1.1.0)
+  Downloading xarray-2025.12.0-py3-none-any.whl.metadata (12 kB)
+Collecting cloudpickle>=3.0.0 (from dask<2025,>=2024.8.0->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+Collecting partd>=1.4.0 (from dask<2025,>=2024.8.0->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading partd-1.4.2-py3-none-any.whl.metadata (4.6 kB)
+Collecting toolz>=0.10.0 (from dask<2025,>=2024.8.0->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading toolz-1.1.0-py3-none-any.whl.metadata (5.1 kB)
+Collecting importlib_metadata>=4.13.0 (from dask<2025,>=2024.8.0->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading importlib_metadata-9.0.1-py3-none-any.whl.metadata (4.5 kB)
+Collecting tzdata>=2022.7 (from pandas->BLAST-Lite==1.1.0)
+  Downloading tzdata-2026.4-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting aiobotocore<3.0.0,>=2.5.4 (from s3fs<2024,>=2023.6.0->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading aiobotocore-2.26.0-py3-none-any.whl.metadata (25 kB)
+Collecting fsspec<2025,>=2021.09.0 (from nrel-rex->BLAST-Lite==1.1.0)
+  Downloading fsspec-2023.12.2-py3-none-any.whl.metadata (6.8 kB)
+Collecting aiohttp!=4.0.0a0,!=4.0.0a1 (from s3fs<2024,>=2023.6.0->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading aiohttp-3.14.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+Collecting aioitertools<1.0.0,>=0.5.1 (from aiobotocore<3.0.0,>=2.5.4->s3fs<2024,>=2023.6.0->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading aioitertools-0.13.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting botocore<1.41.6,>=1.41.0 (from aiobotocore<3.0.0,>=2.5.4->s3fs<2024,>=2023.6.0->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading botocore-1.41.5-py3-none-any.whl.metadata (5.9 kB)
+Collecting jmespath<2.0.0,>=0.7.1 (from aiobotocore<3.0.0,>=2.5.4->s3fs<2024,>=2023.6.0->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading jmespath-1.1.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting multidict<7.0.0,>=6.0.0 (from aiobotocore<3.0.0,>=2.5.4->s3fs<2024,>=2023.6.0->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading multidict-6.9.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+Collecting wrapt<2.0.0,>=1.10.10 (from aiobotocore<3.0.0,>=2.5.4->s3fs<2024,>=2023.6.0->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading wrapt-1.17.3-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.4 kB)
+Collecting aiohappyeyeballs>=2.5.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->s3fs<2024,>=2023.6.0->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+Collecting aiosignal>=1.4.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->s3fs<2024,>=2023.6.0->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting attrs>=17.3.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->s3fs<2024,>=2023.6.0->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp!=4.0.0a0,!=4.0.0a1->s3fs<2024,>=2023.6.0->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+Collecting propcache>=0.2.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->s3fs<2024,>=2023.6.0->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading propcache-0.5.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (25 kB)
+Collecting typing_extensions>=4.4 (from aiohttp!=4.0.0a0,!=4.0.0a1->s3fs<2024,>=2023.6.0->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting yarl<2.0,>=1.17.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->s3fs<2024,>=2023.6.0->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading yarl-1.25.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (111 kB)
+Collecting urllib3!=2.2.0,<3,>=1.25.4 (from botocore<1.41.6,>=1.41.0->aiobotocore<3.0.0,>=2.5.4->s3fs<2024,>=2023.6.0->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting joblib>=1.4.0 (from scikit-learn<2,>=1.6.1->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting narwhals>=2.0.1 (from scikit-learn<2,>=1.6.1->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading narwhals-2.26.0-py3-none-any.whl.metadata (15 kB)
+Collecting threadpoolctl>=3.5.0 (from scikit-learn<2,>=1.6.1->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading threadpoolctl-3.7.0-py3-none-any.whl.metadata (24 kB)
+Collecting idna>=2.0 (from yarl<2.0,>=1.17.0->aiohttp!=4.0.0a0,!=4.0.0a1->s3fs<2024,>=2023.6.0->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting zipp>=3.20 (from importlib_metadata>=4.13.0->dask<2025,>=2024.8.0->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading zipp-4.1.0-py3-none-any.whl.metadata (3.6 kB)
+Collecting locket (from partd>=1.4.0->dask<2025,>=2024.8.0->nrel-rex->BLAST-Lite==1.1.0)
+  Downloading locket-1.0.0-py2.py3-none-any.whl.metadata (2.8 kB)
+Collecting requests>=1.1 (from requests_unixsocket->h5pyd->BLAST-Lite==1.1.0)
+  Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting charset_normalizer<4,>=2 (from requests>=1.1->requests_unixsocket->h5pyd->BLAST-Lite==1.1.0)
+  Downloading charset_normalizer-3.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (45 kB)
+Collecting certifi>=2023.5.7 (from requests>=1.1->requests_unixsocket->h5pyd->BLAST-Lite==1.1.0)
+  Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.3/18.3 MB 139.6 MB/s  0:00:00
+Downloading geopy-2.5.0-py3-none-any.whl (114 kB)
+Downloading geographiclib-2.1-py3-none-any.whl (40 kB)
+Downloading matplotlib-3.11.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.9/9.9 MB 138.7 MB/s  0:00:00
+Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.65.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 144.3 MB/s  0:00:00
+Downloading kiwisolver-1.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 60.3 MB/s  0:00:00
+Downloading pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 134.1 MB/s  0:00:00
+Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading nrel_rex-0.2.100-py3-none-any.whl (176 kB)
+Downloading click-8.5.0-py3-none-any.whl (125 kB)
+Downloading dask-2024.12.1-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 53.9 MB/s  0:00:00
+Downloading packaging-24.2-py3-none-any.whl (65 kB)
+Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 133.9 MB/s  0:00:00
+Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 32.3 MB/s  0:00:00
+Downloading s3fs-2023.12.2-py3-none-any.whl (28 kB)
+Downloading fsspec-2023.12.2-py3-none-any.whl (168 kB)
+Downloading aiobotocore-2.26.0-py3-none-any.whl (87 kB)
+Downloading aiohttp-3.14.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 76.5 MB/s  0:00:00
+Downloading aioitertools-0.13.0-py3-none-any.whl (24 kB)
+Downloading botocore-1.41.5-py3-none-any.whl (14.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.3/14.3 MB 32.7 MB/s  0:00:00
+Downloading jmespath-1.1.0-py3-none-any.whl (20 kB)
+Downloading multidict-6.9.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (304 kB)
+Downloading scikit_learn-1.9.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.3/9.3 MB 115.9 MB/s  0:00:00
+Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 79.7 MB/s  0:00:00
+Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+Downloading wrapt-1.17.3-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (82 kB)
+Downloading xarray-2025.12.0-py3-none-any.whl (1.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 55.2 MB/s  0:00:00
+Downloading yarl-1.25.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (117 kB)
+Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+Downloading h5py-3.16.0-cp311-cp311-manylinux_2_28_x86_64.whl (5.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 102.5 MB/s  0:00:00
+Downloading idna-3.20-py3-none-any.whl (69 kB)
+Downloading importlib_metadata-9.0.1-py3-none-any.whl (27 kB)
+Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+Downloading narwhals-2.26.0-py3-none-any.whl (474 kB)
+Downloading partd-1.4.2-py3-none-any.whl (18 kB)
+Downloading propcache-0.5.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (235 kB)
+Downloading pytz-2026.3.post1-py2.py3-none-any.whl (508 kB)
+Downloading threadpoolctl-3.7.0-py3-none-any.whl (26 kB)
+Downloading toolz-1.1.0-py3-none-any.whl (58 kB)
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading tzdata-2026.4-py2.py3-none-any.whl (347 kB)
+Downloading zipp-4.1.0-py3-none-any.whl (10 kB)
+Downloading locket-1.0.0-py2.py3-none-any.whl (4.4 kB)
+Downloading pyjwt-2.14.0-py3-none-any.whl (32 kB)
+Downloading requests_unixsocket-0.4.1-py3-none-any.whl (11 kB)
+Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+Downloading charset_normalizer-3.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (262 kB)
+Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+Building wheels for collected packages: BLAST-Lite, h5pyd
+  Building editable for BLAST-Lite (pyproject.toml): started
+  Building editable for BLAST-Lite (pyproject.toml): finished with status 'done'
+  Created wheel for BLAST-Lite: filename=blast_lite-1.1.0-0.editable-py3-none-any.whl size=9056 sha256=3eb70ab5ebdc83949ea0a9742b00c709864da3a7dc8df2cfbb3e8f874bb717b3
+  Stored in directory: /tmp/pip-ephem-wheel-cache-ccdcn62q/wheels/4a/89/e9/1a7679f627f9ea25d35697c66887fd6e7384ada1d379e8d4e1
+  Building wheel for h5pyd (pyproject.toml): started
+  Building wheel for h5pyd (pyproject.toml): finished with status 'done'
+  Created wheel for h5pyd: filename=h5pyd-0.18.0-py3-none-any.whl size=169331 sha256=b0d9c4aa8c72ce0608353a3b8e268dba8ebfd14bfec9b7f2e273674cdf61aa20
+  Stored in directory: /root/.cache/pip/wheels/a4/dd/4d/cad4371c9ae4d377250c698d52826ef9fde974889a98b75c0e
+Successfully built BLAST-Lite h5pyd
+Installing collected packages: pytz, zipp, wrapt, urllib3, tzdata, typing_extensions, toolz, toml, threadpoolctl, six, PyYAML, pyparsing, pyjwt, psutil, propcache, pillow, packaging, numpy, narwhals, multidict, locket, kiwisolver, jmespath, idna, geographiclib, fsspec, frozenlist, fonttools, cycler, cloudpickle, click, charset_normalizer, certifi, attrs, aioitertools, aiohappyeyeballs, yarl, scipy, requests, python-dateutil, partd, joblib, importlib_metadata, h5py, geopy, contourpy, aiosignal, scikit-learn, requests_unixsocket, pandas, matplotlib, dask, botocore, aiohttp, xarray, h5pyd, aiobotocore, s3fs, nrel-rex, BLAST-Lite
+  Attempting uninstall: packaging
+    Found existing installation: packaging 26.3
+    Uninstalling packaging-26.3:
+      Successfully uninstalled packaging-26.3
+
+Successfully installed BLAST-Lite-1.1.0 PyYAML-6.0.3 aiobotocore-2.26.0 aiohappyeyeballs-2.7.1 aiohttp-3.14.3 aioitertools-0.13.0 aiosignal-1.4.0 attrs-26.1.0 botocore-1.41.5 certifi-2026.7.22 charset_normalizer-3.5.1 click-8.5.0 cloudpickle-3.1.2 contourpy-1.3.3 cycler-0.12.1 dask-2024.12.1 fonttools-4.65.0 frozenlist-1.8.0 fsspec-2023.12.2 geographiclib-2.1 geopy-2.5.0 h5py-3.16.0 h5pyd-0.18.0 idna-3.20 importlib_metadata-9.0.1 jmespath-1.1.0 joblib-1.6.0 kiwisolver-1.5.1 locket-1.0.0 matplotlib-3.11.2 multidict-6.9.0 narwhals-2.26.0 nrel-rex-0.2.100 numpy-1.26.4 packaging-24.2 pandas-2.3.3 partd-1.4.2 pillow-12.3.0 propcache-0.5.4 psutil-7.2.2 pyjwt-2.14.0 pyparsing-3.3.2 python-dateutil-2.9.0.post0 pytz-2026.3.post1 requests-2.34.2 requests_unixsocket-0.4.1 s3fs-2023.12.2 scikit-learn-1.9.1 scipy-1.17.1 six-1.17.0 threadpoolctl-3.7.0 toml-0.10.2 toolz-1.1.0 typing_extensions-4.16.0 tzdata-2026.4 urllib3-2.8.0 wrapt-1.17.3 xarray-2025.12.0 yarl-1.25.1 zipp-4.1.0
+
+
+STANDARD ERROR
+
+
+RETURN CODE
+0
+
+TIMED OUT
+False
