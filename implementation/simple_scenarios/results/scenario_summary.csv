@@ -1,0 +1,4 @@
+scenario,description,input_file,constant_input,duration_argument,requested_years,initial_q,final_q,q_change,minimum_q,maximum_q,final_time_years,output_points,output_file
+scenario_A,Constant storage at 80% SOC and 45 C,scenario_A_constant_80pct.csv,True,threshold_time,5,1.0,0.7354776618956259,-0.2645223381043741,0.7354776618956259,1.0,5.00268182394733,1827,results/scenario_A_output.csv
+scenario_B,Constant storage at 50% SOC and 25 C,scenario_B_constant_50pct.csv,True,threshold_time,5,1.0,0.9819951253673164,-0.018004874632683632,0.9819951253673164,1.0,5.00268182394733,1827,results/scenario_B_output.csv
+scenario_C,One-day cycle from 30% to 80% SOC at 25 C,scenario_C_daily_cycle.csv,False,threshold_time,5,1.0,0.9458900542220395,-0.054109945777960466,0.9458900542220395,1.0,5.00268182394733,1827,results/scenario_C_output.csv

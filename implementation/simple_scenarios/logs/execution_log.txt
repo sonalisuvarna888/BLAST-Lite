@@ -1,0 +1,40 @@
+BLAST-LITE SIMPLE-SCENARIO EXECUTION
+========================================================================
+
+COMMAND
+/content/blast_py311/bin/python /content/BLAST-Lite/implementation/simple_scenarios/run_simple_scenarios.py
+
+STANDARD OUTPUT
+Running scenario_A...
+  final q = 0.735477662
+  final time = 5.002682 years
+Running scenario_B...
+  final q = 0.981995125
+  final time = 5.002682 years
+Running scenario_C...
+  final q = 0.945890054
+  final time = 5.002682 years
+
+Run record:
+{
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "simulation_years_requested": 5,
+  "number_of_scenarios": 3,
+  "successful_scenarios": 3,
+  "failed_scenarios": 0,
+  "summary_file": "results/scenario_summary.csv",
+  "comparison_figure": "results/scenario_comparison.png"
+}
+
+Scenario summary:
+  scenario                               description                    input_file  constant_input duration_argument  requested_years  initial_q  final_q  q_change  minimum_q  maximum_q  final_time_years  output_points                   output_file
+scenario_A      Constant storage at 80% SOC and 45 C scenario_A_constant_80pct.csv            True    threshold_time                5        1.0 0.735478 -0.264522   0.735478        1.0          5.002682           1827 results/scenario_A_output.csv
+scenario_B      Constant storage at 50% SOC and 25 C scenario_B_constant_50pct.csv            True    threshold_time                5        1.0 0.981995 -0.018005   0.981995        1.0          5.002682           1827 results/scenario_B_output.csv
+scenario_C One-day cycle from 30% to 80% SOC at 25 C    scenario_C_daily_cycle.csv           False    threshold_time                5        1.0 0.945890 -0.054110   0.945890        1.0          5.002682           1827 results/scenario_C_output.csv
+
+
+STANDARD ERROR
+
+
+RETURN CODE
+0

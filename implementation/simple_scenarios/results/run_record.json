@@ -1,0 +1,9 @@
+{
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "simulation_years_requested": 5,
+  "number_of_scenarios": 3,
+  "successful_scenarios": 3,
+  "failed_scenarios": 0,
+  "summary_file": "results/scenario_summary.csv",
+  "comparison_figure": "results/scenario_comparison.png"
+}
