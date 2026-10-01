@@ -1,0 +1,27 @@
+{
+  "research_status": "Controlled temperature sensitivity plus climate-informed scenario",
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "source_soc_profile": "examples/application profiles/Residential PV-BESS (CA, mild).csv",
+  "soc_profile_interpretation": "Repository-provided simulated residential PV-BESS annual SOC profile",
+  "source_profile_rows": 35040,
+  "source_profile_interval_seconds": 900,
+  "source_profile_annualized_efc": 72.647357,
+  "source_profile_first_soc": 0.5,
+  "source_profile_last_soc": 0.792004,
+  "source_profile_repeat_jump": -0.292004,
+  "temperature_experiments": {
+    "T25": "Constant 25 degrees Celsius",
+    "T30": "Constant 30 degrees Celsius",
+    "T40": "Constant 40 degrees Celsius",
+    "Miami": "Repository hourly Miami temperature profile; 5.0 to 35.6 degrees Celsius"
+  },
+  "controlled_variable": "The SOC trajectory is held identical across temperature cases.",
+  "boundary_policy": "Do not silently repeat the source profile with its 29.2-percentage-point annual boundary jump. Construct and document a transition to the initial SOC.",
+  "simulation_horizon_years": 5,
+  "important_boundaries": [
+    "The application SOC profile is repository-provided and simulated.",
+    "The Miami temperature file is climate-informed but is not site-matched to the California SOC profile.",
+    "The work isolates modeled temperature sensitivity; it is not an empirical lifetime validation.",
+    "No aged second-life initial condition is applied yet."
+  ]
+}

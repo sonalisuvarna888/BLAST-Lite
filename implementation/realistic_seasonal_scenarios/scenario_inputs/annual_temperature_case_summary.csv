@@ -1,0 +1,5 @@
+case,file,rows,duration_days,soc_min,soc_mean,soc_max,temperature_min_C,temperature_mean_C,temperature_max_C,boundary_correction_rows,first_soc,last_soc
+T25,scenario_T25_annual.csv,35040,364.9895833333333,0.30001,0.8159771787671232,0.95,25.0,25.0,25.0,96,0.5,0.5
+T30,scenario_T30_annual.csv,35040,364.9895833333333,0.30001,0.8159771787671232,0.95,30.0,30.0,30.0,96,0.5,0.5
+T40,scenario_T40_annual.csv,35040,364.9895833333333,0.30001,0.8159771787671232,0.95,40.0,40.0,40.0,96,0.5,0.5
+Miami_variable,scenario_Miami_variable_annual.csv,35040,364.9895833333333,0.30001,0.8159771787671232,0.95,5.0,24.506906392694063,35.6,96,0.5,0.5

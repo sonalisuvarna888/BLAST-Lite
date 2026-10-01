@@ -1,0 +1,18 @@
+{
+  "q_T25": 0.9228114321280864,
+  "q_T30": 0.8889711316566016,
+  "q_T40": 0.7785460375685382,
+  "q_Miami": 0.9168800249265976,
+  "capacity_loss_T25_percent": 7.718856787191363,
+  "capacity_loss_T30_percent": 11.102886834339841,
+  "capacity_loss_T40_percent": 22.145396243146177,
+  "capacity_loss_Miami_percent": 8.31199750734024,
+  "q_difference_T25_minus_T30": 0.033840300471484785,
+  "q_difference_T30_minus_T40": 0.11042509408806334,
+  "q_difference_T25_minus_T40": 0.14426539455954812,
+  "q_difference_T25_minus_Miami": 0.00593140720148877,
+  "relative_capacity_loss_multiplier_T40_vs_T25": 2.868999497424819,
+  "final_efc_spread": 8.74650477755796,
+  "controlled_temperature_statement": "For an identical annual SOC input, the modeled final q decreased as constant temperature increased from 25 C to 30 C to 40 C.",
+  "efc_interpretation": "Final EFC differs across temperature cases despite identical input SOC because the model was run with its default energy-throughput conservation behavior as capacity degraded."
+}

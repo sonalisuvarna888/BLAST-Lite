@@ -1,0 +1,49 @@
+REALISTIC SCENARIO SMOKE TEST
+========================================================================
+
+COMMAND
+/content/blast_py311/bin/python /content/BLAST-Lite/implementation/realistic_seasonal_scenarios/run_realistic_scenarios.py --mode smoke
+
+STANDARD OUTPUT
+Running T25 in smoke mode...
+  final q = 0.983470188
+  final time = 30.6979 days
+  final EFC = 5.543088
+Running T30 in smoke mode...
+  final q = 0.976125425
+  final time = 30.6979 days
+  final EFC = 5.543089
+Running T40 in smoke mode...
+  final q = 0.951891113
+  final time = 30.6979 days
+  final EFC = 5.543089
+Running Miami_variable in smoke mode...
+  final q = 0.988000883
+  final time = 30.6979 days
+  final EFC = 5.543088
+
+Run record:
+{
+  "mode": "smoke",
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "requested_years": null,
+  "successful_scenarios": 4,
+  "failed_scenarios": 0,
+  "summary_file": "/content/BLAST-Lite/implementation/realistic_seasonal_scenarios/results/smoke_scenario_summary.csv",
+  "error_file": "/content/BLAST-Lite/implementation/realistic_seasonal_scenarios/logs/smoke_scenario_errors.json",
+  "comparison_figure": "/content/BLAST-Lite/implementation/realistic_seasonal_scenarios/figures/smoke_q_comparison.png"
+}
+
+Summary:
+      scenario  mode                                             description                         input_file  input_rows  input_duration_days temperature_type  temperature_min_C  temperature_mean_C  temperature_max_C  soc_min  soc_mean  soc_max   duration_argument requested_years  initial_q  final_q  q_change  minimum_q  final_time_days  final_time_years  final_efc  output_points                             output_file
+           T25 smoke                Residential PV-BESS SOC at constant 25 C            scenario_T25_annual.csv        2880            29.989583         constant               25.0           25.000000               25.0 0.300016  0.800414 0.949994 none_one_input_pass            None        1.0 0.983470 -0.016530   0.983470        30.697917          0.084104   5.543088             32            results/smoke_T25_output.csv
+           T30 smoke                Residential PV-BESS SOC at constant 30 C            scenario_T30_annual.csv        2880            29.989583         constant               30.0           30.000000               30.0 0.300016  0.800414 0.949994 none_one_input_pass            None        1.0 0.976125 -0.023875   0.976125        30.697917          0.084104   5.543089             32            results/smoke_T30_output.csv
+           T40 smoke                Residential PV-BESS SOC at constant 40 C            scenario_T40_annual.csv        2880            29.989583         constant               40.0           40.000000               40.0 0.300016  0.800414 0.949994 none_one_input_pass            None        1.0 0.951891 -0.048109   0.951891        30.697917          0.084104   5.543089             32            results/smoke_T40_output.csv
+Miami_variable smoke Residential PV-BESS SOC with variable Miami temperature scenario_Miami_variable_annual.csv        2880            29.989583 climate-informed                9.4           19.568299               28.9 0.300016  0.800414 0.949994 none_one_input_pass            None        1.0 0.988001 -0.011999   0.988001        30.697917          0.084104   5.543088             32 results/smoke_Miami_variable_output.csv
+
+
+STANDARD ERROR
+
+
+RETURN CODE
+0

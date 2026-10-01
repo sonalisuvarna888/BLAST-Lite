@@ -1,0 +1,10 @@
+{
+  "mode": "smoke",
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "requested_years": null,
+  "successful_scenarios": 4,
+  "failed_scenarios": 0,
+  "summary_file": "/content/BLAST-Lite/implementation/realistic_seasonal_scenarios/results/smoke_scenario_summary.csv",
+  "error_file": "/content/BLAST-Lite/implementation/realistic_seasonal_scenarios/logs/smoke_scenario_errors.json",
+  "comparison_figure": "/content/BLAST-Lite/implementation/realistic_seasonal_scenarios/figures/smoke_q_comparison.png"
+}

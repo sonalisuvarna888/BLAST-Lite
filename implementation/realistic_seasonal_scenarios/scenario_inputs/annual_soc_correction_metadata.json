@@ -1,0 +1,21 @@
+{
+  "source_file": "examples/application profiles/Residential PV-BESS (CA, mild).csv",
+  "output_file": "implementation/realistic_seasonal_scenarios/scenario_inputs/annual_soc_residential_pvbess_CA_corrected.csv",
+  "rows": 35040,
+  "interval_seconds": 900,
+  "duration_days": 364.9895833333333,
+  "source_first_soc": 0.5,
+  "source_last_soc": 0.792004,
+  "corrected_first_soc": 0.5,
+  "corrected_last_soc": 0.5,
+  "corrected_repeat_jump": 0.0,
+  "transition_duration_hours": 24,
+  "transition_points": 96,
+  "transition_start_soc": 0.949987,
+  "transition_target_soc": 0.5,
+  "maximum_absolute_adjustment": 0.31047054736842106,
+  "original_profile_efc": 72.645284,
+  "corrected_profile_efc": 72.791286,
+  "efc_difference": 0.14600199999999575,
+  "correction_interpretation": "The final 24 hours were replaced with a synthetic linear return to the initial SOC to prevent an artificial annual repeat jump."
+}

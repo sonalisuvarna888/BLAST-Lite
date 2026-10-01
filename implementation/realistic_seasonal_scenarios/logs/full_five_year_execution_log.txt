@@ -1,0 +1,52 @@
+REALISTIC SEASONAL SCENARIOS — FIVE-YEAR EXECUTION
+========================================================================
+
+COMMAND
+/content/blast_py311/bin/python /content/BLAST-Lite/implementation/realistic_seasonal_scenarios/run_realistic_scenarios.py --mode full --years 5
+
+ELAPSED SECONDS
+9.586913108825684
+
+STANDARD OUTPUT
+Running T25 in full mode...
+  final q = 0.922811432
+  final time = 1825.1563 days
+  final EFC = 363.691560
+Running T30 in full mode...
+  final q = 0.888971132
+  final time = 1825.1563 days
+  final EFC = 363.252993
+Running T40 in full mode...
+  final q = 0.778546038
+  final time = 1825.1563 days
+  final EFC = 354.945055
+Running Miami_variable in full mode...
+  final q = 0.916880025
+  final time = 1825.1563 days
+  final EFC = 363.668887
+
+Run record:
+{
+  "mode": "full",
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "requested_years": 5.0,
+  "successful_scenarios": 4,
+  "failed_scenarios": 0,
+  "summary_file": "/content/BLAST-Lite/implementation/realistic_seasonal_scenarios/results/full_scenario_summary.csv",
+  "error_file": "/content/BLAST-Lite/implementation/realistic_seasonal_scenarios/logs/full_scenario_errors.json",
+  "comparison_figure": "/content/BLAST-Lite/implementation/realistic_seasonal_scenarios/figures/full_q_comparison.png"
+}
+
+Summary:
+      scenario mode                                             description                         input_file  input_rows  input_duration_days temperature_type  temperature_min_C  temperature_mean_C  temperature_max_C  soc_min  soc_mean  soc_max duration_argument  requested_years  initial_q  final_q  q_change  minimum_q  final_time_days  final_time_years  final_efc  output_points                            output_file
+           T25 full                Residential PV-BESS SOC at constant 25 C            scenario_T25_annual.csv       35040           364.989583         constant               25.0           25.000000               25.0  0.30001  0.815977     0.95    threshold_time              5.0        1.0 0.922811 -0.077189   0.922811       1825.15625          5.000428 363.691560           1830            results/full_T25_output.csv
+           T30 full                Residential PV-BESS SOC at constant 30 C            scenario_T30_annual.csv       35040           364.989583         constant               30.0           30.000000               30.0  0.30001  0.815977     0.95    threshold_time              5.0        1.0 0.888971 -0.111029   0.888971       1825.15625          5.000428 363.252993           1830            results/full_T30_output.csv
+           T40 full                Residential PV-BESS SOC at constant 40 C            scenario_T40_annual.csv       35040           364.989583         constant               40.0           40.000000               40.0  0.30001  0.815977     0.95    threshold_time              5.0        1.0 0.778546 -0.221454   0.778546       1825.15625          5.000428 354.945055           1830            results/full_T40_output.csv
+Miami_variable full Residential PV-BESS SOC with variable Miami temperature scenario_Miami_variable_annual.csv       35040           364.989583 climate-informed                5.0           24.506906               35.6  0.30001  0.815977     0.95    threshold_time              5.0        1.0 0.916880 -0.083120   0.916880       1825.15625          5.000428 363.668887           1830 results/full_Miami_variable_output.csv
+
+
+STANDARD ERROR
+
+
+RETURN CODE
+0

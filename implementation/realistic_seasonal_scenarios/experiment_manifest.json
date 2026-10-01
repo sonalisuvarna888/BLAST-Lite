@@ -1,0 +1,267 @@
+{
+  "experiment": "Realistic seasonal BLAST-Lite temperature sensitivity",
+  "research_status": "Controlled model experiment with one climate-informed case",
+  "git_branch": "implementation/realistic-seasonal-scenarios",
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "source_soc_profile": "examples/application profiles/Residential PV-BESS (CA, mild).csv",
+  "climate_source": "examples/climates/hourly_temperature_miami.csv",
+  "simulation_horizon_years": 5,
+  "duration_argument": "threshold_time",
+  "is_constant_input": false,
+  "same_soc_across_temperature_cases": true,
+  "boundary_correction": {
+    "duration_hours": 24,
+    "first_soc": 0.5,
+    "last_soc": 0.5,
+    "repeat_jump": 0.0,
+    "added_profile_efc": 0.14600199999999575
+  },
+  "successful_scenarios": 4,
+  "failed_scenarios": 0,
+  "results": [
+    {
+      "scenario": "T25",
+      "temperature_type": "constant",
+      "temperature_min_C": 25.0,
+      "temperature_mean_C": 25.0,
+      "temperature_max_C": 25.0,
+      "final_q": 0.9228114321280864,
+      "modeled_capacity_loss_percent": 7.718856787191363,
+      "final_efc": 363.69155955224375,
+      "final_time_years": 5.000428082191782,
+      "output_points": 1830
+    },
+    {
+      "scenario": "T30",
+      "temperature_type": "constant",
+      "temperature_min_C": 30.0,
+      "temperature_mean_C": 30.0,
+      "temperature_max_C": 30.0,
+      "final_q": 0.8889711316566016,
+      "modeled_capacity_loss_percent": 11.102886834339841,
+      "final_efc": 363.252992937632,
+      "final_time_years": 5.000428082191782,
+      "output_points": 1830
+    },
+    {
+      "scenario": "T40",
+      "temperature_type": "constant",
+      "temperature_min_C": 40.0,
+      "temperature_mean_C": 40.0,
+      "temperature_max_C": 40.0,
+      "final_q": 0.7785460375685382,
+      "modeled_capacity_loss_percent": 22.145396243146177,
+      "final_efc": 354.9450547746858,
+      "final_time_years": 5.000428082191782,
+      "output_points": 1830
+    },
+    {
+      "scenario": "Miami_variable",
+      "temperature_type": "climate-informed",
+      "temperature_min_C": 5.0,
+      "temperature_mean_C": 24.506906392694063,
+      "temperature_max_C": 35.6,
+      "final_q": 0.9168800249265976,
+      "modeled_capacity_loss_percent": 8.31199750734024,
+      "final_efc": 363.6688867368261,
+      "final_time_years": 5.000428082191782,
+      "output_points": 1830
+    }
+  ],
+  "main_finding": "Under an identical annual SOC input, final q decreased as constant temperature increased from 25 C to 30 C to 40 C.",
+  "important_limitations": [
+    "The source SOC profile is repository-provided and simulated.",
+    "The final-day SOC boundary correction is synthetic.",
+    "The Miami climate is not site-matched to the California SOC profile.",
+    "No documented aged second-life initial condition is applied.",
+    "The results represent model behavior, not empirical pack validation."
+  ],
+  "file_count_excluding_manifest": 37,
+  "files": [
+    {
+      "path": "implementation/realistic_seasonal_scenarios/README.md",
+      "size_bytes": 7723,
+      "sha256": "31b768a930ee3ec2500599b77afe6fb3b54f2393f044f80c003574b5f913165c"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/experiment_design.json",
+      "size_bytes": 1501,
+      "sha256": "9c784cf2ab697d87ae54d6cec95bf9ac6b9ec4ea1fefa04ea8e81fed7a60ab9e"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/figures/annual_boundary_correction.png",
+      "size_bytes": 104606,
+      "sha256": "ce7e8c2694b45789edd8f7e3a640eb817c63edeff467a4579a7a8e258e9b0ab8"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/figures/annual_soc_temperature_cases.png",
+      "size_bytes": 558514,
+      "sha256": "034f603d66830a66f098e05aaafb62597551d3f988cc51cbd3e1ff1e85a2877d"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/figures/final_q_and_efc_comparison.png",
+      "size_bytes": 108678,
+      "sha256": "6bfefb65f29a4efa3bda01da82b768348048fdb19ce6892a074ca568e573a6d5"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/figures/full_q_comparison.png",
+      "size_bytes": 180624,
+      "sha256": "e6f5a56a77cda4fad57d0e35b9e6607dc26040aefe5ee68c5eb682aa6e9bd503"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/figures/representative_summer_week.png",
+      "size_bytes": 218879,
+      "sha256": "2de724b7399084df77defae94f7943e0fe7c6453996f010e14af2b3e75fb59f8"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/figures/smoke_q_comparison.png",
+      "size_bytes": 168497,
+      "sha256": "65ea7d9db3238e74e3ebefa615eb7be5d45d1151fc5d194f0634cd5f8380e44a"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/figures/temperature_exposure_distribution.png",
+      "size_bytes": 84128,
+      "sha256": "651f248f188aa5b3a80f9953ce00e3766d477c6b123975423b8ae84461ace16e"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/figures/temperature_sensitivity_final_results.png",
+      "size_bytes": 130582,
+      "sha256": "eb6c6167454b9c12a678c7fe13d29d5f967a98967990da24b4a44beb73524139"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/figures/temperature_sensitivity_q_trajectories.png",
+      "size_bytes": 249194,
+      "sha256": "4ec89bd0d0f8316221db1cc44d96c549c3c66101e1135b5f8a17031da16ab297"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/logs/full_five_year_execution_log.txt",
+      "size_bytes": 3446,
+      "sha256": "2b1297c116fe86734f66cab492b6409a9f0ad968b5947449e5cb531b86592644"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/logs/full_scenario_errors.json",
+      "size_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/logs/smoke_execution_log.txt",
+      "size_bytes": 3387,
+      "sha256": "37d081550a7d857a1847741449f74c4f87cbf7f01194447fae7b8f50db1b2dbf"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/logs/smoke_scenario_errors.json",
+      "size_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/results/full_Miami_variable_output.csv",
+      "size_bytes": 132942,
+      "sha256": "2e963523e71f9a6b6008b7ca3412968c7cdebe6926ce2b9a55e9e4c2dae4f309"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/results/full_T25_output.csv",
+      "size_bytes": 132890,
+      "sha256": "e8df723bce0ee891c1ac9c5bd11b4d07ce70baa95f4ec0397bbd5882e9addb5d"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/results/full_T30_output.csv",
+      "size_bytes": 133017,
+      "sha256": "5bd46a5e2d56554c6a16bad3ca12fcbef0e2e9b2ce6b5d06075dc9f6dbcc1071"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/results/full_T40_output.csv",
+      "size_bytes": 133193,
+      "sha256": "e65422d8febf94c3b03c9e0237c56e0c3f3deccf410a6ccdbed13a4588fce54a"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/results/full_run_record.json",
+      "size_bytes": 503,
+      "sha256": "bfc5f6f59425bad30eea1fd98808e3dc95d19282a1905ca74f29cdc2b6747211"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/results/full_scenario_summary.csv",
+      "size_bytes": 1670,
+      "sha256": "e195e2783a619fdc9143443223b7c540c65bb0b658aa5ca8f54e9a27258b8b43"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/results/smoke_Miami_variable_output.csv",
+      "size_bytes": 2291,
+      "sha256": "cd64968af3ee68e54d2b329f9e1a8f0fc1bd355f9be5662e0faa9bf8c2a85639"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/results/smoke_T25_output.csv",
+      "size_bytes": 2342,
+      "sha256": "ba67623a8b4891f62423d6ddac9c59dfb7528477ca0b3b0b10c5eae527bc80ab"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/results/smoke_T30_output.csv",
+      "size_bytes": 2329,
+      "sha256": "5e753ef1a7b74f60528fc09c186eb1bd258ef8a2418cd36292ef51ac451f0ea5"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/results/smoke_T40_output.csv",
+      "size_bytes": 2329,
+      "sha256": "33637b43f0caaaf445c79920582f6e4aedc57146f2673cfb6b7aad8ddcbab94f"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/results/smoke_run_record.json",
+      "size_bytes": 508,
+      "sha256": "0bdb958a622d146e1e6c7b5be7bb13e9c0451344025a00ce39e4f49c4b7efe90"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/results/smoke_scenario_summary.csv",
+      "size_bytes": 1689,
+      "sha256": "69fd85f56ec22cf80d8fa3b73605313e2c6c6e9e09807605b75884cc19a506f6"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/results/temperature_sensitivity_metrics.json",
+      "size_bytes": 1025,
+      "sha256": "46b3f601075da8c0c9f30f5bd9809bc40b792064413e1d4978f187d3dbe3a7e1"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/results/temperature_sensitivity_presentation_table.csv",
+      "size_bytes": 522,
+      "sha256": "1b2d402bc22a7f016c93c0c45e7c45ea8fbb3302b6665fb3d78af8108176481e"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/run_realistic_scenarios.py",
+      "size_bytes": 12710,
+      "sha256": "6da0a903feaa2be9ccbb5a209e3bf99649c9ac20c4f7bb8741cd0e6fed83a060"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/scenario_inputs/annual_soc_correction_metadata.json",
+      "size_bytes": 907,
+      "sha256": "8f4d3c8c6f1b6d62bbfbbc5068b267cf4c979b0b1824e88cc6b54413e6846627"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/scenario_inputs/annual_soc_residential_pvbess_CA_corrected.csv",
+      "size_bytes": 1439842,
+      "sha256": "e4bbd6410a1f834a66ff5d6fd41fff45696421f17adc17486aa2003f2e02e6db"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/scenario_inputs/annual_temperature_case_summary.csv",
+      "size_bytes": 628,
+      "sha256": "1257978743cd338de23390ee963cf5e00272fae4de8ec7b0e8bf471622c5037b"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/scenario_inputs/scenario_Miami_variable_annual.csv",
+      "size_bytes": 1164905,
+      "sha256": "a6c2dcd0ccc91590c25c79436d1fcab9f3cbdd5a9db4d23a76739e3949159794"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/scenario_inputs/scenario_T25_annual.csv",
+      "size_bytes": 1116321,
+      "sha256": "f053d8fa2e21b9807b1effc88dddfeb1af0896578de2d5f6d2f4da6c79385005"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/scenario_inputs/scenario_T30_annual.csv",
+      "size_bytes": 1116321,
+      "sha256": "6ff0283da31ccc5c452e1889c08e7331090d38d172e2c2041b5ba6a8c4ddca2f"
+    },
+    {
+      "path": "implementation/realistic_seasonal_scenarios/scenario_inputs/scenario_T40_annual.csv",
+      "size_bytes": 1116321,
+      "sha256": "777cac82b47bb68784cea8700109d4f101b5eea898065eb830d46558ccbbd9ef"
+    }
+  ]
+}
