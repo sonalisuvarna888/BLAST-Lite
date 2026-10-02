@@ -1,0 +1,9 @@
+{
+  "target_duration_days": 365,
+  "temperature_C": 25.0,
+  "boundary_tolerance_SOC": 0.01,
+  "time_policy": "Normalize source time to zero and preserve native source resolution.",
+  "tail_policy": "Hold final observed SOC for missing tail when source coverage is shorter than the target year.",
+  "boundary_policy": "If annual first-last SOC differs by more than 0.01, replace the final 24 hours with a linear return to the initial SOC.",
+  "research_boundary": "Tail extension and boundary correction are synthetic harmonization steps and are explicitly quantified."
+}

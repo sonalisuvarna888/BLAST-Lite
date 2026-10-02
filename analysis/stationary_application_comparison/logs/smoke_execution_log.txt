@@ -1,0 +1,48 @@
+STATIONARY APPLICATION COMPARISON SMOKE TEST
+========================================================================
+
+STANDARD OUTPUT
+Running residential_CA_mild in smoke mode...
+  final q = 0.983471922
+  annualized input EFC = 63.505
+Running residential_Germany_aggressive in smoke mode...
+  final q = 0.991744765
+  annualized input EFC = 132.905
+Running commercial_peak_shaving in smoke mode...
+  final q = 0.978644131
+  annualized input EFC = 22.906
+Running frequency_containment_reserve in smoke mode...
+  final q = 0.992694749
+  annualized input EFC = 235.206
+
+Run record:
+{
+  "mode": "smoke",
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "fixed_temperature_C": 25.0,
+  "requested_years": null,
+  "q80_threshold": 0.8,
+  "q80_cap_years": 30.0,
+  "successful_cases": 4,
+  "failed_cases": 0,
+  "summary_file": "/content/BLAST-Lite/analysis/stationary_application_comparison/results/smoke_application_summary.csv",
+  "error_file": "/content/BLAST-Lite/analysis/stationary_application_comparison/logs/smoke_application_errors.json",
+  "comparison_figure": "/content/BLAST-Lite/analysis/stationary_application_comparison/figures/smoke_application_q_comparison.png"
+}
+
+Summary:
+                          case                                    label  mode                                    input_file  input_rows  input_duration_days  temperature_C  input_soc_min  input_soc_mean  input_soc_median  input_soc_max  input_annualized_efc duration_argument requested_years  initial_q  final_q  q_change  final_time_years  final_efc  mean_model_soc  mean_model_dod  rms_model_dod  output_points                                             output_file
+           residential_CA_mild            Residential PV-BESS — CA mild smoke            residential_CA_mild_annual_25C.csv        2881                 30.0           25.0       0.300016        0.800243      8.437810e-01       0.949994             63.505389    one_input_pass            None        1.0 0.983472 -0.016528          0.084132   5.543088        0.796927        0.258019       0.314423             32            results/smoke_residential_CA_mild_output.csv
+residential_Germany_aggressive Residential PV-BESS — Germany aggressive smoke residential_Germany_aggressive_annual_25C.csv        4321                 30.0           25.0       0.000000        0.058332      1.483189e-15       1.000000            132.905078    one_input_pass            None        1.0 0.991745 -0.008255          0.084399  11.390290        0.058878        0.320526       0.457151             32 results/smoke_residential_Germany_aggressive_output.csv
+       commercial_peak_shaving                  Commercial peak shaving smoke        commercial_peak_shaving_annual_25C.csv        4321                 30.0           25.0       0.778872        0.992317      1.000000e+00       1.000000             22.906108    one_input_pass            None        1.0 0.978644 -0.021356          0.084399   1.991283        0.991457        0.067776       0.091755             32        results/smoke_commercial_peak_shaving_output.csv
+ frequency_containment_reserve            Frequency containment reserve smoke  frequency_containment_reserve_annual_25C.csv        4321                 30.0           25.0       0.049779        0.475302      5.131875e-01       0.974479            235.205912    one_input_pass            None        1.0 0.992695 -0.007305          0.084399  19.727268        0.483141        0.256375       0.280372             32  results/smoke_frequency_containment_reserve_output.csv
+
+
+STANDARD ERROR
+
+
+RETURN CODE
+0
+
+ELAPSED SECONDS
+8.753526449203491

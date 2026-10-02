@@ -1,0 +1,247 @@
+{
+  "experiment": "Stationary application-profile comparison",
+  "branch": "analysis/stationary-application-comparison",
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "fixed_temperature_C": 25.0,
+  "five_year_horizon": 5,
+  "q80_threshold": 0.8,
+  "q80_cap_years": 30,
+  "successful_cases": 4,
+  "failed_cases": 0,
+  "results": [
+    {
+      "case": "residential_CA_mild",
+      "mean_SOC": 0.8159771787671232,
+      "annualized_input_EFC": 72.79336343617113,
+      "mean_model_DOD": 0.2594862296089459,
+      "RMS_model_DOD": 0.3221423211633515,
+      "five_year_final_q": 0.9228114321280864,
+      "modeled_capacity_loss_percent": 7.718856787191363,
+      "q80_reached": false,
+      "time_to_q80_years": null,
+      "q_at_threshold_cap": 0.8373051894908293
+    },
+    {
+      "case": "residential_Germany_aggressive",
+      "mean_SOC": 0.325505771624526,
+      "annualized_input_EFC": 261.8139568086749,
+      "mean_model_DOD": 0.7141338464732252,
+      "RMS_model_DOD": 0.8113910815841818,
+      "five_year_final_q": 0.8877125094099159,
+      "modeled_capacity_loss_percent": 11.228749059008415,
+      "q80_reached": true,
+      "time_to_q80_years": 12.219425418569273,
+      "q_at_threshold_cap": 0.7999914926791316
+    },
+    {
+      "case": "commercial_peak_shaving",
+      "mean_SOC": 0.9903343348465848,
+      "annualized_input_EFC": 18.83870736489086,
+      "mean_model_DOD": 0.0547434694317378,
+      "RMS_model_DOD": 0.1245720104349705,
+      "five_year_final_q": 0.9078493612969716,
+      "modeled_capacity_loss_percent": 9.215063870302842,
+      "q80_reached": false,
+      "time_to_q80_years": null,
+      "q_at_threshold_cap": 0.8193333269971746
+    },
+    {
+      "case": "frequency_containment_reserve",
+      "mean_SOC": 0.4930046555799081,
+      "annualized_input_EFC": 232.59713931446828,
+      "mean_model_DOD": 0.2898630945730963,
+      "RMS_model_DOD": 0.3132135297248088,
+      "five_year_final_q": 0.9571653828395932,
+      "modeled_capacity_loss_percent": 4.283461716040682,
+      "q80_reached": true,
+      "time_to_q80_years": 28.279490106544955,
+      "q_at_threshold_cap": 0.799993861719887
+    }
+  ],
+  "main_finding": "Modeled degradation is not determined by EFC alone; mean SOC, DOD distribution, calendar exposure, and cycling interact.",
+  "harmonization_boundary": "California and frequency-reserve profiles use documented final-day corrections. Commercial peak shaving uses an eight-day constant-SOC tail.",
+  "long_horizon_boundary": "q=0.80 threshold times are model extrapolations, not validated service-life predictions.",
+  "file_count_excluding_manifest": 36,
+  "files": [
+    {
+      "path": "analysis/stationary_application_comparison/README.md",
+      "size_bytes": 5965,
+      "sha256": "bce334c469957a7fbe2d900d7d574b2465d8e3ecfde8d4b985ee6de9e57e3936"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/experiment_design.json",
+      "size_bytes": 679,
+      "sha256": "84a9717a62c463919bec9b5344f135ff8bab4421ec57fd78640f881427177168"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/figures/application_final_q_and_annual_efc.png",
+      "size_bytes": 106899,
+      "sha256": "7dfc6e4a8ec32042f491739123c27dfcdb8ac52d264f6191a03574fb8acc9135"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/figures/application_profiles_representative_week.png",
+      "size_bytes": 299076,
+      "sha256": "749cb53c510ddc1f34c57d1b7c571201d0d8237098fab3546e62fa9ba67aa9df"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/figures/application_q_trajectories.png",
+      "size_bytes": 266383,
+      "sha256": "6c745c6a50f558f2f360d20623bafda8181fa2571ed5d13f9b3ce464fb384ae6"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/figures/application_stress_and_loss.png",
+      "size_bytes": 144082,
+      "sha256": "c9911227612ca27b84d88d2246e5f4f7a688ec2aad31025eaef06637ff3383ef"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/figures/application_time_to_q80.png",
+      "size_bytes": 109877,
+      "sha256": "7af03fe8e8dba815f1d5d48f270fa101aee2db9a0ad6014bedb270e68d9dad3c"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/figures/full_application_q_comparison.png",
+      "size_bytes": 231253,
+      "sha256": "08af10bb490edc4988ed8a8ac501facc359f67e019d400b2071169a442800ee4"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/figures/harmonized_application_profiles.png",
+      "size_bytes": 873921,
+      "sha256": "7307f54e48c75b565efe22cc1f0970b3afb73b2363c9b679cb95a8446b9930da"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/figures/smoke_application_q_comparison.png",
+      "size_bytes": 204989,
+      "sha256": "21de3599575c9d0ac639d32c5a3d3c9c391c36fd6891d08437a32b26ec696e30"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/harmonization_policy.json",
+      "size_bytes": 570,
+      "sha256": "d4c865c2179a011fe7d0e2d1e4da2634f27cfa0ccd785e0de84716ead354f858"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/logs/full_application_errors.json",
+      "size_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/logs/full_execution_log.txt",
+      "size_bytes": 4704,
+      "sha256": "e1410ad5a9969f1e32d79730e876ab895e6fdf36854554b0d79dbd9b551e1e4f"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/logs/smoke_application_errors.json",
+      "size_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/logs/smoke_execution_log.txt",
+      "size_bytes": 3602,
+      "sha256": "55fcdc2fe91bd762a3e3d298b4dc24d6207498f31400d250bde6dc0ee745f0f8"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/results/application_comparison_metrics.json",
+      "size_bytes": 2801,
+      "sha256": "5ada6c5f757e1e0e0ae7c61ca4695067a095419ff045209bfc6909017d5bad22"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/results/application_comparison_presentation_table.csv",
+      "size_bytes": 951,
+      "sha256": "2e93c2c25ee7201fec0464f21ddef03813dbf218b48a3631832529458b2e43e8"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/results/full_application_summary.csv",
+      "size_bytes": 2544,
+      "sha256": "403fc50ad2f62f307c369fab645e6ee6841bff9d7ae92d3c4f620a8daceb66e5"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/results/full_commercial_peak_shaving_output.csv",
+      "size_bytes": 135965,
+      "sha256": "13a0ff1f2b6e14cb60e63c323afd01ac57f423dfe8443833f0bd5f32c6c86da2"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/results/full_frequency_containment_reserve_output.csv",
+      "size_bytes": 135765,
+      "sha256": "a9b6ce35dc884f63215c0ae17d7925c740eede513b8430e910635692cef38ea7"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/results/full_residential_CA_mild_output.csv",
+      "size_bytes": 135255,
+      "sha256": "bb311306fda6d2d2d8c8315e0b726942d752698512c1b00a34475e66b95f5764"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/results/full_residential_Germany_aggressive_output.csv",
+      "size_bytes": 136259,
+      "sha256": "960de2abefe0cf878dec6a567147884e1c13f6d190a336b89c1c28656fc32210"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/results/full_run_record.json",
+      "size_bytes": 590,
+      "sha256": "22817ba733dfb48cfb247b2b6af0b59284b716dd8f9c69f63816a812eb0af6c1"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/results/harmonization_summary.csv",
+      "size_bytes": 1596,
+      "sha256": "ca18b2059597b9c15636de7dbd1095e25ae689f2e0f703457762d0e8f01aa4de"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/results/smoke_application_summary.csv",
+      "size_bytes": 1928,
+      "sha256": "00802711249eab1d4d1b0071283d5176e57e0ff89707536d707181026fd91dd8"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/results/smoke_commercial_peak_shaving_output.csv",
+      "size_bytes": 2421,
+      "sha256": "4edc503e1b279d5e9cfcd9f4c616a4a612ca278e3313f3fcabb3daa0e4532917"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/results/smoke_frequency_containment_reserve_output.csv",
+      "size_bytes": 2400,
+      "sha256": "b0f88dbf33e4e455182f62a44167c64861e5aae175e12ce3cdb606b0f00d18c2"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/results/smoke_residential_CA_mild_output.csv",
+      "size_bytes": 2341,
+      "sha256": "2b7257971b5a3a729d04712f09e2c66477b0a9b7564203cbb19db623789d87bf"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/results/smoke_residential_Germany_aggressive_output.csv",
+      "size_bytes": 2399,
+      "sha256": "47ee532f97194f0c28248f2d17c03514a4fa3ab6185b92e05513de0800f425b9"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/results/smoke_run_record.json",
+      "size_bytes": 595,
+      "sha256": "8cce7a26cadccacecee5163e9c5ff0ab1dd01ec8b0a6eee090f495cf725f8f5c"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/results/source_profile_audit.csv",
+      "size_bytes": 1317,
+      "sha256": "7324ac149776e503ae8c8356ba9e877c4ebd34f4453b9b50d1903eb7123109f3"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/run_application_comparison.py",
+      "size_bytes": 14655,
+      "sha256": "9e04bda2cbd44263eeeb256436ce733de184caf3325ffd283977711bca56093b"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/scenario_inputs/commercial_peak_shaving_annual_25C.csv",
+      "size_bytes": 2060500,
+      "sha256": "07cf428e1b7b0c0c7055c0f9e518f7974ed2b1134c9b802ccaef0c6f51c2fc67"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/scenario_inputs/frequency_containment_reserve_annual_25C.csv",
+      "size_bytes": 3122531,
+      "sha256": "01fad94988469b8bb8295a613480b129c279eb5566539562bfa26f16b4d12d21"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/scenario_inputs/residential_CA_mild_annual_25C.csv",
+      "size_bytes": 1473309,
+      "sha256": "c0e5b5224d8b840aa053c987fbf19156ce80d3d04f913729eace0ffb8583cad5"
+    },
+    {
+      "path": "analysis/stationary_application_comparison/scenario_inputs/residential_Germany_aggressive_annual_25C.csv",
+      "size_bytes": 2918724,
+      "sha256": "96324162c31aee76a5c15057932291800d90b861a4ae1961eae046a6bfab860a"
+    }
+  ]
+}

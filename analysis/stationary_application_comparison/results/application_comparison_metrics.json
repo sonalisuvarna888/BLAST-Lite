@@ -1,0 +1,64 @@
+{
+  "fixed_temperature_C": 25.0,
+  "five_year_results": {
+    "residential_CA_mild": {
+      "mean_SOC": 0.8159771787671232,
+      "median_SOC": 0.9286475,
+      "annualized_input_EFC": 72.79336343617113,
+      "mean_model_DOD": 0.2594862296089459,
+      "rms_model_DOD": 0.3221423211633515,
+      "five_year_final_q": 0.9228114321280864,
+      "five_year_capacity_loss_percent": 7.718856787191363,
+      "five_year_final_EFC": 363.69155955224375,
+      "q80_reached": false,
+      "time_to_q80_years": null,
+      "q80_run_final_q": 0.8373051894908293,
+      "q80_run_final_time_years": 30.00242579908675
+    },
+    "residential_Germany_aggressive": {
+      "mean_SOC": 0.325505771624526,
+      "median_SOC": 0.0375609260239779,
+      "annualized_input_EFC": 261.8139568086749,
+      "mean_model_DOD": 0.7141338464732252,
+      "rms_model_DOD": 0.8113910815841818,
+      "five_year_final_q": 0.8877125094099159,
+      "five_year_capacity_loss_percent": 11.228749059008415,
+      "five_year_final_EFC": 1236.4126295911874,
+      "q80_reached": true,
+      "time_to_q80_years": 12.219425418569273,
+      "q80_run_final_q": 0.7999914926791316,
+      "q80_run_final_time_years": 12.219425418569273
+    },
+    "commercial_peak_shaving": {
+      "mean_SOC": 0.9903343348465848,
+      "median_SOC": 1.0,
+      "annualized_input_EFC": 18.83870736489086,
+      "mean_model_DOD": 0.0547434694317378,
+      "rms_model_DOD": 0.1245720104349705,
+      "five_year_final_q": 0.9078493612969716,
+      "five_year_capacity_loss_percent": 9.215063870302842,
+      "five_year_final_EFC": 92.57717381128997,
+      "q80_reached": false,
+      "time_to_q80_years": null,
+      "q80_run_final_q": 0.8193333269971746,
+      "q80_run_final_time_years": 30.00104642313549
+    },
+    "frequency_containment_reserve": {
+      "mean_SOC": 0.4930046555799081,
+      "median_SOC": 0.52697600607183,
+      "annualized_input_EFC": 232.59713931446828,
+      "mean_model_DOD": 0.2898630945730963,
+      "rms_model_DOD": 0.3132135297248088,
+      "five_year_final_q": 0.9571653828395932,
+      "five_year_capacity_loss_percent": 4.283461716040682,
+      "five_year_final_EFC": 1163.097919365356,
+      "q80_reached": true,
+      "time_to_q80_years": 28.279490106544955,
+      "q80_run_final_q": 0.799993861719887,
+      "q80_run_final_time_years": 28.279490106544955
+    }
+  },
+  "main_interpretation": "Application degradation is not determined by EFC alone. Mean SOC, DOD distribution, calendar exposure, and cycling interact.",
+  "notable_comparison": "Commercial peak shaving has low annual EFC but extremely high mean SOC, and its five-year q is lower than the frequency reserve case.",
+  "long_horizon_boundary": "Time to q=0.80 values are model extrapolations capped at 30 years and are not validated service-life predictions."
+}

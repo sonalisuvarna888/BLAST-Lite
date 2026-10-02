@@ -1,0 +1,59 @@
+STATIONARY APPLICATION COMPARISON FULL EXECUTION
+========================================================================
+
+COMMAND
+/content/blast_py311/bin/python /content/BLAST-Lite/analysis/stationary_application_comparison/run_application_comparison.py --mode full --years 5 --max-threshold-years 30
+
+ELAPSED SECONDS
+49.529000997543335
+
+STANDARD OUTPUT
+Running residential_CA_mild in full mode...
+  final q = 0.922811432
+  annualized input EFC = 72.793
+  q=0.80 reached = False
+  q=0.80 time = None
+Running residential_Germany_aggressive in full mode...
+  final q = 0.887712509
+  annualized input EFC = 261.814
+  q=0.80 reached = True
+  q=0.80 time = 12.219425418569273
+Running commercial_peak_shaving in full mode...
+  final q = 0.907849361
+  annualized input EFC = 18.839
+  q=0.80 reached = False
+  q=0.80 time = None
+Running frequency_containment_reserve in full mode...
+  final q = 0.957165383
+  annualized input EFC = 232.597
+  q=0.80 reached = True
+  q=0.80 time = 28.279490106544955
+
+Run record:
+{
+  "mode": "full",
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "fixed_temperature_C": 25.0,
+  "requested_years": 5.0,
+  "q80_threshold": 0.8,
+  "q80_cap_years": 30.0,
+  "successful_cases": 4,
+  "failed_cases": 0,
+  "summary_file": "/content/BLAST-Lite/analysis/stationary_application_comparison/results/full_application_summary.csv",
+  "error_file": "/content/BLAST-Lite/analysis/stationary_application_comparison/logs/full_application_errors.json",
+  "comparison_figure": "/content/BLAST-Lite/analysis/stationary_application_comparison/figures/full_application_q_comparison.png"
+}
+
+Summary:
+                          case                                    label mode                                    input_file  input_rows  input_duration_days  temperature_C  input_soc_min  input_soc_mean  input_soc_median  input_soc_max  input_annualized_efc duration_argument  requested_years  initial_q  final_q  q_change  final_time_years   final_efc  mean_model_soc  mean_model_dod  rms_model_dod  output_points                                            output_file            q80_threshold_argument  q80_reached  time_to_q80_years  q80_run_final_q  q80_run_final_time_years  q80_run_final_efc  q80_cap_years
+           residential_CA_mild            Residential PV-BESS — CA mild full            residential_CA_mild_annual_25C.csv       35040           364.989583           25.0       0.300010        0.815977          0.928648           0.95             72.793363    threshold_time              5.0        1.0 0.922811 -0.077189          5.000428  363.691560        0.815053        0.259486       0.322142           1830            results/full_residential_CA_mild_output.csv threshold_capacity+threshold_time        False                NaN         0.837305                 30.002426        2163.243220           30.0
+residential_Germany_aggressive Residential PV-BESS — Germany aggressive full residential_Germany_aggressive_annual_25C.csv       52560           364.993056           25.0       0.000000        0.325506          0.037561           1.00            261.813957    threshold_time              5.0        1.0 0.887713 -0.112287          5.000818 1236.412630        0.324495        0.714134       0.811391           1844 results/full_residential_Germany_aggressive_output.csv threshold_capacity+threshold_time         True          12.219425         0.799991                 12.219425        2892.928770           30.0
+       commercial_peak_shaving                  Commercial peak shaving full        commercial_peak_shaving_annual_25C.csv       52560           364.993056           25.0       0.137376        0.990334          1.000000           1.00             18.838707    threshold_time              5.0        1.0 0.907849 -0.092151          5.001104   92.577174        0.989935        0.054743       0.124572           1829        results/full_commercial_peak_shaving_output.csv threshold_capacity+threshold_time        False                NaN         0.819333                 30.001046         542.625633           30.0
+ frequency_containment_reserve            Frequency containment reserve full  frequency_containment_reserve_annual_25C.csv       52560           364.993056           25.0       0.019902        0.493005          0.526976           1.00            232.597139    threshold_time              5.0        1.0 0.957165 -0.042835          5.001104 1163.097919        0.492476        0.289863       0.313214           1829  results/full_frequency_containment_reserve_output.csv threshold_capacity+threshold_time         True          28.279490         0.799994                 28.279490        6580.434776           30.0
+
+
+STANDARD ERROR
+
+
+RETURN CODE
+0

@@ -1,0 +1,13 @@
+{
+  "mode": "full",
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "fixed_temperature_C": 25.0,
+  "requested_years": 5.0,
+  "q80_threshold": 0.8,
+  "q80_cap_years": 30.0,
+  "successful_cases": 4,
+  "failed_cases": 0,
+  "summary_file": "/content/BLAST-Lite/analysis/stationary_application_comparison/results/full_application_summary.csv",
+  "error_file": "/content/BLAST-Lite/analysis/stationary_application_comparison/logs/full_application_errors.json",
+  "comparison_figure": "/content/BLAST-Lite/analysis/stationary_application_comparison/figures/full_application_q_comparison.png"
+}

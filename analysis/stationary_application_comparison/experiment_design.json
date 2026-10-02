@@ -1,0 +1,19 @@
+{
+  "experiment": "Stationary application-profile comparison",
+  "fixed_temperature_C": 25.0,
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "profiles": {
+    "residential_CA_mild": "Residential PV-BESS (CA, mild).csv",
+    "residential_Germany_aggressive": "Residential PV-BESS (Germany, aggressive).csv",
+    "commercial_peak_shaving": "Commercial peak shaving.csv",
+    "frequency_containment_reserve": "Frequency containment reserve.csv"
+  },
+  "requested_metrics": [
+    "Mean SOC",
+    "Modeled depth of discharge",
+    "Equivalent full cycles per year",
+    "Final q",
+    "Time to q = 0.80 if reached"
+  ],
+  "harmonization_status": "Pending source-boundary audit"
+}
