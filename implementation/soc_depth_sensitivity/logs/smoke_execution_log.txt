@@ -1,0 +1,42 @@
+SOC-DEPTH SENSITIVITY SMOKE TEST AFTER FINITE-STATISTICS PATCH
+========================================================================
+
+STANDARD OUTPUT
+Running shallow_50_70 in smoke mode...
+  final q = 0.993025152
+  final EFC = 1.705592
+  mean DOD = 0.078912
+Running moderate_30_80 in smoke mode...
+  final q = 0.988785137
+  final EFC = 4.263980
+  mean DOD = 0.197780
+Running deep_10_90 in smoke mode...
+  final q = 0.985441592
+  final EFC = 6.822368
+  mean DOD = 0.317096
+
+Run record:
+{
+  "mode": "smoke",
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "fixed_temperature_C": 25.0,
+  "requested_years": null,
+  "successful_scenarios": 3,
+  "failed_scenarios": 0,
+  "summary_file": "/content/BLAST-Lite/implementation/soc_depth_sensitivity/results/smoke_soc_depth_summary.csv",
+  "error_file": "/content/BLAST-Lite/implementation/soc_depth_sensitivity/logs/smoke_soc_depth_errors.json",
+  "comparison_figure": "/content/BLAST-Lite/implementation/soc_depth_sensitivity/figures/smoke_soc_depth_q_comparison.png"
+}
+
+Summary:
+      scenario               label  mode                         input_file  input_rows  temperature_C  input_soc_min  input_soc_mean  input_soc_max  input_soc_range  input_profile_efc duration_argument requested_years  initial_q  final_q  q_change  minimum_q  final_time_days  final_time_years  final_efc  mean_model_dod  rms_model_dod  mean_model_soc  output_points                             output_file
+ shallow_50_70  Shallow 50–70% SOC smoke  scenario_shallow_50_70_annual.csv        2880           25.0       0.500002        0.653973       0.699998         0.199996           1.606062    one_input_pass            None        1.0 0.993025 -0.006975   0.993025        30.697917          0.084104   1.705592        0.078912       0.096182        0.652860             32  results/smoke_shallow_50_70_output.csv
+moderate_30_80 Moderate 30–80% SOC smoke scenario_moderate_30_80_annual.csv        2880           25.0       0.300005        0.684932       0.799995         0.499991           4.015155    one_input_pass            None        1.0 0.988785 -0.011215   0.988785        30.697917          0.084104   4.263980        0.197780       0.241030        0.682256             32 results/smoke_moderate_30_80_output.csv
+    deep_10_90     Deep 10–90% SOC smoke     scenario_deep_10_90_annual.csv        2880           25.0       0.100007        0.715891       0.899993         0.799985           6.424248    one_input_pass            None        1.0 0.985442 -0.014558   0.985442        30.697917          0.084104   6.822368        0.317096       0.386395        0.711751             32     results/smoke_deep_10_90_output.csv
+
+
+STANDARD ERROR
+
+
+RETURN CODE
+0

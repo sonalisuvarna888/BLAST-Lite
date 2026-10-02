@@ -1,0 +1,48 @@
+SOC-DEPTH SENSITIVITY FIVE-YEAR EXECUTION
+========================================================================
+
+COMMAND
+/content/blast_py311/bin/python /content/BLAST-Lite/implementation/soc_depth_sensitivity/run_soc_depth_sensitivity.py --mode full --years 5
+
+ELAPSED SECONDS
+9.072086811065674
+
+STANDARD OUTPUT
+Running shallow_50_70 in full mode...
+  final q = 0.967780757
+  final EFC = 111.909388
+  mean DOD = 0.077136
+Running moderate_30_80 in full mode...
+  final q = 0.946073007
+  final EFC = 279.773469
+  mean DOD = 0.196005
+Running deep_10_90 in full mode...
+  final q = 0.927532172
+  final EFC = 447.637550
+  mean DOD = 0.317922
+
+Run record:
+{
+  "mode": "full",
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "fixed_temperature_C": 25.0,
+  "requested_years": 5.0,
+  "successful_scenarios": 3,
+  "failed_scenarios": 0,
+  "summary_file": "/content/BLAST-Lite/implementation/soc_depth_sensitivity/results/full_soc_depth_summary.csv",
+  "error_file": "/content/BLAST-Lite/implementation/soc_depth_sensitivity/logs/full_soc_depth_errors.json",
+  "comparison_figure": "/content/BLAST-Lite/implementation/soc_depth_sensitivity/figures/full_soc_depth_q_comparison.png"
+}
+
+Summary:
+      scenario               label mode                         input_file  input_rows  temperature_C  input_soc_min  input_soc_mean  input_soc_max  input_soc_range  input_profile_efc duration_argument  requested_years  initial_q  final_q  q_change  minimum_q  final_time_days  final_time_years  final_efc  mean_model_dod  rms_model_dod  mean_model_soc  output_points                            output_file
+ shallow_50_70  Shallow 50–70% SOC full  scenario_shallow_50_70_annual.csv       35040           25.0            0.5        0.658762            0.7              0.2          22.397663    threshold_time              5.0        1.0 0.967781 -0.032219   0.967781       1825.15625          5.000428 111.909388        0.077136       0.095738        0.658495           1830  results/full_shallow_50_70_output.csv
+moderate_30_80 Moderate 30–80% SOC full scenario_moderate_30_80_annual.csv       35040           25.0            0.3        0.696904            0.8              0.5          55.994158    threshold_time              5.0        1.0 0.946073 -0.053927   0.946073       1825.15625          5.000428 279.773469        0.196005       0.243302        0.696216           1830 results/full_moderate_30_80_output.csv
+    deep_10_90     Deep 10–90% SOC full     scenario_deep_10_90_annual.csv       35040           25.0            0.1        0.735046            0.9              0.8          89.590653    threshold_time              5.0        1.0 0.927532 -0.072468   0.927532       1825.15625          5.000428 447.637550        0.317922       0.394686        0.733917           1830     results/full_deep_10_90_output.csv
+
+
+STANDARD ERROR
+
+
+RETURN CODE
+0

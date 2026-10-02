@@ -1,0 +1,36 @@
+{
+  "fixed_temperature_C": 25.0,
+  "scenarios": {
+    "shallow_50_70": {
+      "final_q": 0.9677807568734412,
+      "modeled_capacity_loss_percent": 3.221924312655877,
+      "final_efc": 111.90938760191456,
+      "annual_input_efc": 22.397663348666903,
+      "rms_model_dod": 0.0957380324594024,
+      "mean_model_soc": 0.6584948376024762
+    },
+    "moderate_30_80": {
+      "final_q": 0.9460730065675356,
+      "modeled_capacity_loss_percent": 5.392699343246443,
+      "final_efc": 279.77346900478625,
+      "annual_input_efc": 55.99415837166727,
+      "rms_model_dod": 0.2433015033516928,
+      "mean_model_soc": 0.6962161711575624
+    },
+    "deep_10_90": {
+      "final_q": 0.9275321722889264,
+      "modeled_capacity_loss_percent": 7.2467827711073625,
+      "final_efc": 447.63755040765847,
+      "annual_input_efc": 89.59065339466763,
+      "rms_model_dod": 0.3946862992059597,
+      "mean_model_soc": 0.7339172073554654
+    }
+  },
+  "comparisons": {
+    "deep_minus_shallow_final_q": -0.04024858458451486,
+    "deep_vs_shallow_loss_multiplier": 2.249209499627798,
+    "deep_minus_shallow_final_efc": 335.7281628057439,
+    "main_finding": "At fixed 25 C and identical annual timing, wider SOC windows produced higher throughput, higher RMS DOD, and lower final q.",
+    "causal_boundary": "SOC range, mean SOC, DOD, and throughput all change together under the min-max transformation. The experiment does not isolate DOD independently."
+  }
+}

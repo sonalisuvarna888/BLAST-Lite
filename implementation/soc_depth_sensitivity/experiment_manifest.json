@@ -1,0 +1,209 @@
+{
+  "experiment": "SOC operating-window sensitivity",
+  "branch": "implementation/soc-depth-sensitivity",
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "fixed_temperature_C": 25.0,
+  "source_profile": "implementation/realistic_seasonal_scenarios/scenario_inputs/annual_soc_residential_pvbess_CA_corrected.csv",
+  "transformation": "Min-max scaling preserves annual timing and relative profile shape while changing the SOC window.",
+  "simulation_horizon_years": 5,
+  "duration_argument": "threshold_time",
+  "is_constant_input": false,
+  "successful_scenarios": 3,
+  "failed_scenarios": 0,
+  "results": [
+    {
+      "scenario": "shallow_50_70",
+      "soc_min": 0.5,
+      "soc_mean": 0.6587615744141058,
+      "soc_max": 0.7,
+      "annual_input_efc": 22.397663348666903,
+      "rms_model_dod": 0.0957380324594024,
+      "final_efc": 111.90938760191456,
+      "final_q": 0.9677807568734412,
+      "modeled_capacity_loss_percent": 3.221924312655877,
+      "final_time_years": 5.000428082191782,
+      "output_points": 1830
+    },
+    {
+      "scenario": "moderate_30_80",
+      "soc_min": 0.3,
+      "soc_mean": 0.6969039360352646,
+      "soc_max": 0.8,
+      "annual_input_efc": 55.99415837166727,
+      "rms_model_dod": 0.2433015033516928,
+      "final_efc": 279.77346900478625,
+      "final_q": 0.9460730065675356,
+      "modeled_capacity_loss_percent": 5.392699343246443,
+      "final_time_years": 5.000428082191782,
+      "output_points": 1830
+    },
+    {
+      "scenario": "deep_10_90",
+      "soc_min": 0.1,
+      "soc_mean": 0.7350462976564235,
+      "soc_max": 0.9,
+      "annual_input_efc": 89.59065339466763,
+      "rms_model_dod": 0.3946862992059597,
+      "final_efc": 447.63755040765847,
+      "final_q": 0.9275321722889264,
+      "modeled_capacity_loss_percent": 7.2467827711073625,
+      "final_time_years": 5.000428082191782,
+      "output_points": 1830
+    }
+  ],
+  "main_finding": "At fixed 25 C and identical annual timing, wider SOC windows produced higher throughput, higher RMS DOD, and lower final q.",
+  "causal_boundary": "SOC range, mean SOC, DOD, EFC, and throughput change together. The experiment does not isolate DOD independently.",
+  "file_count_excluding_manifest": 30,
+  "files": [
+    {
+      "path": "implementation/soc_depth_sensitivity/README.md",
+      "size_bytes": 4084,
+      "sha256": "a03736256bd60079ec8257c67284d02a64b73a23e8bc55d9d3b5811e52d2bd61"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/experiment_design.json",
+      "size_bytes": 1052,
+      "sha256": "02206696f8e53b6f4fd42ee87417ba0908ff443147dd2bcff59086d8f7886179"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/figures/full_soc_depth_q_comparison.png",
+      "size_bytes": 187485,
+      "sha256": "1f0782d4af5d01cb13596165b2caa1beed7416860e4e91071f8e5d58d17c5eb3"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/figures/smoke_soc_depth_q_comparison.png",
+      "size_bytes": 181208,
+      "sha256": "863774e5c2e393e2c04fa531bc3068d21bc38533ef4ef003f4f22d0a9331b74d"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/figures/soc_depth_annual_inputs.png",
+      "size_bytes": 463470,
+      "sha256": "1814a0cb7bc330d67b03787641b45b00bfd905c602eaf5df3ba49cac7ba402ac"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/figures/soc_depth_efc_dod_comparison.png",
+      "size_bytes": 114348,
+      "sha256": "19646dd6b913691d90d313c2e335e79253d817456fd1b06b49ce536cc4812270"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/figures/soc_depth_final_results.png",
+      "size_bytes": 147612,
+      "sha256": "4da2c7ba7d0210bb16062c7049d253b0dce1f248156f684d6165a95e4636d703"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/figures/soc_depth_q_trajectories.png",
+      "size_bytes": 214737,
+      "sha256": "868b7eaef59e7fb68f1384c788a07652513d4e790dcc8db1cfac36c25960a226"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/figures/soc_depth_representative_week.png",
+      "size_bytes": 177538,
+      "sha256": "47028a16eb25466d5fd172c8e540a0d028bc8bbe7cf5b4eb50f6ff2f1b0d1b38"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/logs/full_five_year_execution_log.txt",
+      "size_bytes": 2857,
+      "sha256": "b7481c55ad87023419ffefe63ffe755bb8368df851ae2c42eabd53db97208fa2"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/logs/full_soc_depth_errors.json",
+      "size_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/logs/smoke_execution_log.txt",
+      "size_bytes": 2700,
+      "sha256": "803aa8f4b091a87c2531e4f94ca443d2026e89182d7d2bb019ff80403be6c9f5"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/logs/smoke_soc_depth_errors.json",
+      "size_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/results/full_deep_10_90_output.csv",
+      "size_bytes": 133518,
+      "sha256": "b4ef07cd4e7f3cbd8f1b1c41399581ab712a9c465239117e3cf0e5b3ce205305"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/results/full_moderate_30_80_output.csv",
+      "size_bytes": 133634,
+      "sha256": "b41f118237ae456e625d0afa3480823c0453757becac3f07c15a79c39746a0d5"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/results/full_run_record.json",
+      "size_bytes": 525,
+      "sha256": "6b46820543b915652001113743dbe0f63293e941a9a054270185911a231f3e85"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/results/full_shallow_50_70_output.csv",
+      "size_bytes": 133103,
+      "sha256": "9ecaa97c0e13b9a25f485d2c3a7c9cf2e2e6506cdbfa67fd1d8caecc5fd478c6"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/results/full_soc_depth_summary.csv",
+      "size_bytes": 1447,
+      "sha256": "7acd8ee090e64b7fe6768eb47003ba2fcfeb1ce85eeb6d9e9decc9b0029b9d3d"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/results/smoke_deep_10_90_output.csv",
+      "size_bytes": 2397,
+      "sha256": "13b69adceea1d1d24ee5f085a9d8ede3dc61ea9999bea93fa2c1e0ae0c9c4fb2"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/results/smoke_moderate_30_80_output.csv",
+      "size_bytes": 2402,
+      "sha256": "44462377a52b8a024287d3e48073e88ef5471fe7dd29f5387d42028d00ac47b5"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/results/smoke_run_record.json",
+      "size_bytes": 530,
+      "sha256": "313f06c73eef1cf234d1beddb2ce1be07c46e681103577ab26e5180a5e45c9dc"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/results/smoke_shallow_50_70_output.csv",
+      "size_bytes": 2412,
+      "sha256": "69ad91fbac9fa157bf463bd4504875e0e597e6f36408fb6ea3930070ee3989ec"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/results/smoke_soc_depth_summary.csv",
+      "size_bytes": 1552,
+      "sha256": "c0b682f4e5936311b849eb794a55bdf7512f44fea742b86a70ec4a90a062f7a7"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/results/soc_depth_presentation_table.csv",
+      "size_bytes": 605,
+      "sha256": "293b526d3e39555289137f6c3d06f821b12268e93f32a061924090af9375b9b6"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/results/soc_depth_sensitivity_metrics.json",
+      "size_bytes": 1450,
+      "sha256": "300bccdd17ef901f3ca4cac7e2b459d36e78d39b00dab95bcae9dde583bc342e"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/run_soc_depth_sensitivity.py",
+      "size_bytes": 10604,
+      "sha256": "ff2e865eacc4d4456225c9f6ea0612267a6149997e14637d02504a278b1d8705"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/scenario_inputs/scenario_deep_10_90_annual.csv",
+      "size_bytes": 1422954,
+      "sha256": "ba30207376cf7c699c57ca60d8c8b2050a3843746a4775d8a7963f21b3f7f42e"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/scenario_inputs/scenario_moderate_30_80_annual.csv",
+      "size_bytes": 1421644,
+      "sha256": "297dec3c1237357d7afb2aa44a58bcdb79ccc697888f44c06ce0cbca3b759e7d"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/scenario_inputs/scenario_shallow_50_70_annual.csv",
+      "size_bytes": 1419324,
+      "sha256": "68f80cb6c3585b2743f61810e5b3d6ab40f97e52f54b64d3664a72a5176175cb"
+    },
+    {
+      "path": "implementation/soc_depth_sensitivity/scenario_inputs/soc_depth_case_summary.csv",
+      "size_bytes": 832,
+      "sha256": "557e850681d315f41de2138e21cb5b0db8925d0655df15768c1ebd8af440b69e"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "experiment": "One-factor-at-a-time SOC-depth sensitivity",
+  "source_profile": "implementation/realistic_seasonal_scenarios/scenario_inputs/annual_soc_residential_pvbess_CA_corrected.csv",
+  "fixed_temperature_C": 25.0,
+  "controlled_factor": "SOC range and cycling depth",
+  "transformation": "Min-max transform of the corrected annual residential PV-BESS SOC profile. Timing and relative shape are preserved.",
+  "scenario_ranges": {
+    "shallow_50_70": {
+      "soc_min": 0.5,
+      "soc_max": 0.7,
+      "description": "Shallow cycling from 50% to 70% SOC"
+    },
+    "moderate_30_80": {
+      "soc_min": 0.3,
+      "soc_max": 0.8,
+      "description": "Moderate cycling from 30% to 80% SOC"
+    },
+    "deep_10_90": {
+      "soc_min": 0.1,
+      "soc_max": 0.9,
+      "description": "Deep cycling from 10% to 90% SOC"
+    }
+  },
+  "source_soc_min": 0.30001,
+  "source_soc_max": 0.95,
+  "simulation_horizon_years": 5,
+  "research_boundary": "Synthetic range transformation for controlled model sensitivity; not a measured dispatch dataset."
+}

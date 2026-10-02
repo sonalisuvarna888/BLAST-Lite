@@ -1,0 +1,4 @@
+scenario,description,file,rows,interval_seconds,duration_days,soc_min,soc_mean,soc_max,soc_range,temperature_C,annual_profile_efc,first_soc,last_soc,repeat_jump,boundary_correction_rows
+shallow_50_70,Shallow cycling from 50% to 70% SOC,scenario_shallow_50_70_annual.csv,35040,900,364.9895833333333,0.5,0.6587615744141058,0.7,0.19999999999999996,25.0,22.397663348666903,0.5615363313281743,0.5615363313281743,0.0,96
+moderate_30_80,Moderate cycling from 30% to 80% SOC,scenario_moderate_30_80_annual.csv,35040,900,364.9895833333333,0.3,0.6969039360352646,0.8,0.5,25.0,55.99415837166727,0.4538408283204357,0.4538408283204357,0.0,96
+deep_10_90,Deep cycling from 10% to 90% SOC,scenario_deep_10_90_annual.csv,35040,900,364.9895833333333,0.1,0.7350462976564235,0.9,0.8,25.0,89.59065339466763,0.34614532531269715,0.34614532531269715,0.0,96

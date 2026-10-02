@@ -1,0 +1,11 @@
+{
+  "mode": "smoke",
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "fixed_temperature_C": 25.0,
+  "requested_years": null,
+  "successful_scenarios": 3,
+  "failed_scenarios": 0,
+  "summary_file": "/content/BLAST-Lite/implementation/soc_depth_sensitivity/results/smoke_soc_depth_summary.csv",
+  "error_file": "/content/BLAST-Lite/implementation/soc_depth_sensitivity/logs/smoke_soc_depth_errors.json",
+  "comparison_figure": "/content/BLAST-Lite/implementation/soc_depth_sensitivity/figures/smoke_soc_depth_q_comparison.png"
+}
