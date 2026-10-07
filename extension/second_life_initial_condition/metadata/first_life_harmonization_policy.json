@@ -1,0 +1,9 @@
+{
+  "target_duration_days": 365,
+  "hourly_intervals": 8760,
+  "points_including_endpoint": 8761,
+  "temperature_C": 25.0,
+  "boundary_tolerance": 0.01,
+  "boundary_correction_hours": 24,
+  "policy": "Tile the official utility-generated profile to 365 days. If first-last SOC difference exceeds 0.01, replace the last 24 hours with a linear return to the initial SOC."
+}

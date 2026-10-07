@@ -1,0 +1,6 @@
+candidate,output_file,rows,duration_days,soc_min,soc_mean,soc_max,first_soc,last_soc,pre_correction_repeat_jump,post_correction_repeat_jump,boundary_correction_applied,boundary_correction_rows,transition_start_soc,source_tiled_efc,corrected_annual_efc,efc_change,temperature_C
+combined_unscaled,first_life_combined_unscaled_365day.csv,8761,365.0,0.1,0.7129950981494121,0.95,0.95,0.95,0.0,0.0,False,0,,90.89863756599999,90.89863756599999,0.0,25.0
+personal_large,first_life_personal_large_365day.csv,8761,365.0,0.15974189,0.6214448101159686,0.95,0.95,0.95,0.0,0.0,False,0,,64.3775071,64.3775071,0.0,25.0
+personal_small,first_life_personal_small_365day.csv,8761,365.0,0.281331041,0.6863374762935738,0.95,0.95,0.95,0.0,0.0,False,0,,132.63485815899998,132.63485815899998,0.0,25.0
+commercial,first_life_commercial_365day.csv,8761,365.0,0.049998451,0.5112896538397442,0.95,0.95,0.95,0.0,0.0,False,0,,657.00113077,657.00113077,0.0,25.0
+combined_scaled_55efc,first_life_combined_scaled_55efc_365day.csv,8761,365.0,0.1,0.7205615065798711,0.95,0.95,0.95,0.7218652295,0.0,True,25,0.3888939824999999,53.56058634275,53.760759745499996,0.2001734027499964,25.0

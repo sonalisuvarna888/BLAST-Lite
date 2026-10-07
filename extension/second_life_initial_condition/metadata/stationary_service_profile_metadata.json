@@ -1,0 +1,9 @@
+{
+  "service_profile": "second_life_stationary_service_DR_plus_battery.csv",
+  "source_branch": "integration/annual-community-dispatch",
+  "source_commit": "114193eedee56340403d390fce7431ceb09e9e4c",
+  "source_file": "integration/annual_community_dispatch/data/blast_input_demand_response_plus_battery_annual.csv",
+  "sha256": "bfbd823877819eb57d118682f3f391b5ec53cba93dee41c7817ffd2798901770",
+  "interpretation": "Annual community DR-plus-battery SOC trajectory used as the stationary second-life service profile.",
+  "important_boundary": "The service profile was generated using a fixed 42-kWh dispatch capacity and Miami climate; it is used here for continuation validation."
+}

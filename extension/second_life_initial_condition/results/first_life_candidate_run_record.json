@@ -1,0 +1,11 @@
+{
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "degradation_scalar": 2.75,
+  "target_q": 0.8,
+  "maximum_years": 30.0,
+  "successful_candidates": 5,
+  "failed_candidates": 0,
+  "summary_file": "/content/BLAST-Lite/extension/second_life_initial_condition/results/first_life_candidate_results.csv",
+  "error_file": "/content/BLAST-Lite/extension/second_life_initial_condition/logs/first_life_candidate_errors.json",
+  "comparison_figure": "/content/BLAST-Lite/extension/second_life_initial_condition/figures/first_life_candidate_comparison.png"
+}

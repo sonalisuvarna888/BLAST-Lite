@@ -1,0 +1,52 @@
+STANDARD OUTPUT
+Running combined_unscaled...
+  q = 0.800000
+  years = 12.818
+  EFC = 1156.6
+Running personal_large...
+  q = 0.799987
+  years = 25.924
+  EFC = 1608.5
+Running personal_small...
+  q = 0.799804
+  years = 14.516
+  EFC = 1895.5
+Running commercial...
+  q = 0.799991
+  years = 2.107
+  EFC = 1268.2
+Running combined_scaled_55efc...
+  q = 0.799981
+  years = 20.912
+  EFC = 1084.5
+
+RUN RECORD
+{
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "degradation_scalar": 2.75,
+  "target_q": 0.8,
+  "maximum_years": 30.0,
+  "successful_candidates": 5,
+  "failed_candidates": 0,
+  "summary_file": "/content/BLAST-Lite/extension/second_life_initial_condition/results/first_life_candidate_results.csv",
+  "error_file": "/content/BLAST-Lite/extension/second_life_initial_condition/logs/first_life_candidate_errors.json",
+  "comparison_figure": "/content/BLAST-Lite/extension/second_life_initial_condition/figures/first_life_candidate_comparison.png"
+}
+
+SUMMARY
+            candidate                                 source_file  annual_input_efc  input_soc_min  input_soc_mean  input_soc_max  target_q  target_reached  final_q   final_r  final_time_years   final_efc                                         pickle_file                                         state_file                                         trajectory_file  execution_seconds
+    combined_unscaled     first_life_combined_unscaled_365day.csv         90.898638       0.100000        0.712995           0.95       0.8            True 0.800000 27.136261         12.817922 1156.614785     saved_states/combined_unscaled_aged_battery.pkl     saved_states/combined_unscaled_aged_state.json     results/combined_unscaled_first_life_trajectory.csv           3.785789
+       personal_large        first_life_personal_large_365day.csv         64.377507       0.159742        0.621445           0.95       0.8            True 0.799987 48.187450         25.924087 1608.464631        saved_states/personal_large_aged_battery.pkl        saved_states/personal_large_aged_state.json        results/personal_large_first_life_trajectory.csv           5.570700
+       personal_small        first_life_personal_small_365day.csv        132.634858       0.281331        0.686337           0.95       0.8            True 0.799804 28.981452         14.515868 1895.456703        saved_states/personal_small_aged_battery.pkl        saved_states/personal_small_aged_state.json        results/personal_small_first_life_trajectory.csv           2.935319
+           commercial            first_life_commercial_365day.csv        657.001131       0.049998        0.511290           0.95       0.8            True 0.799991  3.086304          2.106507 1268.158396            saved_states/commercial_aged_battery.pkl            saved_states/commercial_aged_state.json            results/commercial_first_life_trajectory.csv           0.582334
+combined_scaled_55efc first_life_combined_scaled_55efc_365day.csv         53.760760       0.100000        0.720562           0.95       0.8            True 0.799981 51.144780         20.911758 1084.472230 saved_states/combined_scaled_55efc_aged_battery.pkl saved_states/combined_scaled_55efc_aged_state.json results/combined_scaled_55efc_first_life_trajectory.csv           5.501367
+
+
+STANDARD ERROR
+
+
+RETURN CODE
+0
+
+ELAPSED SECONDS
+22.319419622421265

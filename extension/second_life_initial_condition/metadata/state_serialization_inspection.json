@@ -1,0 +1,53 @@
+{
+  "class": "Nmc111_Gr_Kokam75Ah_Battery",
+  "constructor_signature": "(degradation_scalar: float = 1, label: str = 'NMC111-Gr Kokam')",
+  "simulate_signature": "(input_timeseries: Union[dict, pandas.core.frame.DataFrame], threshold_time: float = None, threshold_capacity: float = None, threshold_efc: float = None, is_constant_input: bool = False, is_conserve_energy_throughput: bool = True, breakpoints_max_time_diff_s: float = 86400, breakpoints_max_EFC_diff: float = 1)",
+  "attribute_names": [
+    "_degradation_scalar",
+    "_label",
+    "experimental_range",
+    "outputs",
+    "rates",
+    "states",
+    "stressors"
+  ],
+  "state_keys": [
+    "qLoss_LLI_t",
+    "qLoss_LLI_EFC",
+    "qLoss_LAM",
+    "rGain_LLI_t",
+    "rGain_LLI_EFC"
+  ],
+  "output_keys": [
+    "q",
+    "q_LLI",
+    "q_LLI_t",
+    "q_LLI_EFC",
+    "q_LAM",
+    "r",
+    "r_LLI",
+    "r_LLI_t",
+    "r_LLI_EFC",
+    "r_LAM"
+  ],
+  "stressor_keys": [
+    "delta_t_days",
+    "t_days",
+    "delta_efc",
+    "efc",
+    "TdegK",
+    "soc",
+    "Ua",
+    "dod"
+  ],
+  "rate_keys": [
+    "q1",
+    "q3",
+    "q5"
+  ],
+  "deepcopy_success": true,
+  "deepcopy_error": null,
+  "pickle_success": true,
+  "pickle_error": null,
+  "pickle_size_bytes": 1695
+}

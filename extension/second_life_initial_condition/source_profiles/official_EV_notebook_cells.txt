@@ -1,0 +1,509 @@
+
+--- CELL 0: MARKDOWN ---
+Paul Gasper, Ph.D., National Renewable Energy Lab, 2024
+
+Paul.Gasper@nlr.gov
+
+Examples of simulating EV lifetime for personal and commercial vehicles based on assumed driving profiles.
+These simulations are not meant to comment on real-world EVs. Battery life models are dependent on battery-specific degradation data, and the driving profiles were created as illustrative examples and are not representative of real world driving data.
+
+The climate chosen in this example is Honolulu, Hawai'i, which has a very stable climate in a temperature range that is optimal for many commercial lithium-ion batteries. As this simulation is not addressing thermal management of the vehicle battery in any way, any simulations for climates with extreme heat or extreme cold will not be an accurate representation of most real world EVs, which can cool and sometimes heat the battery pack to maintain safe and reliable battery performance in a wide temperature range.
+
+--- CELL 1: CODE ---
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from blast.utils.functions import get_nsrdb_temperature_data
+
+--- CELL 2: CODE ---
+# climate = get_nsrdb_temperature_data('Honolulu, Hawaii') # Openstreetmap doesn't always respond
+climate = pd.read_csv('climates/nsrdb_honolulu.csv')
+plt.plot(climate['Time_s']/(3600*24), climate['Temperature_C'], linewidth=0.3)
+plt.plot(climate['Time_s']/(3600*24), climate['Temperature_C'].rolling(14*24*2).mean(), linewidth=3)
+plt.xlabel('Time (days)')
+plt.ylabel('Temperature (C)')
+
+--- CELL 3: CODE ---
+ev_largebattery = pd.read_csv('application profiles/Electric vehicle/personal_ev_largebatt.csv')
+ev_smallbattery = pd.read_csv('application profiles/Electric vehicle/personal_ev_smallbatt.csv')
+commercial_ev = pd.read_csv('application profiles/Electric vehicle/commercial_ev.csv')
+
+plt.plot(ev_largebattery['Time_s'] / (24*3600), ev_largebattery['SOC'], label='Large battery EV')
+plt.plot(ev_smallbattery['Time_s'] / (24*3600), ev_smallbattery['SOC'], label='Small battery EV')
+plt.plot(commercial_ev['Time_s'] / (24*3600), commercial_ev['SOC'], label='Commercial EV')
+plt.xlabel('Time (days)')
+plt.ylabel('State of charge')
+plt.legend()
+
+--- CELL 4: CODE ---
+from blast.utils.functions import assemble_one_year_input
+input_ev_smallbatt = assemble_one_year_input(ev_smallbattery, climate)
+input_ev_largebatt = assemble_one_year_input(ev_largebattery, climate)
+input_ev_commercial = assemble_one_year_input(commercial_ev, climate)
+
+--- CELL 5: CODE ---
+from blast.models.nmc111_gr_Kokam75Ah_2017 import Nmc111_Gr_Kokam75Ah_Battery
+from blast.models.lfp_gr_250AhPrismatic_2019 import Lfp_Gr_250AhPrismatic
+from blast.models.nca_gr_Panasonic3Ah_2018 import Nca_Gr_Panasonic3Ah_Battery
+from blast.models.nmc622_gr_DENSO50Ah_2021 import Nmc622_Gr_DENSO50Ah_Battery
+
+batteries = {
+    'NMC111-Gr': [Nmc111_Gr_Kokam75Ah_Battery(), Nmc111_Gr_Kokam75Ah_Battery(), Nmc111_Gr_Kokam75Ah_Battery()],
+    'LFP-Gr': [Lfp_Gr_250AhPrismatic(), Lfp_Gr_250AhPrismatic(), Lfp_Gr_250AhPrismatic()],
+    'NCA-Gr': [Nca_Gr_Panasonic3Ah_Battery(), Nca_Gr_Panasonic3Ah_Battery(), Nca_Gr_Panasonic3Ah_Battery()],
+    'NMC622-Gr': [Nmc622_Gr_DENSO50Ah_Battery(), Nmc622_Gr_DENSO50Ah_Battery(), Nmc622_Gr_DENSO50Ah_Battery()]
+}
+simulations = {
+    'Personal EV (small)': input_ev_smallbatt,
+    'Personal EV (large)': input_ev_largebatt,
+    'Commercial EV': input_ev_commercial,
+}
+
+years_simulation = 20
+fig, ax = plt.subplots(2, 4, figsize=(12,5))
+idx_ax = 0
+for batt_type, battery in batteries.items():
+    idx_sim = 0
+    for sim_type, sim_input in simulations.items():
+        batt = battery[idx_sim]
+        batt.simulate_battery_life(sim_input, threshold_time=years_simulation)
+
+        ax[0][idx_ax].plot(batt.stressors['t_days']/365, batt.outputs['q'], label=sim_type)
+        ax[1][idx_ax].plot(batt.stressors['efc'], batt.outputs['q'], label=sim_type)
+        idx_sim += 1
+        
+    ax[0][idx_ax].set_xlabel('Time (years)')
+    ax[0][idx_ax].set_ylabel('Relative discharge capacity')
+    ax[0][idx_ax].set_ylim((0.8, 1.01))
+    ax[0][idx_ax].set_xlim((0, 20))
+    ax[1][idx_ax].set_xlabel('Equiv. full cycles')
+    ax[1][idx_ax].set_ylabel('Relative discharge capacity')
+    ax[1][idx_ax].set_ylim((0.8, 1.01))
+    ax[1][idx_ax].set_xlim((0, 6000))
+
+    ax[0][idx_ax].set_title(batt_type)
+    if idx_ax == 2:
+        ax[0][idx_ax].legend(loc='upper right')
+    idx_ax += 1
+
+plt.tight_layout()
+
+--- CELL 6: MARKDOWN ---
+While 'equivalent full cycles' is a nice measure for battery use, real-world vehicle use is in units of 'vehicle miles traveled', or VMT. To turn VMT into equivalent full cycles, we can make a simple assumption that the vehicle's pack range is equal to one full discharge, e.g., half an equivalent full cycle. US Department of Transporation data is used to get a cumulative distribution function of annual VMTs to simulate the distribution of personal vehicle battery degradation paths; this data is compiled from data on population groups segregated by age and gender, so the 100-percentile annual VMT is not representative of an individual, which could be much higher. Also, this data is for personal vehicles, not commercial vehicles. To convert annual VMT into equivalent full cycles, I assume pack sizes from Tesla Model 3 Short Range for LFP-Gr, and Tesla Model 3 Long Range for the higher energy density layered oxides.
+
+--- CELL 7: CODE ---
+annual_vmt = pd.read_csv("application profiles/Electric vehicle/annual_vmt_cdf.csv")
+annual_vmt.plot(x='CDF', y='Annual VMT')
+
+--- CELL 8: CODE ---
+# To represent varied vehicle driving patterns, use to 'combined' vehicle SOC profile
+ev_combined = pd.read_csv('application profiles/Electric vehicle/personal_ev_combined.csv')
+ev_combined['Time (days)'] = ev_combined['Time_s'] / (24*3600)
+ev_combined['State of charge'] = ev_combined['SOC']
+ev_combined.plot(x='Time (days)', y='State of charge')
+plt.ylim([0, 1])
+
+--- CELL 9: CODE ---
+# To scale any vehicle profile to a certain number of annual EFCs, there is a helper function
+# This function takes any vehicle SOC profile and adds either rests or deep-discharge driving events
+# to reduce or increase the annual EFCs to hit the targeted value.
+from blast.utils.functions import scale_vehicle_profile_to_annual_efcs
+
+batteries = ['NMC111-Gr', 'LFP-Gr', 'NCA-Gr', 'NMC622-Gr']
+"""
+LFP (Model 3 short range): 
+- 272 mile EPA range * 77% performance = 209.4 miles/EFC 
+- 209.4 miles/EFC = 64 EFCs/year @ 13476 miles/yr
+- 60.9 kWh energy capacity
+
+NMC/NCA (Model 3 long range): 
+- 363 mile EPA range * 67% performance = 243.2 miles/EFC
+- 243.2 miles/EFC = 55 EFCs/year @ 13476 miles/yr
+- 82 kWh energy capacity
+"""
+# percentiles = [0.3, 0.5, 1]
+percentiles = [0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+from cycler import cycler
+cmap = plt.get_cmap('cividis')
+fig, ax = plt.subplots(4, 4, figsize=(16,12))
+for axis in ax.ravel():
+    axis.set_prop_cycle(cycler('color', cmap(percentiles)))
+idx_ax = 0
+results = {
+    'capacity': [],
+    'time': [],
+    'miles': [],
+    'battery': [],
+}
+for battery in batteries:
+    idx_sim = 0
+    time_to_capacity = {
+        0.9: [],
+        0.85: [],
+        0.8: [],
+    }
+    miles_to_capacity = {
+        0.9: [],
+        0.85: [],
+        0.8: [],
+    }
+    capacity_at_time = {
+        5: [],
+        10: [],
+        15: [],
+        20: [],
+    }
+
+    for percentile in percentiles:
+        vmt = np.interp(percentile, annual_vmt['CDF'], annual_vmt['Annual VMT'])
+        if battery == 'LFP-Gr':
+            efcs = vmt / 209.4
+            ev = scale_vehicle_profile_to_annual_efcs(ev_combined.copy(), desired_efcs_per_year=efcs)
+            batt = Lfp_Gr_250AhPrismatic(degradation_scalar=2.75)
+        else:
+            efcs = vmt / 243.2
+            ev = scale_vehicle_profile_to_annual_efcs(ev_combined.copy(), desired_efcs_per_year=efcs)
+            if battery == 'NCA-Gr':
+                batt = Nca_Gr_Panasonic3Ah_Battery(degradation_scalar=1.0)
+            elif battery == 'NMC111-Gr':
+                batt = Nmc111_Gr_Kokam75Ah_Battery(degradation_scalar=2.75)
+            elif battery == 'NMC622-Gr':
+                batt = Nmc622_Gr_DENSO50Ah_Battery(degradation_scalar=1.5)
+            
+        
+        ev['Temperature_C'] = 25
+        batt.simulate_battery_life(ev, threshold_capacity=0.8)   
+
+        ax[0][idx_ax].plot(batt.stressors['t_days']/365, batt.outputs['q'], label=f"{int(vmt)} Annual VMT")
+        ax[1][idx_ax].plot(batt.stressors['efc'], batt.outputs['q'], label=f"{int(vmt)} Annual VMT")
+        idx_sim += 1
+
+        # For each 'capacity' in 'time_to_capacity', extract the years to that capacity and append
+        for capacity, years in time_to_capacity.items():
+            idx = np.argwhere(np.array(batt.outputs['q']) < capacity).flatten()
+            if len(idx) > 0:
+                years.append(batt.stressors['t_days'][idx[0]] / 365)
+                if battery == 'LFP-Gr':
+                    packsize = 209.4
+                else:
+                    packsize = 243.2
+                miles_to_capacity[capacity].append(batt.stressors['efc'][idx[0]] * packsize) 
+            else:
+                years.append(np.nan)
+                miles_to_capacity[capacity].append(np.nan) 
+        # For each 'time' in 'capacity_at_time', extract the capacity at that time and append
+        for time, capacities in capacity_at_time.items():
+            idx = np.argwhere(batt.stressors['t_days'] / 365 < time).flatten()
+            if len(idx) > 0:
+                capacities.append(batt.outputs['q'][idx[-1]])
+            else:
+                capacities.append(np.nan)
+        # Extract batt data to results dict
+        results['capacity'].extend(batt.outputs['q'][::10].tolist())
+        results['time'].extend(batt.stressors['t_days'][::10].tolist())
+        miles = batt.stressors['efc'][::10] * packsize
+        results['miles'].extend(miles.tolist())
+        results['battery'].extend([battery] * len(miles))
+
+    # Plot boxplots of time_to_capacity on row 2
+    ax[2][idx_ax].boxplot(time_to_capacity.values(), tick_labels=time_to_capacity.keys())
+    ax[2][idx_ax].set_ylabel('Time (years) to capacity')
+    ax[2][idx_ax].set_xlabel('Capacity')
+    # Plot boxplots of capacity_at_time on row 3
+    ax[3][idx_ax].boxplot(capacity_at_time.values(), tick_labels=capacity_at_time.keys())  
+    ax[3][idx_ax].set_ylabel('Capacity at time (years)')  
+    ax[3][idx_ax].set_xlabel('Time (years)')
+    ax[3][idx_ax].set_ylim((0.79, 1.01))
+    
+    ax[0][idx_ax].set_xlabel('Time (years)')
+    ax[0][idx_ax].set_ylabel('Relative discharge capacity')
+    ax[0][idx_ax].set_ylim((0.79, 1.01))
+    # ax[0][idx_ax].set_xlim((0, 20))
+    ax[1][idx_ax].set_xlabel('Equiv. full cycles')
+    ax[1][idx_ax].set_ylabel('Relative discharge capacity')
+    ax[1][idx_ax].set_ylim((0.79, 1.01))
+    # ax[1][idx_ax].set_xlim((0, 6000))
+
+    ax[0][idx_ax].set_title(battery)
+    if idx_ax == 3:
+        ax[0][idx_ax].legend(loc='upper left', bbox_to_anchor=(1.05, 1))
+    idx_ax += 1
+
+plt.tight_layout()
+
+--- CELL 10: CODE ---
+# Get varied distribution of results from multiple chemistries, degradation rates
+from blast.utils.functions import scale_vehicle_profile_to_annual_efcs
+from blast.utils.functions import simulate_battery_life_distribution
+
+# batteries = ['NMC111-Gr', 'LFP-Gr', 'NCA-Gr', 'NMC622-Gr']
+batteries = ['LFP-Gr']
+"""
+LFP (Model 3 short range): 
+- 272 mile EPA range * 77% performance = 209.4 miles/EFC 
+- 209.4 miles/EFC = 64 EFCs/year @ 13476 miles/yr
+- 60.9 kWh energy capacity
+
+NMC/NCA (Model 3 long range): 
+- 363 mile EPA range * 67% performance = 243.2 miles/EFC
+- 243.2 miles/EFC = 55 EFCs/year @ 13476 miles/yr
+- 82 kWh energy capacity
+"""
+# percentiles = [0.02, 0.03, 0.05, 0.065, 0.08, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+# vmts = np.linspace(500, 70000, 30)
+vmts = np.geomspace(500, 70000, 30)
+results = {
+    'Relative discharge capacity': [],
+    'Time (years)': [],
+    'Miles': [],
+    'Battery': [],
+}
+for battery in batteries:
+    idx_sim = 0
+    time_to_capacity = {
+        0.9: [],
+        0.85: [],
+        0.8: [],
+    }
+    miles_to_capacity = {
+        0.9: [],
+        0.85: [],
+        0.8: [],
+    }
+    capacity_at_time = {
+        5: [],
+        10: [],
+        15: [],
+        20: [],
+    }
+
+    for vmt in vmts:
+        if battery == 'LFP-Gr':
+            packsize = 209.4
+            efcs = vmt / packsize
+            ev = scale_vehicle_profile_to_annual_efcs(ev_combined.copy(), desired_efcs_per_year=efcs)
+            Batt = Lfp_Gr_250AhPrismatic
+            degradation_scalar = 2.75
+            degradation_std = 0.25
+        else:
+            packsize = 243.2
+            efcs = vmt / packsize
+            ev = scale_vehicle_profile_to_annual_efcs(ev_combined.copy(), desired_efcs_per_year=efcs)
+            if battery == 'NCA-Gr':
+                Batt = Nca_Gr_Panasonic3Ah_Battery
+                degradation_scalar = 1.0
+                degradation_std = 0.25
+            elif battery == 'NMC111-Gr':
+                Batt = Nmc111_Gr_Kokam75Ah_Battery
+                degradation_scalar = 2.75
+                degradation_std = 0.3
+            elif battery == 'NMC622-Gr':
+                Batt = Nmc622_Gr_DENSO50Ah_Battery
+                degradation_scalar = 1.5
+                degradation_std = 0.2
+            
+        ev['Temperature_C'] = 25
+        sims = simulate_battery_life_distribution(Batt, ev, degradation_scalar_std=degradation_std, degradation_scalar_mean=degradation_scalar, threshold_capacity=0.8)
+        for sim in sims:
+            batt = sims[sim]
+            results['Relative discharge capacity'].extend(batt.outputs['q'][::30].tolist())
+            t = batt.stressors['t_days'][::30] / 365
+            results['Time (years)'].extend(t.tolist())
+            miles = batt.stressors['efc'][::30] * packsize
+            results['Miles'].extend(miles.tolist())
+            results['Battery'].extend([battery] * len(miles))
+        idx_sim += 1
+results = pd.DataFrame(results)
+results.loc[np.logical_and(results['Relative discharge capacity'] > 0.84, results['Relative discharge capacity'] < 0.86), 'Capacity'] = '85%'
+results.loc[np.logical_and(results['Relative discharge capacity'] > 0.89, results['Relative discharge capacity'] < 0.91), 'Capacity'] = '90%'
+results.loc[np.logical_and(results['Relative discharge capacity'] > 0.94, results['Relative discharge capacity'] < 0.96), 'Capacity'] = '95%'
+results.loc[results['Relative discharge capacity'] > 0.98, 'Capacity'] = '100%'
+results.loc[results['Relative discharge capacity'] <= 0.82, 'Capacity'] = '80%'
+results.loc[results['Time (years)'] > 35, 'Time (years)'] = 35
+
+--- CELL 11: CODE ---
+import seaborn as sns
+go = sns.displot(data=results, x='Miles', hue='Capacity', kind='kde', fill=True, common_norm=True, palette="mako", alpha=.5, height=3, aspect=1.2)
+sns.move_legend(go, 'upper right', bbox_to_anchor=(0.8, 0.9))
+plt.xlim([0, 500000])
+
+--- CELL 12: CODE ---
+go = sns.displot(data=results, x='Time (years)', hue='Capacity', kind='kde', fill=True, common_norm=True, palette="mako", alpha=.5, height=3, aspect=1.2)
+sns.move_legend(go, 'upper right', bbox_to_anchor=(0.8, 0.9))
+plt.xlim([0, 30])
+
+--- CELL 13: CODE ---
+sns.scatterplot(data=results, x='Time (years)', y='Miles', hue='Capacity', palette='mako_r', alpha=0.5)
+
+--- CELL 14: CODE ---
+go = sns.displot(data=results, x='Time (years)', y='Miles', hue='Capacity', kind='kde', palette='mako_r', 
+                 fill=True, thresh=0.0001, common_norm=True, hue_order=['80%', '85%', '90%', '95%', '100%'],
+                 height=3, aspect=1.15)
+
+sns.kdeplot(data=results, x='Time (years)', y='Miles', hue='Capacity', palette='mako_r', thresh=0.0001, common_norm=True,
+                 hue_order=['80%', '85%', '90%', '95%', '100%'], legend=False,
+                 ax=go.axes[0][0])
+go.axes[0][0].set_xlim([0, 35])
+go.axes[0][0].set_ylim([0, 500000])
+
+--- CELL 15: CODE ---
+# Compare Panasonic 18650 NCA-Gr model to data from Tesla Model 3 LR vehicles, which use Panasonic 21700 NCA-Gr cells
+'''
+NMC/NCA (Model 3 long range): 
+- 363 mile EPA range * 67% performance = 243.2 miles/EFC
+- 243.2 miles/EFC = 55 EFCs/year @ 13476 miles/yr
+- 82 kWh nominal energy capacity
+'''
+import seaborn as sns
+teslainfo_data = pd.read_csv('TeslaInfo_Model3LR.csv')
+teslainfo_data['Relative capacity'] = teslainfo_data['kWh']/82
+teslainfo_data['EFCs'] = teslainfo_data['Mileage']/243.2
+sns.boxenplot(teslainfo_data, x='Year', y='Relative capacity')
+
+--- CELL 16: CODE ---
+sns.scatterplot(teslainfo_data, x='Mileage', y='Relative capacity', hue='Year', palette='Set2', alpha=0.8)
+plt.ylim([None, 1.])
+
+--- CELL 17: CODE ---
+go = sns.displot(teslainfo_data, x='Mileage', y='Relative capacity', col='Year', hue='Year', palette='Set2')
+for ax in go.axes.flatten():
+    ax.set_ylim([0.6, 1])
+
+--- CELL 18: CODE ---
+from blast.utils.functions import simulate_battery_life_distribution, scale_vehicle_profile_to_annual_efcs
+from blast.models import Nca_Gr_Panasonic3Ah_Battery
+'''
+NMC/NCA (Model 3 long range): 
+- 363 mile EPA range * 67% performance = 243.2 miles/EFC
+- 243.2 miles/EFC = 55 EFCs/year @ 13476 miles/yr
+- 82 kWh nominal energy capacity
+'''
+percentiles = [0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+capacity, time, efc = [], [], []
+for percentile in percentiles:
+    vmt = np.interp(percentile, annual_vmt['CDF'], annual_vmt['Annual VMT'])
+    efcs = vmt / 243.2
+    ev = scale_vehicle_profile_to_annual_efcs(ev_combined.copy(), desired_efcs_per_year=efcs)
+    ev['Temperature_C'] = 25
+
+    Battery = Nca_Gr_Panasonic3Ah_Battery
+    sims = simulate_battery_life_distribution(Battery, ev, degradation_scalar_std=0.15, degradation_scalar_mean=1.20, threshold_time=10)
+    for sim in sims:
+        batt = sims[sim]
+        capacity.extend(batt.outputs['q'].tolist()[:])
+        time.extend(batt.stressors['t_days'].tolist()[:])
+        efc.extend(batt.stressors['efc'].tolist()[:])
+
+model_summary = pd.DataFrame({'Relative capacity': capacity, 'Time (days)': time, 'EFCs': efc})
+# To convert simulation time to model year, we take the floor of the time passed.
+# Vehicle model years are often 'forward looking', for example, a 2018 vehicle at the end of 2018
+# could have been manufactured in the middle of 2017, so it would be 1.5 years old in actuality, but
+# the age according to the model year is only 1 year.
+model_summary['Year'] = np.floor(model_summary['Time (days)']/365).astype(int)
+model_summary['Mileage'] = model_summary['EFCs'] * 243.2
+model_summary
+
+--- CELL 19: CODE ---
+teslainfo_data['Source'] = 'Public Tesla data'
+model_summary['Source'] = 'Battery simulation'
+columns = ['Source', 'Relative capacity', 'EFCs', 'Year', 'Mileage']
+comparison = pd.concat([teslainfo_data[columns], model_summary[columns]]).reset_index(drop=True)
+
+--- CELL 20: CODE ---
+sns.boxenplot(comparison, x='Year', y='Relative capacity', hue='Source', palette='tab10')
+plt.title('Model 3 Long Range data vs. Panasonic NCA-Gr BLAST-Lite model')
+
+--- CELL 21: CODE ---
+
+sns.displot(comparison[comparison['Year'].isin([2, 4, 6])], 
+            x='Mileage', y='Relative capacity', col='Year', row='Source', hue='Year', palette='Set2', height=2.5, aspect=1)
+# plt.title('Model 3 Long Range data vs. Panasonic NCA-Gr BLAST-Lite model')
+
+--- CELL 22: CODE ---
+# Compare LFP-Gr 250Ah model to data from Tesla Model 3 SR vehicles, which use CATL large format LFP-Gr cells
+import seaborn as sns
+"""
+LFP (Model 3 short range): 
+- 272 mile EPA range * 77% performance = 209.4 miles/EFC 
+- 209.4 miles/EFC = 64 EFCs/year @ 13476 miles/yr
+- 60.9 kWh energy capacity
+"""
+tesla_survey_model3SR_data = pd.read_excel('Telsa_Survey_Model3SR.xlsx')
+tesla_survey_model3SR_data['Relative capacity'] = 1 -tesla_survey_model3SR_data['Degradation.1']
+tesla_survey_model3SR_data['Year'] = tesla_survey_model3SR_data['Age'] / 12
+tesla_survey_model3SR_data['Mileage'] = tesla_survey_model3SR_data['Odometer'] * 0.621371
+tesla_survey_model3SR_data = tesla_survey_model3SR_data.loc[tesla_survey_model3SR_data['Relative capacity'] < 1.0]
+tesla_survey_model3SR_data['Year (binned)'] = tesla_survey_model3SR_data['Year'].apply(lambda x: int(np.floor(x)))
+tesla_survey_model3SR_data['EFCs'] = tesla_survey_model3SR_data['Mileage'] / 209.4
+sns.scatterplot(tesla_survey_model3SR_data, x='Year', y='Relative capacity')
+
+--- CELL 23: CODE ---
+# since relative capacity is pretty low even at year 0, assume Tesla is just overreporting total range
+tesla_survey_model3SR_data['Relative capacity'] = tesla_survey_model3SR_data['Relative capacity'] + 0.01
+sns.scatterplot(tesla_survey_model3SR_data, x='Year', y='Relative capacity')
+
+--- CELL 24: CODE ---
+sns.scatterplot(tesla_survey_model3SR_data, x='Mileage', y='Relative capacity', hue='Year (binned)', palette='Set2', alpha=0.8)
+plt.ylim([None, 1.])
+
+--- CELL 25: CODE ---
+sns.boxenplot(tesla_survey_model3SR_data, x='Year (binned)', y='Relative capacity')
+
+--- CELL 26: CODE ---
+go = sns.displot(tesla_survey_model3SR_data, x='Mileage', y='Relative capacity', col='Year (binned)', hue='Year (binned)', palette='Set2')
+for ax in go.axes.flatten():
+    ax.set_ylim([0.85, 1])
+
+--- CELL 27: CODE ---
+from blast.utils.functions import simulate_battery_life_distribution, scale_vehicle_profile_to_annual_efcs
+from blast.models import Lfp_Gr_250AhPrismatic, Lfp_Gr_SonyMurata3Ah_Battery
+"""
+LFP (Model 3 short range): 
+- 272 mile EPA range * 77% performance = 209.4 miles/EFC 
+- 209.4 miles/EFC = 64 EFCs/year @ 13476 miles/yr
+- 60.9 kWh energy capacity
+"""
+percentiles = [0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+capacity, time, efc = [], [], []
+for percentile in percentiles:
+    vmt = np.interp(percentile, annual_vmt['CDF'], annual_vmt['Annual VMT'])
+    efcs = vmt / 209.4
+    ev = scale_vehicle_profile_to_annual_efcs(ev_combined.copy(), desired_efcs_per_year=efcs)
+    ev['Temperature_C'] = 25
+
+    Battery = Lfp_Gr_SonyMurata3Ah_Battery
+    # scalar ~ 2.5 for LFP_Gr_250Ah, but doesn't match first few years very well (underpredicts at early years) so probably
+    # will overpredict degradation at later years
+    sims = simulate_battery_life_distribution(Battery, ev, degradation_scalar_std=0.1, degradation_scalar_mean=0.75, threshold_time=4)
+    for sim in sims:
+        batt = sims[sim]
+        capacity.extend(batt.outputs['q'].tolist()[:])
+        time.extend(batt.stressors['t_days'].tolist()[:])
+        efc.extend(batt.stressors['efc'].tolist()[:])
+
+model_summary = pd.DataFrame({'Relative capacity': capacity, 'Time (days)': time, 'EFCs': efc})
+# To convert simulation time to model year, we take the floor of the time passed.
+# Vehicle model years are often 'forward looking', for example, a 2018 vehicle at the end of 2018
+# could have been manufactured in the middle of 2017, so it would be 1.5 years old in actuality, but
+# the age according to the model year is only 1 year.
+model_summary['Year'] = model_summary['Time (days)']/365
+model_summary['Year (binned)'] = np.floor(model_summary['Time (days)']/365).astype(int)
+model_summary['Mileage'] = model_summary['EFCs'] * 209.4
+
+--- CELL 28: CODE ---
+tesla_survey_model3SR_data['Source'] = 'Public Tesla data'
+model_summary['Source'] = 'Battery simulation'
+columns = ['Source', 'Relative capacity', 'EFCs', 'Year', 'Year (binned)', 'Mileage']
+comparison = pd.concat([tesla_survey_model3SR_data[columns], model_summary[columns]]).reset_index(drop=True)
+
+--- CELL 29: CODE ---
+sns.boxenplot(comparison, x='Year (binned)', y='Relative capacity', hue='Source', hue_order=['Battery simulation', 'Public Tesla data'], palette='tab10')
+plt.title('Model 3 Short Range data vs. SonyMurata LFP-Gr BLAST-Lite model')
+
+--- CELL 30: CODE ---
+
+sns.displot(comparison, 
+            x='Mileage', y='Relative capacity', col='Year (binned)', row='Source', hue='Year (binned)', palette='Set2', height=2.5, aspect=1)
+
+--- CELL 31: CODE ---
+

@@ -1,0 +1,38 @@
+{
+  "selected_candidate": "combined_unscaled",
+  "service_profile": "second_life_stationary_service_DR_plus_battery.csv",
+  "equivalence": {
+    "aged_direct": {
+      "q": true,
+      "r": true,
+      "time_days": true,
+      "efc": true
+    },
+    "aged_deepcopy": {
+      "q": true,
+      "r": true,
+      "time_days": true,
+      "efc": true
+    },
+    "aged_reloaded": {
+      "q": true,
+      "r": true,
+      "time_days": true,
+      "efc": true
+    }
+  },
+  "checks": {
+    "aged_equivalence": true,
+    "aged_q_does_not_reset": true,
+    "aged_r_does_not_reset": true,
+    "aged_time_continues": true,
+    "aged_continuation_is_one_year": true,
+    "aged_efc_continues": true,
+    "history_appended": true
+  },
+  "all_checks_passed": true,
+  "summary_file": "/content/BLAST-Lite/extension/second_life_initial_condition/results/second_life_continuation_summary.csv",
+  "continued_pickle": "saved_states/combined_unscaled_after_one_year_stationary.pkl",
+  "figure": "/content/BLAST-Lite/extension/second_life_initial_condition/figures/second_life_continuation_comparison.png",
+  "classification": "Internally consistent aged second-life state continued under one annual stationary service profile."
+}

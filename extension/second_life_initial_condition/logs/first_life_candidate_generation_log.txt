@@ -1,0 +1,14 @@
+STANDARD OUTPUT
+            candidate                                        file  rows  duration_days  soc_min  soc_mean  soc_max  first_soc  last_soc  boundary_difference  annual_input_efc  temperature_C
+    combined_unscaled     first_life_combined_unscaled_annual.csv  8640     359.958333 0.100000  0.715104     0.95       0.95  0.910203            -0.039797         90.088481           25.0
+       personal_large        first_life_personal_large_annual.csv  8640     359.958333 0.159742  0.622271     0.95       0.95  0.471107            -0.478893         63.347802           25.0
+       personal_small        first_life_personal_small_annual.csv  8640     359.958333 0.281331  0.686689     0.95       0.95  0.782611            -0.167389        130.896414           25.0
+           commercial            first_life_commercial_annual.csv  8640     359.958333 0.049998  0.511240     0.95       0.95  0.500065            -0.449935        647.776148           25.0
+combined_scaled_55efc first_life_combined_scaled_55efc_annual.csv  8640     359.958333 0.100000  0.720855     0.95       0.95  0.946537            -0.003463         53.197922           25.0
+
+
+STANDARD ERROR
+
+
+RETURN CODE
+0

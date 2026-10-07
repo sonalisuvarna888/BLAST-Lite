@@ -1,0 +1,70 @@
+STANDARD OUTPUT
+Running aged_direct...
+  before q = 0.799999963
+  after q = 0.765158120
+Running aged_deepcopy...
+  before q = 0.799999963
+  after q = 0.765158120
+Running aged_reloaded...
+  before q = 0.799999963
+  after q = 0.765158120
+Running fresh_reference...
+  before q = 1.000000000
+  after q = 0.927448452
+
+SUMMARY
+           case  before_q  after_q   delta_q  before_r   after_r  delta_r  before_time_years  after_time_years  delta_time_years  before_efc   after_efc  delta_efc  before_q_length  after_q_length
+    aged_direct       0.8 0.765158 -0.034842 27.136261 29.541724 2.405464          12.817922         13.818265          1.000342 1156.614785 1512.102498 355.487713             4729            5103
+  aged_deepcopy       0.8 0.765158 -0.034842 27.136261 29.541724 2.405464          12.817922         13.818265          1.000342 1156.614785 1512.102498 355.487713             4729            5103
+  aged_reloaded       0.8 0.765158 -0.034842 27.136261 29.541724 2.405464          12.817922         13.818265          1.000342 1156.614785 1512.102498 355.487713             4729            5103
+fresh_reference       1.0 0.927448 -0.072552  1.000000  1.933664 0.933664           0.000000          1.000342          1.000342    0.000000  397.451118 397.451118                1             375
+
+RECORD
+{
+  "selected_candidate": "combined_unscaled",
+  "service_profile": "second_life_stationary_service_DR_plus_battery.csv",
+  "equivalence": {
+    "aged_direct": {
+      "q": true,
+      "r": true,
+      "time_days": true,
+      "efc": true
+    },
+    "aged_deepcopy": {
+      "q": true,
+      "r": true,
+      "time_days": true,
+      "efc": true
+    },
+    "aged_reloaded": {
+      "q": true,
+      "r": true,
+      "time_days": true,
+      "efc": true
+    }
+  },
+  "checks": {
+    "aged_equivalence": true,
+    "aged_q_does_not_reset": true,
+    "aged_r_does_not_reset": true,
+    "aged_time_continues": true,
+    "aged_continuation_is_one_year": true,
+    "aged_efc_continues": true,
+    "history_appended": true
+  },
+  "all_checks_passed": true,
+  "summary_file": "/content/BLAST-Lite/extension/second_life_initial_condition/results/second_life_continuation_summary.csv",
+  "continued_pickle": "saved_states/combined_unscaled_after_one_year_stationary.pkl",
+  "figure": "/content/BLAST-Lite/extension/second_life_initial_condition/figures/second_life_continuation_comparison.png",
+  "classification": "Internally consistent aged second-life state continued under one annual stationary service profile."
+}
+
+
+STANDARD ERROR
+
+
+RETURN CODE
+0
+
+ELAPSED SECONDS
+4.6348419189453125

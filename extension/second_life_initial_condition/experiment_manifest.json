@@ -1,0 +1,484 @@
+{
+  "experiment": "Consistent second-life initial condition",
+  "branch": "extension/second-life-initial-condition",
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "degradation_scalar": 2.75,
+  "transition_q": 0.8,
+  "selected_candidate": "combined_unscaled",
+  "selected_state": {
+    "selected_candidate": "combined_unscaled",
+    "selection_rationale": [
+      "Official combined personal-EV SOC profile from the repository.",
+      "Natural annual boundary continuity after 365-day tiling.",
+      "No synthetic final-day boundary correction required.",
+      "Moderate annual use of approximately 90.90 EFC.",
+      "Reaches q=0.80 in a practical modeled time compared with the less intensive personal-large case.",
+      "Avoids the commercial candidate's extreme 657 EFC/year."
+    ],
+    "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+    "degradation_scalar": 2.75,
+    "first_life_temperature_C": 25.0,
+    "transition_definition": "The same internally consistent battery object is transitioned to stationary service when model q reaches 0.80.",
+    "transition_state": {
+      "q": 0.7999999632108619,
+      "r": 27.136260714135968,
+      "modeled_time_years": 12.817922374429225,
+      "efc": 1156.6147853032078,
+      "annual_input_efc": 90.898637566,
+      "pickle_file": "saved_states/combined_unscaled_aged_battery.pkl",
+      "state_json": "saved_states/combined_unscaled_aged_state.json"
+    },
+    "one_year_stationary_service": {
+      "service_profile": "Annual community DR-plus-battery SOC trajectory",
+      "q_before": 0.7999999632108619,
+      "q_after": 0.7651581198601853,
+      "q_change": -0.0348418433506765,
+      "r_before": 27.136260714135968,
+      "r_after": 29.54172423769337,
+      "r_change": 2.4054635235573976,
+      "time_increment_years": 1.0003424657533913,
+      "efc_increment": 355.48771279820494
+    },
+    "fresh_reference": {
+      "q_before": 1.0,
+      "q_after": 0.927448451718664,
+      "r_before": 1.0,
+      "r_after": 1.933664310890479,
+      "efc_increment": 397.4511180355503
+    },
+    "important_boundaries": [
+      "q=0.80 is an analytical transition threshold, not a universal EV retirement rule.",
+      "Resistance r is a normalized model output, not direct ohmic resistance.",
+      "The first-life degradation scalar of 2.75 follows the official EV notebook example and is scenario-specific.",
+      "The stationary service profile was generated using fixed 42-kWh dispatch capacity and Miami climate.",
+      "This validates state continuity, not pack-level second-life safety."
+    ]
+  },
+  "candidate_results": [
+    {
+      "candidate": "combined_unscaled",
+      "annual_input_efc": 90.898637566,
+      "final_q": 0.7999999632108619,
+      "final_r": 27.136260714135968,
+      "final_time_years": 12.817922374429225,
+      "final_efc": 1156.6147853032078,
+      "target_reached": true
+    },
+    {
+      "candidate": "personal_large",
+      "annual_input_efc": 64.3775071,
+      "final_q": 0.7999873416964296,
+      "final_r": 48.18744998952522,
+      "final_time_years": 25.92408675799087,
+      "final_efc": 1608.464631450644,
+      "target_reached": true
+    },
+    {
+      "candidate": "personal_small",
+      "annual_input_efc": 132.63485815899998,
+      "final_q": 0.7998038700243837,
+      "final_r": 28.98145172563904,
+      "final_time_years": 14.515867579908676,
+      "final_efc": 1895.4567032156888,
+      "target_reached": true
+    },
+    {
+      "candidate": "commercial",
+      "annual_input_efc": 657.00113077,
+      "final_q": 0.799990706324713,
+      "final_r": 3.086304181528366,
+      "final_time_years": 2.1065068493150743,
+      "final_efc": 1268.158395689629,
+      "target_reached": true
+    },
+    {
+      "candidate": "combined_scaled_55efc",
+      "annual_input_efc": 53.7607597455,
+      "final_q": 0.7999808566661109,
+      "final_r": 51.144780269865926,
+      "final_time_years": 20.911757990867585,
+      "final_efc": 1084.472229696106,
+      "target_reached": true
+    }
+  ],
+  "continuation_results": [
+    {
+      "case": "aged_direct",
+      "before_q": 0.7999999632108619,
+      "after_q": 0.7651581198601853,
+      "delta_q": -0.0348418433506765,
+      "before_r": 27.136260714135968,
+      "after_r": 29.54172423769337,
+      "delta_r": 2.4054635235573976,
+      "before_time_years": 12.817922374429225,
+      "after_time_years": 13.818264840182616,
+      "delta_time_years": 1.0003424657533913,
+      "before_efc": 1156.6147853032078,
+      "after_efc": 1512.1024981014127,
+      "delta_efc": 355.48771279820494,
+      "before_q_length": 4729,
+      "after_q_length": 5103
+    },
+    {
+      "case": "aged_deepcopy",
+      "before_q": 0.7999999632108619,
+      "after_q": 0.7651581198601853,
+      "delta_q": -0.0348418433506765,
+      "before_r": 27.136260714135968,
+      "after_r": 29.54172423769337,
+      "delta_r": 2.4054635235573976,
+      "before_time_years": 12.817922374429225,
+      "after_time_years": 13.818264840182616,
+      "delta_time_years": 1.0003424657533913,
+      "before_efc": 1156.6147853032078,
+      "after_efc": 1512.1024981014127,
+      "delta_efc": 355.48771279820494,
+      "before_q_length": 4729,
+      "after_q_length": 5103
+    },
+    {
+      "case": "aged_reloaded",
+      "before_q": 0.7999999632108619,
+      "after_q": 0.7651581198601853,
+      "delta_q": -0.0348418433506765,
+      "before_r": 27.136260714135968,
+      "after_r": 29.54172423769337,
+      "delta_r": 2.4054635235573976,
+      "before_time_years": 12.817922374429225,
+      "after_time_years": 13.818264840182616,
+      "delta_time_years": 1.0003424657533913,
+      "before_efc": 1156.6147853032078,
+      "after_efc": 1512.1024981014127,
+      "delta_efc": 355.48771279820494,
+      "before_q_length": 4729,
+      "after_q_length": 5103
+    },
+    {
+      "case": "fresh_reference",
+      "before_q": 1.0,
+      "after_q": 0.927448451718664,
+      "delta_q": -0.0725515482813359,
+      "before_r": 1.0,
+      "after_r": 1.933664310890479,
+      "delta_r": 0.933664310890479,
+      "before_time_years": 0.0,
+      "after_time_years": 1.0003424657534243,
+      "delta_time_years": 1.0003424657534243,
+      "before_efc": 0.0,
+      "after_efc": 397.4511180355503,
+      "delta_efc": 397.4511180355503,
+      "before_q_length": 1,
+      "after_q_length": 375
+    }
+  ],
+  "serialization": {
+    "deepcopy_supported": true,
+    "pickle_supported": true,
+    "continuation_equivalence": true
+  },
+  "source_notebook_sha256": "625b0491b5b1da2cc084c64eecb174c0a311441bca9f5db0df44fe5e5732d805",
+  "stationary_service_source_branch": "integration/annual-community-dispatch",
+  "stationary_service_source_commit": "114193eedee56340403d390fce7431ceb09e9e4c",
+  "main_finding": "An internally consistent aged second-life state can be generated by simulating a documented first-life history and preserving the complete battery object.",
+  "important_boundaries": [
+    "q=0.80 is an analytical transition threshold.",
+    "The first-life profile is illustrative rather than measured.",
+    "The degradation scalar is scenario-specific.",
+    "Resistance r is a normalized model output.",
+    "The stationary profile is synthetic community dispatch.",
+    "State continuity does not establish pack safety."
+  ],
+  "file_count_excluding_manifest": 58,
+  "files": [
+    {
+      "path": "extension/second_life_initial_condition/README.md",
+      "size_bytes": 6448,
+      "sha256": "c01abf13c140f92321ae7bb341dce5aaf54b0a2684338c69675395befc590184"
+    },
+    {
+      "path": "extension/second_life_initial_condition/figures/first_life_candidate_comparison.png",
+      "size_bytes": 261592,
+      "sha256": "412e92c1dfd24fc18f7b917bbc3f9010aca35e3a456ddcf16b6d863494a364c3"
+    },
+    {
+      "path": "extension/second_life_initial_condition/figures/first_life_candidate_threshold_comparison.png",
+      "size_bytes": 99841,
+      "sha256": "1c9b9cd1bb270b9af391a7ae4b03586aac5f57eae077ec32816eb366e5563f40"
+    },
+    {
+      "path": "extension/second_life_initial_condition/figures/second_life_continuation_comparison.png",
+      "size_bytes": 124339,
+      "sha256": "fbbd8a63167f547a99cab2782b14e969293ad59cf0615cc22dd9fbc7976bb2e0"
+    },
+    {
+      "path": "extension/second_life_initial_condition/figures/selected_second_life_transition.png",
+      "size_bytes": 104264,
+      "sha256": "d13edeba77b22e7abe1e4884ee048d2aac3e41311b8e23ca364d3de5ee626921"
+    },
+    {
+      "path": "extension/second_life_initial_condition/logs/first_life_candidate_errors.json",
+      "size_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "extension/second_life_initial_condition/logs/first_life_candidate_execution_log.txt",
+      "size_bytes": 3325,
+      "sha256": "af64dc38364a6ad027513b0ef295e494c5920c3a2f85301173f5d6147bb85d30"
+    },
+    {
+      "path": "extension/second_life_initial_condition/logs/first_life_candidate_generation_log.txt",
+      "size_bytes": 1188,
+      "sha256": "5bd286d96c618d8397d7bb8dcbff4d4d707ec26f5a6203b2d0ef493999e1ff02"
+    },
+    {
+      "path": "extension/second_life_initial_condition/logs/saved_state_audit_log.txt",
+      "size_bytes": 8441,
+      "sha256": "2a1bdfd677f72d6017bd70cc9e9d0129e4cb0170e6906719c6e27e87076f5a2f"
+    },
+    {
+      "path": "extension/second_life_initial_condition/logs/second_life_continuation_log.txt",
+      "size_bytes": 2547,
+      "sha256": "c239a9c8cb5f052ac40cc08fc4247857948b60072bf2cdf5850d205fa46ddf54"
+    },
+    {
+      "path": "extension/second_life_initial_condition/logs/second_life_one_year_continuation_log.txt",
+      "size_bytes": 2590,
+      "sha256": "8977477b50447fb2f239f3a58386873f8e18c98141699ec3e50f9f36453f8fdb"
+    },
+    {
+      "path": "extension/second_life_initial_condition/metadata/first_life_harmonization_policy.json",
+      "size_bytes": 370,
+      "sha256": "d1ede467622a64d5b1e04633f2d7392ca828f77cb2f481fcdc18b9fbdcf5d629"
+    },
+    {
+      "path": "extension/second_life_initial_condition/metadata/official_EV_notebook_metadata.json",
+      "size_bytes": 150,
+      "sha256": "9d568a4a40c4c708f38202dea6c470fcb38691c5897c7b4b255191a9cb6cfdde"
+    },
+    {
+      "path": "extension/second_life_initial_condition/metadata/selected_second_life_state.json",
+      "size_bytes": 2182,
+      "sha256": "eced6cd9c0e5512fc4c049a6d1432b9f90dd38751d40bbe87f7f2a86f720c6af"
+    },
+    {
+      "path": "extension/second_life_initial_condition/metadata/state_serialization_inspection.json",
+      "size_bytes": 1223,
+      "sha256": "17b8497aff17eadfbd850a883c69019dd8fae1cf382d84dcc75bc95255d06a87"
+    },
+    {
+      "path": "extension/second_life_initial_condition/metadata/stationary_service_profile_metadata.json",
+      "size_bytes": 682,
+      "sha256": "b72c54d47021a146e5ae0f78272b98d4ed0be6f6a5a30821d51d84098148bc38"
+    },
+    {
+      "path": "extension/second_life_initial_condition/results/EV_profile_inventory.csv",
+      "size_bytes": 1132,
+      "sha256": "c831c0738a1f05d4a5d2f004db14f9370edab7976f28f95e806578cf3aa4ef31"
+    },
+    {
+      "path": "extension/second_life_initial_condition/results/climate_inventory.csv",
+      "size_bytes": 413,
+      "sha256": "10e9c96a0b1189860e4c4129851fa4bf52775271e9daa6c53d21ecadbbc4a3c2"
+    },
+    {
+      "path": "extension/second_life_initial_condition/results/combined_scaled_55efc_first_life_trajectory.csv",
+      "size_bytes": 18524,
+      "sha256": "5a09f12ef111bf8392cc084edd313c779905fe5c234a941b5402afb05c4b8fa3"
+    },
+    {
+      "path": "extension/second_life_initial_condition/results/combined_unscaled_first_life_trajectory.csv",
+      "size_bytes": 11319,
+      "sha256": "43ba9486063a21fb14cdb7e1d1ec6a603fc4fee6db4f567b655a1804d9cfa31b"
+    },
+    {
+      "path": "extension/second_life_initial_condition/results/commercial_first_life_trajectory.csv",
+      "size_bytes": 1981,
+      "sha256": "5f3e82702b1737da44e6247d1f6c677f65f5bd78b766f8fb6ef33ac81209dd33"
+    },
+    {
+      "path": "extension/second_life_initial_condition/results/first_life_365day_harmonization_summary.csv",
+      "size_bytes": 1145,
+      "sha256": "dd734651d2422674a4245525b94cba6d2abd83d154c7c446176690cb90e8a9d7"
+    },
+    {
+      "path": "extension/second_life_initial_condition/results/first_life_candidate_input_summary.csv",
+      "size_bytes": 965,
+      "sha256": "4c9e24661b510af6a7cc5d7204a59181f28364c0a2dfb02ed20d0a2f725db565"
+    },
+    {
+      "path": "extension/second_life_initial_condition/results/first_life_candidate_results.csv",
+      "size_bytes": 1935,
+      "sha256": "cf99d4289717744f0303d56c4728fc0e7e08658ae80c1db7d6e8f55297654037"
+    },
+    {
+      "path": "extension/second_life_initial_condition/results/first_life_candidate_run_record.json",
+      "size_bytes": 551,
+      "sha256": "ee3860b78ad300763d94761a9ffd349f11da8b94fc7e40a48d18e38b7333d821"
+    },
+    {
+      "path": "extension/second_life_initial_condition/results/first_life_saved_state_audit.csv",
+      "size_bytes": 681,
+      "sha256": "75b4bb03265a6cf6f58653f20595602041d69a3ecba575445523264d643922fb"
+    },
+    {
+      "path": "extension/second_life_initial_condition/results/personal_large_first_life_trajectory.csv",
+      "size_bytes": 23020,
+      "sha256": "2d6d2cfbed4e93886c6e0c41887b5b27e8efdbf31084dba0bd0f4bdad485e982"
+    },
+    {
+      "path": "extension/second_life_initial_condition/results/personal_small_first_life_trajectory.csv",
+      "size_bytes": 12929,
+      "sha256": "8f6302fb5393e76bb14a6ed49e22d3395b7f74f13eb717c33699100144ab4ac2"
+    },
+    {
+      "path": "extension/second_life_initial_condition/results/saved_state_finiteness_diagnostics.csv",
+      "size_bytes": 10402,
+      "sha256": "dd9089fa47e12fd9f44fc422a33112004e675b49c6eaacbef47fac0efce9d44e"
+    },
+    {
+      "path": "extension/second_life_initial_condition/results/second_life_continuation_record.json",
+      "size_bytes": 1207,
+      "sha256": "95b1aba8220ac6feee9de286a4c6fde17266c441f5f7d86598469a44b86b07e2"
+    },
+    {
+      "path": "extension/second_life_initial_condition/results/second_life_continuation_summary.csv",
+      "size_bytes": 1117,
+      "sha256": "b906acdbdbff7238d793ab7039cf37064cc569cc33a5b2b1e95913c1a03ba38e"
+    },
+    {
+      "path": "extension/second_life_initial_condition/run_first_life_candidates.py",
+      "size_bytes": 12613,
+      "sha256": "38950c37e7dd3d201e24d6ccb9b4eb54c8ee82b3cad8ee2d75e269a132ae7c02"
+    },
+    {
+      "path": "extension/second_life_initial_condition/saved_states/combined_scaled_55efc_aged_battery.pkl",
+      "size_bytes": 1592042,
+      "sha256": "78ce6d76826930713a2027e14ee1fa3be19d74bf420ca17012d968c311a2c8ea"
+    },
+    {
+      "path": "extension/second_life_initial_condition/saved_states/combined_scaled_55efc_aged_state.json",
+      "size_bytes": 1041666,
+      "sha256": "05fb2e5fabc2bf06c826d0da1428e0bd8331db2b48b860f50a25330d73adf757"
+    },
+    {
+      "path": "extension/second_life_initial_condition/saved_states/combined_unscaled_after_one_year_stationary.pkl",
+      "size_bytes": 1063098,
+      "sha256": "2c09700e9e42ef019f1ed46b8403642d8f407fb008f4c8ff9bb2df984879c235"
+    },
+    {
+      "path": "extension/second_life_initial_condition/saved_states/combined_unscaled_aged_battery.pkl",
+      "size_bytes": 985306,
+      "sha256": "eff949d581cb6ba0aaae81a7b6aea0c4bf27051cae1fa45eac787af53b1a2df9"
+    },
+    {
+      "path": "extension/second_life_initial_condition/saved_states/combined_unscaled_aged_state.json",
+      "size_bytes": 643631,
+      "sha256": "26191b7a8cf5914bbb61c33b8f622b7f2d86d26f1802e11a8908110c7d208931"
+    },
+    {
+      "path": "extension/second_life_initial_condition/saved_states/commercial_aged_battery.pkl",
+      "size_bytes": 227680,
+      "sha256": "8aee4370e59dc0f0a9493e87439495a79d80f302af7f6f8c87c588cbcda45d53"
+    },
+    {
+      "path": "extension/second_life_initial_condition/saved_states/commercial_aged_state.json",
+      "size_bytes": 149507,
+      "sha256": "48c6cf36a7dc8e49ff2f521fe6e779bb7c26caec91d460f5cd7ff28d2bfaef2c"
+    },
+    {
+      "path": "extension/second_life_initial_condition/saved_states/personal_large_aged_battery.pkl",
+      "size_bytes": 1973423,
+      "sha256": "1634f435beacf2b1a330ad4ad63ea7d98a8926a0c422cc9ccef9def135cc9ab3"
+    },
+    {
+      "path": "extension/second_life_initial_condition/saved_states/personal_large_aged_state.json",
+      "size_bytes": 1284609,
+      "sha256": "26927f9dcc8bb1db389b16d9dc2009958c3eabfa8c9f1674f0552e43032f5bf7"
+    },
+    {
+      "path": "extension/second_life_initial_condition/saved_states/personal_small_aged_battery.pkl",
+      "size_bytes": 1105738,
+      "sha256": "69847dcd33cd89bdddf0f0fee415dd249ac408b6e1e839e6d308d836f43fe1f7"
+    },
+    {
+      "path": "extension/second_life_initial_condition/saved_states/personal_small_aged_state.json",
+      "size_bytes": 718765,
+      "sha256": "48a2c7bbae0f32b4ceec5942ba3b8706160c817b875677c387decf31f3418932"
+    },
+    {
+      "path": "extension/second_life_initial_condition/source_profiles/example_EV_life.ipynb",
+      "size_bytes": 2069558,
+      "sha256": "625b0491b5b1da2cc084c64eecb174c0a311441bca9f5db0df44fe5e5732d805"
+    },
+    {
+      "path": "extension/second_life_initial_condition/source_profiles/first_life_combined_scaled_55efc_365day.csv",
+      "size_bytes": 406760,
+      "sha256": "85313ad6631579f6a05f76a5125c2b3c10289035b669b83bcf4386296ea71793"
+    },
+    {
+      "path": "extension/second_life_initial_condition/source_profiles/first_life_combined_scaled_55efc_annual.csv",
+      "size_bytes": 226918,
+      "sha256": "4a05b59e54e44254bdd4be72e564ad2136593b2ac588a6c6cd368ae83d48cf49"
+    },
+    {
+      "path": "extension/second_life_initial_condition/source_profiles/first_life_combined_unscaled_365day.csv",
+      "size_bytes": 394056,
+      "sha256": "bf3168254b0d2e8e96cf25b92d4f6c57c967ecc0b3abcdb3701b18c6fa139a65"
+    },
+    {
+      "path": "extension/second_life_initial_condition/source_profiles/first_life_combined_unscaled_annual.csv",
+      "size_bytes": 218640,
+      "sha256": "e2c6a5a6f1615dd428f9f1cfefc8fada3a9cf339059f042fd5dcf9fe21d622e8"
+    },
+    {
+      "path": "extension/second_life_initial_condition/source_profiles/first_life_commercial_365day.csv",
+      "size_bytes": 388284,
+      "sha256": "cbd4a6b7c38e6e55b1067f6ca657ab2dd4eb811d739b876a03af8cededa49784"
+    },
+    {
+      "path": "extension/second_life_initial_condition/source_profiles/first_life_commercial_annual.csv",
+      "size_bytes": 215815,
+      "sha256": "2cf2545acaf6d3df506cba41f1904452b9db56cd036cb3def5ff34c9b7884b07"
+    },
+    {
+      "path": "extension/second_life_initial_condition/source_profiles/first_life_personal_large_365day.csv",
+      "size_bytes": 396838,
+      "sha256": "5e0b61d5dabdf4dec6d7fc8c9a8ef979c79347e1c4e408ec84b56fd52fdf0026"
+    },
+    {
+      "path": "extension/second_life_initial_condition/source_profiles/first_life_personal_large_annual.csv",
+      "size_bytes": 220031,
+      "sha256": "38df363a2a204e91d2d6d3a3200634221b2421cb79d36887b78c0a1646489136"
+    },
+    {
+      "path": "extension/second_life_initial_condition/source_profiles/first_life_personal_small_365day.csv",
+      "size_bytes": 394444,
+      "sha256": "b839b17346f4458baa4ceb342b847b25896d187aad0b0edf50bbae3a91ef71eb"
+    },
+    {
+      "path": "extension/second_life_initial_condition/source_profiles/first_life_personal_small_annual.csv",
+      "size_bytes": 218850,
+      "sha256": "094d9a0d8315f5609482aaa1a8c9ec27df8601ca3497a17fcff38b65cef6e231"
+    },
+    {
+      "path": "extension/second_life_initial_condition/source_profiles/official_EV_notebook_cells.txt",
+      "size_bytes": 23852,
+      "sha256": "81564c7bb0d491aa1fc87e57c465c1c2dd5bc65811fc8ae63adb89ff83248379"
+    },
+    {
+      "path": "extension/second_life_initial_condition/source_profiles/official_EV_notebook_code.py",
+      "size_bytes": 21797,
+      "sha256": "847029201ea6de29ff4720c0d4692fa26370090bd60038e6736433e03840f2d6"
+    },
+    {
+      "path": "extension/second_life_initial_condition/source_profiles/second_life_stationary_service_DR_plus_battery.csv",
+      "size_bytes": 508927,
+      "sha256": "bfbd823877819eb57d118682f3f391b5ec53cba93dee41c7817ffd2798901770"
+    },
+    {
+      "path": "extension/second_life_initial_condition/test_second_life_continuation.py",
+      "size_bytes": 13695,
+      "sha256": "4800de57093a0a2dddce1162443bcfbbc805d4a6dcc4b31b36eeb2612c198448"
+    }
+  ]
+}

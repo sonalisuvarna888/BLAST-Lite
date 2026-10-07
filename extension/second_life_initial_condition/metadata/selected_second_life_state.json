@@ -1,0 +1,49 @@
+{
+  "selected_candidate": "combined_unscaled",
+  "selection_rationale": [
+    "Official combined personal-EV SOC profile from the repository.",
+    "Natural annual boundary continuity after 365-day tiling.",
+    "No synthetic final-day boundary correction required.",
+    "Moderate annual use of approximately 90.90 EFC.",
+    "Reaches q=0.80 in a practical modeled time compared with the less intensive personal-large case.",
+    "Avoids the commercial candidate's extreme 657 EFC/year."
+  ],
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "degradation_scalar": 2.75,
+  "first_life_temperature_C": 25.0,
+  "transition_definition": "The same internally consistent battery object is transitioned to stationary service when model q reaches 0.80.",
+  "transition_state": {
+    "q": 0.7999999632108619,
+    "r": 27.136260714135968,
+    "modeled_time_years": 12.817922374429225,
+    "efc": 1156.6147853032078,
+    "annual_input_efc": 90.898637566,
+    "pickle_file": "saved_states/combined_unscaled_aged_battery.pkl",
+    "state_json": "saved_states/combined_unscaled_aged_state.json"
+  },
+  "one_year_stationary_service": {
+    "service_profile": "Annual community DR-plus-battery SOC trajectory",
+    "q_before": 0.7999999632108619,
+    "q_after": 0.7651581198601853,
+    "q_change": -0.0348418433506765,
+    "r_before": 27.136260714135968,
+    "r_after": 29.54172423769337,
+    "r_change": 2.4054635235573976,
+    "time_increment_years": 1.0003424657533913,
+    "efc_increment": 355.48771279820494
+  },
+  "fresh_reference": {
+    "q_before": 1.0,
+    "q_after": 0.927448451718664,
+    "r_before": 1.0,
+    "r_after": 1.933664310890479,
+    "efc_increment": 397.4511180355503
+  },
+  "important_boundaries": [
+    "q=0.80 is an analytical transition threshold, not a universal EV retirement rule.",
+    "Resistance r is a normalized model output, not direct ohmic resistance.",
+    "The first-life degradation scalar of 2.75 follows the official EV notebook example and is scenario-specific.",
+    "The stationary service profile was generated using fixed 42-kWh dispatch capacity and Miami climate.",
+    "This validates state continuity, not pack-level second-life safety."
+  ]
+}

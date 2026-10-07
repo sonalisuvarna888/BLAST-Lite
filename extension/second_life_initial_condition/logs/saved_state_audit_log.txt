@@ -1,0 +1,67 @@
+STANDARD OUTPUT
+SAVED-STATE AUDIT
+========================================================================
+            candidate  pickle_exists  state_json_exists  q_matches_summary  r_matches_summary  time_matches_summary  efc_matches_summary  all_states_finite  final_outputs_finite  final_stressors_finite  final_rates_finite  target_reached  pickle_size_bytes  state_json_candidate_matches
+    combined_unscaled           True               True               True               True                  True                 True               True                  True                    True                True            True             985306                          True
+       personal_large           True               True               True               True                  True                 True               True                  True                    True                True            True            1973423                          True
+       personal_small           True               True               True               True                  True                 True               True                  True                    True                True            True            1105738                          True
+           commercial           True               True               True               True                  True                 True               True                  True                    True                True            True             227680                          True
+combined_scaled_55efc           True               True               True               True                  True                 True               True                  True                    True                True            True            1592042                          True
+
+NONFINITE HISTORICAL ENTRIES
+========================================================================
+            candidate  category          key  nan_count  positive_inf_count  negative_inf_count  first_value  last_value  last_value_finite
+    combined_unscaled stressors delta_t_days          1                   0                   0          NaN    0.875000               True
+    combined_unscaled stressors    delta_efc          1                   0                   0          NaN    1.027458               True
+    combined_unscaled stressors        TdegK          1                   0                   0          NaN  298.150000               True
+    combined_unscaled stressors          soc          1                   0                   0          NaN    0.655012               True
+    combined_unscaled stressors           Ua          1                   0                   0          NaN    0.135394               True
+    combined_unscaled stressors          dod          1                   0                   0          NaN    0.988325               True
+    combined_unscaled     rates           q1          1                   0                   0          NaN    0.002927               True
+    combined_unscaled     rates           q3          1                   0                   0          NaN    0.000331               True
+    combined_unscaled     rates           q5          1                   0                   0          NaN 5047.661412               True
+       personal_large stressors delta_t_days          1                   0                   0          NaN    1.041667               True
+       personal_large stressors    delta_efc          1                   0                   0          NaN    0.082072               True
+       personal_large stressors        TdegK          1                   0                   0          NaN  298.150000               True
+       personal_large stressors          soc          1                   0                   0          NaN    0.842848               True
+       personal_large stressors           Ua          1                   0                   0          NaN    0.092567               True
+       personal_large stressors          dod          1                   0                   0          NaN    0.205179               True
+       personal_large     rates           q1          1                   0                   0          NaN    0.004853               True
+       personal_large     rates           q3          1                   0                   0          NaN    0.000062               True
+       personal_large     rates           q5          1                   0                   0          NaN 8677.050243               True
+       personal_small stressors delta_t_days          1                   0                   0          NaN    1.000000               True
+       personal_small stressors    delta_efc          1                   0                   0          NaN    0.297329               True
+       personal_small stressors        TdegK          1                   0                   0          NaN  298.150000               True
+       personal_small stressors          soc          1                   0                   0          NaN    0.827532               True
+       personal_small stressors           Ua          1                   0                   0          NaN    0.096303               True
+       personal_small stressors          dod          1                   0                   0          NaN    0.371642               True
+       personal_small     rates           q1          1                   0                   0          NaN    0.004519               True
+       personal_small     rates           q3          1                   0                   0          NaN    0.000069               True
+       personal_small     rates           q5          1                   0                   0          NaN 7647.279645               True
+           commercial stressors delta_t_days          1                   0                   0          NaN    0.541667               True
+           commercial stressors    delta_efc          1                   0                   0          NaN    1.000141               True
+           commercial stressors        TdegK          1                   0                   0          NaN  298.150000               True
+           commercial stressors          soc          1                   0                   0          NaN    0.544492               True
+           commercial stressors           Ua          1                   0                   0          NaN    0.200575               True
+           commercial stressors          dod          1                   0                   0          NaN    1.000000               True
+           commercial     rates           q1          1                   0                   0          NaN    0.002410               True
+           commercial     rates           q3          1                   0                   0          NaN    0.000354               True
+           commercial     rates           q5          1                   0                   0          NaN 5834.634858               True
+combined_scaled_55efc stressors delta_t_days          1                   0                   0          NaN    1.000000               True
+combined_scaled_55efc stressors    delta_efc          1                   0                   0          NaN    0.132437               True
+combined_scaled_55efc stressors        TdegK          1                   0                   0          NaN  298.150000               True
+combined_scaled_55efc stressors          soc          1                   0                   0          NaN    0.971837               True
+combined_scaled_55efc stressors           Ua          1                   0                   0          NaN    0.087668               True
+combined_scaled_55efc stressors          dod          1                   0                   0          NaN    0.297307               True
+combined_scaled_55efc     rates           q1          1                   0                   0          NaN    0.006022               True
+combined_scaled_55efc     rates           q3          1                   0                   0          NaN    0.000065               True
+combined_scaled_55efc     rates           q5          1                   0                   0          NaN 7789.656216               True
+
+All saved-state checks passed: True
+
+
+STANDARD ERROR
+
+
+RETURN CODE
+0
