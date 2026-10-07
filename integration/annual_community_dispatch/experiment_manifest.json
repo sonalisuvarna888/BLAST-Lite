@@ -1,0 +1,630 @@
+{
+  "experiment": "One-year community dispatch with BLAST-Lite aging post-processing",
+  "branch": "integration/annual-community-dispatch",
+  "random_seed": 20261006,
+  "number_of_households": 10,
+  "annual_hours": 8760,
+  "dispatch_cases": [
+    "baseline",
+    "demand_response_only",
+    "battery_only",
+    "demand_response_plus_battery"
+  ],
+  "solver": "CLARABEL",
+  "rolling_horizon_hours": 48,
+  "implemented_hours_per_solve": 24,
+  "peak_penalty_per_kw_window": 0.5,
+  "dispatch_capacity_kwh": 42.0,
+  "blast_battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "blast_horizon_years": 5,
+  "successful_daily_case_solves": 1460,
+  "failed_daily_case_solves": 0,
+  "dispatch_results": [
+    {
+      "case": "baseline",
+      "annual_grid_bill": 12970.892842171388,
+      "annual_bill_savings": 0.0,
+      "bill_savings_percent": 0.0,
+      "peak_grid_import_kw": 21.43299957503618,
+      "peak_reduction_kw": 0.0,
+      "peak_reduction_percent": 0.0,
+      "annual_grid_energy_kwh": 56288.46239186629,
+      "grid_energy_change_kwh": 0.0,
+      "annual_battery_throughput_kwh": 0.0,
+      "annual_solar_spill_kwh": 9446.548477037504
+    },
+    {
+      "case": "demand_response_only",
+      "annual_grid_bill": 11831.02120754212,
+      "annual_bill_savings": 1139.8716346292676,
+      "bill_savings_percent": 8.787919601982063,
+      "peak_grid_import_kw": 18.218049673127062,
+      "peak_reduction_kw": 3.214949901909119,
+      "peak_reduction_percent": 14.999999839750345,
+      "annual_grid_energy_kwh": 54430.684895702245,
+      "grid_energy_change_kwh": -1857.7774961640464,
+      "annual_battery_throughput_kwh": 0.0,
+      "annual_solar_spill_kwh": 7588.770980766348
+    },
+    {
+      "case": "battery_only",
+      "annual_grid_bill": 9573.162964517156,
+      "annual_bill_savings": 3397.729877654232,
+      "bill_savings_percent": 26.195034674925555,
+      "peak_grid_import_kw": 14.09066602916693,
+      "peak_reduction_kw": 7.34233354586925,
+      "peak_reduction_percent": 34.25714408365473,
+      "annual_grid_energy_kwh": 51131.68371848931,
+      "grid_energy_change_kwh": -5156.778673376983,
+      "annual_battery_throughput_kwh": 17140.013310072936,
+      "annual_solar_spill_kwh": 1510.3081836359402
+    },
+    {
+      "case": "demand_response_plus_battery",
+      "annual_grid_bill": 8556.145926923018,
+      "annual_bill_savings": 4414.74691524837,
+      "bill_savings_percent": 34.03579822119108,
+      "peak_grid_import_kw": 12.447330002484154,
+      "peak_reduction_kw": 8.985669572552027,
+      "peak_reduction_percent": 41.924461114710105,
+      "annual_grid_energy_kwh": 50332.52924276861,
+      "grid_energy_change_kwh": -5955.933149097684,
+      "annual_battery_throughput_kwh": 16543.291273986077,
+      "annual_solar_spill_kwh": 807.9194441599651
+    }
+  ],
+  "aging_results": [
+    {
+      "case": "battery_only",
+      "annual_grid_bill": 9573.162964517156,
+      "annual_bill_savings": 3397.729877654232,
+      "bill_savings_percent": 26.195034674925555,
+      "peak_grid_import_kw": 14.09066602916693,
+      "peak_reduction_percent": 34.25714408365473,
+      "annual_solar_spill_kwh": 1510.3081836359402,
+      "dispatch_battery_throughput_kwh": 17140.013310072936,
+      "blast_input_mean_soc": 0.513403643212597,
+      "blast_input_annual_efc": 406.7519014934381,
+      "five_year_final_q": 0.8930958754717004,
+      "five_year_modeled_capacity_loss_percent": 10.690412452829955,
+      "five_year_final_model_efc": 2059.970364751392
+    },
+    {
+      "case": "demand_response_plus_battery",
+      "annual_grid_bill": 8556.145926923018,
+      "annual_bill_savings": 4414.74691524837,
+      "bill_savings_percent": 34.03579822119108,
+      "peak_grid_import_kw": 12.447330002484154,
+      "peak_reduction_percent": 41.924461114710105,
+      "annual_solar_spill_kwh": 807.9194441599651,
+      "dispatch_battery_throughput_kwh": 16543.291273986077,
+      "blast_input_mean_soc": 0.5337855643343428,
+      "blast_input_annual_efc": 392.5910145326306,
+      "five_year_final_q": 0.8904117701588632,
+      "five_year_modeled_capacity_loss_percent": 10.95882298411368,
+      "five_year_final_model_efc": 1992.88278790762
+    }
+  ],
+  "main_finding": "DR plus battery provides greater operational value but slightly greater modeled capacity loss than battery only, despite fewer annual EFC, because the combined trajectory has higher mean SOC.",
+  "classification": "Synthetic annual dispatch with post-processing aging evaluation; degradation is not fed back into dispatch.",
+  "important_boundaries": [
+    "Synthetic household, solar, price, and weather-matching assumptions.",
+    "Fixed 42-kWh dispatch capacity for the full annual run.",
+    "Miami climate is not geographically matched to the synthetic community.",
+    "BLAST-Lite q is not a complete pack-level SOH or safety metric.",
+    "Results represent model behavior, not empirical lifetime validation."
+  ],
+  "file_count_excluding_manifest": 102,
+  "files": [
+    {
+      "path": "integration/annual_community_dispatch/README.md",
+      "size_bytes": 7010,
+      "sha256": "cd0647c5dbbe08a90eb976879035b6986530b28e79bcff0bfa457dd4a976e9bf"
+    },
+    {
+      "path": "integration/annual_community_dispatch/annual_dispatch_design.json",
+      "size_bytes": 2234,
+      "sha256": "9b86dfa5df1e7bf3e494ee146521e270f04ee111dd28dc2682538eb9cce9c37c"
+    },
+    {
+      "path": "integration/annual_community_dispatch/data/annual_community_inputs.csv",
+      "size_bytes": 3040949,
+      "sha256": "e3e37cf947b3d631429cd304ee2fcf66075476acaa18918c4c1622254f614c0f"
+    },
+    {
+      "path": "integration/annual_community_dispatch/data/annual_household_loads.csv",
+      "size_bytes": 2324443,
+      "sha256": "9caa522b636a2478ced03d6c1c7bb3b28193f3754348e3a0450307085dcc5f4d"
+    },
+    {
+      "path": "integration/annual_community_dispatch/data/blast_input_battery_only_annual.csv",
+      "size_bytes": 509162,
+      "sha256": "1e85a6178ba2255769beb1a65d97a51594506d07fd9117fe5898b825b87772b4"
+    },
+    {
+      "path": "integration/annual_community_dispatch/data/blast_input_demand_response_plus_battery_annual.csv",
+      "size_bytes": 508927,
+      "sha256": "bfbd823877819eb57d118682f3f391b5ec53cba93dee41c7817ffd2798901770"
+    },
+    {
+      "path": "integration/annual_community_dispatch/data/blast_input_metadata.json",
+      "size_bytes": 558,
+      "sha256": "3b4ffbcd92682502b003a431fa3b35619b3aa5dbb9206519741783d48d673683"
+    },
+    {
+      "path": "integration/annual_community_dispatch/data/household_parameters.json",
+      "size_bytes": 4359,
+      "sha256": "3a295d665e730dd640b51e6fc5fa49285a47c2d7e007e4afc582a335f1785121"
+    },
+    {
+      "path": "integration/annual_community_dispatch/figures/annual_battery_soc.png",
+      "size_bytes": 621118,
+      "sha256": "44e5328ef12b509a8cc0961da5a0b1b8278ab7d2fb47f893df26b03153e7c72c"
+    },
+    {
+      "path": "integration/annual_community_dispatch/figures/annual_community_load.png",
+      "size_bytes": 197106,
+      "sha256": "0c552230fc4d7a1d86d3f906ae28c868bb243358b80b1b6f4183c12ddfc4bba1"
+    },
+    {
+      "path": "integration/annual_community_dispatch/figures/annual_daily_grid_energy.png",
+      "size_bytes": 394619,
+      "sha256": "cc757acb7e61fbb2ef6c281a68ead6fa46b3341dbe72828b24d6c2dbb42dec0b"
+    },
+    {
+      "path": "integration/annual_community_dispatch/figures/annual_dispatch_metrics.png",
+      "size_bytes": 135338,
+      "sha256": "0af122407bc2de0f8f8ee54bd6424e6a90cb9caf77e2eb2c736bdcd167979493"
+    },
+    {
+      "path": "integration/annual_community_dispatch/figures/annual_solar_load_price.png",
+      "size_bytes": 349037,
+      "sha256": "12bf1f0c21d94f336af9447f7e72acebe9ad500d3d0774fba21daf580345e0c8"
+    },
+    {
+      "path": "integration/annual_community_dispatch/figures/blast_full_community_aging.png",
+      "size_bytes": 147531,
+      "sha256": "901a31c49e1d283459f45bc1009843e0ead4d29659df431cd811c39413102344"
+    },
+    {
+      "path": "integration/annual_community_dispatch/figures/blast_smoke_community_aging.png",
+      "size_bytes": 157592,
+      "sha256": "8362588c5c580587b979ad31e05ec7eba822b41e0871ef587b90736143715119"
+    },
+    {
+      "path": "integration/annual_community_dispatch/figures/household_annual_energy.png",
+      "size_bytes": 65777,
+      "sha256": "f127a0ea6cab697c64ce481df10b91fe2dc2ee881341c1a0d11f9b0b9a4f5fb2"
+    },
+    {
+      "path": "integration/annual_community_dispatch/figures/integrated_blast_q_trajectories.png",
+      "size_bytes": 153207,
+      "sha256": "627bfac471a958143d7ddb613670c485f17e8fa90f1be311009b7e9712842c6b"
+    },
+    {
+      "path": "integration/annual_community_dispatch/figures/integrated_dispatch_aging_tradeoffs.png",
+      "size_bytes": 177841,
+      "sha256": "15cbaf87d5593e410be7cf31ea447e77dd43621463bfe90b77b7a3e2b779b0c3"
+    },
+    {
+      "path": "integration/annual_community_dispatch/figures/integrated_soc_efc_comparison.png",
+      "size_bytes": 80487,
+      "sha256": "ef0a0dff8fc74e2d08880e08f9e97575a956577bbbd460746bbe0bbecd9d3fbd"
+    },
+    {
+      "path": "integration/annual_community_dispatch/figures/peak_penalty_sensitivity.png",
+      "size_bytes": 166119,
+      "sha256": "6c150be082872f7b4b981c62a328fab6eefda3680a71109a1d4b665283a67a9b"
+    },
+    {
+      "path": "integration/annual_community_dispatch/figures/pilot_battery_soc.png",
+      "size_bytes": 218279,
+      "sha256": "6880c1abba0be0021386a2f5611f2225cbda1e9bd0bd2d89af074d70ca793f15"
+    },
+    {
+      "path": "integration/annual_community_dispatch/figures/pilot_grid_import_comparison.png",
+      "size_bytes": 465500,
+      "sha256": "821b1bd251d0e9a4b07d4f7700bb008cf452ef0be62800c54d5ea0e493de3a25"
+    },
+    {
+      "path": "integration/annual_community_dispatch/figures/pilot_summary_metrics.png",
+      "size_bytes": 131222,
+      "sha256": "45e765214b9ef1d1148eb7febaa96f7676551656f1eb209ecc22a8fef24d6361"
+    },
+    {
+      "path": "integration/annual_community_dispatch/figures/summer_week_solar_load_price.png",
+      "size_bytes": 248878,
+      "sha256": "40e5633657093d6514dfe241df4e20c953df531c2a7b0195c254e617637afebe"
+    },
+    {
+      "path": "integration/annual_community_dispatch/figures/winter_summer_community_weeks.png",
+      "size_bytes": 322843,
+      "sha256": "deda846ebb91effd114490717778d4031b42b650dbdb3fedcb732868b8065240"
+    },
+    {
+      "path": "integration/annual_community_dispatch/figures/winter_summer_grid_import.png",
+      "size_bytes": 629424,
+      "sha256": "6f4e4f891d31a62276bc890d1b85556d7936e79354fb563f407d9847e04cf8a5"
+    },
+    {
+      "path": "integration/annual_community_dispatch/logs/annual_execution_log.txt",
+      "size_bytes": 5167,
+      "sha256": "d6216b1d5bda764692c5c8b67daef4a8446c45db3c66fa55fce5899edacebd2f"
+    },
+    {
+      "path": "integration/annual_community_dispatch/logs/blast_full_community_aging_errors.json",
+      "size_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "integration/annual_community_dispatch/logs/blast_full_community_aging_log.txt",
+      "size_bytes": 2278,
+      "sha256": "00fa6bb9d52396b7ac7732a7f06d2ad3e54ccddaae4ec541a02ef9cfbef8e825"
+    },
+    {
+      "path": "integration/annual_community_dispatch/logs/blast_smoke_community_aging_errors.json",
+      "size_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "integration/annual_community_dispatch/logs/blast_smoke_community_aging_log.txt",
+      "size_bytes": 2282,
+      "sha256": "5bf66f0360ad8fb3d38d4c54c70bbdab7dba736cacf0cbb4bc74c859f846060d"
+    },
+    {
+      "path": "integration/annual_community_dispatch/logs/dispatch_errors_30day.json",
+      "size_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "integration/annual_community_dispatch/logs/dispatch_errors_365day.json",
+      "size_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "integration/annual_community_dispatch/logs/dispatch_errors_7day.json",
+      "size_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "integration/annual_community_dispatch/logs/peak_penalty_sensitivity_log.json",
+      "size_bytes": 12838,
+      "sha256": "9b335987f5372ce201565350ddb1486a01758a90f7767c053cf773924464fe28"
+    },
+    {
+      "path": "integration/annual_community_dispatch/logs/seven_day_execution_log.txt",
+      "size_bytes": 5071,
+      "sha256": "dcac86863c5de86e69a36bd3bf647bdc6fe7db72821af15fb02d9deac18bd791"
+    },
+    {
+      "path": "integration/annual_community_dispatch/logs/thirty_day_execution_log.txt",
+      "size_bytes": 5182,
+      "sha256": "e964758fce8fe01dadd822b19d1a7098c9368f16554e61a28767cc64c7549a74"
+    },
+    {
+      "path": "integration/annual_community_dispatch/optimization_model_design.json",
+      "size_bytes": 2375,
+      "sha256": "1954ff16fa50d11a85487543f5f95dd901fa510a4ae134114ebd9dce93d8b959"
+    },
+    {
+      "path": "integration/annual_community_dispatch/peak_penalty_selection.json",
+      "size_bytes": 478,
+      "sha256": "0909b721576cd001829c3c8eef15424536069fafae67496f050d298e8440b740"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/annual_dispatch_interpretation_metrics.csv",
+      "size_bytes": 930,
+      "sha256": "c3932a75f1d2472b7776fa3033fdd57908cf9207673ca9056b7df49900971a5a"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/annual_household_load_summary.csv",
+      "size_bytes": 1126,
+      "sha256": "dd2b4e2a1f72b61ca64b367ebcd7320c34a51a83d0d1c82071787c02d2fa846b"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/annual_operational_audit.csv",
+      "size_bytes": 531,
+      "sha256": "c180906add32e2035533886dd4a9f103ef0c93e7f72246b9223ad16ff970ec8a"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/baseline_30day_day_records.csv",
+      "size_bytes": 2784,
+      "sha256": "c470637b5fa8259c75f2838bc34f002519c23652a0d36fd590bb304876f3f513"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/baseline_30day_output.csv",
+      "size_bytes": 267887,
+      "sha256": "195e5a2e9760938ab0c3c575aaf0fd4cba325e89a6e072dd75f990132e90212f"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/baseline_365day_day_records.csv",
+      "size_bytes": 32916,
+      "sha256": "208001f1ce46bb1e3f23a38aeea13279bad4dfbeaba5023b0530c9f780d1c970"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/baseline_365day_output.csv",
+      "size_bytes": 3284616,
+      "sha256": "3f4b68fb34788af4c0bcde65de01ecaec789222ed9678b9086cc8252db6728bf"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/baseline_7day_day_records.csv",
+      "size_bytes": 568,
+      "sha256": "c6bb10321659d63862f29f462ab94abb0c728202094253ebc816ff99ebc7f3a7"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/baseline_7day_output.csv",
+      "size_bytes": 62519,
+      "sha256": "06a9b4cee122418e127da46725458fad3694cc4c3338c23586a20948b5178d07"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/battery_only_30day_day_records.csv",
+      "size_bytes": 3653,
+      "sha256": "7e9209c3067d501617f631e0768bcffc37c4b11cd353fb6480cd15606b03cdb1"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/battery_only_30day_output.csv",
+      "size_bytes": 314747,
+      "sha256": "599f860e09a3c0f0e6fb50e9562cb6f6b9a96c10b92b078b086287e7ce7e2471"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/battery_only_365day_day_records.csv",
+      "size_bytes": 43728,
+      "sha256": "5877ad08944644ef53fc89e01ac53447d9f037092673f830644315aa6b69d5ef"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/battery_only_365day_output.csv",
+      "size_bytes": 3861078,
+      "sha256": "7fa300f7dbb5305f8d591794bb885d484205c01b6d5196d299ffac1c9887a0d7"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/battery_only_7day_day_records.csv",
+      "size_bytes": 919,
+      "sha256": "a63cfa38c51727fd51ef42063ad2b394a91aaa1ff42e73cb7b85ed95c46c47ac"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/battery_only_7day_output.csv",
+      "size_bytes": 73608,
+      "sha256": "62daa67ca63773b30069e2ca46b101ac6baf98675f2dd1fdc8867ef03abebd47"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/battery_only_7day_peakpenalty_0p0.csv",
+      "size_bytes": 73638,
+      "sha256": "f4d367528352044becaaaea229603c40a36507c90c123b4932408892f8d4e42c"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/battery_only_7day_peakpenalty_0p5.csv",
+      "size_bytes": 73638,
+      "sha256": "7c03d029298646bb76fcb627861ef5bbe4d8ed59e88fa3252507c04c52b54694"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/battery_only_7day_peakpenalty_1p0.csv",
+      "size_bytes": 73594,
+      "sha256": "26a98937340149c6cf8df2fadd4e536ec45561851564792d58adfdf878280117"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/battery_only_7day_peakpenalty_2p0.csv",
+      "size_bytes": 73608,
+      "sha256": "62daa67ca63773b30069e2ca46b101ac6baf98675f2dd1fdc8867ef03abebd47"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/blast_full_battery_only_output.csv",
+      "size_bytes": 139961,
+      "sha256": "0cdb26cb927a990b87cb9dbd3dd233de1f937a2b24157ea5fc3bbfbbe783024f"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/blast_full_community_aging_run_record.json",
+      "size_bytes": 597,
+      "sha256": "8ede6d13999987dc2ba2c953e329b133004c2093e5cb145595f28714e9cf0dd2"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/blast_full_community_aging_summary.csv",
+      "size_bytes": 1132,
+      "sha256": "4908972cb631b3ff5bc78bb1d202c3beac9548f7be8fafb821c9ec1357acac0c"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/blast_full_demand_response_plus_battery_output.csv",
+      "size_bytes": 138872,
+      "sha256": "ce9dfbd02e8b9aab28079631c4a6ebd2b36d67e398c000876d7b3b33d8ef9ebe"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/blast_input_summary.csv",
+      "size_bytes": 521,
+      "sha256": "e32e363d647f889f086cada304e80ff2bc4a0e28e7269bceca3d0bfba065b470"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/blast_smoke_battery_only_output.csv",
+      "size_bytes": 28181,
+      "sha256": "c2a2056ba8341408d1329422a991dbe0c80b224e83d344ab4364e7499039d835"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/blast_smoke_community_aging_run_record.json",
+      "size_bytes": 602,
+      "sha256": "403ba93cd549f532df13af8d4feb213de71f3ba3cc5d0edb328498f614910456"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/blast_smoke_community_aging_summary.csv",
+      "size_bytes": 1127,
+      "sha256": "99a4cffebd817a0e636202d76bcca70fce86dd6e13090f57b09ace8b0545a33d"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/blast_smoke_demand_response_plus_battery_output.csv",
+      "size_bytes": 27868,
+      "sha256": "9f6d07d3a5d379742ecd7485b66271a8a908c8f41af5c8f133e71ead79b89365"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/demand_response_only_30day_day_records.csv",
+      "size_bytes": 3137,
+      "sha256": "1365f1a599cb558780ce768e3622a6b47eb9aaa77b0aca12318c65314a32268b"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/demand_response_only_30day_output.csv",
+      "size_bytes": 275188,
+      "sha256": "515239de433315bfffcb7e3f0d7c6cc50f4ca88ef6cde2e78456089537f4174b"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/demand_response_only_365day_day_records.csv",
+      "size_bytes": 37287,
+      "sha256": "e7583f28d06dda315db16532d2a1fe0b68720ee3541a3a31ec2632b9141c3fad"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/demand_response_only_365day_output.csv",
+      "size_bytes": 3380790,
+      "sha256": "6c95328a8130ef761faf7c561dc50b23168bd3ddcd390e2ba7f86922c18b9a44"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/demand_response_only_7day_day_records.csv",
+      "size_bytes": 649,
+      "sha256": "5057d7c7164b07cf83968f7ceed5ccfed1e7f4b61f56bc098a9d06de1c428b34"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/demand_response_only_7day_output.csv",
+      "size_bytes": 63334,
+      "sha256": "7379be6f4c6862588597013c58aae0048ffbdb1796dc128b76a529eac256b948"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/demand_response_plus_battery_30day_day_records.csv",
+      "size_bytes": 4133,
+      "sha256": "76c3cefaf3a18d9b177879c55dc3b55f0b7326c55daf1ee5db46da359e5e250a"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/demand_response_plus_battery_30day_output.csv",
+      "size_bytes": 326814,
+      "sha256": "ae6b48e5eeaa59ce0c0847cbfee84776591ec867ec662f236eeab3bf8f165105"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/demand_response_plus_battery_365day_day_records.csv",
+      "size_bytes": 49548,
+      "sha256": "82bd633b29958e4255379e988bbb024b73f780e89cebb07b1042de04df3cdbd5"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/demand_response_plus_battery_365day_output.csv",
+      "size_bytes": 4014422,
+      "sha256": "da1beb046659f0a822a8b810333247b2df528e2037ead7fa75a84c3d70f9f997"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/demand_response_plus_battery_7day_day_records.csv",
+      "size_bytes": 1022,
+      "sha256": "773e8bc345ac48cdf2d6ab55820b9789a010687f0af59438f21353f1b6a3de64"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/demand_response_plus_battery_7day_output.csv",
+      "size_bytes": 76290,
+      "sha256": "10a48eb6afa431fab3f7aea92a28e62b2aa03280aa19fdc301943ce3ebc8c187"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/demand_response_plus_battery_7day_peakpenalty_0p0.csv",
+      "size_bytes": 76548,
+      "sha256": "176745a66df384cdbe58d42238dcb1e51b0790aadf9a8e76e066f5bd2df39c0f"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/demand_response_plus_battery_7day_peakpenalty_0p5.csv",
+      "size_bytes": 76397,
+      "sha256": "d1ec219fccbf8c4aee5237d54ba6588a412353ba1dde0d9db35f0a5b17375aa7"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/demand_response_plus_battery_7day_peakpenalty_1p0.csv",
+      "size_bytes": 76347,
+      "sha256": "5076d43e9b7cae2fd320811a467f87daf8910f62d82f7cfb3f27fe9af4e2b3d5"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/demand_response_plus_battery_7day_peakpenalty_2p0.csv",
+      "size_bytes": 76290,
+      "sha256": "10a48eb6afa431fab3f7aea92a28e62b2aa03280aa19fdc301943ce3ebc8c187"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/dispatch_summary_30day.csv",
+      "size_bytes": 1131,
+      "sha256": "da55f469ffee5fcb2fec62bf7a445e3fd7037a9c8f7a69d050ba56f8b6a86051"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/dispatch_summary_365day.csv",
+      "size_bytes": 1106,
+      "sha256": "babf3183ed024aa4e6f654485eda576604a83ad5b6ee1fd43d94a1c5e850797e"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/dispatch_summary_7day.csv",
+      "size_bytes": 788,
+      "sha256": "791a89552091ebe429354b47ea3d4ccbd1e99f642003c81c920f46ef401c123e"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/integrated_aging_comparison.json",
+      "size_bytes": 1006,
+      "sha256": "c3ce37aa58e6a7244ef5a92da7f29c6f3a6af3c863460554ca0d1c54319b612e"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/integrated_dispatch_aging_metrics.csv",
+      "size_bytes": 771,
+      "sha256": "c8c3d09ad69219ef3601880efa283dd0aabfc23bab76771cc62936356768ffca"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/peak_penalty_decision_table.csv",
+      "size_bytes": 1093,
+      "sha256": "13f41745a113b2257ed2397a40ba1c637e7bc5b239b6de1acbe99ebbacb632a6"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/run_record_30day.json",
+      "size_bytes": 470,
+      "sha256": "05cf83a3c51dcaac8107b49fff5441bbb262ae6afab6b992c43949b5d57b5639"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/run_record_365day.json",
+      "size_bytes": 473,
+      "sha256": "40921c3d667694207e8434550b15f12af55f9094c0f614a3798ba745b6e4161e"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/run_record_7day.json",
+      "size_bytes": 423,
+      "sha256": "eee52a7ecbd17309e468bf5cd5bd2ddf52fb1a44537fb632fb8d24f3edecd46c"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/seven_day_interpretation_metrics.csv",
+      "size_bytes": 926,
+      "sha256": "6b4ef00d671038b72a15ddead8f505431e60d4ec5d909b8fb36790c6037d6776"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/seven_day_interpretation_record.json",
+      "size_bytes": 393,
+      "sha256": "56d9cf9a308f4009f75e5213aa2f402aad2039a9d55cc43a6d78d2cf7f8d58f0"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/seven_day_operation_audit.csv",
+      "size_bytes": 492,
+      "sha256": "072142afaac33c814b299dadcbcdb95b663107c92c35076f4a7cfddf6cbfdff2"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/seven_day_peak_penalty_sensitivity.csv",
+      "size_bytes": 2275,
+      "sha256": "8db44a3e8e22d3cf95fc7f74be1a6adb4a0bd77c2840d76a163aa2399e6470d5"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/solar_price_profile_summary.json",
+      "size_bytes": 378,
+      "sha256": "4c61b43d89556f60fa5dd186c01b193eeaedad00a5f64eea2c40746c4a751752"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/thirty_day_interpretation_metrics.csv",
+      "size_bytes": 917,
+      "sha256": "c78bd788df86b0814e45dd2b7a6575573fb0efdc0e8f578c2f9f3c2e65aa0ff5"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/thirty_day_interpretation_record.json",
+      "size_bytes": 440,
+      "sha256": "6ca9dffe981f1e090cc00583465b9fabd693f1fa16f90a60786b6130d7e16a98"
+    },
+    {
+      "path": "integration/annual_community_dispatch/results/thirty_day_operational_audit.csv",
+      "size_bytes": 945,
+      "sha256": "43f594bb75ce3a1a0bfcb0bc34e290105ef152d42270312b877968977e8866c1"
+    },
+    {
+      "path": "integration/annual_community_dispatch/run_annual_blast_aging.py",
+      "size_bytes": 13043,
+      "sha256": "a2aa4252ed8ba90795e051d71618ba53c8d5531ae29b9a90cbbd5f4e8c009ddf"
+    },
+    {
+      "path": "integration/annual_community_dispatch/run_annual_dispatch.py",
+      "size_bytes": 23072,
+      "sha256": "783eb77eeadd93714059f9c3e0529291fcc772733a4d25b190f1f200450dcaf5"
+    }
+  ]
+}

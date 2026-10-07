@@ -1,0 +1,5 @@
+case,maximum_soc_continuity_error_kwh,simultaneous_hours_above_1e-5,maximum_simultaneous_kw,total_simultaneous_kwh,maximum_daily_household_energy_error_kwh,all_daily_status_optimal,timestamp_count
+baseline,0.0,0,0.0,0.0,0.0,True,8760
+demand_response_only,0.0,0,0.0,0.0,8.526512829121202e-14,True,8760
+battery_only,3.0632955727583067e-08,0,1.0510828575822189e-07,0.00010206798287116337,0.0,True,8760
+demand_response_plus_battery,1.3581671787221694e-08,0,2.064949208024303e-08,2.3541121195905915e-05,1.8118839761882555e-13,True,8760

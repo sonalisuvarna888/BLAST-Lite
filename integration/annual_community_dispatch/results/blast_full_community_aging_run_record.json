@@ -1,0 +1,11 @@
+{
+  "mode": "full",
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "requested_years": 5.0,
+  "successful_cases": 2,
+  "failed_cases": 0,
+  "summary_file": "/content/BLAST-Lite/integration/annual_community_dispatch/results/blast_full_community_aging_summary.csv",
+  "error_file": "/content/BLAST-Lite/integration/annual_community_dispatch/logs/blast_full_community_aging_errors.json",
+  "comparison_figure": "/content/BLAST-Lite/integration/annual_community_dispatch/figures/blast_full_community_aging.png",
+  "classification": "Post-processing aging evaluation with fixed dispatch capacity"
+}

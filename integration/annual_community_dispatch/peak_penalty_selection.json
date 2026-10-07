@@ -1,0 +1,10 @@
+{
+  "selected_peak_penalty_per_kw": 0.5,
+  "units": "Synthetic dollars per kW of maximum grid import in each rolling window",
+  "selection_rationale": [
+    "Eliminates the combined-case peak increase observed with zero peak penalty.",
+    "Retains most of the pilot grid-bill savings.",
+    "Higher values provide diminishing or less attractive cost-peak trade-offs."
+  ],
+  "important_boundary": "This is a synthetic planning weight, not a documented utility demand charge."
+}

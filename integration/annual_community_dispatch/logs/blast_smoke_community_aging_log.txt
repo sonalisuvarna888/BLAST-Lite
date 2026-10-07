@@ -1,0 +1,35 @@
+STANDARD OUTPUT
+Running battery_only in smoke mode...
+  final q = 0.962549234
+  final EFC = 409.524996
+Running demand_response_plus_battery in smoke mode...
+  final q = 0.961005656
+  final EFC = 397.451118
+
+RUN RECORD
+{
+  "mode": "smoke",
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "requested_years": null,
+  "successful_cases": 2,
+  "failed_cases": 0,
+  "summary_file": "/content/BLAST-Lite/integration/annual_community_dispatch/results/blast_smoke_community_aging_summary.csv",
+  "error_file": "/content/BLAST-Lite/integration/annual_community_dispatch/logs/blast_smoke_community_aging_errors.json",
+  "comparison_figure": "/content/BLAST-Lite/integration/annual_community_dispatch/figures/blast_smoke_community_aging.png",
+  "classification": "Post-processing aging evaluation with fixed dispatch capacity"
+}
+
+SUMMARY
+                        case        label  mode  input_rows  input_duration_days  input_soc_min  input_soc_mean  input_soc_max  input_annual_efc  input_temperature_min_C  input_temperature_mean_C  input_temperature_max_C duration_argument requested_years  initial_q  final_q  q_change  final_time_years  final_efc  mean_model_soc  mean_model_dod  rms_model_dod  mean_model_temperature_C  output_points                                                 output_file
+                battery_only Battery only smoke        8761                365.0            0.1        0.513404            0.9        406.751901                      5.0                 24.506323                     35.6    one_input_pass            None        1.0 0.962549 -0.037451          1.000114 409.524996        0.520859        0.818044       0.818185                 24.393371            377                 results/blast_smoke_battery_only_output.csv
+demand_response_plus_battery DR + battery smoke        8761                365.0            0.1        0.533786            0.9        392.591015                      5.0                 24.506323                     35.6    one_input_pass            None        1.0 0.961006 -0.038994          1.000342 397.451118        0.541679        0.819412       0.819511                 24.400464            375 results/blast_smoke_demand_response_plus_battery_output.csv
+
+
+STANDARD ERROR
+
+
+RETURN CODE
+0
+
+ELAPSED SECONDS
+5.90343976020813

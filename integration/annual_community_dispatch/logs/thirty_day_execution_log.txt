@@ -1,0 +1,129 @@
+ANNUAL COMMUNITY DISPATCH 30-DAY PILOT
+========================================================================
+
+COMMAND
+/usr/bin/python3 /content/BLAST-Lite/integration/annual_community_dispatch/run_annual_dispatch.py --days 30 --peak-penalty-per-kw 0.5
+
+ELAPSED SECONDS
+11.946131706237793
+
+STANDARD OUTPUT
+Solver: CLARABEL
+Days: 30
+Cases: ['baseline', 'demand_response_only', 'battery_only', 'demand_response_plus_battery']
+Peak penalty ($/kW-window): 0.5
+
+Running baseline...
+{
+  "case": "baseline",
+  "hours": 720,
+  "grid_energy_kwh": 6159.284062043895,
+  "grid_energy_bill": 1503.49803618885,
+  "peak_grid_import_kw": 21.43299957503618,
+  "solar_spill_kwh": 156.66008267481251,
+  "battery_throughput_kwh": 0.0,
+  "battery_charge_kwh": 0.0,
+  "battery_discharge_kwh": 0.0,
+  "minimum_soc_kwh": 21.0,
+  "maximum_soc_kwh": 21.0,
+  "initial_soc_kwh": 21.0,
+  "final_soc_kwh": 21.0,
+  "maximum_absolute_balance_residual": 5.678167269707046e-08,
+  "maximum_load_shift_kw": 0.0,
+  "successful_days": 30,
+  "failed_days": 0
+}
+
+Running demand_response_only...
+{
+  "case": "demand_response_only",
+  "hours": 720,
+  "grid_energy_kwh": 6080.166230670044,
+  "grid_energy_bill": 1402.2665789931684,
+  "peak_grid_import_kw": 18.218049673127062,
+  "solar_spill_kwh": 77.54225123271392,
+  "battery_throughput_kwh": 0.0,
+  "battery_charge_kwh": 0.0,
+  "battery_discharge_kwh": 0.0,
+  "minimum_soc_kwh": 21.0,
+  "maximum_soc_kwh": 21.0,
+  "initial_soc_kwh": 21.0,
+  "final_soc_kwh": 21.0,
+  "maximum_absolute_balance_residual": 5.076469022924357e-09,
+  "maximum_load_shift_kw": 3.2149499475194183,
+  "successful_days": 30,
+  "failed_days": 0
+}
+
+Running battery_only...
+{
+  "case": "battery_only",
+  "hours": 720,
+  "grid_energy_kwh": 6188.830919390122,
+  "grid_energy_bill": 1267.2570519425562,
+  "peak_grid_import_kw": 14.09066602916693,
+  "solar_spill_kwh": 4.728848105183973e-06,
+  "battery_throughput_kwh": 1148.2760999873715,
+  "battery_charge_kwh": 1241.3795675539163,
+  "battery_discharge_kwh": 1055.1726324208266,
+  "minimum_soc_kwh": 4.2000000003339055,
+  "maximum_soc_kwh": 37.79999999973884,
+  "initial_soc_kwh": 21.0,
+  "final_soc_kwh": 20.999999999999996,
+  "maximum_absolute_balance_residual": 7.067044378991287e-15,
+  "maximum_load_shift_kw": 0.0,
+  "successful_days": 30,
+  "failed_days": 0
+}
+
+Running demand_response_plus_battery...
+{
+  "case": "demand_response_plus_battery",
+  "hours": 720,
+  "grid_energy_kwh": 6181.252701022591,
+  "grid_energy_bill": 1177.7459384827448,
+  "peak_grid_import_kw": 12.447330002484154,
+  "solar_spill_kwh": 6.530001282868275e-07,
+  "battery_throughput_kwh": 1101.5437785220038,
+  "battery_charge_kwh": 1190.858138942707,
+  "battery_discharge_kwh": 1012.2294181013008,
+  "minimum_soc_kwh": 4.200000000079207,
+  "maximum_soc_kwh": 37.79999999994702,
+  "initial_soc_kwh": 21.0,
+  "final_soc_kwh": 21.000000000000004,
+  "maximum_absolute_balance_residual": 6.423133496393652e-14,
+  "maximum_load_shift_kw": 3.2149499364451053,
+  "successful_days": 30,
+  "failed_days": 0
+}
+
+RUN RECORD
+{
+  "days": 30,
+  "solver": "CLARABEL",
+  "peak_penalty_per_kw": 0.5,
+  "requested_cases": [
+    "baseline",
+    "demand_response_only",
+    "battery_only",
+    "demand_response_plus_battery"
+  ],
+  "successful_cases": 4,
+  "failed_case_days": 0,
+  "summary_file": "/content/BLAST-Lite/integration/annual_community_dispatch/results/dispatch_summary_30day.csv",
+  "error_file": "/content/BLAST-Lite/integration/annual_community_dispatch/logs/dispatch_errors_30day.json"
+}
+
+SUMMARY
+                        case  hours  grid_energy_kwh  grid_energy_bill  peak_grid_import_kw  solar_spill_kwh  battery_throughput_kwh  battery_charge_kwh  battery_discharge_kwh  minimum_soc_kwh  maximum_soc_kwh  initial_soc_kwh  final_soc_kwh  maximum_absolute_balance_residual  maximum_load_shift_kw  successful_days  failed_days
+                    baseline    720      6159.284062       1503.498036            21.433000     1.566601e+02                0.000000            0.000000               0.000000             21.0             21.0             21.0           21.0                       5.678167e-08                0.00000               30            0
+        demand_response_only    720      6080.166231       1402.266579            18.218050     7.754225e+01                0.000000            0.000000               0.000000             21.0             21.0             21.0           21.0                       5.076469e-09                3.21495               30            0
+                battery_only    720      6188.830919       1267.257052            14.090666     4.728848e-06             1148.276100         1241.379568            1055.172632              4.2             37.8             21.0           21.0                       7.067044e-15                0.00000               30            0
+demand_response_plus_battery    720      6181.252701       1177.745938            12.447330     6.530001e-07             1101.543779         1190.858139            1012.229418              4.2             37.8             21.0           21.0                       6.423133e-14                3.21495               30            0
+
+
+STANDARD ERROR
+
+
+RETURN CODE
+0

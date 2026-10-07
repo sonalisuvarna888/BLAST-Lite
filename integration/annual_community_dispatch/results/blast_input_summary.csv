@@ -1,0 +1,3 @@
+case,file,rows,duration_days,soc_min,soc_mean,soc_max,first_soc,last_soc,annual_input_efc,temperature_min_C,temperature_mean_C,temperature_max_C
+battery_only,blast_input_battery_only_annual.csv,8761,365.0,0.10000000000227871,0.5134036432125971,0.8999999999991153,0.5,0.5,406.7519014934381,5.0,24.506323479054902,35.6
+demand_response_plus_battery,blast_input_demand_response_plus_battery_annual.csv,8761,365.0,0.10000000000044082,0.5337855643343428,0.8999999999997618,0.5,0.5,392.5910145326306,5.0,24.506323479054902,35.6

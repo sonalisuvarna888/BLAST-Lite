@@ -1,0 +1,11 @@
+{
+  "pv_capacity_kw": 18.0,
+  "annual_solar_energy_kwh": 32375.37069166751,
+  "solar_capacity_factor": 0.2053232540060091,
+  "solar_peak_kw": 18.0,
+  "minimum_price_per_kwh": 0.09200029632706988,
+  "mean_price_per_kwh": 0.18214883371707932,
+  "maximum_price_per_kwh": 0.3672,
+  "community_annual_load_kwh": 79217.28460797065,
+  "annual_solar_to_load_ratio": 0.4086907403085864
+}

@@ -1,0 +1,16 @@
+{
+  "battery_only_final_q": 0.8930958754717004,
+  "combined_final_q": 0.8904117701588632,
+  "combined_minus_battery_final_q": -0.0026841053128372483,
+  "battery_only_modeled_loss_percent": 10.690412452829957,
+  "combined_modeled_loss_percent": 10.95882298411368,
+  "combined_minus_battery_loss_percentage_points": 0.26841053128372394,
+  "battery_only_annual_input_efc": 406.7519014934381,
+  "combined_annual_input_efc": 392.5910145326306,
+  "combined_efc_change_percent": -3.481455626590584,
+  "battery_only_mean_soc": 0.513403643212597,
+  "combined_mean_soc": 0.5337855643343428,
+  "combined_mean_soc_change": 0.02038192112174575,
+  "interpretation": "The DR-plus-battery trajectory has fewer annual EFC but slightly higher mean SOC and slightly greater modeled capacity loss. This supports a multi-stressor interpretation rather than an EFC-only interpretation.",
+  "classification": "Post-processing comparison with fixed 42-kWh dispatch capacity; degradation has not yet been fed back into dispatch."
+}

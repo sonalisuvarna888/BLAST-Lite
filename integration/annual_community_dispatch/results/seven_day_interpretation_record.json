@@ -1,0 +1,8 @@
+{
+  "main_findings": [
+    "Demand response alone reduces both bill and peak grid import.",
+    "Battery operation reduces bill but increases total grid energy because of round-trip losses.",
+    "The combined case produces the lowest bill but the highest pilot peak grid import."
+  ],
+  "interpretation_boundary": "Seven winter days are a pilot and should not be treated as annual results."
+}

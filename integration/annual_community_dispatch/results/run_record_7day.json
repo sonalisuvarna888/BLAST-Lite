@@ -1,0 +1,13 @@
+{
+  "days": 7,
+  "solver": "CLARABEL",
+  "peak_penalty_per_kw": 2.0,
+  "requested_cases": [
+    "battery_only",
+    "demand_response_plus_battery"
+  ],
+  "successful_cases": 2,
+  "failed_case_days": 0,
+  "summary_file": "/content/BLAST-Lite/integration/annual_community_dispatch/results/dispatch_summary_7day.csv",
+  "error_file": "/content/BLAST-Lite/integration/annual_community_dispatch/logs/dispatch_errors_7day.json"
+}

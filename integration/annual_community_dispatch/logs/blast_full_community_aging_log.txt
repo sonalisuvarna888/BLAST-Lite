@@ -1,0 +1,35 @@
+STANDARD OUTPUT
+Running battery_only in full mode...
+  final q = 0.893095875
+  final EFC = 2059.970365
+Running demand_response_plus_battery in full mode...
+  final q = 0.890411770
+  final EFC = 1992.882788
+
+RUN RECORD
+{
+  "mode": "full",
+  "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+  "requested_years": 5.0,
+  "successful_cases": 2,
+  "failed_cases": 0,
+  "summary_file": "/content/BLAST-Lite/integration/annual_community_dispatch/results/blast_full_community_aging_summary.csv",
+  "error_file": "/content/BLAST-Lite/integration/annual_community_dispatch/logs/blast_full_community_aging_errors.json",
+  "comparison_figure": "/content/BLAST-Lite/integration/annual_community_dispatch/figures/blast_full_community_aging.png",
+  "classification": "Post-processing aging evaluation with fixed dispatch capacity"
+}
+
+SUMMARY
+                        case        label mode  input_rows  input_duration_days  input_soc_min  input_soc_mean  input_soc_max  input_annual_efc  input_temperature_min_C  input_temperature_mean_C  input_temperature_max_C duration_argument  requested_years  initial_q  final_q  q_change  final_time_years   final_efc  mean_model_soc  mean_model_dod  rms_model_dod  mean_model_temperature_C  output_points                                                output_file
+                battery_only Battery only full        8761                365.0            0.1        0.513404            0.9        406.751901                      5.0                 24.506323                     35.6    threshold_time              5.0        1.0 0.893096 -0.106904          5.002055 2059.970365        0.526713        0.854014       0.854488                 24.361815           1883                 results/blast_full_battery_only_output.csv
+demand_response_plus_battery DR + battery full        8761                365.0            0.1        0.533786            0.9        392.591015                      5.0                 24.506323                     35.6    threshold_time              5.0        1.0 0.890412 -0.109588          5.000799 1992.882788        0.549140        0.856348       0.856792                 24.375693           1871 results/blast_full_demand_response_plus_battery_output.csv
+
+
+STANDARD ERROR
+
+
+RETURN CODE
+0
+
+ELAPSED SECONDS
+4.951834678649902

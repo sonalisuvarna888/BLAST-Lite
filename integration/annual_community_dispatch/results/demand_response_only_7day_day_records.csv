@@ -1,0 +1,8 @@
+case,day,status,objective,start_soc_kwh,end_soc_kwh,maximum_absolute_residual
+demand_response_only,0,optimal,96.11072041470584,21.0,21.0,1.931963922174873e-09
+demand_response_only,1,optimal,98.25762359595328,21.0,21.0,4.326174973812158e-10
+demand_response_only,2,optimal,97.61692018947925,21.0,21.0,9.385026089603343e-11
+demand_response_only,3,optimal,96.06629158017489,21.0,21.0,1.5086776272710267e-10
+demand_response_only,4,optimal,95.95065370940293,21.0,21.0,1.2017942196962395e-10
+demand_response_only,5,optimal,94.02796231133136,21.0,21.0,2.6298323518858524e-09
+demand_response_only,6,optimal,46.52194487628145,21.0,21.0,1.2790497549985957e-09

@@ -1,0 +1,9 @@
+{
+  "selected_peak_penalty_per_kw_window": 0.5,
+  "main_findings": [
+    "Demand response reduces bill, peak, grid energy, and solar spill.",
+    "Battery cases reduce bill and peak but increase total grid energy because of round-trip losses.",
+    "Demand response plus battery produces the largest bill and peak reductions."
+  ],
+  "boundary": "Thirty winter days remain a pilot; annual conclusions require the full 365-day simulation."
+}

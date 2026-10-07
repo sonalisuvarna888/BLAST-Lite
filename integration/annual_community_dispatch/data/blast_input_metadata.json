@@ -1,0 +1,9 @@
+{
+  "source_dispatch": "365-day annual community dispatch",
+  "capacity_normalization_kwh": 42.0,
+  "soc_definition": "SOC_kWh divided by fixed available capacity of 42 kWh",
+  "time_definition": "Hourly start-of-interval SOC with one final annual endpoint",
+  "temperature_source": "examples/climates/hourly_temperature_miami.csv",
+  "temperature_boundary": "Miami climate is not geographically matched to the synthetic community; used as a climate-informed profile.",
+  "next_step": "Run BLAST-Lite on battery-only and DR-plus-battery annual SOC inputs."
+}

@@ -1,0 +1,65 @@
+{
+  "study": "One-year synthetic community-microgrid dispatch",
+  "research_status": "Reproducible synthetic operational prototype",
+  "simulation_year": "Non-leap synthetic year with 365 days and 8760 hourly intervals",
+  "number_of_households": 10,
+  "random_seed": 20261006,
+  "time_resolution_hours": 1,
+  "household_load_design": {
+    "components": [
+      "household-specific background load",
+      "morning activity peak",
+      "evening activity peak",
+      "smaller daytime component",
+      "weekend adjustment",
+      "seasonal multiplier",
+      "day-level random variation",
+      "hour-level random variation"
+    ],
+    "heterogeneity": [
+      "different annual energy scales",
+      "different morning peak times",
+      "different evening peak times",
+      "different peak amplitudes",
+      "different weekend responses",
+      "different noise sequences"
+    ],
+    "nonnegative_loads": true,
+    "interpretation": "Synthetic hourly household demand for method development; not measured customer data."
+  },
+  "planned_solar_design": {
+    "resource": "one aggregate community PV system",
+    "variation": [
+      "seasonal daylight duration",
+      "seasonal generation amplitude",
+      "day-level weather factor"
+    ]
+  },
+  "planned_price_design": {
+    "tariff": "transparent synthetic time-of-use price",
+    "periods": [
+      "low overnight",
+      "moderate daytime",
+      "high evening"
+    ]
+  },
+  "planned_dispatch_cases": [
+    "baseline",
+    "demand_response_only",
+    "battery_only",
+    "demand_response_plus_battery"
+  ],
+  "battery_operation_plan": {
+    "method": "365 sequential 24-hour convex optimization problems",
+    "state_link": "ending SOC of one day becomes the next day's initial SOC",
+    "daily_terminal_equality": false,
+    "annual_terminal_target": "final annual SOC returned near initial SOC"
+  },
+  "important_boundaries": [
+    "All demand, solar, and price values are synthetic.",
+    "The model is an energy-management model, not a power-flow model.",
+    "Hourly grid import is an hourly-average power quantity.",
+    "Battery degradation will be evaluated after annual dispatch is validated.",
+    "No claim of empirical household savings is supported yet."
+  ]
+}

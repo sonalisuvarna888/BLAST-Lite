@@ -1,0 +1,5 @@
+case,simultaneous_hours_above_1e-5,maximum_simultaneous_charge_discharge_kw,total_simultaneous_energy_kwh,maximum_daily_aggregate_energy_difference_kwh,maximum_daily_per_household_energy_difference_kwh
+baseline,0,0.0,0.0,0.0,0.0
+demand_response_only,0,0.0,0.0,8.526512829121202e-14,2.842170943040401e-14
+battery_only,0,7.834135541850604e-08,3.0504332951530366e-06,0.0,0.0
+demand_response_plus_battery,0,1.8336624622533627e-09,1.696218634961175e-07,2.842170943040401e-14,2.842170943040401e-14

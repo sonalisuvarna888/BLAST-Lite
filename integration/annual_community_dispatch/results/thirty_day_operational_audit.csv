@@ -1,0 +1,5 @@
+case,timestamps_complete,days_recorded,all_daily_status_optimal,maximum_soc_boundary_difference_kwh,simultaneous_hours_above_1e-5,maximum_simultaneous_kw,total_simultaneous_kwh,maximum_daily_aggregate_energy_difference_kwh,maximum_daily_household_energy_difference_kwh,maximum_balance_residual_kw,soc_min_kwh,soc_max_kwh,final_soc_kwh
+baseline,True,30,True,0.0,0,0.0,0.0,0.0,0.0,5.678167269707046e-08,21.0,21.0,21.0
+demand_response_only,True,30,True,0.0,0,0.0,0.0,8.526512829121202e-14,3.907985046680551e-14,5.076469022924357e-09,21.0,21.0,21.0
+battery_only,True,30,True,2.5135449277513544e-12,0,1.042753090703102e-07,1.8792741765438215e-05,0.0,0.0,7.0670443789912865e-15,4.2000000003339055,37.79999999973884,21.0
+demand_response_plus_battery,True,30,True,4.440892098500626e-15,0,1.5315780098919322e-08,2.68388572564219e-06,8.526512829121202e-14,9.237055564881302e-14,6.423133496393652e-14,4.200000000079207,37.79999999994702,21.000000000000004

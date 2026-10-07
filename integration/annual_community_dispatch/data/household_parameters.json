@@ -1,0 +1,122 @@
+[
+  {
+    "household": "House_01",
+    "base_kw": 0.23847570707091356,
+    "scale": 1.0552993158319937,
+    "morning_center_hour": 6.940364393612883,
+    "evening_center_hour": 18.037800926466183,
+    "daytime_center_hour": 14.153650310566935,
+    "morning_amplitude_kw": 0.9804833327748701,
+    "evening_amplitude_kw": 1.0115738300614232,
+    "daytime_amplitude_kw": 0.10367670390086486,
+    "weekend_adjustment": 0.04408127392881488
+  },
+  {
+    "household": "House_02",
+    "base_kw": 0.3897250365895466,
+    "scale": 1.041210819174062,
+    "morning_center_hour": 7.873447620982429,
+    "evening_center_hour": 20.13418415981309,
+    "daytime_center_hour": 14.458426321750077,
+    "morning_amplitude_kw": 0.7146155219677492,
+    "evening_amplitude_kw": 0.848485506778323,
+    "daytime_amplitude_kw": 0.12368382797965177,
+    "weekend_adjustment": 0.0939165890027311
+  },
+  {
+    "household": "House_03",
+    "base_kw": 0.3746807538691077,
+    "scale": 1.2710946815380253,
+    "morning_center_hour": 8.066207099688189,
+    "evening_center_hour": 17.367747458727354,
+    "daytime_center_hour": 13.52203720995845,
+    "morning_amplitude_kw": 0.9214552601807839,
+    "evening_amplitude_kw": 1.088219630966706,
+    "daytime_amplitude_kw": 0.2947864023941664,
+    "weekend_adjustment": 0.02944024538190407
+  },
+  {
+    "household": "House_04",
+    "base_kw": 0.44663460623933515,
+    "scale": 1.22250819539331,
+    "morning_center_hour": 8.123256615282324,
+    "evening_center_hour": 19.43688350428369,
+    "daytime_center_hour": 13.811914583012543,
+    "morning_amplitude_kw": 0.6089791269647455,
+    "evening_amplitude_kw": 1.0942782698197568,
+    "daytime_amplitude_kw": 0.24473481075509554,
+    "weekend_adjustment": 0.011263312086591282
+  },
+  {
+    "household": "House_05",
+    "base_kw": 0.46453409337540374,
+    "scale": 1.1652928942733554,
+    "morning_center_hour": 6.229858217440406,
+    "evening_center_hour": 19.333451129308852,
+    "daytime_center_hour": 13.27656373181514,
+    "morning_amplitude_kw": 0.4564913457124582,
+    "evening_amplitude_kw": 1.5663840953051644,
+    "daytime_amplitude_kw": 0.3209269556415544,
+    "weekend_adjustment": 0.11269304221039586
+  },
+  {
+    "household": "House_06",
+    "base_kw": 0.2683574316555028,
+    "scale": 0.8431325382125809,
+    "morning_center_hour": 6.736269453261829,
+    "evening_center_hour": 17.927052788535708,
+    "daytime_center_hour": 13.617458313821523,
+    "morning_amplitude_kw": 0.804187989263104,
+    "evening_amplitude_kw": 1.2372788329888809,
+    "daytime_amplitude_kw": 0.3427995040410263,
+    "weekend_adjustment": 0.10356229960277062
+  },
+  {
+    "household": "House_07",
+    "base_kw": 0.3304602665791929,
+    "scale": 1.0498817258276099,
+    "morning_center_hour": 7.142750930685116,
+    "evening_center_hour": 17.37021069467094,
+    "daytime_center_hour": 12.141570328610538,
+    "morning_amplitude_kw": 0.9274541716002842,
+    "evening_amplitude_kw": 1.2020351665569946,
+    "daytime_amplitude_kw": 0.1836852614320777,
+    "weekend_adjustment": 0.01730415613066156
+  },
+  {
+    "household": "House_08",
+    "base_kw": 0.3261304267276441,
+    "scale": 1.0842711564007896,
+    "morning_center_hour": 7.671678792462229,
+    "evening_center_hour": 19.409343291385998,
+    "daytime_center_hour": 13.721457453696804,
+    "morning_amplitude_kw": 0.8350372045909686,
+    "evening_amplitude_kw": 0.9502231754507042,
+    "daytime_amplitude_kw": 0.24231995821863528,
+    "weekend_adjustment": 0.10608004205475068
+  },
+  {
+    "household": "House_09",
+    "base_kw": 0.34974570399590776,
+    "scale": 1.0670118006076479,
+    "morning_center_hour": 6.219567434581276,
+    "evening_center_hour": 18.11127295971739,
+    "daytime_center_hour": 13.501918130428265,
+    "morning_amplitude_kw": 0.7960014768038455,
+    "evening_amplitude_kw": 1.3870403614738807,
+    "daytime_amplitude_kw": 0.2029056687243445,
+    "weekend_adjustment": 0.03402464483258452
+  },
+  {
+    "household": "House_10",
+    "base_kw": 0.3611339033196171,
+    "scale": 1.1264840987902631,
+    "morning_center_hour": 6.782875312781223,
+    "evening_center_hour": 19.326380348167305,
+    "daytime_center_hour": 13.720645745972403,
+    "morning_amplitude_kw": 0.7037101142054473,
+    "evening_amplitude_kw": 1.3166246379137931,
+    "daytime_amplitude_kw": 0.11741390196102314,
+    "weekend_adjustment": 0.11475442987971819
+  }
+]

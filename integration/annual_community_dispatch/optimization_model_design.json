@@ -1,0 +1,71 @@
+{
+  "optimization_framework": "Sequential rolling-horizon convex optimization in CVXPY",
+  "time_resolution_hours": 1,
+  "implemented_hours_per_day": 24,
+  "lookahead_hours": 48,
+  "final_day_lookahead_hours": 24,
+  "cases": {
+    "baseline": {
+      "demand_response": false,
+      "battery": false
+    },
+    "demand_response_only": {
+      "demand_response": true,
+      "battery": false
+    },
+    "battery_only": {
+      "demand_response": false,
+      "battery": true
+    },
+    "demand_response_plus_battery": {
+      "demand_response": true,
+      "battery": true
+    }
+  },
+  "demand_response": {
+    "hourly_lower_bound_fraction": 0.85,
+    "hourly_upper_bound_fraction": 1.15,
+    "daily_energy_preserved_per_household": true,
+    "daily_energy_preservation_scope": "Each implemented 24-hour day",
+    "inconvenience_penalty": "Quadratic normalized deviation from baseline",
+    "inconvenience_weight": 0.035
+  },
+  "battery": {
+    "nominal_capacity_kwh": 60.0,
+    "initial_state_of_health": 0.7,
+    "available_capacity_kwh": 42.0,
+    "minimum_soc_fraction": 0.1,
+    "maximum_soc_fraction": 0.9,
+    "minimum_soc_kwh": 4.2,
+    "maximum_soc_kwh": 37.8,
+    "initial_soc_fraction": 0.5,
+    "initial_soc_kwh": 21.0,
+    "maximum_charge_kw": 12.0,
+    "maximum_discharge_kw": 12.0,
+    "round_trip_efficiency": 0.85,
+    "charge_efficiency": "sqrt(0.85)",
+    "discharge_efficiency": "sqrt(0.85)",
+    "throughput_penalty_per_kwh": 0.015,
+    "terminal_target_soc_kwh": 21.0,
+    "terminal_target_penalty": 0.1
+  },
+  "community_constraints": {
+    "grid_export_allowed": false,
+    "solar_curtailment_allowed": true,
+    "energy_balance": "grid + solar + discharge = household demand + charge + spill"
+  },
+  "objective_components": [
+    "grid energy cost",
+    "household inconvenience penalty",
+    "battery throughput penalty",
+    "look-ahead terminal SOC deviation penalty"
+  ],
+  "important_boundaries": [
+    "Battery capacity remains fixed during initial annual dispatch.",
+    "BLAST-Lite degradation is evaluated only after annual SOC is validated.",
+    "Charge and discharge are nonnegative continuous variables.",
+    "No mixed-integer constraint prevents simultaneous charging and discharging.",
+    "A positive throughput penalty discourages unnecessary simultaneous operation.",
+    "The tariff and all operating profiles are synthetic."
+  ]
+}
