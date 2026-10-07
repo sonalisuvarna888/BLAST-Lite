@@ -1,0 +1,52 @@
+{
+  "official_notebook": "examples/example_stationary_storage_life.ipynb",
+  "notebook_sha256": "60faea6b25aa40ccfc9d5cd7efde2f40a9e371eaca877849cb0945225f4098e3",
+  "notebook_cells": 13,
+  "battery_models": [
+    "Nmc111_Gr_Kokam75Ah_Battery",
+    "Lfp_Gr_250AhPrismatic",
+    "Nca_Gr_Panasonic3Ah_Battery",
+    "Nmc622_Gr_DENSO50Ah_Battery"
+  ],
+  "battery_labels": [
+    "NMC111-Gr",
+    "LFP-Gr",
+    "NCA-Gr",
+    "NMC622-Gr"
+  ],
+  "application_count": 8,
+  "temperature_assumption_C": 30,
+  "temperature_interpretation": "Notebook markdown states that all simulations assume stable temperature at 30 degrees Celsius.",
+  "stopping_criteria": {
+    "threshold_capacity": 0.7,
+    "threshold_time_years": 30
+  },
+  "primary_figures": [
+    "SOC profiles and representative-day insets",
+    "application EFC statistics",
+    "application DOD statistics",
+    "application mean SOC statistics",
+    "q versus time for four battery models",
+    "q versus EFC for four battery models",
+    "battery-sizing derating analysis"
+  ],
+  "official_warnings": [
+    "Stationary systems may be designed for 20 to 30 years, beyond much of the degradation-model calibration data.",
+    "Application profiles may not be representative of all real systems with the same application label.",
+    "Specific system operation is needed for application-specific accuracy.",
+    "The sizing analysis omits time value of money, learning curves, residual value, and augmentation."
+  ],
+  "reproduction_scope": {
+    "included": [
+      "profile inventory and stress statistics",
+      "four battery models",
+      "eight stationary applications",
+      "q versus modeled time",
+      "q versus equivalent full cycles",
+      "threshold-capacity and time stopping behavior"
+    ],
+    "deferred": [
+      "battery-sizing derating cost-factor analysis; reproduce after the main stationary lifetime figures"
+    ]
+  }
+}

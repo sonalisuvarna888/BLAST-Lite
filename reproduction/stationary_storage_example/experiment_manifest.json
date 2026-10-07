@@ -1,0 +1,580 @@
+{
+  "reproduction": "Official BLAST-Lite stationary-storage example",
+  "branch": "reproduction/stationary-storage-example",
+  "official_notebook": "examples/example_stationary_storage_life.ipynb",
+  "official_notebook_sha256": "60faea6b25aa40ccfc9d5cd7efde2f40a9e371eaca877849cb0945225f4098e3",
+  "battery_models": [
+    "Nmc111_Gr_Kokam75Ah_Battery",
+    "Lfp_Gr_250AhPrismatic",
+    "Nca_Gr_Panasonic3Ah_Battery",
+    "Nmc622_Gr_DENSO50Ah_Battery"
+  ],
+  "application_count": 8,
+  "literal_source_temperature_C": 20,
+  "markdown_stated_temperature_C": 30,
+  "threshold_capacity": 0.7,
+  "threshold_time_years": 30,
+  "literal_reproduction": {
+    "successful_cases": 32,
+    "failed_cases": 0,
+    "threshold_counts_by_battery": {
+      "LFP-Gr": 1,
+      "NCA-Gr": 6,
+      "NMC111-Gr": 4,
+      "NMC622-Gr": 3
+    }
+  },
+  "markdown_intent_sensitivity": {
+    "successful_cases": 32,
+    "failed_cases": 0,
+    "threshold_counts_by_battery": {
+      "LFP-Gr": 0,
+      "NCA-Gr": 8,
+      "NMC111-Gr": 3,
+      "NMC622-Gr": 3
+    }
+  },
+  "temperature_comparison": {
+    "total_cases": 32,
+    "class_counts": {
+      "neither_reached_by_30_years": 16,
+      "both_reached_threshold": 12,
+      "20C_reached_only": 2,
+      "30C_reached_only": 2
+    },
+    "both_reached_mean_time_change_years": -4.959650875190245,
+    "both_reached_median_time_change_years": -5.068750000000004,
+    "neither_reached_mean_final_q_change": -0.051374891556737176,
+    "neither_reached_cases_with_lower_q_at_30C": 15,
+    "interpretation": "The 30C override materially changes results, but threshold-time direction is model- and application-dependent. Threshold time and capped final q must be interpreted separately."
+  },
+  "primary_classification": "Literal code reproduction uses source CSV Temperature_C = 20.",
+  "secondary_classification": "Explicit 30C override is a markdown-intent sensitivity.",
+  "main_finding": "Battery chemistry and stationary application profile produce widely different modeled capacity trajectories and threshold times.",
+  "source_inconsistency": "Notebook prose states stable 30C, while source CSVs and literal code execution use 20C.",
+  "important_boundaries": [
+    "Long stationary horizons extend beyond much of model calibration data.",
+    "Profiles may not represent all systems with the same application label.",
+    "Models are cell-level expected-behavior models.",
+    "q is not a complete pack-level SOH or safety metric.",
+    "Threshold time and capped final q require separate interpretation."
+  ],
+  "file_count_excluding_manifest": 103,
+  "files": [
+    {
+      "path": "reproduction/stationary_storage_example/README.md",
+      "size_bytes": 6577,
+      "sha256": "a92820bcb0a2c7e416b22871076eb4386fe528889fb91c84accb201d73fe49f0"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/figures/literal_20C_threshold_time_matrix.png",
+      "size_bytes": 135374,
+      "sha256": "740ea996f6c3e0e30b4986393c5a10725ec10829289245f02863fb94e4803ff6"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/figures/literal_20C_vs_override_30C.png",
+      "size_bytes": 366489,
+      "sha256": "2617a2c5f1dc13b01683e85e5531a6f532aa61e8d58ca31b65426c947b3e1247"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/figures/literal_source_20C_q_vs_efc.png",
+      "size_bytes": 406924,
+      "sha256": "f173f80b167d1a2547e05609c1498f289f7b173d4d4d2544f836c029e16204a4"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/figures/literal_source_20C_q_vs_time.png",
+      "size_bytes": 502517,
+      "sha256": "a14a2a7df0f6b024d55d45cd9e569df467e477e7c34d911fd0468963a73e3e5f"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/figures/official_application_stress_characteristics.png",
+      "size_bytes": 179108,
+      "sha256": "ea076fb13fb63518de0f70175e0abd5510fcd58a23192edb0778c972c1956908"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/figures/override_30C_q_vs_efc.png",
+      "size_bytes": 420990,
+      "sha256": "5460edd17bc84d56581ca3deaf4e14c0267b77e95f8dcc7c3866c278339f697a"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/figures/override_30C_q_vs_time.png",
+      "size_bytes": 490308,
+      "sha256": "d56f08b8a53ce60fcccd34e553155ba7e53d6fe1f1e75fae01a03091c11f1e1d"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/logs/api_and_temperature_inspection_log.txt",
+      "size_bytes": 5301,
+      "sha256": "715e4033e87bb69dd73827aed46d6df1e3bf28b541242a4b0ca0146d9cf5401a"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/logs/literal_source_20C_full_errors.json",
+      "size_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/logs/literal_source_20C_full_execution_log.txt",
+      "size_bytes": 26486,
+      "sha256": "3ba45bae54701edeefbf1d6ee59e9ee9df488dfe5ae9e708ca9bc4552d10d5f5"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/logs/literal_source_20C_smoke_errors.json",
+      "size_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/logs/literal_source_20C_smoke_execution_log.txt",
+      "size_bytes": 2735,
+      "sha256": "6dd21b587248a1460fa1dbaeabe6c24b6abff1a1a244598e1c4cafdc7ba990b8"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/logs/override_30C_full_errors.json",
+      "size_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/logs/override_30C_full_execution_log.txt",
+      "size_bytes": 25998,
+      "sha256": "25768ad820de32ec342de31081205920e4a5d54e42df8d696c15e56fd26af387"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/metadata/api_and_temperature_inspection.json",
+      "size_bytes": 5253,
+      "sha256": "adbe72d8af56027bc44ea459718a3e7ff87b662cb511fc1e0f39571120b2714a"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/metadata/battery_model_source_inventory.csv",
+      "size_bytes": 630,
+      "sha256": "927cfa9316254b176aa8dfd862a4efdbd84476f709abef2b0afebc013be3cbb8"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/metadata/official_notebook_assumptions.json",
+      "size_bytes": 1897,
+      "sha256": "f3c43c5254edefa8d364e10ab1123c8529f32705f2e85caf096559a85c20ff6a"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/metadata/temperature_inconsistency_finding.json",
+      "size_bytes": 436,
+      "sha256": "13f78d3353583fe72258be3b72f0f4a40961d3dfae38a8d7ffcc305791cc83c2"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_20C_final_q_matrix.csv",
+      "size_bytes": 876,
+      "sha256": "e6db6e5be2ac2b7bb20d11a09e5ab0181970dd656738af40760e27e438dc3123"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_20C_threshold_time_matrix.csv",
+      "size_bytes": 869,
+      "sha256": "9496355d47d21ac347b82c3dbce2db72681879387c9bd6bf4c46122ec4f82f32"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_LFP_Gr_commercial_peak_shaving_trajectory.csv",
+      "size_bytes": 20076,
+      "sha256": "a7e4987ba4fd4a118598b744bf0d35a8a47b1e38ba604359f837aefbafbd383a"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_LFP_Gr_commercial_pvbess_NREL_trajectory.csv",
+      "size_bytes": 20012,
+      "sha256": "9b8877a7681f793f54b38aec465d90d45bf107a6d83682fabaff40a4c6ac5fd5"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_LFP_Gr_ev_support_corner_charging_station_trajectory.csv",
+      "size_bytes": 19853,
+      "sha256": "71afe4529db9899060982b305b715e29b4ef0dc91e6d59a534f753fd3e14790c"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_LFP_Gr_ev_support_rental_car_depot_trajectory.csv",
+      "size_bytes": 20090,
+      "sha256": "67323fdb9be6a0b2ea7e45964edb2ccfe71580d979dcfdf632bf5f65c024fa72"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_LFP_Gr_frequency_containment_reserve_trajectory.csv",
+      "size_bytes": 19908,
+      "sha256": "82d3535ed41cfe3db706b11f28b9f4fea0038e11b235c7de5451447d2799b765"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_LFP_Gr_residential_pvbess_CA_mild_trajectory.csv",
+      "size_bytes": 20028,
+      "sha256": "c4c4622a8a993701cff2473b1b110bdbf293a30fe27fe7db4a5ed2468c16a99e"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_LFP_Gr_residential_pvbess_Germany_aggressive_trajectory.csv",
+      "size_bytes": 19947,
+      "sha256": "9142b038f1e2b627055c7b4a53a4e6707c5e0b5bf4bc1601d989496b06c5b5e0"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_LFP_Gr_telecom_backup_power_trajectory.csv",
+      "size_bytes": 20173,
+      "sha256": "771d917576b4dee71fc8f3e941738304a5b10cec3c0e46f94b50d5ad8db6985c"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NCA_Gr_commercial_peak_shaving_trajectory.csv",
+      "size_bytes": 15991,
+      "sha256": "7941c792c75ef09f165d7d7cc2d1381d1c156c90c8a0d7dfbd4481ee1ef1e492"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NCA_Gr_commercial_pvbess_NREL_trajectory.csv",
+      "size_bytes": 9178,
+      "sha256": "3880501d9d173ec8950cf5ba3e6ace254e58cc643102d5799f967c3319ba718e"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NCA_Gr_ev_support_corner_charging_station_trajectory.csv",
+      "size_bytes": 15640,
+      "sha256": "75054e9d592446fc9e3782cae8e422b78bc0f91765d2d5a2938ba9345e631e55"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NCA_Gr_ev_support_rental_car_depot_trajectory.csv",
+      "size_bytes": 20091,
+      "sha256": "c24b65bd4a30e8f3e15478562cb0047ddcaa30e553d57eabbaf68570d18b094c"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NCA_Gr_frequency_containment_reserve_trajectory.csv",
+      "size_bytes": 19908,
+      "sha256": "850061a625ff17438cc3203b286971db1ef4c045969753176e396c7bf38ce23b"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NCA_Gr_residential_pvbess_CA_mild_trajectory.csv",
+      "size_bytes": 19009,
+      "sha256": "4b0284a3c21cfe6068528c5fe2ad6b471912e9719cf72176cb3f030fbb2cc503"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NCA_Gr_residential_pvbess_Germany_aggressive_trajectory.csv",
+      "size_bytes": 16583,
+      "sha256": "d0d671015181b2f6b3072c9aef127ccefdf4c16b5250993b9f224833d248cc3d"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NCA_Gr_telecom_backup_power_trajectory.csv",
+      "size_bytes": 19878,
+      "sha256": "d318a25a9ba1298dce73380ca7d23278e53ac58da1174ad18008d45114f5bdf4"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NMC111_Gr_commercial_peak_shaving_trajectory.csv",
+      "size_bytes": 20068,
+      "sha256": "bc44c7fad2d198743fd9fe217cf787ccc24e4f98af8aa7f1fc4f5f12c92f753a"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NMC111_Gr_commercial_pvbess_NREL_trajectory.csv",
+      "size_bytes": 6545,
+      "sha256": "14c41da91dd05e56dd77d95c98b84d36e4c8beb7848178de4eacc8aa838029e4"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NMC111_Gr_ev_support_corner_charging_station_trajectory.csv",
+      "size_bytes": 11094,
+      "sha256": "5a173ba13fb0290fe218257caa6a6a90230bdc3b01d5eb2b96ae2903117720c6"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NMC111_Gr_ev_support_rental_car_depot_trajectory.csv",
+      "size_bytes": 20072,
+      "sha256": "2a726a4be3a54cd294e5b56ec21c8eabbef5e688205387a990bb3f499edd3f67"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NMC111_Gr_frequency_containment_reserve_trajectory.csv",
+      "size_bytes": 19251,
+      "sha256": "b6d5b86ba6492eb89dd3426599a1321285e80bd5b77ca458435fc763f7bd9840"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NMC111_Gr_residential_pvbess_CA_mild_trajectory.csv",
+      "size_bytes": 20010,
+      "sha256": "b4153130d12bd4af892ca87981c31b6698204b067f816dcf3f8b7e85d4007cf6"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NMC111_Gr_residential_pvbess_Germany_aggressive_trajectory.csv",
+      "size_bytes": 12902,
+      "sha256": "21728c109a25ceeb0e3c73a9b4c3f70427da661ad656442499ca7850725a89d5"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NMC111_Gr_telecom_backup_power_trajectory.csv",
+      "size_bytes": 20162,
+      "sha256": "1943a9bf6fc6ad71837bcd1acff356435b3026bba5f449f28537a124f80d5fdd"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NMC622_Gr_commercial_peak_shaving_trajectory.csv",
+      "size_bytes": 20065,
+      "sha256": "672f9d4e51b5ea7dcf500ad52e264a91b55153e49f412117cc8ec1bcc1391971"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NMC622_Gr_commercial_pvbess_NREL_trajectory.csv",
+      "size_bytes": 1876,
+      "sha256": "17d50d61fc70a4ab1e216c02ed716f5b57350724d57531e0784f085fcd7a7475"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NMC622_Gr_ev_support_corner_charging_station_trajectory.csv",
+      "size_bytes": 11264,
+      "sha256": "5ba4ab660408b62406639e52f08e1524282e094e251a3ea6c0f393590d774050"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NMC622_Gr_ev_support_rental_car_depot_trajectory.csv",
+      "size_bytes": 20069,
+      "sha256": "05448d56a55bdaba36b8f554a49f3c4e75426ef291070f595c05549cd5c00339"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NMC622_Gr_frequency_containment_reserve_trajectory.csv",
+      "size_bytes": 19939,
+      "sha256": "1e29816176db25fde34e30cf2e506d534da799d81cf849338937af9e238b4569"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NMC622_Gr_residential_pvbess_CA_mild_trajectory.csv",
+      "size_bytes": 20044,
+      "sha256": "35d2f1ed54c7b97b38cc7c79f2c98bfd12c7d727347c52a43f67706c698cbbd9"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NMC622_Gr_residential_pvbess_Germany_aggressive_trajectory.csv",
+      "size_bytes": 5436,
+      "sha256": "ab31fc9069c63f9e5cf4c055e6c027f8070aa49e9520641117266834fb50e611"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_NMC622_Gr_telecom_backup_power_trajectory.csv",
+      "size_bytes": 20144,
+      "sha256": "cbf533a144f0b0f8ee3434ce6b9f7867cad9badbe0d1e67c4ace8bcebd5ba015"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_full_run_record.json",
+      "size_bytes": 667,
+      "sha256": "ee73aa94632ca83620944ee33cc0a6b1cfcc87b8768b77973099b9a0c56b5436"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_full_summary.csv",
+      "size_bytes": 16373,
+      "sha256": "3505fa8ec96fcf2e4828be12f1e00b8c1bc5bef49a323bb293be31b59f7352ec"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_smoke_run_record.json",
+      "size_bytes": 666,
+      "sha256": "01fe69be465211e7915785275438d36284817843b22dd31a9c6405eb69689220"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/literal_source_20C_smoke_summary.csv",
+      "size_bytes": 972,
+      "sha256": "786a055d058061fba562812657f2c462cfbace269dbe2c49676dcdc3eeb368a9"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/official_application_profile_inventory.csv",
+      "size_bytes": 2867,
+      "sha256": "c4a642ba4fdf3df184ab4f867fba31882aa7ae923efe63d4570246e0e1ba57cf"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/official_application_stress_summary.csv",
+      "size_bytes": 725,
+      "sha256": "7ad4b2db8385fcdd2023aedc18cff58107b1e7e882579261a7930a919318181f"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_LFP_Gr_commercial_peak_shaving_trajectory.csv",
+      "size_bytes": 20054,
+      "sha256": "63bcf6a244213a6dfd5d85bc11c0758dd90722eff9228791d9fbb2bd19d89bec"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_LFP_Gr_commercial_pvbess_NREL_trajectory.csv",
+      "size_bytes": 20009,
+      "sha256": "0a15348b195c93d04291204593b7a98cc4fc6048100a83dedaf6677d2731b0f8"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_LFP_Gr_ev_support_corner_charging_station_trajectory.csv",
+      "size_bytes": 19947,
+      "sha256": "8dcbc4c1d4c89e2d6a7e66a950862788932056becd5ca883ccc6b5e60148fbb4"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_LFP_Gr_ev_support_rental_car_depot_trajectory.csv",
+      "size_bytes": 20092,
+      "sha256": "b274405a716006454f43b0c37080e4251cb19c2dfe5fe77a73e9d75b8e37cf90"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_LFP_Gr_frequency_containment_reserve_trajectory.csv",
+      "size_bytes": 19919,
+      "sha256": "42f8d451c0e4f7dadd93670868ea4977448735149f2488684d16c3b8660b4de5"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_LFP_Gr_residential_pvbess_CA_mild_trajectory.csv",
+      "size_bytes": 20046,
+      "sha256": "2b24d72f7c770d60305ab7d13f32d860f888e31cd813958541762db8ff6c0955"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_LFP_Gr_residential_pvbess_Germany_aggressive_trajectory.csv",
+      "size_bytes": 19977,
+      "sha256": "d21e0f03be3ca53dbaf0c6a970447fa2fff30239bbdd1ba212f09b5c629c12b9"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_LFP_Gr_telecom_backup_power_trajectory.csv",
+      "size_bytes": 20157,
+      "sha256": "34ae9258d170073823e94c8a24f0a6daa1d80f87877aa234b14fe688b67af0dc"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NCA_Gr_commercial_peak_shaving_trajectory.csv",
+      "size_bytes": 8505,
+      "sha256": "12ea29d59e4e16f672f93c741e359438aa8634d3149d45c001f9980aa373cdfe"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NCA_Gr_commercial_pvbess_NREL_trajectory.csv",
+      "size_bytes": 5867,
+      "sha256": "d35bcbc715df02f971820c0da44d75e9bed5eb8add6a5f8880c2932c8692b0e3"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NCA_Gr_ev_support_corner_charging_station_trajectory.csv",
+      "size_bytes": 11700,
+      "sha256": "b557c291480024fbe0a874cd116063fa1dcb881b5510f84d20cffe7530716206"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NCA_Gr_ev_support_rental_car_depot_trajectory.csv",
+      "size_bytes": 19345,
+      "sha256": "98d9bbb1e526121b4320c01ea3057b90eb696941fa8539e39a49de0a6ac5cbc6"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NCA_Gr_frequency_containment_reserve_trajectory.csv",
+      "size_bytes": 16576,
+      "sha256": "077e5653090692c550bf2cb0d7e404ee20028a8fef4968365860fbefb3259fb9"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NCA_Gr_residential_pvbess_CA_mild_trajectory.csv",
+      "size_bytes": 10532,
+      "sha256": "aa98a0568ab43d32e03ea9830962f7f8311bb46b1db6a3d87e78a7ed686657fe"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NCA_Gr_residential_pvbess_Germany_aggressive_trajectory.csv",
+      "size_bytes": 11643,
+      "sha256": "53802e6528815782a10345b9dfbc34b7df03913c6b6867dc60acb67a9b69a01c"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NCA_Gr_telecom_backup_power_trajectory.csv",
+      "size_bytes": 11352,
+      "sha256": "25c734d3f9100af5f02867200a20f751af253b6179ab800acfd0e0ff6ef78863"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NMC111_Gr_commercial_peak_shaving_trajectory.csv",
+      "size_bytes": 20070,
+      "sha256": "724ee7e10c67b0d331f11df73e183c45ad9952c05cc1e0e37f16e305d7a5b595"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NMC111_Gr_commercial_pvbess_NREL_trajectory.csv",
+      "size_bytes": 6433,
+      "sha256": "6871483dd180b4fcc0f410d2439b110ea86d1819c4bff5952d5a180e3f1b4032"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NMC111_Gr_ev_support_corner_charging_station_trajectory.csv",
+      "size_bytes": 12198,
+      "sha256": "9d2b3ab70b3adad017d4462913a59dea17dd762798f2d1ac7640f9a3b8f8dff6"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NMC111_Gr_ev_support_rental_car_depot_trajectory.csv",
+      "size_bytes": 20083,
+      "sha256": "501a1d9e0b0de4bc2cd03101ee15c9b12cef523944fb127b2e5b4d47ac39f9c1"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NMC111_Gr_frequency_containment_reserve_trajectory.csv",
+      "size_bytes": 19931,
+      "sha256": "9eb72ea9cbeca834b208981eee1f0e29d5cae8a45d5386761d106eee8eddbe4a"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NMC111_Gr_residential_pvbess_CA_mild_trajectory.csv",
+      "size_bytes": 20014,
+      "sha256": "92603c7de250ff5a4e81b866215c1a485dba71e25519170a5255bde229763cad"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NMC111_Gr_residential_pvbess_Germany_aggressive_trajectory.csv",
+      "size_bytes": 9467,
+      "sha256": "88d17a1f4dcabab91008ba9a35056c06c2c95b7f19116853d5f0424dd9c08f75"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NMC111_Gr_telecom_backup_power_trajectory.csv",
+      "size_bytes": 20146,
+      "sha256": "0ab35cba1c1adebe974980ad46bcaa31346ff71e63eb0fcdc3f8871f735ddc5e"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NMC622_Gr_commercial_peak_shaving_trajectory.csv",
+      "size_bytes": 20092,
+      "sha256": "dfbb842b60557840aa0b5c4aace19f74c6628b1773cb1fb59a7cebb48cd590d6"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NMC622_Gr_commercial_pvbess_NREL_trajectory.csv",
+      "size_bytes": 2431,
+      "sha256": "336f320a76f099204ef2c2c8f3b35c9257478649c09bebb69400f3d9aed63c0c"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NMC622_Gr_ev_support_corner_charging_station_trajectory.csv",
+      "size_bytes": 9920,
+      "sha256": "4fc278415fc296dcb478ad2265f3fb3508599b3df7a2e9b17c5a0a00ae06a810"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NMC622_Gr_ev_support_rental_car_depot_trajectory.csv",
+      "size_bytes": 20059,
+      "sha256": "085d1e20265d421207c34435fe79fee32c1f12be339a39bdff6866ae83ed6d43"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NMC622_Gr_frequency_containment_reserve_trajectory.csv",
+      "size_bytes": 19914,
+      "sha256": "1cbbc85f2a2d900bb95e4ac98c4393664f7a091b9acc482a773d5be0f99002eb"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NMC622_Gr_residential_pvbess_CA_mild_trajectory.csv",
+      "size_bytes": 20031,
+      "sha256": "58c5b75b1231b0ae8315662c4a82806703ec07e72bccf6b2d4c72392be289026"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NMC622_Gr_residential_pvbess_Germany_aggressive_trajectory.csv",
+      "size_bytes": 5603,
+      "sha256": "f46730bed25238f1990756ac61b68f71bd2c366e2510c3baa9da5a504a8d0255"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_NMC622_Gr_telecom_backup_power_trajectory.csv",
+      "size_bytes": 20162,
+      "sha256": "0c9f916139b7afff05887d499804a39d5262141e93c6eb63f26e9b3bf84ed661"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_full_run_record.json",
+      "size_bytes": 637,
+      "sha256": "1305551a349e73d9c407f4ceb474580f0d3ccef555a4cafe09c93cf666b4d866"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/override_30C_full_summary.csv",
+      "size_bytes": 15975,
+      "sha256": "c10ae3572b684627e0632ac28859b3c8a36bebe1067cdbfbc760388c49424f1e"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/robust_temperature_comparison.csv",
+      "size_bytes": 7862,
+      "sha256": "b58d5cbc938ed5fb8d0aecd4c4369815f993a7cccd90f7b1094adcfd1ceb3285"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/robust_temperature_comparison_summary.json",
+      "size_bytes": 613,
+      "sha256": "ecb02b4787220c0a9e88fa26b3d5195dc09b136a6b08d6f9cfa9fa9d5fd11468"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/stationary_reproduction_result_record.json",
+      "size_bytes": 723,
+      "sha256": "5b5d0058273ce7f9b5b0dfbd7a6746fdc0c31db48e80bc86d71db49621734e01"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/temperature_comparison_by_battery.csv",
+      "size_bytes": 406,
+      "sha256": "984092d8a1a6ada08147037c3a635e0f3cb5bab02c42d8f00efb3c6caf0a0cb5"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/temperature_comparison_class_counts.csv",
+      "size_bytes": 165,
+      "sha256": "bd2536f2ee0fce10a4e7374c388e1c0739fc8d8830f30bca6266bda77ab963e6"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/results/temperature_text_code_comparison.csv",
+      "size_bytes": 6404,
+      "sha256": "d60b1bf871e23c7e3052e37c17aa2f4a1a03c859fcc231851fdac9039514112c"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/run_stationary_storage_reproduction.py",
+      "size_bytes": 18228,
+      "sha256": "8bbaba2311f117e120d40e134ba2e5c8f0efe208f3fd0fc36a9b053637486dda"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/source_extract/example_stationary_storage_life.ipynb",
+      "size_bytes": 635130,
+      "sha256": "60faea6b25aa40ccfc9d5cd7efde2f40a9e371eaca877849cb0945225f4098e3"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/source_extract/official_notebook_cells.txt",
+      "size_bytes": 13947,
+      "sha256": "8001dfadfc156e017a0034c5ce6e84102c2c7da3d9a35c4c445c3a8eaceee7f9"
+    },
+    {
+      "path": "reproduction/stationary_storage_example/source_extract/official_notebook_code.py",
+      "size_bytes": 9515,
+      "sha256": "f4a593a4cc752b70326fb6d1918667969bb20e3222e05364b8f5580b09e4bb41"
+    }
+  ]
+}

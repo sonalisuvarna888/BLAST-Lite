@@ -1,0 +1,12 @@
+{
+  "temperature_mode": "override_30C",
+  "smoke": false,
+  "threshold_capacity": 0.7,
+  "threshold_time_years": 30.0,
+  "successful_cases": 32,
+  "failed_cases": 0,
+  "summary_file": "/content/BLAST-Lite/reproduction/stationary_storage_example/results/override_30C_full_summary.csv",
+  "error_file": "/content/BLAST-Lite/reproduction/stationary_storage_example/logs/override_30C_full_errors.json",
+  "q_vs_time_figure": "/content/BLAST-Lite/reproduction/stationary_storage_example/figures/override_30C_q_vs_time.png",
+  "q_vs_efc_figure": "/content/BLAST-Lite/reproduction/stationary_storage_example/figures/override_30C_q_vs_efc.png"
+}

@@ -1,0 +1,6 @@
+{
+  "primary_reproduction": "Literal notebook-code reproduction using source CSV Temperature_C = 20.",
+  "secondary_sensitivity": "Explicit 30C override corresponding to notebook prose.",
+  "source_inconsistency": "Notebook markdown says stable 30C, but code loads CSVs containing 20C without overriding temperature.",
+  "consequence": "Temperature interpretation materially changes modeled capacity trajectories and threshold times."
+}

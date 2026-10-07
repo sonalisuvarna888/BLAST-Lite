@@ -1,0 +1,15 @@
+{
+  "primary_reproduction_temperature_C": 20,
+  "primary_reproduction_basis": "Literal notebook code loads CSV Temperature_C values unchanged.",
+  "successful_cases": 32,
+  "failed_cases": 0,
+  "threshold_counts_by_battery": {
+    "LFP-Gr": 1,
+    "NCA-Gr": 6,
+    "NMC111-Gr": 4,
+    "NMC622-Gr": 3
+  },
+  "main_qualitative_reproduction": "Battery chemistry and stationary application profile produce widely different capacity trajectories and modeled threshold times.",
+  "temperature_inconsistency": "Notebook prose states 30C, while source CSV files and literal code execution use 20C.",
+  "publication_recommendation": "Report literal 20C reproduction as primary and explicit 30C override as a separate sensitivity."
+}

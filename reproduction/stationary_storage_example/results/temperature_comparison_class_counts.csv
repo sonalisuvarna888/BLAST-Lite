@@ -1,0 +1,5 @@
+battery_label,20C_reached_only,30C_reached_only,both_reached_threshold,neither_reached_by_30_years
+LFP-Gr,1,0,0,7
+NCA-Gr,0,2,6,0
+NMC111-Gr,1,0,3,4
+NMC622-Gr,0,0,3,5

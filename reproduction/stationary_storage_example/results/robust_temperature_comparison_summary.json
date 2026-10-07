@@ -1,0 +1,14 @@
+{
+  "total_cases": 32,
+  "class_counts": {
+    "neither_reached_by_30_years": 16,
+    "both_reached_threshold": 12,
+    "20C_reached_only": 2,
+    "30C_reached_only": 2
+  },
+  "both_reached_mean_time_change_years": -4.959650875190245,
+  "both_reached_median_time_change_years": -5.068750000000004,
+  "neither_reached_mean_final_q_change": -0.051374891556737176,
+  "neither_reached_cases_with_lower_q_at_30C": 15,
+  "interpretation": "The 30C override materially changes results, but threshold-time direction is model- and application-dependent. Threshold time and capped final q must be interpreted separately."
+}

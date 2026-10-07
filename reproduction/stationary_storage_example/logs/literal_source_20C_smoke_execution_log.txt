@@ -1,0 +1,36 @@
+STANDARD OUTPUT
+Running NMC111-Gr | residential_pvbess_CA_mild | literal_source_20C...
+  final q = 0.962953
+  final years = 2.001
+
+RUN RECORD
+{
+  "temperature_mode": "literal_source_20C",
+  "smoke": true,
+  "threshold_capacity": 0.7,
+  "threshold_time_years": 2.0,
+  "successful_cases": 1,
+  "failed_cases": 0,
+  "summary_file": "/content/BLAST-Lite/reproduction/stationary_storage_example/results/literal_source_20C_smoke_summary.csv",
+  "error_file": "/content/BLAST-Lite/reproduction/stationary_storage_example/logs/literal_source_20C_smoke_errors.json",
+  "q_vs_time_figure": "/content/BLAST-Lite/reproduction/stationary_storage_example/figures/literal_source_20C_q_vs_time.png",
+  "q_vs_efc_figure": "/content/BLAST-Lite/reproduction/stationary_storage_example/figures/literal_source_20C_q_vs_efc.png"
+}
+
+SUMMARY
+  temperature_mode battery_label               battery_class                application                        source_file  input_rows  input_duration_days  input_soc_min  input_soc_mean  input_soc_median  input_soc_max  input_profile_efc  input_annualized_efc  input_temperature_min_C  input_temperature_mean_C  input_temperature_max_C  threshold_capacity  threshold_time_years  threshold_capacity_reached  final_q  final_time_years  final_efc  output_points  mean_model_soc  mean_model_dod  rms_model_dod  mean_model_temperature_C  execution_seconds                                                                trajectory_file
+literal_source_20C     NMC111-Gr Nmc111_Gr_Kokam75Ah_Battery residential_pvbess_CA_mild Residential PV-BESS (CA, mild).csv       35040           364.989583        0.30001        0.816501          0.931407           0.95          72.645284             72.647357                     20.0                      20.0                     20.0                 0.7                   2.0                       False 0.962953          2.001284 145.642377            733          0.8152        0.251787       0.313143                      20.0            1.73539 results/literal_source_20C_NMC111_Gr_residential_pvbess_CA_mild_trajectory.csv
+
+
+STANDARD ERROR
+/content/BLAST-Lite/reproduction/stationary_storage_example/run_stationary_storage_reproduction.py:574: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+  axis_time.legend(
+/content/BLAST-Lite/reproduction/stationary_storage_example/run_stationary_storage_reproduction.py:584: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+  axis_efc.legend(
+
+
+RETURN CODE
+0
+
+ELAPSED SECONDS
+12.035006284713745

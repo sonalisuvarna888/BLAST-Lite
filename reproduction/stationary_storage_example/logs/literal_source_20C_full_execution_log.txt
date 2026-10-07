@@ -1,0 +1,156 @@
+STANDARD OUTPUT
+Running NMC111-Gr | commercial_peak_shaving | literal_source_20C...
+  final q = 0.875967
+  final years = 30.000
+Running NMC111-Gr | residential_pvbess_CA_mild | literal_source_20C...
+  final q = 0.887672
+  final years = 30.002
+Running NMC111-Gr | telecom_backup_power | literal_source_20C...
+  final q = 0.887432
+  final years = 30.002
+Running NMC111-Gr | ev_support_rental_car_depot | literal_source_20C...
+  final q = 0.927458
+  final years = 30.000
+Running NMC111-Gr | commercial_pvbess_NREL | literal_source_20C...
+  final q = 0.698654
+  final years = 9.742
+Running NMC111-Gr | frequency_containment_reserve | literal_source_20C...
+  final q = 0.699893
+  final years = 28.991
+Running NMC111-Gr | residential_pvbess_Germany_aggressive | literal_source_20C...
+  final q = 0.699940
+  final years = 19.345
+Running NMC111-Gr | ev_support_corner_charging_station | literal_source_20C...
+  final q = 0.699689
+  final years = 16.633
+Running LFP-Gr | commercial_peak_shaving | literal_source_20C...
+  final q = 0.908570
+  final years = 30.000
+Running LFP-Gr | residential_pvbess_CA_mild | literal_source_20C...
+  final q = 0.878070
+  final years = 30.002
+Running LFP-Gr | telecom_backup_power | literal_source_20C...
+  final q = 0.868748
+  final years = 30.002
+Running LFP-Gr | ev_support_rental_car_depot | literal_source_20C...
+  final q = 0.852994
+  final years = 30.000
+Running LFP-Gr | commercial_pvbess_NREL | literal_source_20C...
+  final q = 0.757347
+  final years = 30.002
+Running LFP-Gr | frequency_containment_reserve | literal_source_20C...
+  final q = 0.797831
+  final years = 30.001
+Running LFP-Gr | residential_pvbess_Germany_aggressive | literal_source_20C...
+  final q = 0.778336
+  final years = 30.001
+Running LFP-Gr | ev_support_corner_charging_station | literal_source_20C...
+  final q = 0.699999
+  final years = 29.881
+Running NCA-Gr | commercial_peak_shaving | literal_source_20C...
+  final q = 0.699994
+  final years = 23.912
+Running NCA-Gr | residential_pvbess_CA_mild | literal_source_20C...
+  final q = 0.699983
+  final years = 28.450
+Running NCA-Gr | telecom_backup_power | literal_source_20C...
+  final q = 0.699987
+  final years = 29.581
+Running NCA-Gr | ev_support_rental_car_depot | literal_source_20C...
+  final q = 0.763688
+  final years = 30.000
+Running NCA-Gr | commercial_pvbess_NREL | literal_source_20C...
+  final q = 0.699977
+  final years = 13.693
+Running NCA-Gr | frequency_containment_reserve | literal_source_20C...
+  final q = 0.749954
+  final years = 30.001
+Running NCA-Gr | residential_pvbess_Germany_aggressive | literal_source_20C...
+  final q = 0.699987
+  final years = 24.941
+Running NCA-Gr | ev_support_corner_charging_station | literal_source_20C...
+  final q = 0.700000
+  final years = 23.523
+Running NMC622-Gr | commercial_peak_shaving | literal_source_20C...
+  final q = 0.846294
+  final years = 30.000
+Running NMC622-Gr | residential_pvbess_CA_mild | literal_source_20C...
+  final q = 0.785049
+  final years = 30.002
+Running NMC622-Gr | telecom_backup_power | literal_source_20C...
+  final q = 0.816913
+  final years = 30.002
+Running NMC622-Gr | ev_support_rental_car_depot | literal_source_20C...
+  final q = 0.754381
+  final years = 30.000
+Running NMC622-Gr | commercial_pvbess_NREL | literal_source_20C...
+  final q = 0.699955
+  final years = 2.727
+Running NMC622-Gr | frequency_containment_reserve | literal_source_20C...
+  final q = 0.778810
+  final years = 30.001
+Running NMC622-Gr | residential_pvbess_Germany_aggressive | literal_source_20C...
+  final q = 0.699934
+  final years = 8.084
+Running NMC622-Gr | ev_support_corner_charging_station | literal_source_20C...
+  final q = 0.699994
+  final years = 16.890
+
+RUN RECORD
+{
+  "temperature_mode": "literal_source_20C",
+  "smoke": false,
+  "threshold_capacity": 0.7,
+  "threshold_time_years": 30.0,
+  "successful_cases": 32,
+  "failed_cases": 0,
+  "summary_file": "/content/BLAST-Lite/reproduction/stationary_storage_example/results/literal_source_20C_full_summary.csv",
+  "error_file": "/content/BLAST-Lite/reproduction/stationary_storage_example/logs/literal_source_20C_full_errors.json",
+  "q_vs_time_figure": "/content/BLAST-Lite/reproduction/stationary_storage_example/figures/literal_source_20C_q_vs_time.png",
+  "q_vs_efc_figure": "/content/BLAST-Lite/reproduction/stationary_storage_example/figures/literal_source_20C_q_vs_efc.png"
+}
+
+SUMMARY
+  temperature_mode battery_label               battery_class                           application                                     source_file  input_rows  input_duration_days  input_soc_min  input_soc_mean  input_soc_median  input_soc_max  input_profile_efc  input_annualized_efc  input_temperature_min_C  input_temperature_mean_C  input_temperature_max_C  threshold_capacity  threshold_time_years  threshold_capacity_reached  final_q  final_time_years    final_efc  output_points  mean_model_soc  mean_model_dod  rms_model_dod  mean_model_temperature_C  execution_seconds                                                                           trajectory_file
+literal_source_20C     NMC111-Gr Nmc111_Gr_Kokam75Ah_Battery               commercial_peak_shaving                     Commercial peak shaving.csv       51408           356.993056       0.137376        0.990118          1.000000       1.000000          18.838349             19.260871                     20.0                      20.0                     20.0                 0.7                  30.0                       False 0.875967         30.000133   564.228400          10965        0.989517        0.057017       0.128635                      20.0          11.451277               results/literal_source_20C_NMC111_Gr_commercial_peak_shaving_trajectory.csv
+literal_source_20C     NMC111-Gr Nmc111_Gr_Kokam75Ah_Battery            residential_pvbess_CA_mild              Residential PV-BESS (CA, mild).csv       35040           364.989583       0.300010        0.816501          0.931407       0.950000          72.645284             72.647357                     20.0                      20.0                     20.0                 0.7                  30.0                       False 0.887672         30.002426  2172.939040          10975        0.816493        0.264321       0.328668                      20.0           9.360552            results/literal_source_20C_NMC111_Gr_residential_pvbess_CA_mild_trajectory.csv
+literal_source_20C     NMC111-Gr Nmc111_Gr_Kokam75Ah_Battery                  telecom_backup_power       Telecom backup power and peak shaving.csv       11273           117.416667       0.250000        0.742465          0.775000       1.000000          29.381000             91.333414                     20.0                      20.0                     20.0                 0.7                  30.0                       False 0.887432         30.001627  2680.573357          11026        0.737586        0.278813       0.357029                      20.0          10.481800                  results/literal_source_20C_NMC111_Gr_telecom_backup_power_trajectory.csv
+literal_source_20C     NMC111-Gr Nmc111_Gr_Kokam75Ah_Battery           ev_support_rental_car_depot        EV charging support rental car depot.csv      105120           364.996528       0.092064        0.304269          0.213899       0.945092         155.555919            155.557399                     20.0                      20.0                     20.0                 0.7                  30.0                       False 0.927458         30.000238  4665.811112          10959        0.304966        0.467026       0.513784                      20.0          19.506870           results/literal_source_20C_NMC111_Gr_ev_support_rental_car_depot_trajectory.csv
+literal_source_20C     NMC111-Gr Nmc111_Gr_Kokam75Ah_Battery                commercial_pvbess_NREL                   Commercial PV-BESS (NREL).csv       35040           364.989583       0.200000        0.954710          1.000000       1.000000         213.381000            213.387090                     20.0                      20.0                     20.0                 0.7                  30.0                        True 0.698654          9.742466  2068.370009           3564        0.950531        0.635233       0.744553                      20.0           3.801989                results/literal_source_20C_NMC111_Gr_commercial_pvbess_NREL_trajectory.csv
+literal_source_20C     NMC111-Gr Nmc111_Gr_Kokam75Ah_Battery         frequency_containment_reserve               Frequency containment reserve.csv       52560           364.993056       0.019902        0.493168          0.527174       1.000000         233.254333            233.258771                     20.0                      20.0                     20.0                 0.7                  30.0                        True 0.699893         28.991096  6760.671717          10598        0.493009        0.301931       0.326526                      20.0          19.025919         results/literal_source_20C_NMC111_Gr_frequency_containment_reserve_trajectory.csv
+literal_source_20C     NMC111-Gr Nmc111_Gr_Kokam75Ah_Battery residential_pvbess_Germany_aggressive   Residential PV-BESS (Germany, aggressive).csv       52560           364.993056       0.000000        0.325506          0.037561       1.000000         261.808976            261.813957                     20.0                      20.0                     20.0                 0.7                  30.0                        True 0.699940         19.345472  4595.860644           7131        0.328536        0.726656       0.821706                      20.0           7.884660 results/literal_source_20C_NMC111_Gr_residential_pvbess_Germany_aggressive_trajectory.csv
+literal_source_20C     NMC111-Gr Nmc111_Gr_Kokam75Ah_Battery    ev_support_corner_charging_station EV charging support corner charging station.csv      105120           364.996528       0.100289        0.335249          0.252990       0.939062         366.857949            366.861439                     20.0                      20.0                     20.0                 0.7                  30.0                        True 0.699689         16.633086  6071.529582           6380        0.322163        0.760347       0.768269                      20.0           8.247333    results/literal_source_20C_NMC111_Gr_ev_support_corner_charging_station_trajectory.csv
+literal_source_20C        LFP-Gr       Lfp_Gr_250AhPrismatic               commercial_peak_shaving                     Commercial peak shaving.csv       51408           356.993056       0.137376        0.990118          1.000000       1.000000          18.838349             19.260871                     20.0                      20.0                     20.0                 0.7                  30.0                       False 0.908570         30.000133   569.433495          10965        0.989738        0.055530       0.125427                      20.0           9.796961                  results/literal_source_20C_LFP_Gr_commercial_peak_shaving_trajectory.csv
+literal_source_20C        LFP-Gr       Lfp_Gr_250AhPrismatic            residential_pvbess_CA_mild              Residential PV-BESS (CA, mild).csv       35040           364.989583       0.300010        0.816501          0.931407       0.950000          72.645284             72.647357                     20.0                      20.0                     20.0                 0.7                  30.0                       False 0.878070         30.002426  2172.483572          10975        0.816480        0.262940       0.326991                      20.0           8.004834               results/literal_source_20C_LFP_Gr_residential_pvbess_CA_mild_trajectory.csv
+literal_source_20C        LFP-Gr       Lfp_Gr_250AhPrismatic                  telecom_backup_power       Telecom backup power and peak shaving.csv       11273           117.416667       0.250000        0.742465          0.775000       1.000000          29.381000             91.333414                     20.0                      20.0                     20.0                 0.7                  30.0                       False 0.868748         30.001627  2679.193485          11026        0.737525        0.279190       0.357549                      20.0           7.465546                     results/literal_source_20C_LFP_Gr_telecom_backup_power_trajectory.csv
+literal_source_20C        LFP-Gr       Lfp_Gr_250AhPrismatic           ev_support_rental_car_depot        EV charging support rental car depot.csv      105120           364.996528       0.092064        0.304269          0.213899       0.945092         155.555919            155.557399                     20.0                      20.0                     20.0                 0.7                  30.0                       False 0.852994         30.000238  4661.643076          10959        0.305700        0.487697       0.536685                      20.0          11.250808              results/literal_source_20C_LFP_Gr_ev_support_rental_car_depot_trajectory.csv
+literal_source_20C        LFP-Gr       Lfp_Gr_250AhPrismatic                commercial_pvbess_NREL                   Commercial PV-BESS (NREL).csv       35040           364.989583       0.200000        0.954710          1.000000       1.000000         213.381000            213.387090                     20.0                      20.0                     20.0                 0.7                  30.0                       False 0.757347         30.002426  6329.769751          10975        0.947693        0.671400       0.787991                      20.0           9.811694                   results/literal_source_20C_LFP_Gr_commercial_pvbess_NREL_trajectory.csv
+literal_source_20C        LFP-Gr       Lfp_Gr_250AhPrismatic         frequency_containment_reserve               Frequency containment reserve.csv       52560           364.993056       0.019902        0.493168          0.527174       1.000000         233.254333            233.258771                     20.0                      20.0                     20.0                 0.7                  30.0                       False 0.797831         30.000628  6993.039241          10967        0.493291        0.319081       0.344799                      20.0          10.276866            results/literal_source_20C_LFP_Gr_frequency_containment_reserve_trajectory.csv
+literal_source_20C        LFP-Gr       Lfp_Gr_250AhPrismatic residential_pvbess_Germany_aggressive   Residential PV-BESS (Germany, aggressive).csv       52560           364.993056       0.000000        0.325506          0.037561       1.000000         261.808976            261.813957                     20.0                      20.0                     20.0                 0.7                  30.0                       False 0.778336         30.001465  7057.513931          11058        0.326748        0.725818       0.821430                      20.0           9.763150    results/literal_source_20C_LFP_Gr_residential_pvbess_Germany_aggressive_trajectory.csv
+literal_source_20C        LFP-Gr       Lfp_Gr_250AhPrismatic    ev_support_corner_charging_station EV charging support corner charging station.csv      105120           364.996528       0.100289        0.335249          0.252990       0.939062         366.857949            366.861439                     20.0                      20.0                     20.0                 0.7                  30.0                        True 0.699999         29.881250 10556.221548          11457        0.297669        0.829013       0.837403                      20.0          12.214838       results/literal_source_20C_LFP_Gr_ev_support_corner_charging_station_trajectory.csv
+literal_source_20C        NCA-Gr Nca_Gr_Panasonic3Ah_Battery               commercial_peak_shaving                     Commercial peak shaving.csv       51408           356.993056       0.137376        0.990118          1.000000       1.000000          18.838349             19.260871                     20.0                      20.0                     20.0                 0.7                  30.0                        True 0.699994         23.911891   438.806422           8740        0.988443        0.063536       0.141352                      20.0           6.190480                  results/literal_source_20C_NCA_Gr_commercial_peak_shaving_trajectory.csv
+literal_source_20C        NCA-Gr Nca_Gr_Panasonic3Ah_Battery            residential_pvbess_CA_mild              Residential PV-BESS (CA, mild).csv       35040           364.989583       0.300010        0.816501          0.931407       0.950000          72.645284             72.647357                     20.0                      20.0                     20.0                 0.7                  30.0                        True 0.699983         28.450485  1981.872895          10407        0.812062        0.293056       0.362454                      20.0           7.470461               results/literal_source_20C_NCA_Gr_residential_pvbess_CA_mild_trajectory.csv
+literal_source_20C        NCA-Gr Nca_Gr_Panasonic3Ah_Battery                  telecom_backup_power       Telecom backup power and peak shaving.csv       11273           117.416667       0.250000        0.742465          0.775000       1.000000          29.381000             91.333414                     20.0                      20.0                     20.0                 0.7                  30.0                        True 0.699987         29.581307  2528.723873          10871        0.733887        0.307487       0.393123                      20.0           7.324986                     results/literal_source_20C_NCA_Gr_telecom_backup_power_trajectory.csv
+literal_source_20C        NCA-Gr Nca_Gr_Panasonic3Ah_Battery           ev_support_rental_car_depot        EV charging support rental car depot.csv      105120           364.996528       0.092064        0.304269          0.213899       0.945092         155.555919            155.557399                     20.0                      20.0                     20.0                 0.7                  30.0                       False 0.763688         30.000238  4631.015910          10959        0.307190        0.522360       0.573974                      20.0          10.503607              results/literal_source_20C_NCA_Gr_ev_support_rental_car_depot_trajectory.csv
+literal_source_20C        NCA-Gr Nca_Gr_Panasonic3Ah_Battery                commercial_pvbess_NREL                   Commercial PV-BESS (NREL).csv       35040           364.989583       0.200000        0.954710          1.000000       1.000000         213.381000            213.387090                     20.0                      20.0                     20.0                 0.7                  30.0                        True 0.699977         13.692922  2809.609125           5009        0.945210        0.693831       0.813825                      20.0           4.347393                   results/literal_source_20C_NCA_Gr_commercial_pvbess_NREL_trajectory.csv
+literal_source_20C        NCA-Gr Nca_Gr_Panasonic3Ah_Battery         frequency_containment_reserve               Frequency containment reserve.csv       52560           364.993056       0.019902        0.493168          0.527174       1.000000         233.254333            233.258771                     20.0                      20.0                     20.0                 0.7                  30.0                       False 0.749954         30.000628  6976.275562          10967        0.493514        0.334979       0.361668                      20.0           9.527628            results/literal_source_20C_NCA_Gr_frequency_containment_reserve_trajectory.csv
+literal_source_20C        NCA-Gr Nca_Gr_Panasonic3Ah_Battery residential_pvbess_Germany_aggressive   Residential PV-BESS (Germany, aggressive).csv       52560           364.993056       0.000000        0.325506          0.037561       1.000000         261.808976            261.813957                     20.0                      20.0                     20.0                 0.7                  30.0                        True 0.699987         24.941001  5521.535310           9193        0.328358        0.735983       0.830101                      20.0           7.449671    results/literal_source_20C_NCA_Gr_residential_pvbess_Germany_aggressive_trajectory.csv
+literal_source_20C        NCA-Gr Nca_Gr_Panasonic3Ah_Battery    ev_support_corner_charging_station EV charging support corner charging station.csv      105120           364.996528       0.100289        0.335249          0.252990       0.939062         366.857949            366.861439                     20.0                      20.0                     20.0                 0.7                  30.0                        True 0.700000         23.523411  8275.991155           9023        0.294031        0.838945       0.846923                      20.0           9.200936       results/literal_source_20C_NCA_Gr_ev_support_corner_charging_station_trajectory.csv
+literal_source_20C     NMC622-Gr Nmc622_Gr_DENSO50Ah_Battery               commercial_peak_shaving                     Commercial peak shaving.csv       51408           356.993056       0.137376        0.990118          1.000000       1.000000          18.838349             19.260871                     20.0                      20.0                     20.0                 0.7                  30.0                       False 0.846294         30.000133   562.267684          10965        0.989422        0.057635       0.129980                      20.0          10.019888               results/literal_source_20C_NMC622_Gr_commercial_peak_shaving_trajectory.csv
+literal_source_20C     NMC622-Gr Nmc622_Gr_DENSO50Ah_Battery            residential_pvbess_CA_mild              Residential PV-BESS (CA, mild).csv       35040           364.989583       0.300010        0.816501          0.931407       0.950000          72.645284             72.647357                     20.0                      20.0                     20.0                 0.7                  30.0                       False 0.785049         30.002426  2136.397277          10975        0.814756        0.280083       0.346975                      20.0          11.588192            results/literal_source_20C_NMC622_Gr_residential_pvbess_CA_mild_trajectory.csv
+literal_source_20C     NMC622-Gr Nmc622_Gr_DENSO50Ah_Battery                  telecom_backup_power       Telecom backup power and peak shaving.csv       11273           117.416667       0.250000        0.742465          0.775000       1.000000          29.381000             91.333414                     20.0                      20.0                     20.0                 0.7                  30.0                       False 0.816913         30.001627  2641.555356          11026        0.736405        0.288847       0.369521                      20.0          10.189749                  results/literal_source_20C_NMC622_Gr_telecom_backup_power_trajectory.csv
+literal_source_20C     NMC622-Gr Nmc622_Gr_DENSO50Ah_Battery           ev_support_rental_car_depot        EV charging support rental car depot.csv      105120           364.996528       0.092064        0.304269          0.213899       0.945092         155.555919            155.557399                     20.0                      20.0                     20.0                 0.7                  30.0                       False 0.754381         30.000238  4622.192392          10959        0.307535        0.528656       0.580547                      20.0          15.494416           results/literal_source_20C_NMC622_Gr_ev_support_rental_car_depot_trajectory.csv
+literal_source_20C     NMC622-Gr Nmc622_Gr_DENSO50Ah_Battery                commercial_pvbess_NREL                   Commercial PV-BESS (NREL).csv       35040           364.989583       0.200000        0.954710          1.000000       1.000000         213.381000            213.387090                     20.0                      20.0                     20.0                 0.7                  30.0                        True 0.699955          2.727112   558.005935            998        0.944829        0.695475       0.815832                      20.0           1.163019                results/literal_source_20C_NMC622_Gr_commercial_pvbess_NREL_trajectory.csv
+literal_source_20C     NMC622-Gr Nmc622_Gr_DENSO50Ah_Battery         frequency_containment_reserve               Frequency containment reserve.csv       52560           364.993056       0.019902        0.493168          0.527174       1.000000         233.254333            233.258771                     20.0                      20.0                     20.0                 0.7                  30.0                       False 0.778810         30.000628  6984.803374          10967        0.493443        0.329936       0.356215                      20.0          15.417103         results/literal_source_20C_NMC622_Gr_frequency_containment_reserve_trajectory.csv
+literal_source_20C     NMC622-Gr Nmc622_Gr_DENSO50Ah_Battery residential_pvbess_Germany_aggressive   Residential PV-BESS (Germany, aggressive).csv       52560           364.993056       0.000000        0.325506          0.037561       1.000000         261.808976            261.813957                     20.0                      20.0                     20.0                 0.7                  30.0                        True 0.699934          8.084037  1760.138891           2980        0.325938        0.735302       0.829916                      20.0           3.174391 results/literal_source_20C_NMC622_Gr_residential_pvbess_Germany_aggressive_trajectory.csv
+literal_source_20C     NMC622-Gr Nmc622_Gr_DENSO50Ah_Battery    ev_support_corner_charging_station EV charging support corner charging station.csv      105120           364.996528       0.100289        0.335249          0.252990       0.939062         366.857949            366.861439                     20.0                      20.0                     20.0                 0.7                  30.0                        True 0.699994         16.890135  5900.078831           6477        0.290887        0.848037       0.855589                      20.0           9.390254    results/literal_source_20C_NMC622_Gr_ev_support_corner_charging_station_trajectory.csv
+
+
+STANDARD ERROR
+
+
+RETURN CODE
+0
+
+ELAPSED SECONDS
+314.50365233421326

@@ -1,0 +1,12 @@
+{
+  "temperature_mode": "literal_source_20C",
+  "smoke": true,
+  "threshold_capacity": 0.7,
+  "threshold_time_years": 2.0,
+  "successful_cases": 1,
+  "failed_cases": 0,
+  "summary_file": "/content/BLAST-Lite/reproduction/stationary_storage_example/results/literal_source_20C_smoke_summary.csv",
+  "error_file": "/content/BLAST-Lite/reproduction/stationary_storage_example/logs/literal_source_20C_smoke_errors.json",
+  "q_vs_time_figure": "/content/BLAST-Lite/reproduction/stationary_storage_example/figures/literal_source_20C_q_vs_time.png",
+  "q_vs_efc_figure": "/content/BLAST-Lite/reproduction/stationary_storage_example/figures/literal_source_20C_q_vs_efc.png"
+}

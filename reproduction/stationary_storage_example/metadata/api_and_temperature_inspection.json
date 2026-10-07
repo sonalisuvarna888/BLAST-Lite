@@ -1,0 +1,149 @@
+{
+  "blast_path": "/content/BLAST-Lite/blast/__init__.py",
+  "models": [
+    {
+      "label": "NMC111-Gr",
+      "class_name": "Nmc111_Gr_Kokam75Ah_Battery",
+      "class_module": "blast.models.nmc111_gr_Kokam75Ah_2017",
+      "constructor_signature": "(degradation_scalar: float = 1, label: str = 'NMC111-Gr Kokam')",
+      "simulate_signature": "(input_timeseries: Union[dict, pandas.core.frame.DataFrame], threshold_time: float = None, threshold_capacity: float = None, threshold_efc: float = None, is_constant_input: bool = False, is_conserve_energy_throughput: bool = True, breakpoints_max_time_diff_s: float = 86400, breakpoints_max_EFC_diff: float = 1)",
+      "initial_output_keys": [
+        "q",
+        "q_LLI",
+        "q_LLI_t",
+        "q_LLI_EFC",
+        "q_LAM",
+        "r",
+        "r_LLI",
+        "r_LLI_t",
+        "r_LLI_EFC",
+        "r_LAM"
+      ],
+      "initial_state_keys": [
+        "qLoss_LLI_t",
+        "qLoss_LLI_EFC",
+        "qLoss_LAM",
+        "rGain_LLI_t",
+        "rGain_LLI_EFC"
+      ],
+      "initial_stressor_keys": [
+        "delta_t_days",
+        "t_days",
+        "delta_efc",
+        "efc",
+        "TdegK",
+        "soc",
+        "Ua",
+        "dod"
+      ]
+    },
+    {
+      "label": "LFP-Gr",
+      "class_name": "Lfp_Gr_250AhPrismatic",
+      "class_module": "blast.models.lfp_gr_250AhPrismatic_2019",
+      "constructor_signature": "(degradation_scalar: float = 1, label: str = 'LFP-Gr 250Ah')",
+      "simulate_signature": "(input_timeseries: Union[dict, pandas.core.frame.DataFrame], threshold_time: float = None, threshold_capacity: float = None, threshold_efc: float = None, is_constant_input: bool = False, is_conserve_energy_throughput: bool = True, breakpoints_max_time_diff_s: float = 86400, breakpoints_max_EFC_diff: float = 1)",
+      "initial_output_keys": [
+        "q",
+        "q_t",
+        "q_EFC"
+      ],
+      "initial_state_keys": [
+        "qLoss_t",
+        "qLoss_EFC"
+      ],
+      "initial_stressor_keys": [
+        "delta_t_days",
+        "t_days",
+        "delta_efc",
+        "efc",
+        "TdegK",
+        "soc",
+        "Ua",
+        "dod",
+        "Crate"
+      ]
+    },
+    {
+      "label": "NCA-Gr",
+      "class_name": "Nca_Gr_Panasonic3Ah_Battery",
+      "class_module": "blast.models.nca_gr_Panasonic3Ah_2018",
+      "constructor_signature": "(degradation_scalar: float = 1, label: str = 'NCA-Gr Panasonic')",
+      "simulate_signature": "(input_timeseries: Union[dict, pandas.core.frame.DataFrame], threshold_time: float = None, threshold_capacity: float = None, threshold_efc: float = None, is_constant_input: bool = False, is_conserve_energy_throughput: bool = True, breakpoints_max_time_diff_s: float = 86400, breakpoints_max_EFC_diff: float = 1)",
+      "initial_output_keys": [
+        "q",
+        "q_t",
+        "q_EFC"
+      ],
+      "initial_state_keys": [
+        "qLoss_t",
+        "qLoss_EFC"
+      ],
+      "initial_stressor_keys": [
+        "delta_t_days",
+        "t_days",
+        "delta_efc",
+        "efc",
+        "TdegK",
+        "soc",
+        "dod",
+        "Crate"
+      ]
+    },
+    {
+      "label": "NMC622-Gr",
+      "class_name": "Nmc622_Gr_DENSO50Ah_Battery",
+      "class_module": "blast.models.nmc622_gr_DENSO50Ah_2021",
+      "constructor_signature": "(degradation_scalar: float = 1, label: str = 'NMC622-Gr DENSO')",
+      "simulate_signature": "(input_timeseries: Union[dict, pandas.core.frame.DataFrame], threshold_time: float = None, threshold_capacity: float = None, threshold_efc: float = None, is_constant_input: bool = False, is_conserve_energy_throughput: bool = True, breakpoints_max_time_diff_s: float = 86400, breakpoints_max_EFC_diff: float = 1)",
+      "initial_output_keys": [
+        "q",
+        "q_t",
+        "q_EFC",
+        "q_BreakIn"
+      ],
+      "initial_state_keys": [
+        "qLoss_t",
+        "qLoss_EFC",
+        "qLoss_BreakIn_t",
+        "qLoss_BreakIn_EFC"
+      ],
+      "initial_stressor_keys": [
+        "delta_t_days",
+        "t_days",
+        "delta_efc",
+        "efc",
+        "TdegK",
+        "soc",
+        "dod",
+        "Crate",
+        "Cchg"
+      ]
+    }
+  ],
+  "temperature_tests": [
+    {
+      "test": "source_file_temperature",
+      "input_temperature_min_C": 20.0,
+      "input_temperature_mean_C": 20.0,
+      "input_temperature_max_C": 20.0,
+      "model_stressor_temperature_min_C": 19.999999999999886,
+      "model_stressor_temperature_mean_C": 20.00000000000011,
+      "model_stressor_temperature_max_C": 20.000000000000114,
+      "final_q_one_pass": 0.9715957207079832,
+      "final_time_days_one_pass": 365.23958333333337
+    },
+    {
+      "test": "explicit_30C_override",
+      "input_temperature_min_C": 30.0,
+      "input_temperature_mean_C": 30.0,
+      "input_temperature_max_C": 30.0,
+      "model_stressor_temperature_min_C": 29.999999999999886,
+      "model_stressor_temperature_mean_C": 30.00000000000011,
+      "model_stressor_temperature_max_C": 30.000000000000114,
+      "final_q_one_pass": 0.9402729844682164,
+      "final_time_days_one_pass": 365.23958333333337
+    }
+  ],
+  "temperature_finding": "The notebook loads profile CSV files directly. The model uses the Temperature_C values present in the input dataframe unless explicitly overridden."
+}
