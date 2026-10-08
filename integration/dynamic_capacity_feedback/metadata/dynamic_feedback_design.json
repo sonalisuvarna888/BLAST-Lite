@@ -1,0 +1,96 @@
+{
+  "experiment": "Monthly dynamic battery-capacity feedback",
+  "research_question": "How does monthly BLAST-Lite capacity feedback change annual community operation relative to a fixed-capacity second-life approximation?",
+  "starting_state": {
+    "battery_model": "Nmc111_Gr_Kokam75Ah_Battery",
+    "first_life_profile": "combined_unscaled personal EV",
+    "transition_q": 0.8,
+    "transition_r": 27.136260714135968,
+    "transition_modeled_time_years": 12.817922374429225,
+    "transition_efc": 1156.6147853032078,
+    "stationary_entry_capacity_kwh": 42.0
+  },
+  "capacity_mapping": {
+    "entry_q": 0.8,
+    "entry_capacity_kwh": 42.0,
+    "equation": "C_m = 42 * q_m / 0.80",
+    "interpretation": "42 kWh corresponds to the documented second-life entry state, not fresh q=1."
+  },
+  "feedback_frequency": "monthly",
+  "months": 12,
+  "monthly_periods": [
+    31,
+    28,
+    31,
+    30,
+    31,
+    30,
+    31,
+    31,
+    30,
+    31,
+    30,
+    31
+  ],
+  "dispatch_cases": [
+    "battery_only",
+    "demand_response_plus_battery"
+  ],
+  "capacity_treatments": [
+    "fixed_42kWh",
+    "dynamic_monthly_q_feedback"
+  ],
+  "primary_experiment_matrix": [
+    "battery_only_fixed",
+    "battery_only_dynamic",
+    "dr_plus_battery_fixed",
+    "dr_plus_battery_dynamic"
+  ],
+  "soc_window": {
+    "minimum_fraction": 0.1,
+    "maximum_fraction": 0.9,
+    "initial_fraction": 0.5
+  },
+  "power_treatment": {
+    "primary": "fixed_12kW",
+    "future_sensitivity": "scale power with capacity"
+  },
+  "dispatch_method": {
+    "daily_rolling_horizon_hours": 48,
+    "implemented_hours": 24,
+    "peak_penalty_per_kw_window": 0.5,
+    "demand_response_bounds": "85% to 115% of baseline",
+    "daily_household_energy_preserved": true
+  },
+  "monthly_loop": [
+    "read beginning-of-month q",
+    "calculate available capacity",
+    "set SOC energy bounds",
+    "solve all daily dispatch problems in the month",
+    "convert monthly kWh SOC to fractional SOC",
+    "continue the same BLAST battery object",
+    "read updated q and resistance",
+    "set next-month capacity"
+  ],
+  "primary_metrics": [
+    "annual grid bill",
+    "bill savings",
+    "peak grid import",
+    "solar spill",
+    "battery throughput",
+    "q trajectory",
+    "capacity trajectory",
+    "resistance trajectory",
+    "EFC",
+    "optimization feasibility"
+  ],
+  "important_boundaries": [
+    "All community profiles remain synthetic.",
+    "BLAST-Lite is cell-level and not a complete pack model.",
+    "Monthly feedback approximates continuous degradation.",
+    "Primary power limit remains fixed at 12 kW.",
+    "q=0.80 is an analytical second-life entry threshold.",
+    "The Miami temperature profile is not geographically matched.",
+    "Dynamic capacity feedback is model-based, not empirical validation."
+  ]
+}

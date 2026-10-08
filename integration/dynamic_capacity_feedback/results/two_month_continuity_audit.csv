@@ -1,0 +1,5 @@
+experiment,month_1_target_forced,month_2_target_forced,month_1_end_soc_fraction,month_2_end_soc_fraction,month_2_capacity_kwh,expected_month_2_capacity_kwh,capacity_mapping_error_kwh,q_continuity_error,r_continuity_error,time_continuity_error,efc_continuity_error
+battery_only_fixed,False,True,0.4595160336166431,0.5,42.0,42.0,0.0,0.0,0.0,0.0,0.0
+battery_only_dynamic,False,True,0.4595160317549302,0.5,41.84998028016919,41.84998028016919,0.0,0.0,0.0,0.0,0.0
+dr_plus_battery_fixed,False,True,0.4606195653112442,0.5000000000000001,42.0,42.0,0.0,0.0,0.0,0.0,0.0
+dr_plus_battery_dynamic,False,True,0.4606195635002789,0.5,41.847519778822125,41.847519778822125,0.0,0.0,0.0,0.0,0.0

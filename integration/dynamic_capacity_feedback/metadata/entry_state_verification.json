@@ -1,0 +1,32 @@
+{
+  "class": "Nmc111_Gr_Kokam75Ah_Battery",
+  "q": 0.7999999632108619,
+  "r": 27.136260714135968,
+  "time_years": 12.817922374429225,
+  "efc": 1156.6147853032078,
+  "mapped_entry_capacity_kwh": 41.99999806857024,
+  "state_keys": [
+    "qLoss_LLI_t",
+    "qLoss_LLI_EFC",
+    "qLoss_LAM",
+    "rGain_LLI_t",
+    "rGain_LLI_EFC"
+  ],
+  "cvxpy_version": "1.9.3",
+  "installed_solvers": [
+    "CLARABEL",
+    "SCS",
+    "SCIPY",
+    "HIGHS",
+    "OSQP"
+  ],
+  "checks": {
+    "q_near_0_80": true,
+    "r_above_fresh": true,
+    "time_positive": true,
+    "efc_positive": true,
+    "mapped_capacity_near_42": true,
+    "clarabel_available": true
+  },
+  "all_checks_passed": true
+}

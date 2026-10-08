@@ -1,0 +1,12 @@
+{
+  "interpretation": "Fixed and dynamic treatments begin with the same second-life capacity, so January dispatch matches. Dynamic capacity diverges after the January q update.",
+  "checks": {
+    "bill_nearly_equal": true,
+    "peak_nearly_equal": true,
+    "throughput_nearly_equal": true,
+    "q_nearly_equal": true,
+    "dynamic_capacity_declines": true,
+    "fixed_capacity_remains_42": true
+  },
+  "all_checks_passed": true
+}

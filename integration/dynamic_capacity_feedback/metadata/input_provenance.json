@@ -1,0 +1,50 @@
+[
+  {
+    "source_branch": "integration/annual-community-dispatch",
+    "source_commit": "114193eedee56340403d390fce7431ceb09e9e4c",
+    "source_file": "integration/annual_community_dispatch/data/annual_community_inputs.csv",
+    "destination_file": "integration/dynamic_capacity_feedback/inputs/annual_community_inputs.csv",
+    "sha256": "e3e37cf947b3d631429cd304ee2fcf66075476acaa18918c4c1622254f614c0f",
+    "size_bytes": 3040949
+  },
+  {
+    "source_branch": "integration/annual-community-dispatch",
+    "source_commit": "114193eedee56340403d390fce7431ceb09e9e4c",
+    "source_file": "integration/annual_community_dispatch/annual_dispatch_design.json",
+    "destination_file": "integration/dynamic_capacity_feedback/inputs/annual_dispatch_design.json",
+    "sha256": "9b86dfa5df1e7bf3e494ee146521e270f04ee111dd28dc2682538eb9cce9c37c",
+    "size_bytes": 2234
+  },
+  {
+    "source_branch": "integration/annual-community-dispatch",
+    "source_commit": "114193eedee56340403d390fce7431ceb09e9e4c",
+    "source_file": "integration/annual_community_dispatch/optimization_model_design.json",
+    "destination_file": "integration/dynamic_capacity_feedback/inputs/optimization_model_design.json",
+    "sha256": "1954ff16fa50d11a85487543f5f95dd901fa510a4ae134114ebd9dce93d8b959",
+    "size_bytes": 2375
+  },
+  {
+    "source_branch": "integration/annual-community-dispatch",
+    "source_commit": "114193eedee56340403d390fce7431ceb09e9e4c",
+    "source_file": "integration/annual_community_dispatch/peak_penalty_selection.json",
+    "destination_file": "integration/dynamic_capacity_feedback/inputs/peak_penalty_selection.json",
+    "sha256": "0909b721576cd001829c3c8eef15424536069fafae67496f050d298e8440b740",
+    "size_bytes": 478
+  },
+  {
+    "source_branch": "extension/second-life-initial-condition",
+    "source_commit": "0e4a4b9b8804dd4784454f9e7b2b58fc77316ea3",
+    "source_file": "extension/second_life_initial_condition/saved_states/combined_unscaled_aged_battery.pkl",
+    "destination_file": "integration/dynamic_capacity_feedback/states/second_life_entry_battery.pkl",
+    "sha256": "eff949d581cb6ba0aaae81a7b6aea0c4bf27051cae1fa45eac787af53b1a2df9",
+    "size_bytes": 985306
+  },
+  {
+    "source_branch": "extension/second-life-initial-condition",
+    "source_commit": "0e4a4b9b8804dd4784454f9e7b2b58fc77316ea3",
+    "source_file": "extension/second_life_initial_condition/saved_states/combined_unscaled_aged_state.json",
+    "destination_file": "integration/dynamic_capacity_feedback/states/second_life_entry_state.json",
+    "sha256": "26191b7a8cf5914bbb61c33b8f622b7f2d86d26f1802e11a8908110c7d208931",
+    "size_bytes": 643631
+  }
+]

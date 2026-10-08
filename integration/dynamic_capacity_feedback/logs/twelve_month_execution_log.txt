@@ -1,0 +1,85 @@
+STANDARD OUTPUT
+Running battery_only_fixed...
+  final q = 0.758153444
+  final capacity = 42.000000
+Running battery_only_dynamic...
+  final q = 0.758522644
+  final capacity = 39.822439
+Running dr_plus_battery_fixed...
+  final q = 0.760218460
+  final capacity = 42.000000
+Running dr_plus_battery_dynamic...
+  final q = 0.757899103
+  final capacity = 39.789703
+
+RUN RECORD
+{
+  "months": 12,
+  "experiments": [
+    "battery_only_fixed",
+    "battery_only_dynamic",
+    "dr_plus_battery_fixed",
+    "dr_plus_battery_dynamic"
+  ],
+  "successful_experiments": 4,
+  "failed_experiments": 0,
+  "overall_file": "/content/BLAST-Lite/integration/dynamic_capacity_feedback/results/dynamic_feedback_12month_overall.csv",
+  "error_file": "/content/BLAST-Lite/integration/dynamic_capacity_feedback/logs/dynamic_feedback_12month_errors.json"
+}
+
+OVERALL
+             experiment  months  hours  grid_energy_kwh   grid_bill  peak_grid_import_kw  solar_spill_kwh  battery_throughput_kwh  initial_q  final_q  q_change  initial_r   final_r  initial_capacity_kwh  last_month_capacity_kwh  final_mapped_capacity_kwh                                          output_file                                        monthly_file                                       state_file
+     battery_only_fixed      12   8760     51113.452606 9599.369430            14.090666      1510.308184            17027.588113        0.8 0.758153 -0.041847  27.136261 29.396323             42.000000                42.000000                  42.000000      results/battery_only_fixed_12month_dispatch.csv      results/battery_only_fixed_12month_summary.csv      states/battery_only_fixed_after_12month.pkl
+   battery_only_dynamic      12   8760     51175.242282 9667.433345            14.090666      1621.077759            16726.018887        0.8 0.758523 -0.041477  27.136261 29.415080             41.999998                39.964722                  39.822439    results/battery_only_dynamic_12month_dispatch.csv    results/battery_only_dynamic_12month_summary.csv    states/battery_only_dynamic_after_12month.pkl
+  dr_plus_battery_fixed      12   8760     50318.645421 8579.206940            12.447330       807.919444            16457.674374        0.8 0.760218 -0.039782  27.136261 29.506220             42.000000                42.000000                  42.000000   results/dr_plus_battery_fixed_12month_dispatch.csv   results/dr_plus_battery_fixed_12month_summary.csv   states/dr_plus_battery_fixed_after_12month.pkl
+dr_plus_battery_dynamic      12   8760     50346.730136 8644.234413            12.447330       881.389802            16178.251951        0.8 0.757899 -0.042101  27.136261 29.459905             41.999998                39.927886                  39.789703 results/dr_plus_battery_dynamic_12month_dispatch.csv results/dr_plus_battery_dynamic_12month_summary.csv states/dr_plus_battery_dynamic_after_12month.pkl
+
+
+STANDARD ERROR
+/content/BLAST-Lite/blast/models/degradation_model.py:537: RuntimeWarning: invalid value encountered in scalar divide
+  Crate = np.trapz(abs_instantaneous_crate, t_days[1:]) / delta_t_days
+/content/BLAST-Lite/blast/models/nmc111_gr_Kokam75Ah_2017.py:158: RuntimeWarning: invalid value encountered in scalar divide
+  q1 = np.trapz(q1, x=t_secs) / delta_t_secs
+/content/BLAST-Lite/blast/models/nmc111_gr_Kokam75Ah_2017.py:159: RuntimeWarning: invalid value encountered in scalar divide
+  q3 = np.trapz(q3, x=t_secs) / delta_t_secs
+/content/BLAST-Lite/blast/models/nmc111_gr_Kokam75Ah_2017.py:160: RuntimeWarning: invalid value encountered in scalar divide
+  q5 = np.trapz(q5, x=t_secs) / delta_t_secs
+/content/BLAST-Lite/blast/models/degradation_model.py:537: RuntimeWarning: invalid value encountered in scalar divide
+  Crate = np.trapz(abs_instantaneous_crate, t_days[1:]) / delta_t_days
+/content/BLAST-Lite/blast/models/nmc111_gr_Kokam75Ah_2017.py:158: RuntimeWarning: invalid value encountered in scalar divide
+  q1 = np.trapz(q1, x=t_secs) / delta_t_secs
+/content/BLAST-Lite/blast/models/nmc111_gr_Kokam75Ah_2017.py:159: RuntimeWarning: invalid value encountered in scalar divide
+  q3 = np.trapz(q3, x=t_secs) / delta_t_secs
+/content/BLAST-Lite/blast/models/nmc111_gr_Kokam75Ah_2017.py:160: RuntimeWarning: invalid value encountered in scalar divide
+  q5 = np.trapz(q5, x=t_secs) / delta_t_secs
+/content/BLAST-Lite/blast/models/degradation_model.py:537: RuntimeWarning: invalid value encountered in scalar divide
+  Crate = np.trapz(abs_instantaneous_crate, t_days[1:]) / delta_t_days
+/content/BLAST-Lite/blast/models/nmc111_gr_Kokam75Ah_2017.py:158: RuntimeWarning: invalid value encountered in scalar divide
+  q1 = np.trapz(q1, x=t_secs) / delta_t_secs
+/content/BLAST-Lite/blast/models/nmc111_gr_Kokam75Ah_2017.py:159: RuntimeWarning: invalid value encountered in scalar divide
+  q3 = np.trapz(q3, x=t_secs) / delta_t_secs
+/content/BLAST-Lite/blast/models/nmc111_gr_Kokam75Ah_2017.py:160: RuntimeWarning: invalid value encountered in scalar divide
+  q5 = np.trapz(q5, x=t_secs) / delta_t_secs
+/content/BLAST-Lite/blast/models/degradation_model.py:537: RuntimeWarning: invalid value encountered in scalar divide
+  Crate = np.trapz(abs_instantaneous_crate, t_days[1:]) / delta_t_days
+/content/BLAST-Lite/blast/models/nmc111_gr_Kokam75Ah_2017.py:158: RuntimeWarning: invalid value encountered in scalar divide
+  q1 = np.trapz(q1, x=t_secs) / delta_t_secs
+/content/BLAST-Lite/blast/models/nmc111_gr_Kokam75Ah_2017.py:159: RuntimeWarning: invalid value encountered in scalar divide
+  q3 = np.trapz(q3, x=t_secs) / delta_t_secs
+/content/BLAST-Lite/blast/models/nmc111_gr_Kokam75Ah_2017.py:160: RuntimeWarning: invalid value encountered in scalar divide
+  q5 = np.trapz(q5, x=t_secs) / delta_t_secs
+/content/BLAST-Lite/blast/models/degradation_model.py:537: RuntimeWarning: invalid value encountered in scalar divide
+  Crate = np.trapz(abs_instantaneous_crate, t_days[1:]) / delta_t_days
+/content/BLAST-Lite/blast/models/nmc111_gr_Kokam75Ah_2017.py:158: RuntimeWarning: invalid value encountered in scalar divide
+  q1 = np.trapz(q1, x=t_secs) / delta_t_secs
+/content/BLAST-Lite/blast/models/nmc111_gr_Kokam75Ah_2017.py:159: RuntimeWarning: invalid value encountered in scalar divide
+  q3 = np.trapz(q3, x=t_secs) / delta_t_secs
+/content/BLAST-Lite/blast/models/nmc111_gr_Kokam75Ah_2017.py:160: RuntimeWarning: invalid value encountered in scalar divide
+  q5 = np.trapz(q5, x=t_secs) / delta_t_secs
+
+
+RETURN CODE
+0
+
+ELAPSED SECONDS
+154.44079065322876

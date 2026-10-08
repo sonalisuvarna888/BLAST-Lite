@@ -1,0 +1,13 @@
+{
+  "months": 12,
+  "experiments": [
+    "battery_only_fixed",
+    "battery_only_dynamic",
+    "dr_plus_battery_fixed",
+    "dr_plus_battery_dynamic"
+  ],
+  "successful_experiments": 4,
+  "failed_experiments": 0,
+  "overall_file": "/content/BLAST-Lite/integration/dynamic_capacity_feedback/results/dynamic_feedback_12month_overall.csv",
+  "error_file": "/content/BLAST-Lite/integration/dynamic_capacity_feedback/logs/dynamic_feedback_12month_errors.json"
+}

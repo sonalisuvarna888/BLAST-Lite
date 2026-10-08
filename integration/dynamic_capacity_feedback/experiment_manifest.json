@@ -1,0 +1,388 @@
+{
+  "experiment": "Monthly dynamic capacity feedback",
+  "branch": "integration/dynamic-capacity-feedback",
+  "source_branches": {
+    "annual_dispatch": {
+      "branch": "integration/annual-community-dispatch",
+      "commit": "114193eedee56340403d390fce7431ceb09e9e4c"
+    },
+    "second_life_state": {
+      "branch": "extension/second-life-initial-condition",
+      "commit": "0e4a4b9b8804dd4784454f9e7b2b58fc77316ea3"
+    }
+  },
+  "starting_q": 0.8,
+  "starting_capacity_kwh": 42.0,
+  "months": 12,
+  "experiments": [
+    "battery_only_fixed",
+    "battery_only_dynamic",
+    "dr_plus_battery_fixed",
+    "dr_plus_battery_dynamic"
+  ],
+  "all_annual_checks_passed": true,
+  "result_record": "integration/dynamic_capacity_feedback/results/dynamic_feedback_result_record.json",
+  "file_count_excluding_manifest": 72,
+  "files": [
+    {
+      "path": "integration/dynamic_capacity_feedback/README.md",
+      "size_bytes": 4359,
+      "sha256": "15935161a66161b11626e8b86d233a27f21489abc27593f1631a33dfc616b7d0"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/figures/annual_final_state_comparison.png",
+      "size_bytes": 115911,
+      "sha256": "0a70cb16fd213cb4695ee1781504aab75bbbdeb426af4b4804a7ccf951101da2"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/figures/annual_fixed_dynamic_operations.png",
+      "size_bytes": 168302,
+      "sha256": "dcfa630ca9c00f2bc376208c209eb3e847001ef40408db7772f566f30b24ad8f"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/figures/monthly_capacity_feedback.png",
+      "size_bytes": 156663,
+      "sha256": "e25d7822945f6afa0ff0ce88948db72a7699775b460ebebd80b3e73c9c579f9f"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/figures/monthly_q_r_feedback.png",
+      "size_bytes": 220434,
+      "sha256": "9a034bc0b912b1a0ce80d6a81940707b1fa38ff851adee6162c999ce7ae444c3"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/figures/one_month_fixed_dynamic_capacity.png",
+      "size_bytes": 68114,
+      "sha256": "f00686e061f31088602b5727babdc38177a0fecb55a1c1526159ea59f18bec7d"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/inputs/annual_community_inputs.csv",
+      "size_bytes": 3040949,
+      "sha256": "e3e37cf947b3d631429cd304ee2fcf66075476acaa18918c4c1622254f614c0f"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/inputs/annual_dispatch_design.json",
+      "size_bytes": 2234,
+      "sha256": "9b86dfa5df1e7bf3e494ee146521e270f04ee111dd28dc2682538eb9cce9c37c"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/inputs/optimization_model_design.json",
+      "size_bytes": 2375,
+      "sha256": "1954ff16fa50d11a85487543f5f95dd901fa510a4ae134114ebd9dce93d8b959"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/inputs/peak_penalty_selection.json",
+      "size_bytes": 478,
+      "sha256": "0909b721576cd001829c3c8eef15424536069fafae67496f050d298e8440b740"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/logs/dynamic_feedback_12month_errors.json",
+      "size_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/logs/dynamic_feedback_1month_errors.json",
+      "size_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/logs/dynamic_feedback_2month_errors.json",
+      "size_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/logs/one_month_pilot_execution_log.txt",
+      "size_bytes": 4329,
+      "sha256": "2c8d1c63e89d7ace12a47bf931ff7c223d631be9532019df42a90309fbfa5c3b"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/logs/twelve_month_execution_log.txt",
+      "size_bytes": 6444,
+      "sha256": "00bed38d0bcbe05dcf860da6ecce342bb646d7f42c5fc2851699ee9e17130b7e"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/logs/two_month_pilot_execution_log.txt",
+      "size_bytes": 5727,
+      "sha256": "daedbf4fcbbc238e660333aa85634fb3cac94024636cb420ce85536ff5e4201f"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/logs/zero_duration_diagnostic_log.txt",
+      "size_bytes": 1759,
+      "sha256": "927dad2fbc1e5ae2c48af6b3cf5f757d375c3caf5e87d6f8c226cac1c9ef2054"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/metadata/dynamic_feedback_design.json",
+      "size_bytes": 2796,
+      "sha256": "5059d0f343442469c7b16b268439afda702ab20612ab99f9b1d1d4963a78c486"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/metadata/entry_state_verification.json",
+      "size_bytes": 676,
+      "sha256": "a342aaa3035c651776defd4222ac03358c1c892cef6d8e6ebda4049f91f6435e"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/metadata/input_provenance.json",
+      "size_bytes": 2643,
+      "sha256": "195d6e239b75e5fceddbf3e120a32db90a6385f692e0e897647b8bcb7fbbc5fa"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/annual_fixed_vs_dynamic_comparison.csv",
+      "size_bytes": 1120,
+      "sha256": "cb69d18a23543490a42f5240995efaeffbd201831fbb4c0f9b8e08af78dbf6a7"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/battery_only_dynamic_12month_dispatch.csv",
+      "size_bytes": 2778822,
+      "sha256": "7e9adccdbd7d855df5025d8633735e86a0da6712856acbe35f28da375878213b"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/battery_only_dynamic_12month_summary.csv",
+      "size_bytes": 5328,
+      "sha256": "c470b80f45984014bcfaa1732fc1fcaddc35b63d6661a326bd7fae310b4e868d"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/battery_only_dynamic_1month_dispatch.csv",
+      "size_bytes": 233064,
+      "sha256": "89691b87e19b3552c8e20c77fec0bb514425463d54d3bd5cac9ca23ec61204ac"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/battery_only_dynamic_1month_summary.csv",
+      "size_bytes": 766,
+      "sha256": "34294c0336b5c8466e0f06dfd475b7074bc07336e970e655b7ea4c01fa417090"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/battery_only_dynamic_2month_dispatch.csv",
+      "size_bytes": 444683,
+      "sha256": "33db195e4d0dc5915218d44ff5b95e662402143ccc51f1ba1deb97c78bdc7f3b"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/battery_only_dynamic_2month_summary.csv",
+      "size_bytes": 1189,
+      "sha256": "e906eceedc870bb455c7c4449165e1871da23c659587ead9196a9dcec7962653"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/battery_only_fixed_12month_dispatch.csv",
+      "size_bytes": 2645405,
+      "sha256": "0713b988f3418786831a9e2b16c7f06ac3752728d4a3760944746c6f8a840c7b"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/battery_only_fixed_12month_summary.csv",
+      "size_bytes": 5137,
+      "sha256": "a8facfca7eff9af7f5275b2ee734a0cc38490af7ede71bae349cace3191cf298"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/battery_only_fixed_1month_dispatch.csv",
+      "size_bytes": 221755,
+      "sha256": "1b2227cf1a748a100cf20cb86c4f7a76f358dea5b12288a38b46af436d3683ab"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/battery_only_fixed_1month_summary.csv",
+      "size_bytes": 732,
+      "sha256": "53f41f3a5f166ab79acdd1feacd7e9b7543d0b9dddad3a9ae6effa1e2a46fcf6"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/battery_only_fixed_2month_dispatch.csv",
+      "size_bytes": 423498,
+      "sha256": "3a88204e6af2e8f647fd45497a7cc1520675e71c6717769f30d14a0915f5cf88"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/battery_only_fixed_2month_summary.csv",
+      "size_bytes": 1164,
+      "sha256": "3184886a8280031d63c6b18c91a7bf3504cb429c49fd75c2c67c984aa2210b62"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/dr_plus_battery_dynamic_12month_dispatch.csv",
+      "size_bytes": 2808086,
+      "sha256": "13c0925f3703bb88b3db7c74d0f4af7cc35990ec729e0b99af56055daa074af2"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/dr_plus_battery_dynamic_12month_summary.csv",
+      "size_bytes": 5349,
+      "sha256": "9822c8e128afcbf708fbd489643f2d1bcb013b99bc1423bd78bedebc992ced8a"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/dr_plus_battery_dynamic_1month_dispatch.csv",
+      "size_bytes": 234991,
+      "sha256": "2fa54f14fe54eeef13d8e6cf2155269c93e4d6ea4023829ad602c1415b16cfd5"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/dr_plus_battery_dynamic_1month_summary.csv",
+      "size_bytes": 757,
+      "sha256": "e7851c1b87ed8934d2bd58ef072bcc50d234026b67da22adcbd0bf002cac8859"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/dr_plus_battery_dynamic_2month_dispatch.csv",
+      "size_bytes": 449471,
+      "sha256": "fa7e406a3add8b1421a5b7834de7df503a97b0ef447b83b757e403c66a20d99c"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/dr_plus_battery_dynamic_2month_summary.csv",
+      "size_bytes": 1207,
+      "sha256": "32e18d0210185d2bd08c14470fafd7c9cf0e0061f32226bb29a76c26f60e8246"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/dr_plus_battery_fixed_12month_dispatch.csv",
+      "size_bytes": 2673810,
+      "sha256": "eedd24fe5d2304ffb29f73cfe2c0194623f8510c2d6d7b2773f9c010d5600199"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/dr_plus_battery_fixed_12month_summary.csv",
+      "size_bytes": 5136,
+      "sha256": "6e6ae985aaae0ac5501dbd9632cfe611e3dc0047750b0b62470dbdce7fd350cc"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/dr_plus_battery_fixed_1month_dispatch.csv",
+      "size_bytes": 223772,
+      "sha256": "09c4485fcd51582b5e1f45d11800ef91afa573e98c0c715ece23df3c95a3e17e"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/dr_plus_battery_fixed_1month_summary.csv",
+      "size_bytes": 737,
+      "sha256": "46c173de6da65df792fc6fce9de7e2df88794afa51e7bcb66d79a85e2d28bb5c"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/dr_plus_battery_fixed_2month_dispatch.csv",
+      "size_bytes": 427533,
+      "sha256": "52f6d7d7f08a80fabcf7b91e1d8cf286eb23b9479f4ce0f4f367ed22ced3055f"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/dr_plus_battery_fixed_2month_summary.csv",
+      "size_bytes": 1180,
+      "sha256": "c8319fc4fe4c57937077b3b0c10c1bb1c7bd94f44427370c7e7a67e1d0efdf8e"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/dynamic_feedback_12month_overall.csv",
+      "size_bytes": 1857,
+      "sha256": "e06eba0aa6f36606a48f533e5fc71fb38f80bcf5dc1b04f9099a1ffb0489d084"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/dynamic_feedback_12month_run_record.json",
+      "size_bytes": 456,
+      "sha256": "f0686c9a658bafd31efd7b5ee764e28822ed96149297f68e4d2483642133e56f"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/dynamic_feedback_1month_overall.csv",
+      "size_bytes": 1856,
+      "sha256": "b6f2b9b1f38a712ab141ff2f9ca7c1bed0c85e3afe97ac04cb57f6f5346a7ad5"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/dynamic_feedback_1month_run_record.json",
+      "size_bytes": 453,
+      "sha256": "a852cf95e05268108746074ee4d340719808b1fd22495ff3e6f4423c0b4ed80d"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/dynamic_feedback_2month_overall.csv",
+      "size_bytes": 1862,
+      "sha256": "4d12cc68ed5b0bdac17d76d5d12c5c96849076564d404e2c79b00da76d522fcc"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/dynamic_feedback_2month_run_record.json",
+      "size_bytes": 453,
+      "sha256": "20cc7426430bff0a2b812b5482abdfdc0b8c90fb296e4d3a4a9e7860fb8b0d4f"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/dynamic_feedback_result_record.json",
+      "size_bytes": 7237,
+      "sha256": "043a92256b5b500d5e0e0980ab33415dbbde39cb48c6564556a05d4453a376a8"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/one_month_fixed_vs_dynamic_comparison.csv",
+      "size_bytes": 836,
+      "sha256": "fce711ec47a49e2256493f4578303308dc5c791674f620c20f99acebb6957b19"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/one_month_pilot_audit.csv",
+      "size_bytes": 1301,
+      "sha256": "812c2e84738e6fa6cd1bd300801c631a2d22593f68b2459af122fd8809c64683"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/one_month_pilot_record.json",
+      "size_bytes": 431,
+      "sha256": "94f15ad1333d4f778875dcf73d81b39221c47b0d4a1f31b0feb7e67ebf7e4178"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/twelve_month_feedback_audit.csv",
+      "size_bytes": 1337,
+      "sha256": "a453dd3d9feeb47f6bdd77e335d368b03d6af021e4247343b8cb4d6dec3de05d"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/results/two_month_continuity_audit.csv",
+      "size_bytes": 675,
+      "sha256": "460bd17ebe6cd9f2a52c0bd1a5b1d0a6c306e8d03e937aea9ba6ee1622bb4c3c"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/run_dynamic_feedback.py",
+      "size_bytes": 31437,
+      "sha256": "32ccfad85a27a4439b5e31ea0115cdd90dd24b00b147e705bcb8ab6ae2bb25c0"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/states/battery_only_dynamic_after_12month.pkl",
+      "size_bytes": 1066635,
+      "sha256": "eda0c2d3eb5148dae96f9b7972e61e118669cb87a929f18f4b18d95cfe2c86ae"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/states/battery_only_dynamic_after_1month.pkl",
+      "size_bytes": 992171,
+      "sha256": "ba308b3b4884a3d4b60a7a2dfb542137191c68c1a2e7d5c92b7e5cd50235a293"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/states/battery_only_dynamic_after_2month.pkl",
+      "size_bytes": 998411,
+      "sha256": "7ad0081f342d861ea2ad210ad3a90372ae4884190eecfdda2b9cbddba6f2b515"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/states/battery_only_fixed_after_12month.pkl",
+      "size_bytes": 1066843,
+      "sha256": "b72943fef648638ac511c8b598cd29dae687f9e50f72c4c08bf171d6f9d802d7"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/states/battery_only_fixed_after_1month.pkl",
+      "size_bytes": 992171,
+      "sha256": "bf60312bb74855d03a3a78a9f1678866ce413589335e2900fb63ec1e9697700c"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/states/battery_only_fixed_after_2month.pkl",
+      "size_bytes": 998411,
+      "sha256": "adfc7bc60cbd1b70ec3543d70856f84f560d211daa802a529f891ad0900a9dfb"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/states/dr_plus_battery_dynamic_after_12month.pkl",
+      "size_bytes": 1066011,
+      "sha256": "32ddaed1ff81857beb835d75377b48caee68e675ed1f4de903e4fc91c160a915"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/states/dr_plus_battery_dynamic_after_1month.pkl",
+      "size_bytes": 991963,
+      "sha256": "15468f4428cbaf067eb6bd6016c3ceacfe0c37405e44c10d8acc2f1923ac5441"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/states/dr_plus_battery_dynamic_after_2month.pkl",
+      "size_bytes": 997995,
+      "sha256": "80cfef922c17ed97b1b70d140402bb0850d86f2c4f3f87bca9e0150bf8e94baa"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/states/dr_plus_battery_fixed_after_12month.pkl",
+      "size_bytes": 1065803,
+      "sha256": "da661ebe23f47ce948160b7b6f2b87845e8246c5e1844e5b1d84ae7abef5d5cc"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/states/dr_plus_battery_fixed_after_1month.pkl",
+      "size_bytes": 991963,
+      "sha256": "3263320df5133a41c944676c4e1db8dc2933de8478904c9ce3e0ee632ee698e5"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/states/dr_plus_battery_fixed_after_2month.pkl",
+      "size_bytes": 997995,
+      "sha256": "d043c00474e3c0b28267a279fe1d9243caf65ae1457426c7f1fddbd5e89bde8a"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/states/second_life_entry_battery.pkl",
+      "size_bytes": 985306,
+      "sha256": "eff949d581cb6ba0aaae81a7b6aea0c4bf27051cae1fa45eac787af53b1a2df9"
+    },
+    {
+      "path": "integration/dynamic_capacity_feedback/states/second_life_entry_state.json",
+      "size_bytes": 643631,
+      "sha256": "26191b7a8cf5914bbb61c33b8f622b7f2d86d26f1802e11a8908110c7d208931"
+    }
+  ]
+}
