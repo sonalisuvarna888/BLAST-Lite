@@ -1,0 +1,12 @@
+{
+  "real_annual_load_kwh": 77603.74500000001,
+  "synthetic_annual_load_kwh": 79217.28460797065,
+  "real_mean_load_kw": 8.858875000000001,
+  "synthetic_mean_load_kw": 9.043069019174732,
+  "real_peak_load_kw": 27.429999999999996,
+  "synthetic_peak_load_kw": 21.432999621376688,
+  "shared_solar_energy_kwh": 32375.37069166751,
+  "real_solar_to_load_ratio": 0.4171882515678529,
+  "method": "Replace synthetic household loads with 2017 HUE household loads while preserving synthetic solar and price by annual hour index.",
+  "important_boundary": "This isolates household-load data effects; solar and tariff remain synthetic."
+}

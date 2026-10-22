@@ -1,0 +1,339 @@
+{
+  "dataset": "HUE: Hourly Usage of Energy Dataset for Buildings in British Columbia",
+  "persistent_id": "doi:10.7910/DVN/N3HGRN",
+  "license": "CC BY 4.0",
+  "analysis_year": 2017,
+  "selected_households": [
+    "Residential_06",
+    "Residential_22",
+    "Residential_10",
+    "Residential_07",
+    "Residential_05",
+    "Residential_20",
+    "Residential_13",
+    "Residential_04",
+    "Residential_19",
+    "Residential_14"
+  ],
+  "selection_rule": "At least 99% nonmissing coverage, no negative values, and evenly spaced annual-energy ranks.",
+  "maximum_imputation_fraction": 0.0068493150684931,
+  "annual_community_energy_kwh": 77603.745,
+  "file_count_excluding_manifest": 63,
+  "files": [
+    {
+      "path": "data/real_household_loads/README.md",
+      "size_bytes": 4712,
+      "sha256": "6516c7889fefd7b3aa053b7fec71d5a35483d15f460a407c31ac37ac69b08cc3"
+    },
+    {
+      "path": "data/real_household_loads/figures/real_community_load_duration_curve.png",
+      "size_bytes": 84704,
+      "sha256": "1b9b06bbdbb9b8975fc6492893894c826afb0e48d11bba666550631b30ad17be"
+    },
+    {
+      "path": "data/real_household_loads/figures/real_community_weekday_weekend_profile.png",
+      "size_bytes": 149962,
+      "sha256": "b932e55f4d9db5b5bc0b5585310e28c6a79edfb4ef8f69aa7717aafb25194738"
+    },
+    {
+      "path": "data/real_household_loads/figures/real_household_annual_energy.png",
+      "size_bytes": 77676,
+      "sha256": "b34fbb441ba3d961dc22e42c7cc9951a24fad3d3b0dc7fb1fdeb5ae42bb0f72c"
+    },
+    {
+      "path": "data/real_household_loads/figures/real_household_daily_energy_heatmap.png",
+      "size_bytes": 118759,
+      "sha256": "23fc4127caaec2aa633751973ccf5dc2b6a7de4e113525f40c5509fdce1cf38d"
+    },
+    {
+      "path": "data/real_household_loads/figures/real_household_one_day_profiles.png",
+      "size_bytes": 447520,
+      "sha256": "0346042c5376d69260b08541f456ea41b6f39e40cf295fbd2aeebccadb937d04"
+    },
+    {
+      "path": "data/real_household_loads/figures/real_household_one_week_profiles.png",
+      "size_bytes": 874272,
+      "sha256": "7b8aa18f91e504a780f2ac2b7aadbca0d4a2cba59e880065f8f2a12bb84f376b"
+    },
+    {
+      "path": "data/real_household_loads/logs/download_verification.csv",
+      "size_bytes": 5008,
+      "sha256": "e51fa18b1f1d62fee20976a95d8debc2ab79835e79c76bb5dbec7cf0f969e213"
+    },
+    {
+      "path": "data/real_household_loads/logs/download_verification_classified.csv",
+      "size_bytes": 7294,
+      "sha256": "00083f299169a1cd40792a34a4f55012548621d427f178b94925d6dbac072975"
+    },
+    {
+      "path": "data/real_household_loads/logs/downloaded_file_previews.json",
+      "size_bytes": 15972,
+      "sha256": "6b3afdfd16c63c1c89010622e7f6ad5bd234fab77ed8317e184d3535bd721a14"
+    },
+    {
+      "path": "data/real_household_loads/logs/residential_timestamp_previews.json",
+      "size_bytes": 31177,
+      "sha256": "e57e850cb56a7bbdeff79b099c8751888715e3c2591352d377158409fef98e4a"
+    },
+    {
+      "path": "data/real_household_loads/metadata/citation_metadata.json",
+      "size_bytes": 2499,
+      "sha256": "3fda9c39886fb8047157a29a9d8b5c30f72c10300e919840f358de85d26b5cbf"
+    },
+    {
+      "path": "data/real_household_loads/metadata/dataset_record.json",
+      "size_bytes": 728,
+      "sha256": "b7a8445f79e902c627367da2c84b74bf5feb7994503cf3b7d0f235d08b71bd23"
+    },
+    {
+      "path": "data/real_household_loads/metadata/dataverse_download_transformation_record.json",
+      "size_bytes": 612,
+      "sha256": "2001ce9bb6b62d961b9cd6986cf14228513c77652e48fa7dce63834c22ff76a0"
+    },
+    {
+      "path": "data/real_household_loads/metadata/dataverse_file_inventory.csv",
+      "size_bytes": 5990,
+      "sha256": "e198efcd843ef3da8b18897069ec292ac0a1ef5833cd54b2398c3eef1b8aa078"
+    },
+    {
+      "path": "data/real_household_loads/metadata/dataverse_metadata.json",
+      "size_bytes": 48390,
+      "sha256": "cf0fba0423aa97b5616921967149b00d53e96981f6d7b7611f034288ba7fb998"
+    },
+    {
+      "path": "data/real_household_loads/metadata/documentation_file_record.json",
+      "size_bytes": 258,
+      "sha256": "e5ec721ea5d5716dc82bc03a071f77e21ee4268f7d0e3eb060b2d7b67b526143"
+    },
+    {
+      "path": "data/real_household_loads/metadata/household_selection_record.json",
+      "size_bytes": 670,
+      "sha256": "26e53cfd9ca3c9fa918c6a78cb1bd6e221767352cf35e0828393995c3c9595fb"
+    },
+    {
+      "path": "data/real_household_loads/metadata/real_annual_input_provenance.json",
+      "size_bytes": 607,
+      "sha256": "d6bc06e9dc1c8003975c96503e39d87c438863e4b39166b8a599a0de9a6d7250"
+    },
+    {
+      "path": "data/real_household_loads/processed/real_annual_community_inputs_2017.csv",
+      "size_bytes": 1542354,
+      "sha256": "bba670485afd8abb5a6e624dbda9f25f376bccee60e5ebf7fcde861760a13f90"
+    },
+    {
+      "path": "data/real_household_loads/processed/real_household_loads_2017_hourly.csv",
+      "size_bytes": 2717401,
+      "sha256": "e6a0a7cdfd5181d3385d0812afdfc281e7c709e8522d65ac365c38eecdf8d440"
+    },
+    {
+      "path": "data/real_household_loads/raw/All_Residential.txt",
+      "size_bytes": 5757,
+      "sha256": "bbad07e029b6d0488a16ba589b99870aeebf073cc6c0f260cfeef6b1f160ff3c"
+    },
+    {
+      "path": "data/real_household_loads/raw/Holidays.tab",
+      "size_bytes": 70387,
+      "sha256": "1164ede36b061b02d0f0c80a0ae18176f9d05243bb58ac50212d6367736cd257"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_1.tab",
+      "size_bytes": 584643,
+      "sha256": "9ff116a6217fc7c86100e035478a9c8252f7992a3878900cb871997e422cfced"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_10.tab",
+      "size_bytes": 496941,
+      "sha256": "fc2cbae142770ab26ec6fc28f4c6903ab5c9479fe0bb744fb267e0f8d1611a8f"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_11.tab",
+      "size_bytes": 498697,
+      "sha256": "31c3e47a28b3c5b9d4e940c9e5038d38239849a99648df857e151893ebb13961"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_12.tab",
+      "size_bytes": 496302,
+      "sha256": "69211a7f8554f3565d1b715db8e8296645af120375c48b0a5c1e83ec0274aa41"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_13.tab",
+      "size_bytes": 496592,
+      "sha256": "a134d3971b09e042c6f519cfa9b67009499ecd03ff0e99ebb916cceae6cc9946"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_14.tab",
+      "size_bytes": 496097,
+      "sha256": "14d8c73439a2f4420d56ed00e6f79fd19809db71cc0dd775502f158d0a92ddfd"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_15.tab",
+      "size_bytes": 396734,
+      "sha256": "b55bcc8e0f37125a0e0c3addc54d96b679850ab1484bd1f890903c178fc22292"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_16.tab",
+      "size_bytes": 211177,
+      "sha256": "5e13f8ae562fd1f38500877f20c9cb31df719906c4c74317f87af303866aca74"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_17.tab",
+      "size_bytes": 151737,
+      "sha256": "9ebc97f365efad861b235d19d178f64c78be681483283e4b3b4c1afa0e0ff0b6"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_18.tab",
+      "size_bytes": 498352,
+      "sha256": "48caf6e367f2d03d0c92b8837e6c1980f46904af8cc266f9323cf66fd7c66026"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_19.tab",
+      "size_bytes": 495894,
+      "sha256": "14a0f6fb64c85360ce6e5aea0574fbb1b5991bc971d25195686cdec0722900c2"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_2.tab",
+      "size_bytes": 573893,
+      "sha256": "824fdec43f19cb0e51ce318e8097e8c02511e81dc5d429b9b0c2cb39f1183ada"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_20.tab",
+      "size_bytes": 441293,
+      "sha256": "64769c2c6abbff51620edb5b47437c789df74a7f7b86afadbfaf996c3c5c4097"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_21.tab",
+      "size_bytes": 97483,
+      "sha256": "610fdf1b54e3a17fad87842a47a039e4003592ccbbc7dd501b16451c1f755ff0"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_22.tab",
+      "size_bytes": 322141,
+      "sha256": "d36dc5f837ae13c43f8ed2724d5c1e864be431d7b195e43cd6adeb3ac6ae13e5"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_23.tab",
+      "size_bytes": 435233,
+      "sha256": "05456bd6c22a225c5646c7a1edd00a70b4864a2babaedc3d85eff848d674c07a"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_24.tab",
+      "size_bytes": 499557,
+      "sha256": "a5279c9344e44777ffe13c6d920a40853bd30d265030728f1ac5600f839b9a1e"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_25.tab",
+      "size_bytes": 499141,
+      "sha256": "54fb3453afea78aa11debdd664f299033d4a81d4471ce86259b550b0e7e3dddf"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_26.tab",
+      "size_bytes": 79298,
+      "sha256": "5bc348e6a8172367021ed3c3a0541d651aa6ec4b23b549759c87f14e9f34a7f0"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_27.tab",
+      "size_bytes": 201442,
+      "sha256": "0246cc756ed213176de17944d8838a20fc4cc0c1243457aac2094232ea07e194"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_28.tab",
+      "size_bytes": 299925,
+      "sha256": "5915545185a49f59dc3463517a4e6ebf955769dabc6786a1e61e6c3eaba4ce68"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_3.tab",
+      "size_bytes": 499805,
+      "sha256": "068f70546fe83ba3aedab06105aeaa1e6f35e7194a8525737df5d3aee87c2f5d"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_4.tab",
+      "size_bytes": 499301,
+      "sha256": "f45111e2c5d3479db77a3abd3ac676e27d47bbde94280e621208a2116f4161d1"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_5.tab",
+      "size_bytes": 496347,
+      "sha256": "1f1d66dc8a87f3bcaadc05aaa5d0728150821fa5c2c2be1fd9f8003390fffef7"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_6.tab",
+      "size_bytes": 499469,
+      "sha256": "cb704629879b248786dd223b46688165e12536ab4c45185be53a28a869081e9a"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_7.tab",
+      "size_bytes": 442420,
+      "sha256": "8ea4645d36ade881bd8b4efdc30577566aa64efff4fa9e93af13a3aed95ff488"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_8.tab",
+      "size_bytes": 498461,
+      "sha256": "ef1d4ea101b2fbb2d6492a3fffd18e996ec8c62653599c08834634336c047ef4"
+    },
+    {
+      "path": "data/real_household_loads/raw/Residential_9.tab",
+      "size_bytes": 468372,
+      "sha256": "3e7815eb386ad89b1e213a027ba0dad3bfc5e9974eb010032bc58597dfe55459"
+    },
+    {
+      "path": "data/real_household_loads/raw/Solar.tab",
+      "size_bytes": 215067,
+      "sha256": "cc4bef44b41fa5f25e6cae9968c8d4c157a4a2f601c9ecb3dc947de5e7db4049"
+    },
+    {
+      "path": "data/real_household_loads/raw/Weather_WYJ.tab",
+      "size_bytes": 1287007,
+      "sha256": "cc504e232e3ae4b5b74834fc1ba71059ead828b668fdc9b77dce1a1d90d1dc73"
+    },
+    {
+      "path": "data/real_household_loads/raw/Weather_YVR.tab",
+      "size_bytes": 2637421,
+      "sha256": "3add54a367e1d49dd4d079f280505d85ba6b34b1c3d80ff38dbeb5dccbad0f2f"
+    },
+    {
+      "path": "data/real_household_loads/results/downloaded_file_content_inspection.csv",
+      "size_bytes": 11354,
+      "sha256": "6a4b9cea8335f6c90a7ee9937a4ab4fb227af779ca00cdfe9c0b87bb065e7af2"
+    },
+    {
+      "path": "data/real_household_loads/results/downloaded_file_content_inspection_classified.csv",
+      "size_bytes": 12231,
+      "sha256": "5ac64e6cb8173a18c8fe11bd2ef8911ee25d9689256bf5c0618b5d45ed09f29d"
+    },
+    {
+      "path": "data/real_household_loads/results/real_data_imputation_log.csv",
+      "size_bytes": 1112,
+      "sha256": "4cdd24361cfa9be13fce5e0c126f664892e069fb994ef0df35ab8b9fc5ef7e7b"
+    },
+    {
+      "path": "data/real_household_loads/results/real_household_load_summary.csv",
+      "size_bytes": 1242,
+      "sha256": "ad6e442641bd81829dd5bcf061bc1a765c9bd450b2d08c39146eaeef9cfdf307"
+    },
+    {
+      "path": "data/real_household_loads/results/real_vs_synthetic_input_comparison.json",
+      "size_bytes": 624,
+      "sha256": "d2a7e9296cd15208e4a8861630a5d583d8f7ba6c93802c30c5651d6d9332fd62"
+    },
+    {
+      "path": "data/real_household_loads/results/residential_file_audit.csv",
+      "size_bytes": 5552,
+      "sha256": "9fb183aec9001f0b5cd7b8dce66f53e83597a40824335cc5378f4cfee62a87e6"
+    },
+    {
+      "path": "data/real_household_loads/results/residential_year_coverage.csv",
+      "size_bytes": 9831,
+      "sha256": "369a6d92dbfae73c0b6d0633fc86ed91ceb2474d531bbb47b34c2a3c1258a4d4"
+    },
+    {
+      "path": "data/real_household_loads/results/selected_2017_households.csv",
+      "size_bytes": 1206,
+      "sha256": "cb0311a43886bf7a1647ffe0078d8730e355373ed7c1ecfed031f3d15c8719ee"
+    },
+    {
+      "path": "data/real_household_loads/results/year_household_availability_summary.csv",
+      "size_bytes": 258,
+      "sha256": "d23b4f57fb433fcc4360ac3eba3a6380f9c98c40740323ee4c2e6dbf1210e87c"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "title": "HUE: The Hourly Usage of Energy Dataset  for Buildings in British Columbia",
+  "author": [
+    {
+      "authorName": {
+        "typeName": "authorName",
+        "multiple": false,
+        "typeClass": "primitive",
+        "value": "Makonin, Stephen"
+      },
+      "authorAffiliation": {
+        "typeName": "authorAffiliation",
+        "multiple": false,
+        "typeClass": "primitive",
+        "value": "Simon Fraser University"
+      },
+      "authorIdentifierScheme": {
+        "typeName": "authorIdentifierScheme",
+        "multiple": false,
+        "typeClass": "controlledVocabulary",
+        "value": "ORCID"
+      },
+      "authorIdentifier": {
+        "typeName": "authorIdentifier",
+        "multiple": false,
+        "typeClass": "primitive",
+        "value": "0000-0002-7818-8301"
+      }
+    }
+  ],
+  "datasetContact": [
+    {
+      "datasetContactName": {
+        "typeName": "datasetContactName",
+        "multiple": false,
+        "typeClass": "primitive",
+        "value": "Makonin, Stephen"
+      },
+      "datasetContactAffiliation": {
+        "typeName": "datasetContactAffiliation",
+        "multiple": false,
+        "typeClass": "primitive",
+        "value": "Simon Fraser University"
+      },
+      "datasetContactEmail": {
+        "typeName": "datasetContactEmail",
+        "multiple": false,
+        "typeClass": "primitive",
+        "value": "smakonin@sfu.ca"
+      }
+    }
+  ],
+  "dsDescription": [
+    {
+      "dsDescriptionValue": {
+        "typeName": "dsDescriptionValue",
+        "multiple": false,
+        "typeClass": "primitive",
+        "value": "The HUE dataset contains donated data from residential customers of BCHydro, a provincial power utility. There are currently twenty-two houses contain within the dataset with most houses having three years of consumption history. Data is downloaded from BCHydro\u2019s customer web porthole by each customer how donated the data. The porthole only allows customers to download a maximum of three years worth of data. Only BCHydro customers were asked to donate to keep the data quality consistent. Weather data from the nearest weather station is also included."
+      },
+      "dsDescriptionDate": {
+        "typeName": "dsDescriptionDate",
+        "multiple": false,
+        "typeClass": "primitive",
+        "value": "2018-09-03"
+      }
+    }
+  ],
+  "subject": [
+    "Computer and Information Science",
+    "Engineering"
+  ],
+  "depositor": "Makonin, Stephen",
+  "dateOfDeposit": "2018-09-03"
+}

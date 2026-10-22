@@ -1,0 +1,1213 @@
+{
+  "status": "OK",
+  "data": {
+    "id": 3213303,
+    "identifier": "DVN/N3HGRN",
+    "persistentUrl": "https://doi.org/10.7910/DVN/N3HGRN",
+    "protocol": "doi",
+    "authority": "10.7910",
+    "separator": "/",
+    "publisher": "Harvard Dataverse",
+    "publicationDate": "2018-09-04",
+    "storageIdentifier": "s3://10.7910/DVN/N3HGRN",
+    "effectiveDatasetFileCountLimit": 1000,
+    "datasetFileUploadsAvailable": 954,
+    "datasetType": "dataset",
+    "locks": [],
+    "latestVersion": {
+      "id": 196835,
+      "datasetId": 3213303,
+      "datasetPersistentId": "doi:10.7910/DVN/N3HGRN",
+      "datasetType": "dataset",
+      "storageIdentifier": "s3://10.7910/DVN/N3HGRN",
+      "versionNumber": 5,
+      "internalVersionNumber": 11,
+      "versionMinorNumber": 0,
+      "versionState": "RELEASED",
+      "latestVersionPublishingState": "RELEASED",
+      "deaccessionLink": "",
+      "UNF": "UNF:6:F2ursIn9woKDFzaliyA5EA==",
+      "lastUpdateTime": "2020-06-05T04:56:00Z",
+      "releaseTime": "2020-06-05T04:56:00Z",
+      "createTime": "2020-06-05T04:54:06Z",
+      "publicationDate": "2018-09-04",
+      "citationDate": "2018-09-04",
+      "effectiveDatasetFileCountLimit": 1000,
+      "datasetFileUploadsAvailable": 954,
+      "termsOfUse": "Creative Commons Attribution license (CC-BY) see https://creativecommons.org/licenses/by/4.0/ You must cite: Stephen Makonin, \u201cHUE: The Hourly Usage of Energy Dataset for Buildings in British Columbia,\u201d Data in Brief, vol. 23, no. 103744, pp. 1-4 (2019).",
+      "citationRequirements": "Stephen Makonin, \u201cHUE: The Hourly Usage of Energy Dataset for Buildings in British Columbia,\u201d Data in Brief, vol. 23, no. 103744, pp. 1-4 (2019).",
+      "fileAccessRequest": false,
+      "metadataBlocks": {
+        "citation": {
+          "displayName": "Citation Metadata",
+          "name": "citation",
+          "fields": [
+            {
+              "typeName": "title",
+              "multiple": false,
+              "typeClass": "primitive",
+              "value": "HUE: The Hourly Usage of Energy Dataset  for Buildings in British Columbia"
+            },
+            {
+              "typeName": "author",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "authorName": {
+                    "typeName": "authorName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Makonin, Stephen"
+                  },
+                  "authorAffiliation": {
+                    "typeName": "authorAffiliation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Simon Fraser University"
+                  },
+                  "authorIdentifierScheme": {
+                    "typeName": "authorIdentifierScheme",
+                    "multiple": false,
+                    "typeClass": "controlledVocabulary",
+                    "value": "ORCID"
+                  },
+                  "authorIdentifier": {
+                    "typeName": "authorIdentifier",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "0000-0002-7818-8301"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "datasetContact",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "datasetContactName": {
+                    "typeName": "datasetContactName",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Makonin, Stephen"
+                  },
+                  "datasetContactAffiliation": {
+                    "typeName": "datasetContactAffiliation",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "Simon Fraser University"
+                  },
+                  "datasetContactEmail": {
+                    "typeName": "datasetContactEmail",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "smakonin@sfu.ca"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "dsDescription",
+              "multiple": true,
+              "typeClass": "compound",
+              "value": [
+                {
+                  "dsDescriptionValue": {
+                    "typeName": "dsDescriptionValue",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "The HUE dataset contains donated data from residential customers of BCHydro, a provincial power utility. There are currently twenty-two houses contain within the dataset with most houses having three years of consumption history. Data is downloaded from BCHydro\u2019s customer web porthole by each customer how donated the data. The porthole only allows customers to download a maximum of three years worth of data. Only BCHydro customers were asked to donate to keep the data quality consistent. Weather data from the nearest weather station is also included."
+                  },
+                  "dsDescriptionDate": {
+                    "typeName": "dsDescriptionDate",
+                    "multiple": false,
+                    "typeClass": "primitive",
+                    "value": "2018-09-03"
+                  }
+                }
+              ]
+            },
+            {
+              "typeName": "subject",
+              "multiple": true,
+              "typeClass": "controlledVocabulary",
+              "value": [
+                "Computer and Information Science",
+                "Engineering"
+              ]
+            },
+            {
+              "typeName": "depositor",
+              "multiple": false,
+              "typeClass": "primitive",
+              "value": "Makonin, Stephen"
+            },
+            {
+              "typeName": "dateOfDeposit",
+              "multiple": false,
+              "typeClass": "primitive",
+              "value": "2018-09-03"
+            }
+          ]
+        }
+      },
+      "files": [
+        {
+          "label": "All_Residential.txt",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3861553,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/XI5QVK",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/XI5QVK",
+            "filename": "All_Residential.txt",
+            "contentType": "text/plain",
+            "friendlyType": "Plain Text",
+            "filesize": 5757,
+            "storageIdentifier": "s3://dvn-cloud:17282d4e7ee-1c05adc6a50f",
+            "rootDataFileId": -1,
+            "md5": "3fd0fae857cba0d6ca75015582fe89d8",
+            "checksum": {
+              "type": "MD5",
+              "value": "3fd0fae857cba0d6ca75015582fe89d8"
+            },
+            "tabularData": false,
+            "creationDate": "2020-06-05",
+            "publicationDate": "2020-06-05",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Holidays.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3213313,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/BKMY47",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/BKMY47",
+            "filename": "Holidays.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 70387,
+            "storageIdentifier": "s3://dvn-cloud:165a048e9c6-9d4f7353a2e3",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 60159,
+            "originalFileName": "Holidays.csv",
+            "UNF": "UNF:6:7A/ZRBJRfC1KuGULRyxitw==",
+            "rootDataFileId": -1,
+            "md5": "39595648ee5abd2e99059098906780a7",
+            "checksum": {
+              "type": "MD5",
+              "value": "39595648ee5abd2e99059098906780a7"
+            },
+            "tabularData": true,
+            "creationDate": "2018-09-03",
+            "publicationDate": "2018-09-04",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_10.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3213327,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/BQTDVV",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/BQTDVV",
+            "filename": "Residential_10.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 496941,
+            "storageIdentifier": "s3://dvn-cloud:165a0490307-d40c123eaecf",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 496941,
+            "originalFileName": "Residential_10.csv",
+            "UNF": "UNF:6:BHphmVFv3ZaXGAwZobaB9Q==",
+            "rootDataFileId": -1,
+            "md5": "d090bc7ea6160a7576715e7dee9261f6",
+            "checksum": {
+              "type": "MD5",
+              "value": "d090bc7ea6160a7576715e7dee9261f6"
+            },
+            "tabularData": true,
+            "creationDate": "2018-09-03",
+            "publicationDate": "2018-09-04",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_11.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3213318,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/YQABN1",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/YQABN1",
+            "filename": "Residential_11.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 498697,
+            "storageIdentifier": "s3://dvn-cloud:165a04904b2-7b3c148eb63b",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 498697,
+            "originalFileName": "Residential_11.csv",
+            "UNF": "UNF:6:siB7T1Exjg0icOVWgOEdkg==",
+            "rootDataFileId": -1,
+            "md5": "02334c00ba65317979c062ed41bf937f",
+            "checksum": {
+              "type": "MD5",
+              "value": "02334c00ba65317979c062ed41bf937f"
+            },
+            "tabularData": true,
+            "creationDate": "2018-09-03",
+            "publicationDate": "2018-09-04",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_12.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3213308,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/XLQRYF",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/XLQRYF",
+            "filename": "Residential_12.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 496302,
+            "storageIdentifier": "s3://dvn-cloud:165a049066a-1ed1f31ca4d0",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 496302,
+            "originalFileName": "Residential_12.csv",
+            "UNF": "UNF:6:qQn577q+ITEneI6E3blmPw==",
+            "rootDataFileId": -1,
+            "md5": "e5a837befa74508d9eb38262f4a0921e",
+            "checksum": {
+              "type": "MD5",
+              "value": "e5a837befa74508d9eb38262f4a0921e"
+            },
+            "tabularData": true,
+            "creationDate": "2018-09-03",
+            "publicationDate": "2018-09-04",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_13.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3213320,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/L1VVSX",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/L1VVSX",
+            "filename": "Residential_13.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 496592,
+            "storageIdentifier": "s3://dvn-cloud:165a0490833-fc0250fd9901",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 496592,
+            "originalFileName": "Residential_13.csv",
+            "UNF": "UNF:6:bK2ZDh8MdZMcusEWQ/tHUQ==",
+            "rootDataFileId": -1,
+            "md5": "53b9bd9d723159d94d6fb7deb1017849",
+            "checksum": {
+              "type": "MD5",
+              "value": "53b9bd9d723159d94d6fb7deb1017849"
+            },
+            "tabularData": true,
+            "creationDate": "2018-09-03",
+            "publicationDate": "2018-09-04",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_14.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3213309,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/F4S0MM",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/F4S0MM",
+            "filename": "Residential_14.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 496097,
+            "storageIdentifier": "s3://dvn-cloud:165a04909ef-9d270268c6e0",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 496097,
+            "originalFileName": "Residential_14.csv",
+            "UNF": "UNF:6:Dm++s++Aa8hikhsbYNLmiw==",
+            "rootDataFileId": -1,
+            "md5": "f0c1bcd08887caec8dc5295283854abd",
+            "checksum": {
+              "type": "MD5",
+              "value": "f0c1bcd08887caec8dc5295283854abd"
+            },
+            "tabularData": true,
+            "creationDate": "2018-09-03",
+            "publicationDate": "2018-09-04",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_15.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3213307,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/RPAL4U",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/RPAL4U",
+            "filename": "Residential_15.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 396734,
+            "storageIdentifier": "s3://dvn-cloud:165a0490bc5-e19e6aa25e3f",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 396734,
+            "originalFileName": "Residential_15.csv",
+            "UNF": "UNF:6:zMRnajH63nmFL2Q+IExFsg==",
+            "rootDataFileId": -1,
+            "md5": "2572f06ce66f91804daedc2b6b41d851",
+            "checksum": {
+              "type": "MD5",
+              "value": "2572f06ce66f91804daedc2b6b41d851"
+            },
+            "tabularData": true,
+            "creationDate": "2018-09-03",
+            "publicationDate": "2018-09-04",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "description": "",
+          "label": "Residential_16.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3370148,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/21CHSV",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/21CHSV",
+            "filename": "Residential_16.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 211177,
+            "description": "",
+            "storageIdentifier": "s3://dvn-cloud:1690dec7eda-5ad94cc3f647",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 211177,
+            "originalFileName": "Residential_16.csv",
+            "UNF": "UNF:6:fyl0DHJrCKJCCU+yQ2+b2w==",
+            "rootDataFileId": -1,
+            "md5": "bec8bea55eeabbdd55a6865b784fcc68",
+            "checksum": {
+              "type": "MD5",
+              "value": "bec8bea55eeabbdd55a6865b784fcc68"
+            },
+            "tabularData": true,
+            "creationDate": "2019-02-20",
+            "publicationDate": "2019-06-11",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_17.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3213317,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/XF6PLO",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/XF6PLO",
+            "filename": "Residential_17.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 151737,
+            "storageIdentifier": "s3://dvn-cloud:165a0490ee3-8cb9640b435a",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 151737,
+            "originalFileName": "Residential_17.csv",
+            "UNF": "UNF:6:r92etZvSZSikigiM776f5w==",
+            "rootDataFileId": -1,
+            "md5": "4c47f981943a77fc2a992a050faa647e",
+            "checksum": {
+              "type": "MD5",
+              "value": "4c47f981943a77fc2a992a050faa647e"
+            },
+            "tabularData": true,
+            "creationDate": "2018-09-03",
+            "publicationDate": "2018-09-04",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_18.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3213329,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/EEHPKH",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/EEHPKH",
+            "filename": "Residential_18.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 498352,
+            "storageIdentifier": "s3://dvn-cloud:165a04910a8-fc21171210b8",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 498352,
+            "originalFileName": "Residential_18.csv",
+            "UNF": "UNF:6:si6ldauecGuNw99Sog/cKw==",
+            "rootDataFileId": -1,
+            "md5": "75a795da2f927f605a142fdbff1d6e26",
+            "checksum": {
+              "type": "MD5",
+              "value": "75a795da2f927f605a142fdbff1d6e26"
+            },
+            "tabularData": true,
+            "creationDate": "2018-09-03",
+            "publicationDate": "2018-09-04",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_19.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3213326,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/E0AKID",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/E0AKID",
+            "filename": "Residential_19.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 495894,
+            "storageIdentifier": "s3://dvn-cloud:165a049125f-167cebc864e4",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 495894,
+            "originalFileName": "Residential_19.csv",
+            "UNF": "UNF:6:md6tl5CTGzyDdsUpsqoPmQ==",
+            "rootDataFileId": -1,
+            "md5": "e1bef44e96fc27bb7b770c33013d4aa0",
+            "checksum": {
+              "type": "MD5",
+              "value": "e1bef44e96fc27bb7b770c33013d4aa0"
+            },
+            "tabularData": true,
+            "creationDate": "2018-09-03",
+            "publicationDate": "2018-09-04",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_1.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3213328,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/AV4RIX",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/AV4RIX",
+            "filename": "Residential_1.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 584643,
+            "storageIdentifier": "s3://dvn-cloud:165a048f1f8-a47612867c55",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 584643,
+            "originalFileName": "Residential_1.csv",
+            "UNF": "UNF:6:i2yAdo8GQBaJUh1v621neg==",
+            "rootDataFileId": -1,
+            "md5": "bd1005a160f3e60414e334360d408447",
+            "checksum": {
+              "type": "MD5",
+              "value": "bd1005a160f3e60414e334360d408447"
+            },
+            "tabularData": true,
+            "creationDate": "2018-09-03",
+            "publicationDate": "2018-09-04",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_20.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3725071,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/VXEHTA",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/VXEHTA",
+            "filename": "Residential_20.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 441293,
+            "storageIdentifier": "s3://dvn-cloud:17055444757-c13d9a5f8eb1",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 441293,
+            "originalFileName": "Residential_20.csv",
+            "UNF": "UNF:6:5MiRpWkSnBpCx5G3oXuMbQ==",
+            "rootDataFileId": -1,
+            "md5": "365c37d2897e387182ad3bc3e9e06ccb",
+            "checksum": {
+              "type": "MD5",
+              "value": "365c37d2897e387182ad3bc3e9e06ccb"
+            },
+            "tabularData": true,
+            "creationDate": "2020-02-17",
+            "publicationDate": "2020-02-17",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_21.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3725072,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/9JJ6ZE",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/9JJ6ZE",
+            "filename": "Residential_21.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 97483,
+            "storageIdentifier": "s3://dvn-cloud:1705544489d-c2f7b1fe2d36",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 97483,
+            "originalFileName": "Residential_21.csv",
+            "UNF": "UNF:6:7nAeAD654aa0I0Xs51Zr3w==",
+            "rootDataFileId": -1,
+            "md5": "2e047691939050a57cfe913e934d1820",
+            "checksum": {
+              "type": "MD5",
+              "value": "2e047691939050a57cfe913e934d1820"
+            },
+            "tabularData": true,
+            "creationDate": "2020-02-17",
+            "publicationDate": "2020-02-17",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_22.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3213314,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/TLRGLX",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/TLRGLX",
+            "filename": "Residential_22.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 322141,
+            "storageIdentifier": "s3://dvn-cloud:165a049172b-0e3a1feed089",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 322141,
+            "originalFileName": "Residential_22.csv",
+            "UNF": "UNF:6:P4GDbeFHCtn0BGZ1aEm6og==",
+            "rootDataFileId": -1,
+            "md5": "29118693a43c914574875b4680037c20",
+            "checksum": {
+              "type": "MD5",
+              "value": "29118693a43c914574875b4680037c20"
+            },
+            "tabularData": true,
+            "creationDate": "2018-09-03",
+            "publicationDate": "2018-09-04",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_23.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3835131,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/YKKOZO",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/YKKOZO",
+            "filename": "Residential_23.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 435233,
+            "storageIdentifier": "s3://dvn-cloud:172152e74f7-42593621021f",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 435233,
+            "originalFileName": "Residential_23.csv",
+            "UNF": "UNF:6:k8yirljcOWVl/hwnFPYc5g==",
+            "rootDataFileId": -1,
+            "md5": "c9b7b5fc51f243e5f4cc28fcbe0b16d8",
+            "checksum": {
+              "type": "MD5",
+              "value": "c9b7b5fc51f243e5f4cc28fcbe0b16d8"
+            },
+            "tabularData": true,
+            "creationDate": "2020-05-14",
+            "publicationDate": "2020-05-14",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_24.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3835132,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/CBY0SC",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/CBY0SC",
+            "filename": "Residential_24.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 499557,
+            "storageIdentifier": "s3://dvn-cloud:172152e7609-7e0eba8d900b",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 499557,
+            "originalFileName": "Residential_24.csv",
+            "UNF": "UNF:6:52hlW1vFR70M+t8woXidCw==",
+            "rootDataFileId": -1,
+            "md5": "4950795751d60e7a0da3c08a46ec0205",
+            "checksum": {
+              "type": "MD5",
+              "value": "4950795751d60e7a0da3c08a46ec0205"
+            },
+            "tabularData": true,
+            "creationDate": "2020-05-14",
+            "publicationDate": "2020-05-14",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_25.tab",
+          "restricted": false,
+          "version": 3,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3861552,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/MUDZIG",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/MUDZIG",
+            "filename": "Residential_25.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 499141,
+            "storageIdentifier": "s3://dvn-cloud:17282d4ea66-443ccf48e14e",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 499141,
+            "originalFileName": "Residential_25.csv",
+            "UNF": "UNF:6:pYNsBoi0OVT/rq16BsWXMw==",
+            "rootDataFileId": -1,
+            "md5": "32cace652f6dab882e714252741377f8",
+            "checksum": {
+              "type": "MD5",
+              "value": "32cace652f6dab882e714252741377f8"
+            },
+            "tabularData": true,
+            "creationDate": "2020-06-05",
+            "publicationDate": "2020-06-05",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_26.tab",
+          "restricted": false,
+          "version": 3,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3861548,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/OC8BIU",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/OC8BIU",
+            "filename": "Residential_26.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 79298,
+            "storageIdentifier": "s3://dvn-cloud:17282d4eb57-303b70ab5260",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 79298,
+            "originalFileName": "Residential_26.csv",
+            "UNF": "UNF:6:WzxRuGafmZcYfJ9+bkFtow==",
+            "rootDataFileId": -1,
+            "md5": "ba9827c399d5fbd8d81425f5483b3cf1",
+            "checksum": {
+              "type": "MD5",
+              "value": "ba9827c399d5fbd8d81425f5483b3cf1"
+            },
+            "tabularData": true,
+            "creationDate": "2020-06-05",
+            "publicationDate": "2020-06-05",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_27.tab",
+          "restricted": false,
+          "version": 3,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3861550,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/XOYYSP",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/XOYYSP",
+            "filename": "Residential_27.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 201442,
+            "storageIdentifier": "s3://dvn-cloud:17282d4ec56-34cbb44d163a",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 201442,
+            "originalFileName": "Residential_27.csv",
+            "UNF": "UNF:6:IlBqTsKyFUQWGvvmAs4cEA==",
+            "rootDataFileId": -1,
+            "md5": "98853f37abd40219a28d2a1fb3e04b25",
+            "checksum": {
+              "type": "MD5",
+              "value": "98853f37abd40219a28d2a1fb3e04b25"
+            },
+            "tabularData": true,
+            "creationDate": "2020-06-05",
+            "publicationDate": "2020-06-05",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_28.tab",
+          "restricted": false,
+          "version": 3,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3861549,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/EICGSW",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/EICGSW",
+            "filename": "Residential_28.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 299925,
+            "storageIdentifier": "s3://dvn-cloud:17282d4ed59-74a2a987bbc8",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 299925,
+            "originalFileName": "Residential_28.csv",
+            "UNF": "UNF:6:5dcutKX82qVNrkzsQWZ+Og==",
+            "rootDataFileId": -1,
+            "md5": "19930381826b4e3a29a6f723d2a70a51",
+            "checksum": {
+              "type": "MD5",
+              "value": "19930381826b4e3a29a6f723d2a70a51"
+            },
+            "tabularData": true,
+            "creationDate": "2020-06-05",
+            "publicationDate": "2020-06-05",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_2.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3835134,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/QYAHBN",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/QYAHBN",
+            "filename": "Residential_2.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 573893,
+            "storageIdentifier": "s3://dvn-cloud:172152e73da-8f4e74a26848",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 573893,
+            "originalFileName": "Residential_2.csv",
+            "UNF": "UNF:6:6idI1PY+efnepHDYGglczg==",
+            "rootDataFileId": -1,
+            "md5": "d307473c817d983cade55d7814a6c2c9",
+            "checksum": {
+              "type": "MD5",
+              "value": "d307473c817d983cade55d7814a6c2c9"
+            },
+            "tabularData": true,
+            "creationDate": "2020-05-14",
+            "publicationDate": "2020-05-14",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_3.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3213322,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/IBX61S",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/IBX61S",
+            "filename": "Residential_3.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 499805,
+            "storageIdentifier": "s3://dvn-cloud:165a048f57d-cd920ed882b7",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 499805,
+            "originalFileName": "Residential_3.csv",
+            "UNF": "UNF:6:p+DpAnjd69HsikTdA6E1Hw==",
+            "rootDataFileId": -1,
+            "md5": "05ee3f52ba029f673d6ca4cc0a590c16",
+            "checksum": {
+              "type": "MD5",
+              "value": "05ee3f52ba029f673d6ca4cc0a590c16"
+            },
+            "tabularData": true,
+            "creationDate": "2018-09-03",
+            "publicationDate": "2018-09-04",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_4.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3213323,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/9U2F7L",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/9U2F7L",
+            "filename": "Residential_4.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 499301,
+            "storageIdentifier": "s3://dvn-cloud:165a048f735-9974eb4d0ee1",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 499301,
+            "originalFileName": "Residential_4.csv",
+            "UNF": "UNF:6:Y5Ag8NT6pD8JN25aQUjL4w==",
+            "rootDataFileId": -1,
+            "md5": "9bcc2cd340ebb4c3db48a0019804965e",
+            "checksum": {
+              "type": "MD5",
+              "value": "9bcc2cd340ebb4c3db48a0019804965e"
+            },
+            "tabularData": true,
+            "creationDate": "2018-09-03",
+            "publicationDate": "2018-09-04",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_5.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3213305,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/ISHXIK",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/ISHXIK",
+            "filename": "Residential_5.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 496347,
+            "storageIdentifier": "s3://dvn-cloud:165a048f8ee-22122737d450",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 496347,
+            "originalFileName": "Residential_5.csv",
+            "UNF": "UNF:6:XWLfLryG0fP9PiaosxQqBQ==",
+            "rootDataFileId": -1,
+            "md5": "f967ebc302d039095b5ef27d5e74dbe5",
+            "checksum": {
+              "type": "MD5",
+              "value": "f967ebc302d039095b5ef27d5e74dbe5"
+            },
+            "tabularData": true,
+            "creationDate": "2018-09-03",
+            "publicationDate": "2018-09-04",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_6.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3213321,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/HVEVYZ",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/HVEVYZ",
+            "filename": "Residential_6.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 499469,
+            "storageIdentifier": "s3://dvn-cloud:165a048fabf-2c580bd8f9da",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 499469,
+            "originalFileName": "Residential_6.csv",
+            "UNF": "UNF:6:Lkqt4lDu1b91bTNVyCWnKA==",
+            "rootDataFileId": -1,
+            "md5": "5c7e58745e57b7016afc999b38371aae",
+            "checksum": {
+              "type": "MD5",
+              "value": "5c7e58745e57b7016afc999b38371aae"
+            },
+            "tabularData": true,
+            "creationDate": "2018-09-03",
+            "publicationDate": "2018-09-04",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_7.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3213315,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/V9GPIB",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/V9GPIB",
+            "filename": "Residential_7.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 442420,
+            "storageIdentifier": "s3://dvn-cloud:165a048fc83-9ea740297d5b",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 442420,
+            "originalFileName": "Residential_7.csv",
+            "UNF": "UNF:6:M4655n8C/DofhyWY6wmg/w==",
+            "rootDataFileId": -1,
+            "md5": "da38f9198a4cbfeaf0881eba662d3ae0",
+            "checksum": {
+              "type": "MD5",
+              "value": "da38f9198a4cbfeaf0881eba662d3ae0"
+            },
+            "tabularData": true,
+            "creationDate": "2018-09-03",
+            "publicationDate": "2018-09-04",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_8.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3213325,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/8X1ZAB",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/8X1ZAB",
+            "filename": "Residential_8.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 498461,
+            "storageIdentifier": "s3://dvn-cloud:165a048fe4b-109222c53df5",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 498461,
+            "originalFileName": "Residential_8.csv",
+            "UNF": "UNF:6:fVLuPTSIxzlxIht5Gv6pAQ==",
+            "rootDataFileId": -1,
+            "md5": "a95c317f37bb7fae37cfb924f8796aa2",
+            "checksum": {
+              "type": "MD5",
+              "value": "a95c317f37bb7fae37cfb924f8796aa2"
+            },
+            "tabularData": true,
+            "creationDate": "2018-09-03",
+            "publicationDate": "2018-09-04",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Residential_9.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3213304,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/I35FLJ",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/I35FLJ",
+            "filename": "Residential_9.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 468372,
+            "storageIdentifier": "s3://dvn-cloud:165a0490020-d908ce2b2b5e",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 468372,
+            "originalFileName": "Residential_9.csv",
+            "UNF": "UNF:6:zkZVCPPq/SQAzIOSbrnSTg==",
+            "rootDataFileId": -1,
+            "md5": "5a2005d1c67b050fd758bf78aa3e29fc",
+            "checksum": {
+              "type": "MD5",
+              "value": "5a2005d1c67b050fd758bf78aa3e29fc"
+            },
+            "tabularData": true,
+            "creationDate": "2018-09-03",
+            "publicationDate": "2018-09-04",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Solar.tab",
+          "restricted": false,
+          "version": 1,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3213306,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/23ACEN",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/23ACEN",
+            "filename": "Solar.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 215067,
+            "storageIdentifier": "s3://dvn-cloud:165a04918c7-d48ff63dc99e",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 197547,
+            "originalFileName": "Solar.csv",
+            "UNF": "UNF:6:81MWqWXmWBFtTblsgbv11g==",
+            "rootDataFileId": -1,
+            "md5": "47127084d047b7e1838869545c8b4ac9",
+            "checksum": {
+              "type": "MD5",
+              "value": "47127084d047b7e1838869545c8b4ac9"
+            },
+            "tabularData": true,
+            "creationDate": "2018-09-03",
+            "publicationDate": "2018-09-04",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Weather_WYJ.tab",
+          "restricted": false,
+          "version": 3,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3861551,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/DAYJ7O",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/DAYJ7O",
+            "filename": "Weather_WYJ.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 1287007,
+            "storageIdentifier": "s3://dvn-cloud:17282d4eebd-14f6428cc44c",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 1287007,
+            "originalFileName": "Weather_WYJ.csv",
+            "UNF": "UNF:6:Md0CDpzQftshkbD2QPDOwA==",
+            "rootDataFileId": -1,
+            "md5": "f5b2353fcd90352ad37d1705d541473d",
+            "checksum": {
+              "type": "MD5",
+              "value": "f5b2353fcd90352ad37d1705d541473d"
+            },
+            "tabularData": true,
+            "creationDate": "2020-06-05",
+            "publicationDate": "2020-06-05",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        },
+        {
+          "label": "Weather_YVR.tab",
+          "restricted": false,
+          "version": 3,
+          "datasetVersionId": 196835,
+          "dataFile": {
+            "id": 3861554,
+            "persistentId": "doi:10.7910/DVN/N3HGRN/KFG3QU",
+            "pidURL": "https://doi.org/10.7910/DVN/N3HGRN/KFG3QU",
+            "filename": "Weather_YVR.tab",
+            "contentType": "text/tab-separated-values",
+            "friendlyType": "Tab-Delimited",
+            "filesize": 2637421,
+            "storageIdentifier": "s3://dvn-cloud:17282d4f057-d54faed61e8a",
+            "originalFileFormat": "text/csv",
+            "originalFormatLabel": "Comma Separated Values",
+            "originalFileSize": 2490817,
+            "originalFileName": "Weather_YVR.csv",
+            "UNF": "UNF:6:tCrmk/F9rUS9q5kaeoaFJA==",
+            "rootDataFileId": -1,
+            "md5": "9c1afab004baaba161613e502fd54c63",
+            "checksum": {
+              "type": "MD5",
+              "value": "9c1afab004baaba161613e502fd54c63"
+            },
+            "tabularData": true,
+            "creationDate": "2020-06-05",
+            "publicationDate": "2020-06-05",
+            "lastUpdateTime": "2020-06-05T04:56:00Z",
+            "fileAccessRequest": false
+          }
+        }
+      ]
+    }
+  }
+}

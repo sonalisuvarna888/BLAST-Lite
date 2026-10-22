@@ -1,0 +1,16 @@
+{
+  "persistent_id": "doi:10.7910/DVN/N3HGRN",
+  "persistent_url": "https://doi.org/10.7910/DVN/N3HGRN",
+  "publication_date": "2018-09-04",
+  "publisher": "Harvard Dataverse",
+  "version_number": 5,
+  "version_minor_number": 0,
+  "version_state": "RELEASED",
+  "release_time": "2020-06-05T04:56:00Z",
+  "last_update_time": "2020-06-05T04:56:00Z",
+  "dataset_citation": null,
+  "license": null,
+  "terms_of_use": "Creative Commons Attribution license (CC-BY) see https://creativecommons.org/licenses/by/4.0/ You must cite: Stephen Makonin, \u201cHUE: The Hourly Usage of Energy Dataset for Buildings in British Columbia,\u201d Data in Brief, vol. 23, no. 103744, pp. 1-4 (2019).",
+  "terms_of_access": null,
+  "file_count": 33
+}

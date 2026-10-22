@@ -1,0 +1,7 @@
+{
+  "filename": "All_Residential.txt",
+  "role": "Dataset documentation or residential metadata text",
+  "tabular_parsing_required": false,
+  "byte_and_checksum_verified": true,
+  "use": "Preserve as source documentation; do not treat as hourly load data."
+}

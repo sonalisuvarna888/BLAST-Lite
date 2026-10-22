@@ -1,0 +1,11 @@
+output_household,source_household,source_file,duplicate_rows_before_aggregation,original_nonmissing_hours,original_missing_hours,short_gap_interpolation_hours,hour_of_week_median_hours,overall_median_hours,imputation_fraction,overall_median_kwh
+House_01,Residential_06,Residential_6.tab,2,8713,47,21,26,0,0.005365296803652968,0.22
+House_02,Residential_22,Residential_22.tab,2,8700,60,18,42,0,0.00684931506849315,0.14
+House_03,Residential_10,Residential_10.tab,2,8747,13,13,0,0,0.0014840182648401827,0.39
+House_04,Residential_07,Residential_7.tab,2,8744,16,16,0,0,0.0018264840182648401,0.45
+House_05,Residential_05,Residential_5.tab,2,8746,14,14,0,0,0.0015981735159817352,0.43
+House_06,Residential_20,Residential_20.tab,2,8741,19,19,0,0,0.0021689497716894978,0.74
+House_07,Residential_13,Residential_13.tab,2,8749,11,11,0,0,0.0012557077625570776,0.63
+House_08,Residential_04,Residential_4.tab,2,8744,16,16,0,0,0.0018264840182648401,1.12
+House_09,Residential_19,Residential_19.tab,2,8726,34,24,10,0,0.0038812785388127853,1.59
+House_10,Residential_14,Residential_14.tab,2,8722,38,20,18,0,0.0043378995433789955,1.32

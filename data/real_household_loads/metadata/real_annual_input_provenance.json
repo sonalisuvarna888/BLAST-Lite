@@ -1,0 +1,19 @@
+{
+  "real_load_source": "Harvard Dataverse doi:10.7910/DVN/N3HGRN",
+  "real_load_year": 2017,
+  "selected_households": [
+    "Residential_06",
+    "Residential_22",
+    "Residential_10",
+    "Residential_07",
+    "Residential_05",
+    "Residential_20",
+    "Residential_13",
+    "Residential_04",
+    "Residential_19",
+    "Residential_14"
+  ],
+  "solar_and_price_source_branch": "integration/annual-community-dispatch",
+  "solar_and_price_source_commit": "114193eedee56340403d390fce7431ceb09e9e4c",
+  "solar_and_price_source_file": "integration/annual_community_dispatch/data/annual_community_inputs.csv"
+}

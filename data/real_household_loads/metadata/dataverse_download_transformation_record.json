@@ -1,0 +1,8 @@
+{
+  "finding": "Dataverse tabular file access returned files with exact expected byte sizes but MD5 values different from the original file metadata.",
+  "interpretation": "This is consistent with Dataverse tabular export or normalization behavior. The files are retained for schema and content validation before use.",
+  "plain_files_with_matching_checksum": 1,
+  "tabular_files_with_size_match_only": 32,
+  "unresolved_files": 0,
+  "policy": "Do not claim original-byte verification for transformed .tab downloads. Preserve expected and actual hashes and validate schema, row counts, timestamps, and values."
+}

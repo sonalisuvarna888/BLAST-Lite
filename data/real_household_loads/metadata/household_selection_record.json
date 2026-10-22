@@ -1,0 +1,23 @@
+{
+  "analysis_year": 2017,
+  "selection_rule": "Filter households with >=99% nonmissing coverage and no negative values; select 10 evenly spaced annual-energy ranks.",
+  "eligible_household_count": 14,
+  "selected_households": [
+    "Residential_06",
+    "Residential_22",
+    "Residential_10",
+    "Residential_07",
+    "Residential_05",
+    "Residential_20",
+    "Residential_13",
+    "Residential_04",
+    "Residential_19",
+    "Residential_14"
+  ],
+  "minimum_coverage": 0.9932648401826484,
+  "annual_energy_range_kwh": [
+    2941.26,
+    13555.52
+  ],
+  "research_boundary": "Selection is based on data quality and energy diversity, not optimization performance."
+}
