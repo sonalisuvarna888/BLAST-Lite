@@ -1,0 +1,392 @@
+{
+  "experiment": "Annual battery degradation proxy objective comparison",
+  "branch": "analysis/degradation-objective-comparison",
+  "source_branch": "integration/dynamic-capacity-feedback",
+  "source_commit": "9fe01dafb7f3374d8a8e1ef623076b4e559d0a54",
+  "coefficients": [
+    0.0,
+    0.005,
+    0.015,
+    0.03
+  ],
+  "successful_annual_runs": 8,
+  "failed_annual_runs": 0,
+  "file_count_excluding_manifest": 75,
+  "files": [
+    {
+      "path": "analysis/degradation_objective_comparison/README.md",
+      "size_bytes": 2079,
+      "sha256": "b73ca082f368a10cd9fe127bf4b3ad4607af77553065485d6ab4e73febf972f5"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/figures/cost_capacity_tradeoff.png",
+      "size_bytes": 100632,
+      "sha256": "6dfebe7eab6341d46c9f3e8f5e60f9cb61bfff264c04266fd776d5e6f477ecb3"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/figures/degradation_proxy_cost_throughput.png",
+      "size_bytes": 186815,
+      "sha256": "1dcb34d8aa7e4f338dd9d88e56b3b07951641728c752ed37787950627af23faf"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/figures/degradation_proxy_q_capacity.png",
+      "size_bytes": 199648,
+      "sha256": "75a57af386ef698520eccd1c04ee22767c315a66b8dcf558a2e272236505a180"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/figures/representative_week_soc_comparison.png",
+      "size_bytes": 446599,
+      "sha256": "75e315b0133278cef536be4a6d3e54d686c7a04d193f6e7044101f02c0c5ffa8"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/inputs/annual_community_inputs.csv",
+      "size_bytes": 3040949,
+      "sha256": "e3e37cf947b3d631429cd304ee2fcf66075476acaa18918c4c1622254f614c0f"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/inputs/peak_penalty_selection.json",
+      "size_bytes": 478,
+      "sha256": "0909b721576cd001829c3c8eef15424536069fafae67496f050d298e8440b740"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/inputs/second_life_entry_battery.pkl",
+      "size_bytes": 985306,
+      "sha256": "eff949d581cb6ba0aaae81a7b6aea0c4bf27051cae1fa45eac787af53b1a2df9"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/inputs/second_life_entry_state.json",
+      "size_bytes": 643631,
+      "sha256": "26191b7a8cf5914bbb61c33b8f622b7f2d86d26f1802e11a8908110c7d208931"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/inputs/source_dynamic_feedback_design.json",
+      "size_bytes": 2796,
+      "sha256": "5059d0f343442469c7b16b268439afda702ab20612ab99f9b1d1d4963a78c486"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/logs/annual_coefficient_sensitivity_log.txt",
+      "size_bytes": 5567,
+      "sha256": "49ae2463c418c53b17b1079d4ed2f056e3da3fc2a25f1be0367f583ae3eca0b5"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/logs/degradation_objective_365day_errors.json",
+      "size_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/logs/degradation_objective_7day_errors.json",
+      "size_bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/logs/seven_day_pilot_execution_log.txt",
+      "size_bytes": 3333,
+      "sha256": "941d4e41e19f8619b1b4c17ed6d13d897fd1e6d8375efcb95e15700cef15543e"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/metadata/degradation_objective_design.json",
+      "size_bytes": 1964,
+      "sha256": "192097ed0cb845727c1b71a98e5d7ed46f41ccc02cc40da0148ca64c7bd3e30f"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/metadata/input_provenance.json",
+      "size_bytes": 2225,
+      "sha256": "4f44ba484111ff663fbc5ae87002806f5f8237a458cc8deddfe6262de9b00f70"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/annual_degradation_objective_tradeoffs.csv",
+      "size_bytes": 2375,
+      "sha256": "f527b9d4d500b4f24cf6fca6c242a782fc4d57b210f75a230d4f9e7c25d39bb6"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/annual_monotonicity_checks.csv",
+      "size_bytes": 133,
+      "sha256": "f916d223c820a1a9586fa0ca9787c10af62eb9c0db0446f3475d5d7ba7f7c281"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p005_365day_blast_input.csv",
+      "size_bytes": 305443,
+      "sha256": "ce6a0fe92bc69cfe094e995abe060ba41f4e471aff84ddb274d346b14d5fc747"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p005_365day_day_records.csv",
+      "size_bytes": 30766,
+      "sha256": "c822f8a789de3cfacf1137d34b2ee3d19f7d10fc113b04388a325b1cab532d1e"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p005_365day_dispatch.csv",
+      "size_bytes": 2245258,
+      "sha256": "960403c6585781d484bc624b613ae716900666b91667257b3eeb50c5c15c5356"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p005_365day_final_battery.pkl",
+      "size_bytes": 1063306,
+      "sha256": "ceecbf4b95b432ab4f2cbc1905d4d1b2e277fba9aca3491471c875b4f1630b95"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p015_365day_blast_input.csv",
+      "size_bytes": 305493,
+      "sha256": "fea791fe912342b540aefe29376d355ecef949bc7c52e6c002f56331d70f090c"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p015_365day_day_records.csv",
+      "size_bytes": 30757,
+      "sha256": "50b50d6111bbfda6fa45e3f2fb501ccc916186f7bcaadf4f815beaf91447df65"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p015_365day_dispatch.csv",
+      "size_bytes": 2245137,
+      "sha256": "d0e7edec4faca9e00be34506fd282f4aed8b45a8a5a9919e9009f7f35f494db3"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p015_365day_final_battery.pkl",
+      "size_bytes": 1063514,
+      "sha256": "1bad55efabbe616f190afd3b25db0e5390a90c048626bed7f79683f538e1a32f"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p015_7day_blast_input.csv",
+      "size_bytes": 5593,
+      "sha256": "b99b2024877d3543c357d218f70deac07fedffbeaae8a361d3d0d0a1c8b5d56c"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p015_7day_day_records.csv",
+      "size_bytes": 647,
+      "sha256": "09d88f84b67664262d409dd4aa9417b45334984597ea45e67fa088c9d2e872fd"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p015_7day_dispatch.csv",
+      "size_bytes": 42466,
+      "sha256": "7f8fa00e0b11932e48950e8f92f13114464003241d232de5a6aeae743e0f3f41"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p015_7day_final_battery.pkl",
+      "size_bytes": 986970,
+      "sha256": "01fe6ae10d1aa8655218ca79176332c7dd70653c1b260d1b609fe490e9485241"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p03_365day_blast_input.csv",
+      "size_bytes": 305560,
+      "sha256": "a93df2f8e8dee035824b4cf3af2cb4e5f2e9715358f7a87d474176996b252a4a"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p03_365day_day_records.csv",
+      "size_bytes": 30781,
+      "sha256": "b2477acf7f62627686362e97911d15db52f43bd057ae772d83912b5fc8cb56d1"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p03_365day_dispatch.csv",
+      "size_bytes": 2236273,
+      "sha256": "3f9471078e955f0642b0c9109cc368bd94d11a133d8ee475c0aa758583da8f2e"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p03_365day_final_battery.pkl",
+      "size_bytes": 1063514,
+      "sha256": "64e48fdd1f10dce8492f8a1ef7c7d55ec0281d589cf0250ec4a1bf51d0d78955"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p0_365day_blast_input.csv",
+      "size_bytes": 306051,
+      "sha256": "2148e09b0032142fd507563292ff1e7096d053e8c7a656301ed0f637e3cb93af"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p0_365day_day_records.csv",
+      "size_bytes": 30819,
+      "sha256": "f9878936a3caa40863caf00bb7b550850f06fe024d7fdecf21f0baf50ae08e0d"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p0_365day_dispatch.csv",
+      "size_bytes": 2220439,
+      "sha256": "9120c2e128eacff7bdf90a26f4fb2eb26a52b46c838275f08fec446fac8c9b14"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p0_365day_final_battery.pkl",
+      "size_bytes": 1065386,
+      "sha256": "bbc1affd2155ddead910f5d191fea9145bae22ecc3df058bfc75bd81a9fd9eaf"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p0_7day_blast_input.csv",
+      "size_bytes": 5597,
+      "sha256": "52787d8a4d551514d30224790807c13a1745e4e92b3a3b132a3d9a7c5d256974"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p0_7day_day_records.csv",
+      "size_bytes": 632,
+      "sha256": "91c7d318cbd78db318285378ea93133b77c36c6825851176e49c5509ba652238"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p0_7day_dispatch.csv",
+      "size_bytes": 41912,
+      "sha256": "c43ab9de5aecdfe205d47f535b44262b74c36d383a6d35009a78153a802c9734"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/battery_only_cdeg_0p0_7day_final_battery.pkl",
+      "size_bytes": 987178,
+      "sha256": "49dd706116a16445c3854378078e25da77ad5f18e54657e98ce4579952722c74"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/best_coefficient_by_case.csv",
+      "size_bytes": 287,
+      "sha256": "0ca9ac28f625d2181ede81adbece5dd7042002f94441965647d8d058af11a156"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/degradation_objective_365day_run_record.json",
+      "size_bytes": 445,
+      "sha256": "5c127c55410fad3f41fad93b04bf53336b9d61bb0b6594678db1aa64897d91c4"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/degradation_objective_365day_summary.csv",
+      "size_bytes": 3920,
+      "sha256": "822036083e5eefb7376468acd8c671cc621815a82af9260d92051f8467552408"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/degradation_objective_7day_run_record.json",
+      "size_bytes": 418,
+      "sha256": "c647db3e2cf3b102a1efb621f21091d3b6597ccbc9b75addb7442b46573161cc"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/degradation_objective_7day_summary.csv",
+      "size_bytes": 2173,
+      "sha256": "05ad22898018991184c230b2a05b98bc7b1b0bfd057c053afc21d3af6c2b4ea1"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/degradation_objective_result_record.json",
+      "size_bytes": 1053,
+      "sha256": "cc627ef7b82fac1db09931fe9e9bd6f739ece902923a672eb55c027379f881ec"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p005_365day_blast_input.csv",
+      "size_bytes": 305257,
+      "sha256": "83317ca790577ed66ce0898231835c1939f708d39c10f8b7c040a78f193e1b7b"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p005_365day_day_records.csv",
+      "size_bytes": 30814,
+      "sha256": "a8c1507e0caaa3de302d3c8315f74ee653a0367e95a68646a17e4b4f4ed92b90"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p005_365day_dispatch.csv",
+      "size_bytes": 2273777,
+      "sha256": "0ca48c6f6e6b94952098ea275f37ebbe55d47628ba25111093990ac54c372160"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p005_365day_final_battery.pkl",
+      "size_bytes": 1063098,
+      "sha256": "a42ceaf8b01a1213900db7bce006ae3e453e8157f0280b0a66d9c1bd146413bc"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p015_365day_blast_input.csv",
+      "size_bytes": 305322,
+      "sha256": "44cab6feab0af560f29861287aefaa7af7ae2a09cb5090d7688c629d3ce08bdf"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p015_365day_day_records.csv",
+      "size_bytes": 30826,
+      "sha256": "6afa4a34a058f03f70a8831a55600eb0618c3c8e59dadbc1eccd21ee15a4ebed"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p015_365day_dispatch.csv",
+      "size_bytes": 2273968,
+      "sha256": "99ad534202d788fe38a50ba0853c8e876f163cb770d8c256b102dea77ae627a3"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p015_365day_final_battery.pkl",
+      "size_bytes": 1063098,
+      "sha256": "dd59d1ac1ba2861833a828c5fde2119977b4a9cd557ca216224b759a5aaee01a"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p015_7day_blast_input.csv",
+      "size_bytes": 5570,
+      "sha256": "86f6ae3528a3cf687629d6c271b2e2acf83a8070ec1cbf6981d3c163788ff30e"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p015_7day_day_records.csv",
+      "size_bytes": 628,
+      "sha256": "d6bcc067183e89809721b5dc829f32a5ecacb6bd33268260e0846fcd18907e1d"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p015_7day_dispatch.csv",
+      "size_bytes": 42894,
+      "sha256": "197774486dd2549124eb19f3307486c6a7c86a469a7b2108722b57950f80ad71"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p015_7day_final_battery.pkl",
+      "size_bytes": 986970,
+      "sha256": "8e64c2dffe148c882c346a9a50c0d5967e6dade4b30e1308f2e0eb0e20836e21"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p03_365day_blast_input.csv",
+      "size_bytes": 305345,
+      "sha256": "6384aaebaa1150b08c178cd93b886d73ab33e75c570829f016eaff5954ce6847"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p03_365day_day_records.csv",
+      "size_bytes": 30821,
+      "sha256": "6c8fcb4c4650846c8f1f3b7db6d7ad8ca825c180e04a55b50ca8f21e768a2f71"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p03_365day_dispatch.csv",
+      "size_bytes": 2265345,
+      "sha256": "7e89eee9fada276c608bb4ae232660612e197ccf5d56c3fae3c1df417f6769cd"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p03_365day_final_battery.pkl",
+      "size_bytes": 1062890,
+      "sha256": "17990de1abe61dab0eb8502317cdcd62428d967ee9c3089e0f55d9480854974f"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p0_365day_blast_input.csv",
+      "size_bytes": 306001,
+      "sha256": "b721a23c14e0d2d0e462ded23ca679601faa1599103252b4fae2152447642e2c"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p0_365day_day_records.csv",
+      "size_bytes": 30794,
+      "sha256": "24c2df20bee78c1c4e37380ba34360288864c258f938ac1366a1594405bc103d"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p0_365day_dispatch.csv",
+      "size_bytes": 2249410,
+      "sha256": "8193e9d28475043feffb15b52cc3d5db4404fc7fdb0d6dac3294a2dbd004ac12"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p0_365day_final_battery.pkl",
+      "size_bytes": 1064970,
+      "sha256": "a392127d5650ea49cce0419aa30730726561e2cc009ee04837ae49a86fc6edaf"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p0_7day_blast_input.csv",
+      "size_bytes": 5586,
+      "sha256": "22b450d59b58eb709c01ec488bd745aff51ff77d755365401526e8a753e544a6"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p0_7day_day_records.csv",
+      "size_bytes": 630,
+      "sha256": "2c96c3ac3142d07b236c5688ed169d3dfc3a5c3c53ce8c74220ca3be7364a952"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p0_7day_dispatch.csv",
+      "size_bytes": 42404,
+      "sha256": "d4072c0bbddbf0bffb31c77006a7c8b170a7fecdd2c0710053bd97c98c9d6d8a"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/dr_plus_battery_cdeg_0p0_7day_final_battery.pkl",
+      "size_bytes": 987178,
+      "sha256": "5e00f579b7671467aa8666190861b31b0febe2790b353bb6ef043b09b08e9f54"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/primary_with_without_degradation_comparison.csv",
+      "size_bytes": 1244,
+      "sha256": "213ae3e818083f5caffb07d02a792b53f36c8a584e2ce5674a29945408533430"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/results/seven_day_degradation_proxy_comparison.csv",
+      "size_bytes": 251,
+      "sha256": "cd8802638b2a68bbb93a3eb9c5dd06fefdfadca8084cd7a910be8912c1afbef9"
+    },
+    {
+      "path": "analysis/degradation_objective_comparison/run_degradation_objective_comparison.py",
+      "size_bytes": 23784,
+      "sha256": "449725322cb277d86fad1e15461751ad16c2d709ea0f87015a7d2fee80971716"
+    }
+  ]
+}

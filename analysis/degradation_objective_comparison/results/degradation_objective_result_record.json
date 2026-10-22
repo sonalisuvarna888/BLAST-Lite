@@ -1,0 +1,30 @@
+{
+  "experiment": "Annual comparison of battery dispatch with and without a linear degradation proxy",
+  "primary_coefficients": [
+    0.0,
+    0.015
+  ],
+  "sensitivity_coefficients": [
+    0.0,
+    0.005,
+    0.015,
+    0.03
+  ],
+  "best_coefficients": [
+    {
+      "case": "battery_only",
+      "best_c_deg_by_remaining_capacity": 0.005,
+      "best_remaining_capacity_kwh": 40.075055997064354,
+      "bill_increase_percent_vs_zero": 0.1933976232617798,
+      "throughput_reduction_percent_vs_zero": 27.772313098181854
+    },
+    {
+      "case": "dr_plus_battery",
+      "best_c_deg_by_remaining_capacity": 0.015,
+      "best_remaining_capacity_kwh": 40.22210700792871,
+      "bill_increase_percent_vs_zero": 0.2948004167883168,
+      "throughput_reduction_percent_vs_zero": 28.84104448151395
+    }
+  ],
+  "main_interpretation": "The linear degradation proxy substantially reduces cycling at a small operating-cost increase. BLAST-Lite remaining capacity is non-monotonic across coefficients because the proxy changes multiple stressors together."
+}

@@ -1,0 +1,3 @@
+case,bill_nondecreasing,throughput_nonincreasing,capacity_nondecreasing
+battery_only,True,True,False
+dr_plus_battery,True,True,False

@@ -1,0 +1,15 @@
+{
+  "days": 7,
+  "cases": [
+    "battery_only",
+    "dr_plus_battery"
+  ],
+  "coefficients": [
+    0.0,
+    0.015
+  ],
+  "successful_runs": 4,
+  "failed_runs": 0,
+  "summary_file": "/content/BLAST-Lite/analysis/degradation_objective_comparison/results/degradation_objective_7day_summary.csv",
+  "error_file": "/content/BLAST-Lite/analysis/degradation_objective_comparison/logs/degradation_objective_7day_errors.json"
+}

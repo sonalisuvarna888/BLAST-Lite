@@ -1,0 +1,76 @@
+COMMAND
+/content/blast_py311/bin/python /content/BLAST-Lite/analysis/degradation_objective_comparison/run_degradation_objective_comparison.py --days 365 --coefficients 0.0 0.005 0.015 0.03 --cases battery_only dr_plus_battery
+
+STANDARD OUTPUT
+Running battery_only_cdeg_0p0...
+  bill = 9535.9483
+  throughput = 23731.5258
+  final q = 0.751842472
+Running battery_only_cdeg_0p005...
+  bill = 9554.3906
+  throughput = 17140.7322
+  final q = 0.763334400
+Running battery_only_cdeg_0p015...
+  bill = 9573.1630
+  throughput = 17140.0133
+  final q = 0.762936860
+Running battery_only_cdeg_0p03...
+  bill = 9585.6594
+  throughput = 17137.5643
+  final q = 0.761128487
+Running dr_plus_battery_cdeg_0p0...
+  bill = 8530.9965
+  throughput = 23248.3616
+  final q = 0.751402008
+Running dr_plus_battery_cdeg_0p005...
+  bill = 8549.3821
+  throughput = 16627.9268
+  final q = 0.765809758
+Running dr_plus_battery_cdeg_0p015...
+  bill = 8556.1459
+  throughput = 16543.2913
+  final q = 0.766135372
+Running dr_plus_battery_cdeg_0p03...
+  bill = 8570.1934
+  throughput = 16260.0422
+  final q = 0.762736929
+
+RUN RECORD
+{
+  "days": 365,
+  "cases": [
+    "battery_only",
+    "dr_plus_battery"
+  ],
+  "coefficients": [
+    0.0,
+    0.005,
+    0.015,
+    0.03
+  ],
+  "successful_runs": 8,
+  "failed_runs": 0,
+  "summary_file": "/content/BLAST-Lite/analysis/degradation_objective_comparison/results/degradation_objective_365day_summary.csv",
+  "error_file": "/content/BLAST-Lite/analysis/degradation_objective_comparison/logs/degradation_objective_365day_errors.json"
+}
+
+SUMMARY
+           case  c_deg  hours  successful_days  grid_energy_kwh   grid_bill  peak_grid_import_kw  solar_spill_kwh  battery_throughput_kwh  charge_energy_kwh  discharge_energy_kwh  dispatch_objective_sum  input_mean_soc  input_annual_efc  initial_q  final_q  q_change  initial_r   final_r  final_remaining_capacity_kwh  maximum_balance_residual  minimum_soc_kwh  maximum_soc_kwh  final_soc_kwh  execution_seconds           experiment_label
+   battery_only  0.000   8760              365     51883.247428 9535.948311            14.706704      1192.977975            23731.525804       25655.703572          21807.348036            22332.763753        0.448424        516.737218        0.8 0.751842 -0.048157  27.136261 29.145262                     39.471730              1.003357e-12              4.2             37.8           21.0          46.884806      battery_only_cdeg_0p0
+   battery_only  0.005   8760              365     51131.800284 9554.390609            14.090666      1510.308179            17140.732155       18530.521248          15750.943061            22534.287700        0.512775        406.768959        0.8 0.763334 -0.036666  27.136261 29.391691                     40.075056              3.225789e-12              4.2             37.8           21.0          46.995913    battery_only_cdeg_0p005
+   battery_only  0.015   8760              365     51131.683718 9573.162965            14.090666      1510.308184            17140.013310       18529.744119          15750.282501            22876.826359        0.513405        406.751901        0.8 0.762937 -0.037063  27.136261 29.369292                     40.054185              8.752286e-14              4.2             37.8           21.0          45.951356    battery_only_cdeg_0p015
+   battery_only  0.030   8760              365     51131.286592 9585.659377            14.090666      1510.308188            17137.564337       18527.096581          15748.032093            23381.195261        0.514070        406.693785        0.8 0.761128 -0.038871  27.136261 29.358741                     39.959246              1.294666e-12              4.2             37.8           21.0          47.343550     battery_only_cdeg_0p03
+dr_plus_battery  0.000   8760              365     51219.425724 8530.996514            12.500698       607.507228            23248.361578       25133.363868          21363.359288            20277.836160        0.461232        522.381197        0.8 0.751402 -0.048598  27.136261 29.223793                     39.448605              2.199453e-13              4.2             37.8           21.0          56.710875   dr_plus_battery_cdeg_0p0
+dr_plus_battery  0.005   8760              365     50346.253924 8549.382067            12.500698       807.919444            16627.926805       17976.137087          15279.716524            20481.900873        0.532976        394.599511        0.8 0.765810 -0.034190  27.136261 29.491748                     40.205012              2.576949e-13              4.2             37.8           21.0          56.748033 dr_plus_battery_cdeg_0p005
+dr_plus_battery  0.015   8760              365     50332.529243 8556.145927            12.447330       807.919444            16543.291274       17884.639215          15201.943333            20814.948342        0.533789        392.591015        0.8 0.766135 -0.033865  27.136261 29.508013                     40.222107              3.803936e-13              4.2             37.8           21.0          57.786138 dr_plus_battery_cdeg_0p015
+dr_plus_battery  0.030   8760              365     50286.596961 8570.193424            12.399908       807.919445            16260.042202       17578.424002          14941.660402            21289.854052        0.533309        385.869194        0.8 0.762737 -0.037263  27.136261 29.367868                     40.043689              4.653625e-13              4.2             37.8           21.0          56.476495  dr_plus_battery_cdeg_0p03
+
+
+STANDARD ERROR
+
+
+RETURN CODE
+0
+
+ELAPSED SECONDS
+418.71523237228394

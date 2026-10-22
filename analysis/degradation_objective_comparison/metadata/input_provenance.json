@@ -1,0 +1,42 @@
+[
+  {
+    "source_branch": "integration/dynamic-capacity-feedback",
+    "source_commit": "9fe01dafb7f3374d8a8e1ef623076b4e559d0a54",
+    "source_file": "integration/dynamic_capacity_feedback/inputs/annual_community_inputs.csv",
+    "destination_file": "analysis/degradation_objective_comparison/inputs/annual_community_inputs.csv",
+    "sha256": "e3e37cf947b3d631429cd304ee2fcf66075476acaa18918c4c1622254f614c0f",
+    "size_bytes": 3040949
+  },
+  {
+    "source_branch": "integration/dynamic-capacity-feedback",
+    "source_commit": "9fe01dafb7f3374d8a8e1ef623076b4e559d0a54",
+    "source_file": "integration/dynamic_capacity_feedback/states/second_life_entry_battery.pkl",
+    "destination_file": "analysis/degradation_objective_comparison/inputs/second_life_entry_battery.pkl",
+    "sha256": "eff949d581cb6ba0aaae81a7b6aea0c4bf27051cae1fa45eac787af53b1a2df9",
+    "size_bytes": 985306
+  },
+  {
+    "source_branch": "integration/dynamic-capacity-feedback",
+    "source_commit": "9fe01dafb7f3374d8a8e1ef623076b4e559d0a54",
+    "source_file": "integration/dynamic_capacity_feedback/states/second_life_entry_state.json",
+    "destination_file": "analysis/degradation_objective_comparison/inputs/second_life_entry_state.json",
+    "sha256": "26191b7a8cf5914bbb61c33b8f622b7f2d86d26f1802e11a8908110c7d208931",
+    "size_bytes": 643631
+  },
+  {
+    "source_branch": "integration/dynamic-capacity-feedback",
+    "source_commit": "9fe01dafb7f3374d8a8e1ef623076b4e559d0a54",
+    "source_file": "integration/dynamic_capacity_feedback/metadata/dynamic_feedback_design.json",
+    "destination_file": "analysis/degradation_objective_comparison/inputs/source_dynamic_feedback_design.json",
+    "sha256": "5059d0f343442469c7b16b268439afda702ab20612ab99f9b1d1d4963a78c486",
+    "size_bytes": 2796
+  },
+  {
+    "source_branch": "integration/dynamic-capacity-feedback",
+    "source_commit": "9fe01dafb7f3374d8a8e1ef623076b4e559d0a54",
+    "source_file": "integration/dynamic_capacity_feedback/inputs/peak_penalty_selection.json",
+    "destination_file": "analysis/degradation_objective_comparison/inputs/peak_penalty_selection.json",
+    "sha256": "0909b721576cd001829c3c8eef15424536069fafae67496f050d298e8440b740",
+    "size_bytes": 478
+  }
+]

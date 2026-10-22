@@ -1,0 +1,3 @@
+case,best_c_deg_by_remaining_capacity,best_remaining_capacity_kwh,bill_increase_percent_vs_zero,throughput_reduction_percent_vs_zero
+battery_only,0.005,40.075055997064354,0.19339762326177987,27.772313098181858
+dr_plus_battery,0.015,40.22210700792871,0.2948004167883168,28.84104448151395

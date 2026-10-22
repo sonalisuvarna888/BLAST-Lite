@@ -1,0 +1,54 @@
+{
+  "experiment": "Battery degradation proxy in dispatch objective",
+  "research_question": "How does a linear battery-throughput penalty in the CVXPY objective affect annual operating cost, battery cycling, BLAST-Lite q, and remaining capacity?",
+  "dispatch_cases": [
+    "battery_only",
+    "demand_response_plus_battery"
+  ],
+  "degradation_coefficients_dollars_per_kwh_throughput": [
+    0.0,
+    0.005,
+    0.015,
+    0.03
+  ],
+  "primary_comparison": {
+    "without_degradation": 0.0,
+    "with_degradation": 0.015
+  },
+  "fixed_inputs": [
+    "same 10-household annual load dataset",
+    "same shared solar profile",
+    "same synthetic electricity price",
+    "same second-life battery state",
+    "same 42-kWh entry capacity",
+    "same 12-kW power limits",
+    "same 85% round-trip efficiency",
+    "same SOC range",
+    "same rolling-horizon method",
+    "same peak penalty"
+  ],
+  "only_changed_parameter": "linear battery throughput coefficient c_deg",
+  "dispatch_degradation_proxy": "c_deg * 0.5 * sum(charge + discharge)",
+  "external_degradation_evaluation": "BLAST-Lite evaluates each resulting annual SOC trajectory using the same second-life entry battery state and temperature profile.",
+  "remaining_capacity_mapping": "C_final = 42 * q_final / 0.80",
+  "metrics": [
+    "grid energy bill",
+    "objective value",
+    "peak grid import",
+    "solar spill",
+    "battery throughput",
+    "charge and discharge energy",
+    "annual input EFC",
+    "mean SOC",
+    "final q",
+    "remaining capacity",
+    "normalized resistance",
+    "computation time"
+  ],
+  "important_boundaries": [
+    "The linear throughput penalty is a dispatch proxy and is not equivalent to BLAST-Lite degradation.",
+    "The selected coefficients are scenario values, not experimentally calibrated battery replacement costs.",
+    "Community loads, solar, and prices remain synthetic for this comparison.",
+    "The analysis uses a cell-level BLAST-Lite model."
+  ]
+}
